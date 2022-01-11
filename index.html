@@ -8,12 +8,35 @@
                 font-family: 'Segoe UI';
             }
 
+            /*header for the site*/
             header {
                 background-color: #ffffffb6;
                 padding: 5px;
                 text-align: center;
                 font-size: 48px;
                 color: #001aff;
+            }
+
+            nav {
+
+                text-align: center;
+                background-color: #ffffff;
+                padding: 5px;
+            }
+
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .options {
+                background-color: #ffffff;
+                color: #001aff;
+                border: 2px #000000;
+                margin: 5px;
+                padding: 5px;
+                font-size: 24px;
             }
 
             h1   {
@@ -39,7 +62,15 @@
                 Software Developer</b>
             </header>
         </a>
-
+        
+        <nav>
+            <div class = "options">
+                <a href="/index.html">Home</a>
+                <a href="/artprojects.html">Art Projects</a>
+                <a href="/gameprojects.html">Game Projects</a>
+                <a href="/resume.html">Resume</a>
+            </div>
+        </nav>
         <p>about me :D</p>
 
         <div><h2>Other websites</h2>
