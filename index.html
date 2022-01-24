@@ -60,21 +60,40 @@
                 width: 100%;
                 background-color: #d08af8;
             }
-
             .slider-container {
                 width: 75%;
                 margin: auto;
                 overflow: hidden;
             }
-
             .carousel-slider {
                 display: flex;
                 width: 100%;
             }
-
             .carousel-slider img {
                 max-width: 100%;
-                opacity: 75%;
+                opacity: 50%;
+            }
+
+            /*buttons of sliders*/
+            #prevBtn {
+                position: absolute;
+                transform: scale(5, 5);
+                color: #a200ff;
+                z-index: 5;
+                top: 50%;
+                left: 5%;
+                cursor: pointer;
+                text-shadow: -0.5px 0.5px #ffffff;
+            }
+            #nextBtn {
+                position: absolute;
+                transform: scale(5, 5);
+                color: #a200ff;
+                z-index: 5;
+                top: 50%;
+                right: 5%;
+                cursor: pointer;
+                text-shadow: 0.5px 0.5px #ffffff;
             }
 
             hr  {
@@ -152,6 +171,12 @@
                 <hr>
 
                 <div class = "home-container">
+                    <i id="prevBtn" aria-hidden="true">
+                        <
+                    </i>
+                    <i id="nextBtn" aria-hidden="true">
+                        >
+                    </i>
                     <div class = "slider-container">
                         <div class = "carousel-slider" style = "transform: translateX(-979px); transition: transform 0.4s ease-in-out 0s;">
                             <img id = "lastClone" src = "images/LabryinthRun.png" alt>
