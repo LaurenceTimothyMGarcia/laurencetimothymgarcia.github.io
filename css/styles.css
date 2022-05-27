@@ -42,11 +42,38 @@ html    {
 /* Global Styles
 ---------------------------*/
 body   {
-    
+    /*Removing Space between elements*/
+    margin: 0;
+    padding: 0;
 }
+
+/*Centers text*/
+.content-wrap   {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/*Navigation Bar*/
+li a    {
+    color: #BBADA0;
+    text-decoration: none;
+}
+li a:hover  {
+    color: #0B1D51;
+}
+li a:active  {
+    color: #797596;
+}
+
+
 
 /* Header and Nav Bar
 ---------------------------*/
+header  {
+    background: #797596;
+    color: #D1C6AD;
+}
 
 
 /* Home Page
