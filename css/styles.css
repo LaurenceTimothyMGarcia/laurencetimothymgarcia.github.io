@@ -1,4 +1,36 @@
 /*** Universal Style ***/
+
+/*
+Color Palette
+    First Set
+        #D1C6AD - Bone
+        #BBADA0 - Pale Silver
+        #A1869E - Mountbatten Pink
+        #797596 - Rhythm
+        #0B1D51 - Royal Blue Dark
+
+    Second Set
+        #7BE0AD - Medium Aquamarine
+        #AEE5D8 - Middle Blue Green
+        #E7E5E5 - Platinum
+        #E5D0E3 - Languid Lavender
+        #E0B0D5 - Pink Lavender
+
+    Third Set
+        #D7CDCC - Pale Silver
+        #FFFFFF - White
+        #59656F - Black Coral
+        #9C528B - Razzmic Berry
+        #1D1E2C - Raisin Black
+    
+    Fourth Set
+        #020202 - Black
+        #0D324D - Prussian Blue
+        #7F5A83 - Chinese Violet
+        #A188A6 - Glossy Grape
+        #9DA2AB - Silver Metallic
+*/
+
 /* border box fix */
 html    {
     box-sizing: border-box;
