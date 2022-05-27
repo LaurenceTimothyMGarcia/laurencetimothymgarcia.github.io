@@ -47,25 +47,18 @@ body   {
     padding: 0;
 }
 
-/*Navigation Bar*/
-li a    {
-    color: #BBADA0;
-    text-decoration: none;
+.content-wrap   {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
-li a:hover  {
-    color: #0B1D51;
-}
-li a:active  {
-    color: #797596;
-}
-
 
 
 /* Header and Nav Bar
 ---------------------------*/
 header  {
-    background: #797596;
-    color: #D1C6AD;
+    background: #9C528B;
+    color: #FFFFFF;
 }
 
 /*Marks text location*/
@@ -80,8 +73,21 @@ header h2    {
     padding: 0 0 20px;
 }
 
+/*Navigation Bar*/
 .nav-bar    {
-    background-color: #A1869E;
+    background-color: #1D1E2C;
+}
+
+/*Navigation Bar Links*/
+li a    {
+    color: #9C528B;
+    text-decoration: none;
+}
+li a:hover  {
+    color: #D7CDCC;
+}
+li a:active  {
+    color: #FFFFFF;
 }
 
 
