@@ -47,13 +47,6 @@ body   {
     padding: 0;
 }
 
-/*Centers text*/
-.content-wrap   {
-    width: 500px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
 /*Navigation Bar*/
 li a    {
     color: #BBADA0;
@@ -73,6 +66,22 @@ li a:active  {
 header  {
     background: #797596;
     color: #D1C6AD;
+}
+
+/*Marks text location*/
+header h1, header h2    {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 0;
+}
+header h2    {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 20px;
+}
+
+.nav-bar    {
+    background-color: #A1869E;
 }
 
 
