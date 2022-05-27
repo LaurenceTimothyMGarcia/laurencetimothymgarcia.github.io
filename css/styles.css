@@ -1,5 +1,13 @@
 /*** Universal Style ***/
-/* type of font here */
-*   {
+/* border box fix */
+html    {
+    box-sizing: border-box;
+}
+*, *:before, *:after    {
+    box-sizing: inherit;
+}
 
+/* type of font here */
+body   {
+    
 }
