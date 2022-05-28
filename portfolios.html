@@ -20,21 +20,25 @@
             </header>
             
             <!----- Navigation Bar ----->
-            <section>
-                <!-- List of items in nav bar-->
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <!--Just a thought, all projects can be condensed into "Portfolios" Tab, then either drop down or Portfolio site to select one of the 3"-->
-                    <li><a href="portfolios.html">Portfolios</a>
-                        <ul>
-                            <li><a href="artprojects.html">Art Projects</a></li>
-                            <li><a href="gameprojects.html">Game Projects</a></li>
-                            <li><a href="programmingprojects.html">Programming Projects</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="coursetaken.html">Relevant Courses</a></li>
-                </ul>
+            <section class="nav-bar-block">
+                <div class="content-wrap">
+                    <!-- List of items in nav bar-->
+                    <ul class="nav-bar">
+                        <li><a href="index.html">Home</a></li>
+                        <!--Just a thought, all projects can be condensed into "Portfolios" Tab, then either drop down or Portfolio site to select one of the 3"-->
+                        <li class="dropdown">
+                            <a href="portfolios.html" class="dropbtn">Portfolios</a>
+                            
+                            <div class="dropdown-content">
+                                <a href="artprojects.html">Art Projects</a>
+                                <a href="gameprojects.html">Game Projects</a>
+                                <a href="programmingprojects.html">Programming Projects</a>
+                            </div>
+                        </li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="coursetaken.html">Relevant Courses</a></li>
+                    </ul>
+                </div>
             </section>
 
             <!----- Options between 3 portfolios ----->
@@ -59,18 +63,20 @@
 
             <!----- Footer ----->
             <footer>
-                <!-- List of links for the socials -->
-                <p>Socials</p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/laurencetimothymanalogarcia/">Insert Linkedin Graphic</a></li>
-                    <li><a href="https://github.com/LaurenceTimothyMGarcia">Insert Github Graphic</a></li>
-                    <li><a href="https://emergencyplayer.itch.io/">Insert Itch.io Graphic</a></li>
-                    <li><a href="https://www.artstation.com/emergencyartist">Insert Artstation Graphic</a></li>
-                    <li><a href="https://www.instagram.com/emergencyartist/">Insert Instagram Graphic</a></li>
-                    <li><a href="mailto: lg007@outlook.com">Insert Email Graphic</a></li>
-                </ul>
+                <div class="content-wrap">
+                    <!-- List of links for the socials -->
+                    <p>Socials</p>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/laurencetimothymanalogarcia/">Insert Linkedin Graphic</a></li>
+                        <li><a href="https://github.com/LaurenceTimothyMGarcia">Insert Github Graphic</a></li>
+                        <li><a href="https://emergencyplayer.itch.io/">Insert Itch.io Graphic</a></li>
+                        <li><a href="https://www.artstation.com/emergencyartist">Insert Artstation Graphic</a></li>
+                        <li><a href="https://www.instagram.com/emergencyartist/">Insert Instagram Graphic</a></li>
+                        <li><a href="mailto: lg007@outlook.com">Insert Email Graphic</a></li>
+                    </ul>
 
-                <p><small>Copyright &copy; 2022, Laurence Timothy Garcia</small></p>
+                    <p><small>Copyright &copy; 2022, Laurence Timothy Garcia</small></p>
+                </div>
             </footer>
         </main>
     </body>
