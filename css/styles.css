@@ -49,7 +49,7 @@ body   {
 
 .content-wrap   {
     width: 800px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px 0;
 }
 
@@ -104,6 +104,10 @@ section h2 {
     padding-top: 20px;
 }
 
+dl  {
+    margin: 0;
+}
+
 dd:last-of-type {
     padding-bottom: 20px;
 }
@@ -134,3 +138,10 @@ dd:last-of-type {
 
 /* Footer
 ---------------------------*/
+footer   {
+    background-color: #59656F;
+    color: #D7CDCC;
+}
+footer p {
+    margin: 0;
+}
