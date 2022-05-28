@@ -74,24 +74,23 @@ header h2    {
 }
 
 /*Navigation Bar*/
-.nav-bar    {
+.nav-bar-block  {
     background-color: #1D1E2C;
-    padding: 0;
 }
 
-/*Navigation Bar Links*/
-.nav-bar ul {
+.nav-bar    {
     display: flex;
     justify-content: center;
-    
+    padding: 0;
     list-style: none;
 }
 
+/*Navigation Bar Links*/
 .nav-bar li a    {
     color: #9C528B;
     text-decoration: none;
     display: inline-block;
-    padding: 20px;
+    padding: 0 20px;
 }
 .nav-bar li a:hover  {
     color: #D7CDCC;
