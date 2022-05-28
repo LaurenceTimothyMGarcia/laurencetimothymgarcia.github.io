@@ -60,7 +60,8 @@ body   {
 }
 
 .content-wrap   {
-    width: 800px;
+    max-width: 1000px;
+    width: 85%;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -74,10 +75,12 @@ header  {
 }
 
 /*Marks text location*/
-header h1, header h2    {
+header h1 {
     width: 1200px;
     margin: 0 auto;
     padding: 20px 0 0;
+
+    font-size: 250%;
 }
 header h2    {
     width: 1200px;
@@ -194,6 +197,28 @@ dd:last-of-type {
 
 /* Relevant Courses Page
 ---------------------------*/
+table   {
+    width: 100%;
+}
+tr  {
+    
+}
+tr:first-child  {
+    background-color: #9C528B;
+    color: #FFFFFF;
+}
+
+tr:nth-child(even){
+    background-color: #D7CDCC;
+}
+
+th  {
+    font-size: 110%;
+}
+
+td, th {
+    padding: 10px;
+}
 
 
 /* Footer
