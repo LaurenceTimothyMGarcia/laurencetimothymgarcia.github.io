@@ -41,7 +41,17 @@ html    {
 
 /* Global Styles
 ---------------------------*/
+@font-face  {
+    font-family: "lato";
+    src: url(//fonts/Lato/Lato-Regular.ttf);
+}
+
 body   {
+    /*Font Details*/
+    font-family: "lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+
     /*Removing Space between elements*/
     margin: 0;
     padding: 0;
