@@ -99,6 +99,43 @@ header h2    {
     color: #FFFFFF;
 }
 
+/*Portfolio Drop*/
+li a, .dropbtn {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown-content a {
+    color: #1D1E2C;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover   {
+    color: #59656F;
+}
+.dropdown:hover .dropdown-content   {
+    display: block;
+}
 
 /* Home Page
 ---------------------------*/
@@ -161,4 +198,5 @@ footer li a {
 footer ul   {
     display: flex;
     justify-content: center;
+    list-style: none;
 }
