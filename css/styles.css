@@ -49,7 +49,7 @@ body   {
 
 .content-wrap   {
     width: 800px;
-    margin: 0;
+    margin: 0 auto;
     padding: 20px 0;
 }
 
@@ -76,17 +76,27 @@ header h2    {
 /*Navigation Bar*/
 .nav-bar    {
     background-color: #1D1E2C;
+    padding: 0;
 }
 
 /*Navigation Bar Links*/
-li a    {
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    
+    list-style: none;
+}
+
+.nav-bar li a    {
     color: #9C528B;
     text-decoration: none;
+    display: inline-block;
+    padding: 20px;
 }
-li a:hover  {
+.nav-bar li a:hover  {
     color: #D7CDCC;
 }
-li a:active  {
+.nav-bar li a:active  {
     color: #FFFFFF;
 }
 
@@ -144,4 +154,7 @@ footer   {
 }
 footer p {
     margin: 0;
+}
+footer li a {
+    color: #D7CDCC;
 }
