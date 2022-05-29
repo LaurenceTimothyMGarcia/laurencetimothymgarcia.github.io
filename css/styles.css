@@ -181,6 +181,9 @@ dd:last-of-type {
 
 /* Portfolios Page
 ---------------------------*/
+.portfolio img  {
+    max-width: 25%;
+}
 
 
 /* Art Projects Page
