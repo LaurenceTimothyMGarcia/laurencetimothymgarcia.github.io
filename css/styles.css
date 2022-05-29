@@ -243,3 +243,11 @@ footer ul   {
     justify-content: center;
     list-style: none;
 }
+
+footer img  {
+    max-width: 50%;
+}
+
+footer img:hover    {
+    opacity: 0.5;
+}
