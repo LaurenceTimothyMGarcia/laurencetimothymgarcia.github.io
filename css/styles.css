@@ -234,7 +234,7 @@ dd:last-of-type {
 
 .portfolio-txt  {
     color: #1D1E2C;
-    font-size: 150%;
+    font-size: 200%;
 }
 
 
@@ -244,6 +244,16 @@ dd:last-of-type {
 
 /* Game Projects Page
 ---------------------------*/
+.game-pitch-background  {
+    background-color: #D7CDCC;
+}
+.game-jam-background    {
+    background-color: #59656F;
+    color:#D7CDCC;
+}
+.solo-projects-background   {
+    background-color: #D7CDCC;
+}
 
 
 /* Programming Projects Page
