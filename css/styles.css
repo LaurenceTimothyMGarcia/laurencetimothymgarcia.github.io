@@ -184,6 +184,7 @@ dd:last-of-type {
 .portfolio-background   {
     background-color: #D7CDCC;
 }
+
 .portfolio  {
     display: flex;
     justify-content: center;
@@ -194,16 +195,46 @@ dd:last-of-type {
 .portfolio a {
     padding: 0;
     flex: 1 1 auto;
+    max-width: 80%;
+    position: relative;
 }
 
 .portfolio img  {
-    max-width: 80%;
+    max-width: 100%;
     border-radius: 10%;
     flex: 1 1 auto;
 }
 
-.portfolio img:hover    {
+.fade   {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
 
+.image  {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.portfolio a:hover .image{
+    opacity: 0.3;
+}
+
+.portfolio a:hover .fade{
+    opacity: 1;
+}
+
+.portfolio-txt  {
+    color: #1D1E2C;
+    font-size: 150%;
 }
 
 
