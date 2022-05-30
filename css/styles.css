@@ -229,7 +229,7 @@ dd:last-of-type {
 }
 
 .portfolio a:hover .fade{
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .portfolio-txt  {
