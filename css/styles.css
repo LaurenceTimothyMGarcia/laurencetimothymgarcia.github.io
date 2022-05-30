@@ -265,6 +265,41 @@ dd:last-of-type {
     background-color: #D7CDCC;
 }
 
+.flex-img-gallery   {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1% 1%;
+    justify-content: center;
+}
+
+.flex-img-gallery section {
+    padding: 1% 1% 0;
+    margin: 0 1% 1%
+}
+
+.image-card {
+    max-width: 25%;
+    background-color: #9C528B;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 0;
+}
+
+.image-card img {
+    max-width: 100%;
+}
+
+.image-card-text    {
+    text-align: center;
+    color: #D7CDCC;
+    padding: 1% 2%;
+    margin: 0;
+}
+
+.image-card-text p, .image-card-text h3 {
+    padding: 0;
+    margin: 0;
+}
+
 
 /* Programming Projects Page
 ---------------------------*/
