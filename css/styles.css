@@ -70,6 +70,15 @@ body   {
     padding: 20px 0;
 }
 
+.title {
+    background-color: #59656F;
+}
+.title h2 {
+    color: #FFFFFF;
+    font-size: 225%;
+    padding-bottom: 1%;
+}
+
 
 /* Header and Nav Bar
 ---------------------------*/
@@ -190,6 +199,7 @@ dd:last-of-type {
     justify-content: center;
     list-style: none;
     margin: 0;
+    padding-top: 1%;
 }
 
 .portfolio a {
@@ -244,16 +254,6 @@ dd:last-of-type {
 
 /* Game Projects Page
 ---------------------------*/
-.game-project-title {
-    background-color: #9C528B;
-}
-.game-project-title h2 {
-    color: #FFFFFF;
-    font-size: 250%;
-    padding-bottom: 1%;
-    margin: 0 auto;
-}
-
 .game-pitch-background  {
     background-color: #D7CDCC;
 }
