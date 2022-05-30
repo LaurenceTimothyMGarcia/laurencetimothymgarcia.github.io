@@ -244,6 +244,16 @@ dd:last-of-type {
 
 /* Game Projects Page
 ---------------------------*/
+.game-project-title {
+    background-color: #9C528B;
+}
+.game-project-title h2 {
+    color: #FFFFFF;
+    font-size: 250%;
+    padding-bottom: 1%;
+    margin: 0 auto;
+}
+
 .game-pitch-background  {
     background-color: #D7CDCC;
 }
