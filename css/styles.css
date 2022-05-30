@@ -261,7 +261,7 @@ dd:last-of-type {
     background-color: #59656F;
     color:#D7CDCC;
 }
-.solo-projects-background   {
+.workshop-background   {
     background-color: #D7CDCC;
 }
 
@@ -284,7 +284,7 @@ dd:last-of-type {
     margin-bottom: 0;
 }
 
-.image-card img {
+.image-card img, .image-card iframe {
     max-width: 100%;
 }
 
