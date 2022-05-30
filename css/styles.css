@@ -291,6 +291,7 @@ footer p {
 }
 footer li a {
     color: #D7CDCC;
+    max-width: 60%;
 }
 
 footer ul   {
@@ -300,7 +301,7 @@ footer ul   {
 }
 
 footer img  {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 footer img:hover    {
