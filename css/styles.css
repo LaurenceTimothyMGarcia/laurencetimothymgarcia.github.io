@@ -71,7 +71,7 @@ body   {
 }
 
 .title {
-    background-color: #59656F;
+    background-color: #335C81;
     color: #FFFFFF;
     font-size: 225%;
     padding-bottom: 1%;
@@ -324,6 +324,40 @@ dd:last-of-type {
 
 /* Resume Page
 ---------------------------*/
+.resume-button  button  {
+    background-color: #1D1E2C;
+    font-family: inherit;
+    font-size: 75%;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 1%;
+    border: none;
+    text-decoration: none;
+}
+.resume-button button:hover    {
+    background-color: #59656F;
+    cursor: pointer;
+}
+
+.resume-education   {
+    background-color: #D7CDCC;
+}
+.resume-education ul    {
+    margin: 0;
+}
+
+.resume-leadership  {
+    background-color: #59656F;
+    color: #D7CDCC;
+}
+
+.resume-work    {
+    background-color: #D7CDCC;
+}
+
+.end-margin{
+    margin: 0;
+}
 
 
 /* Relevant Courses Page
