@@ -304,6 +304,20 @@ dd:last-of-type {
     margin: 0;
 }
 
+.image-card-text button {
+    background-color: #1D1E2C;
+    font-family: inherit;
+    color: #FFFFFF;
+    padding: 5%;
+    border: none;
+    text-decoration: none;
+}
+
+.image-card-text button:hover    {
+    background-color: #59656F;
+    cursor: pointer;
+}
+
 
 /* Programming Projects Page
 ---------------------------*/
