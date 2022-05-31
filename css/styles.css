@@ -72,11 +72,10 @@ body   {
 
 .title {
     background-color: #59656F;
-}
-.title h2 {
     color: #FFFFFF;
     font-size: 225%;
     padding-bottom: 1%;
+    text-align: center;
 }
 
 
