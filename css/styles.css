@@ -39,6 +39,16 @@ html    {
     box-sizing: inherit;
 }
 
+/* Variables for color pallete
+---------------------------*/
+:root   {
+    --pale_silver: #D7CDCC;
+    --white: #FFFFFF;
+    --black_coral: #59656F;
+    --razzmic_berry: #9C528B;
+    --raisin_black: #1D1E2C;
+}
+
 /* Global Styles
 ---------------------------*/
 @font-face  {
@@ -53,7 +63,7 @@ body   {
     font-family: "lato", sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: #1D1E2C;
+    color: var(--raisin_black);
 
     /*Removing Space between elements*/
     width: 100%;
@@ -72,7 +82,7 @@ body   {
 
 .title {
     background-color: #335C81;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 225%;
     padding-bottom: 1%;
     text-align: center;
@@ -88,8 +98,8 @@ body   {
 /* Header and Nav Bar
 ---------------------------*/
 header  {
-    background: #9C528B;
-    color: #FFFFFF;
+    background: var(--razzmic_berry);
+    color: var(--white);
 }
 
 /*Marks text location*/
@@ -108,7 +118,7 @@ header h2    {
 
 /*Navigation Bar*/
 .nav-bar-block  {
-    background-color: #1D1E2C;
+    background-color: var(--raisin_black);
     font-size: 150%;
 }
 
@@ -122,22 +132,22 @@ header h2    {
 
 /*Navigation Bar Links*/
 .nav-bar li a    {
-    color: #9C528B;
+    color: var(--razzmic_berry);
     text-decoration: none;
     display: inline-block;
     padding: 0 40px;
 }
 .nav-bar li a:hover  {
-    color: #D7CDCC;
+    color: var(--pale_silver);
 }
 .nav-bar li a:active  {
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 /*Portfolio Drop*/
 li a, .dropbtn {
     display: inline-block;
-    color: #FFFFFF;
+    color: var(--white);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -150,7 +160,7 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: var(--white);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -158,7 +168,7 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    color: #1D1E2C;
+    color: var(--raisin_black);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -166,7 +176,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover   {
-    color: #59656F;
+    color: var(--black_coral);
 }
 .dropdown:hover .dropdown-content   {
     display: block;
@@ -175,9 +185,9 @@ li.dropdown {
 /* Home Page
 ---------------------------*/
 .about-me   {
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
     margin: 0;
-    color: #1D1E2C;
+    color: var(--raisin_black);
 }
 
 section h2 {
@@ -196,7 +206,7 @@ dd:last-of-type {
 /* Portfolios Page
 ---------------------------*/
 .portfolio-background   {
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
 }
 
 .portfolio  {
@@ -216,7 +226,7 @@ dd:last-of-type {
 
 .portfolio img  {
     max-width: 100%;
-    background-color: #9C528B;
+    background-color: var(--razzmic_berry);
     padding: 3%;
     border-radius: 5%;
     flex: 1 1 auto;
@@ -252,7 +262,7 @@ dd:last-of-type {
 }
 
 .portfolio-txt  {
-    color: #1D1E2C;
+    color: var(--raisin_black);
     font-size: 200%;
 }
 
@@ -264,14 +274,14 @@ dd:last-of-type {
 /* Game Projects Page
 ---------------------------*/
 .game-pitch-background  {
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
 }
 .game-jam-background    {
-    background-color: #59656F;
-    color:#D7CDCC;
+    background-color: var(--black_coral);
+    color:var(--pale_silver);
 }
 .workshop-background   {
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
 }
 
 .flex-img-gallery   {
@@ -288,7 +298,7 @@ dd:last-of-type {
 
 .image-card {
     max-width: 25%;
-    background-color: #9C528B;
+    background-color: var(--razzmic_berry);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 0;
 }
@@ -299,7 +309,7 @@ dd:last-of-type {
 
 .image-card-text    {
     text-align: center;
-    color: #D7CDCC;
+    color: var(--pale_silver);
     padding: 1% 2%;
     margin: 0;
 }
@@ -310,16 +320,16 @@ dd:last-of-type {
 }
 
 .image-card-text button {
-    background-color: #1D1E2C;
+    background-color: var(--raisin_black);
     font-family: inherit;
-    color: #FFFFFF;
+    color: var(--white);
     padding: 5%;
     border: none;
     text-decoration: none;
 }
 
 .image-card-text button:hover    {
-    background-color: #59656F;
+    background-color: var(--black_coral);
     cursor: pointer;
 }
 
@@ -331,14 +341,14 @@ dd:last-of-type {
 /* Resume Page
 ---------------------------*/
 .resume-title {
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 300%;
     padding-bottom: 1%;
     text-align: center;
     position: fixed;
 }
 .resume-title-button {
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 250%;
     padding-bottom: 1%;
     text-align: center;
@@ -363,22 +373,22 @@ dd:last-of-type {
 }
 
 .resume-button  button  {
-    background-color: #1D1E2C;
+    background-color: var(--raisin_black);
     font-family: inherit;
     font-size: 75%;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--white);
     padding: 1%;
     border: none;
     text-decoration: none;
 }
 .resume-button button:hover    {
-    background-color: #59656F;
+    background-color: var(--black_coral);
     cursor: pointer;
 }
 
 .resume-education   {
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
     grid-area: 1 / 2 / 2 / 3;
 }
 .resume-education ul    {
@@ -386,13 +396,13 @@ dd:last-of-type {
 }
 
 .resume-leadership  {
-    background-color: #59656F;
-    color: #D7CDCC;
+    background-color: var(--black_coral);
+    color: var(--pale_silver);
     grid-area: 2 / 2 / 3 / 3;
 }
 
 .resume-work    {
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
     grid-area: 3 / 2 / 4 / 3;
 }
 
@@ -410,12 +420,12 @@ tr  {
     
 }
 tr:first-child  {
-    background-color: #9C528B;
-    color: #FFFFFF;
+    background-color: var(--razzmic_berry);
+    color: var(--white);
 }
 
 tr:nth-child(even){
-    background-color: #D7CDCC;
+    background-color: var(--pale_silver);
 }
 
 th  {
@@ -430,14 +440,14 @@ td, th {
 /* Footer
 ---------------------------*/
 footer   {
-    background-color: #59656F;
-    color: #D7CDCC;
+    background-color: var(--black_coral);
+    color: var(--pale_silver);
 }
 footer p {
     margin: 0 auto;
 }
 footer li a {
-    color: #D7CDCC;
+    color: var(--pale_silver);
     max-width: 60%;
 }
 
