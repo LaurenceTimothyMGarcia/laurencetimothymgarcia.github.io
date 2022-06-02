@@ -324,6 +324,17 @@ dd:last-of-type {
 
 /* Resume Page
 ---------------------------*/
+.resume-sidebar-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.resume-sidebar {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: #335C81;
+}
+
 .resume-button  button  {
     background-color: #1D1E2C;
     font-family: inherit;
@@ -341,6 +352,7 @@ dd:last-of-type {
 
 .resume-education   {
     background-color: #D7CDCC;
+    grid-area: 1 / 2 / 2 / 3;
 }
 .resume-education ul    {
     margin: 0;
@@ -349,10 +361,12 @@ dd:last-of-type {
 .resume-leadership  {
     background-color: #59656F;
     color: #D7CDCC;
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 .resume-work    {
     background-color: #D7CDCC;
+    grid-area: 3 / 2 / 4 / 3;
 }
 
 .end-margin{
