@@ -335,6 +335,15 @@ dd:last-of-type {
     font-size: 225%;
     padding-bottom: 1%;
     text-align: center;
+    position: fixed;
+}
+.resume-title-button {
+    color: #FFFFFF;
+    font-size: 225%;
+    padding-bottom: 1%;
+    text-align: center;
+    position: fixed;
+    margin-top: 5%;
 }
 
 .resume-sidebar-grid {
@@ -349,6 +358,8 @@ dd:last-of-type {
     background-attachment: fixed;
     background-color: rgba(51, 92, 129, 0.5);
     background-blend-mode: soft-light;
+    display: flex;
+    justify-content: center;
 }
 
 .resume-button  button  {
