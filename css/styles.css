@@ -330,6 +330,13 @@ dd:last-of-type {
 
 /* Resume Page
 ---------------------------*/
+.resume-title {
+    color: #FFFFFF;
+    font-size: 225%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
 .resume-sidebar-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -338,7 +345,10 @@ dd:last-of-type {
 
 .resume-sidebar {
     grid-area: 1 / 1 / 4 / 2;
-    background-color: #335C81;
+    background-image: url(../images/portfolios/ProgrammingIcon.png);
+    background-attachment: fixed;
+    background-color: rgba(51, 92, 129, 0.5);
+    background-blend-mode: soft-light;
 }
 
 .resume-button  button  {
