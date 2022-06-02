@@ -77,6 +77,12 @@ body   {
     padding-bottom: 1%;
     text-align: center;
 }
+.title-background-image {
+    background-image: url(../images/portfolios/ProgrammingIcon.png);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.5;
+}
 
 
 /* Header and Nav Bar
