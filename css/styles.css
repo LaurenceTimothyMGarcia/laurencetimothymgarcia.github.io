@@ -197,6 +197,63 @@ section h2 {
 
 dl  {
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.about-me-3d  {
+    color: var(--white);
+    font-size: 250%;
+    font-weight: 700;
+
+    background-image: url(../images/index/3DModeling.png);
+    background-attachment: fixed;
+    background-color: rgba(51, 92, 129, 0.5);
+    background-blend-mode: soft-light;
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+.hide-3d    {
+    display: none;
+}
+
+.about-me-vidgame  {
+    color: var(--white);
+    font-size: 250%;
+    font-weight: 700;
+
+    background-image: url(../images/index/Gaming.png);
+    background-attachment: fixed;
+    background-color: rgba(51, 92, 129, 0.5);
+    background-blend-mode: soft-light;
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+.hide-vidgame    {
+    display: none;
+}
+
+.about-me-videdit  {
+    color: var(--white);
+    font-size: 250%;
+    font-weight: 700;
+
+    /*background-image: url(../images/index/VideoEditing.png);*/
+    background-attachment: relative;
+    background-color: rgba(51, 92, 129, 0.5);
+    background-blend-mode: soft-light;
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+.hide-videdit    {
+    display: none;
 }
 
 dd:last-of-type {
