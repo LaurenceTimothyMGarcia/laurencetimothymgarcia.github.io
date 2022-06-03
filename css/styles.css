@@ -219,6 +219,10 @@ dl  {
 .hide-3d    {
     display: none;
 }
+.about-me-3d:hover + .hide-3d   {
+    display: grid;
+    
+}
 
 .about-me-vidgame  {
     color: var(--white);
