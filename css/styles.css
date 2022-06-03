@@ -80,6 +80,10 @@ body   {
     padding: 20px 0;
 }
 
+.backgroundcolor    {
+    background-color: var(--light_background);
+}
+
 .title {
     background-color: #335C81;
     color: var(--white);
