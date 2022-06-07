@@ -351,6 +351,14 @@ dd:last-of-type {
     margin: 0;
 }
 
+.home-resume {
+    background-color: var(--light_background);
+    color: var(--dark_contrast);
+}
+.home-resume p {
+    margin: 0;
+}
+
 /* Portfolios Page
 ---------------------------*/
 .portfolio-background   {
