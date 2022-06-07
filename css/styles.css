@@ -303,7 +303,7 @@ dd:last-of-type {
 
 /*Home Porfolio select*/
 .home-portfolio {
-    
+    background-color: var(--dark_contrast);
 }
 
 /* Portfolios Page
