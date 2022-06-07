@@ -305,7 +305,11 @@ dd:last-of-type {
 .about-me-subtext {
     text-align: center;
     font-size: 150%;
+    padding-bottom: 2.5%;
+}
 
+.about-me-subtext p {
+    padding: 1% 0;
 }
 
 .btn-main button {
@@ -314,12 +318,13 @@ dd:last-of-type {
     font-size: 125%;
     color: var(--white);
     padding: 1%;
+    margin-top: 1%;
     border: none;
     text-decoration: none;
 }
 
 .btn-main button:hover    {
-    background-color: var(--light_dark_contrast);
+    background-color: var(--light_background);
     cursor: pointer;
 }
 
