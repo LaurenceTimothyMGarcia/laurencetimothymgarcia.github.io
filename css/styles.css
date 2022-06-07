@@ -312,7 +312,7 @@ dd:last-of-type {
     padding: 1% 0;
 }
 
-.btn-main button {
+.btn-main-dark button {
     background-color: var(--primary_color_contrast);
     font-family: inherit;
     font-size: 125%;
@@ -322,9 +322,23 @@ dd:last-of-type {
     border: none;
     text-decoration: none;
 }
-
-.btn-main button:hover    {
+.btn-main-dark button:hover    {
     background-color: var(--light_background);
+    cursor: pointer;
+}
+
+.btn-main-light button {
+    background-color: var(--dark_contrast);
+    font-family: inherit;
+    font-size: 125%;
+    color: var(--white);
+    padding: 1%;
+    margin-top: 1%;
+    border: none;
+    text-decoration: none;
+}
+.btn-main-light button:hover    {
+    background-color: var(--light_dark_contrast);
     cursor: pointer;
 }
 
