@@ -200,7 +200,8 @@ section h2 {
 }
 
 .subtitle  {
-    font-size: 200%;
+    font-size: 210%;
+    text-align: center;
 }
 
 dl  {
@@ -304,6 +305,10 @@ dd:last-of-type {
 /*Home Porfolio select*/
 .home-portfolio {
     background-color: var(--dark_contrast);
+    color: var(--white);
+}
+.home-portfolio p {
+    margin: 0;
 }
 
 /* Portfolios Page
