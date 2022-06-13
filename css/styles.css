@@ -556,6 +556,7 @@ dd:last-of-type {
 .resume-education   {
     background-color: var(--light_background);
     grid-area: 1 / 2 / 2 / 3;
+    padding-left: 5%;
 }
 .resume-education ul    {
     margin: 0;
@@ -565,11 +566,14 @@ dd:last-of-type {
     background-color: var(--light_dark_contrast);
     color: var(--light_background);
     grid-area: 2 / 2 / 3 / 3;
+    padding-left: 5%;
+    padding-bottom: 2%;
 }
 
 .resume-work    {
     background-color: var(--light_background);
     grid-area: 3 / 2 / 4 / 3;
+    padding-left: 5%;
 }
 
 .end-margin{
