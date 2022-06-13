@@ -344,7 +344,12 @@ dd:last-of-type {
 
 /*Home Porfolio select*/
 .home-portfolio {
+    background-image: url(../images/index/portfolios.png);
+    background-attachment: fixed;
+    background-size: cover;
     background-color: var(--dark_contrast);
+    background-blend-mode: soft-light;
+
     color: var(--white);
 }
 .home-portfolio p {
@@ -352,11 +357,16 @@ dd:last-of-type {
 }
 
 .home-resume {
+    background-image: url(../images/index/resume.png);
+    background-attachment: fixed;
+    background-size: cover;
     background-color: var(--light_background);
+    background-blend-mode: soft-light;
     color: var(--dark_contrast);
 }
 .home-resume p {
     margin: 0;
+    font-weight: 700;
 }
 
 /* Portfolios Page
