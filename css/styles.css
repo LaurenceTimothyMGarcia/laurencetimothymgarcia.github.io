@@ -509,7 +509,7 @@ dd:last-of-type {
 .resume-title {
     color: var(--white);
     font-size: 300%;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
     text-align: center;
     position: fixed;
 }
