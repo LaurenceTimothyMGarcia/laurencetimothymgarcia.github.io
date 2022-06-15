@@ -46,6 +46,7 @@ html    {
     --white: #FFFFFF;
     --light_dark_contrast: #59656F;
     --primary_color_contrast: #9C528B;
+    --secondary_color_contrast: #335C81;
     --dark_contrast: #1D1E2C;
 }
 
@@ -85,7 +86,7 @@ body   {
 }
 
 .title {
-    background-color: #335C81;
+    background-color: var(--secondary_color_contrast);
     color: var(--white);
     font-size: 225%;
     padding-bottom: 1%;
@@ -219,7 +220,7 @@ dl  {
     background-image: url(../images/index/3DModelRender.png);
     background-position: left;
     background-attachment: fixed;
-    background-color: rgba(51, 92, 129, 0.5);
+    background-color: var(--secondary_color_contrast);
     background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
