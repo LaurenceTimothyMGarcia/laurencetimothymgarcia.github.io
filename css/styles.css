@@ -436,7 +436,20 @@ dd:last-of-type {
 
 /* Art Projects Page
 ---------------------------*/
+.image-card-art {
+    max-width: 25%;
+    background-color: var(--primary_color_contrast);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 0;
+}
 
+.image-card-art:hover   {
+    max-width: 50%;
+}
+
+.image-card-art img, .image-card-art iframe {
+    max-width: 100%;
+}
 
 /* Game Projects Page
 ---------------------------*/
@@ -463,14 +476,14 @@ dd:last-of-type {
     margin: 0 1% 1%
 }
 
-.image-card {
+.image-card-game {
     max-width: 25%;
     background-color: var(--primary_color_contrast);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-bottom: 0;
 }
 
-.image-card img, .image-card iframe {
+.image-card-game img, .image-card-game iframe {
     max-width: 100%;
 }
 
