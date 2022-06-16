@@ -439,8 +439,24 @@ dd:last-of-type {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.follow-me  {
+    text-align: center;
+    font-size: 200%;
+    padding: 1% 0 0 0;
+    margin: 0;
+}
+.portfolio-img-link li{
+    display: flex;
+    justify-content: center;
+}
+.portfolio-img-link li h3{
+    font-size: 210%;
+    text-align: center;
+}
 .portfolio-img-link li a{
     max-width: 25%;
 }
