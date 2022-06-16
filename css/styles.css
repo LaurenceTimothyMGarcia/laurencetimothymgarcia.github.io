@@ -383,6 +383,13 @@ dd:last-of-type {
     list-style: none;
     margin: 0;
     padding-top: 1%;
+    padding-left: 0;
+}
+
+.portfolio li {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
 }
 
 .portfolio a {
@@ -503,7 +510,7 @@ dd:last-of-type {
     background-color: var(--light_background);
 }
 .workshop-background   {
-    background-color: var(--light_dark_contrast);
+    background-color: var(--secondary_color_contrast);
     color:var(--light_background);
 }
 
