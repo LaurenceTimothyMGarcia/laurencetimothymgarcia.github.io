@@ -93,10 +93,6 @@ body   {
     text-align: center;
 }
 
-.title img   {
-    max-width: 10%;
-}
-
 .title-background-image {
     background-image: url(../images/portfolios/ProgrammingIcon.png);
     background-size: cover;
@@ -438,6 +434,19 @@ dd:last-of-type {
     font-size: 200%;
 }
 
+
+.portfolio-img-link{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.portfolio-img-link li a{
+    max-width: 25%;
+}
+.portfolio-img-link img {
+    max-width: 100%;
+}
 
 /* Art Projects Page
 ---------------------------*/
