@@ -92,6 +92,11 @@ body   {
     padding-bottom: 1%;
     text-align: center;
 }
+
+.title img   {
+    max-width: 10%;
+}
+
 .title-background-image {
     background-image: url(../images/portfolios/ProgrammingIcon.png);
     background-size: cover;
@@ -436,6 +441,15 @@ dd:last-of-type {
 
 /* Art Projects Page
 ---------------------------*/
+.art-background-1   {
+    background-color: var(--light_background);
+}
+
+.art-background-2   {
+    background-color: var(--light_dark_contrast);
+    color: var(--light_background);
+}
+
 .image-card-art {
     max-width: 25%;
     background-color: var(--primary_color_contrast);
