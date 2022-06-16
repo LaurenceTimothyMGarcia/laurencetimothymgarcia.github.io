@@ -463,6 +463,9 @@ dd:last-of-type {
 .portfolio-img-link img {
     max-width: 100%;
 }
+.portfolio-img-link img:hover {
+    opacity: 50%;
+}
 
 /* Art Projects Page
 ---------------------------*/
@@ -493,14 +496,15 @@ dd:last-of-type {
 /* Game Projects Page
 ---------------------------*/
 .game-pitch-background  {
-    background-color: var(--light_background);
-}
-.game-jam-background    {
     background-color: var(--light_dark_contrast);
     color:var(--light_background);
 }
-.workshop-background   {
+.game-jam-background    {
     background-color: var(--light_background);
+}
+.workshop-background   {
+    background-color: var(--light_dark_contrast);
+    color:var(--light_background);
 }
 
 .flex-img-gallery   {
@@ -531,6 +535,10 @@ dd:last-of-type {
     color: var(--light_background);
     padding: 1% 2%;
     margin: 0;
+}
+
+.image-card-text img{
+    max-width: 10%;
 }
 
 .image-card-text p, .image-card-text h3 {
