@@ -138,16 +138,22 @@ header h2    {
 
 /*Navigation Bar Links*/
 .nav-bar li a    {
-    color: var(--primary_color_contrast);
+    color: var(--light_background);
     text-decoration: none;
     display: inline-block;
     padding: 0 40px;
 }
 .nav-bar li a:hover  {
-    color: var(--light_background);
+    color: var(--primary_color_contrast);
 }
 .nav-bar li a:active  {
     color: var(--white);
+}
+.nav-bar li div a {
+    color: var(--primary_color_contrast);
+}
+.nav-bar li div a:hover {
+    color: var(--light_background);
 }
 
 /*Portfolio Drop*/
