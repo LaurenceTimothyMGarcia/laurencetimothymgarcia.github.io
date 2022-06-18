@@ -498,9 +498,9 @@ dd:last-of-type {
     margin-bottom: 0;
 }
 
-.image-card-art:hover   {
+/*.image-card-art:hover   {
     max-width: 50%;
-}
+}*/
 
 .image-card-art img, .image-card-art iframe {
     max-width: 100%;
