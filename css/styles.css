@@ -498,6 +498,10 @@ dd:last-of-type {
     margin-bottom: 0;
 }
 
+.image-card-art h4  {
+    font-size: 150%;
+}
+
 /*.image-card-art:hover   {
     max-width: 50%;
 }*/
