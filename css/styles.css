@@ -227,7 +227,7 @@ dl  {
     background-image: url(../images/index/3DModelRender.png);
     background-position: left;
     background-attachment: fixed;
-    background-color: var(--secondary_color_contrast);
+    background-color: var(--light_dark_contrast);
     background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
@@ -256,7 +256,7 @@ dl  {
     background-image: url(../images/index/Gaming.png);
     background-position: left;
     background-attachment: fixed;
-    background-color: rgba(51, 92, 129, 0.5);
+    background-color: var(--light_dark_contrast);
     background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
@@ -285,7 +285,7 @@ dl  {
     background-image: url(../images/index/VideoEditing.png);
     background-position: right;
     background-attachment: fixed;
-    background-color: rgba(51, 92, 129, 0.5);
+    background-color: var(--light_dark_contrast);
     background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
@@ -622,7 +622,7 @@ th button:hover    {
     grid-area: 1 / 1 / 4 / 2;
     background-image: url(../images/portfolios/ProgrammingIcon.png);
     background-attachment: fixed;
-    background-color: rgba(51, 92, 129, 0.5);
+    background-color: var(--secondary_color_contrast);
     background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
