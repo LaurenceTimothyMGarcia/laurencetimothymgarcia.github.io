@@ -31,6 +31,34 @@ Color Palette
         #9DA2AB - Silver Metallic
 */
 
+/*
+Color Set Variables
+
+Color Set 1
+    --light_background: #D7CDCC;
+    --white: #FFFFFF;
+    --light_dark_contrast: #5E5E7D;
+    --primary_color_contrast: #9C528B;
+    --secondary_color_contrast: #335C81;
+    --dark_contrast: #1D1E2C;
+
+Color Set 2
+    --light_background: #D4D1CC;
+    --white: #FFFFFF;
+    --light_dark_contrast: #303030;
+    --primary_color_contrast: #504DD6;
+    --secondary_color_contrast: #E2C62E;
+    --dark_contrast: #000000;
+
+Color Set 3
+    --light_background: #d4daf3;
+    --white: #FFFFFF;
+    --light_dark_contrast: #5E5E5E;
+    --primary_color_contrast: #48E5C2;
+    --secondary_color_contrast: #F3D3BD;
+    --dark_contrast: #333333;
+*/
+
 /* border box fix */
 html    {
     box-sizing: border-box;
