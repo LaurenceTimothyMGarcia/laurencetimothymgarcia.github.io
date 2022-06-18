@@ -556,7 +556,7 @@ dd:last-of-type {
 }
 
 .image-card-text img{
-    max-width: 10%;
+    max-width: 20%;
 }
 
 .image-card-text p, .image-card-text h3 {
