@@ -19,7 +19,7 @@ Color Palette
     Third Set
         #D7CDCC - Pale Silver
         #FFFFFF - White
-        #59656F - Black Coral
+        #59656F - Black Coral - #5E5E7D Replacement
         #9C528B - Razzmic Berry
         #1D1E2C - Raisin Black
     
@@ -44,7 +44,7 @@ html    {
 :root   {
     --light_background: #D7CDCC;
     --white: #FFFFFF;
-    --light_dark_contrast: #59656F;
+    --light_dark_contrast: #5E5E7D;
     --primary_color_contrast: #9C528B;
     --secondary_color_contrast: #335C81;
     --dark_contrast: #1D1E2C;
