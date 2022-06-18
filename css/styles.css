@@ -500,6 +500,7 @@ dd:last-of-type {
 
 .image-card-art h4  {
     font-size: 150%;
+    margin: 1%;
 }
 
 /*.image-card-art:hover   {
