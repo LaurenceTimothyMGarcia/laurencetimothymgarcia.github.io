@@ -581,7 +581,18 @@ dd:last-of-type {
 
 /* Programming Projects Page
 ---------------------------*/
-
+th button {
+    background-color: var(--dark_contrast);
+    font-family: inherit;
+    color: var(--white);
+    padding: 20%;
+    border: none;
+    text-decoration: none;
+}
+th button:hover    {
+    background-color: var(--light_dark_contrast);
+    cursor: pointer;
+}
 
 /* Resume Page
 ---------------------------*/
