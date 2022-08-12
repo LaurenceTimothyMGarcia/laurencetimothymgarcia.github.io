@@ -643,11 +643,11 @@ th button:hover    {
 .resume-sidebar-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .resume-sidebar {
-    grid-area: 1 / 1 / 4 / 2;
+    grid-area: 1 / 1 / 5 / 2;
     background-image: url(../images/portfolios/ProgrammingIcon.png);
     background-attachment: fixed;
     background-color: var(--secondary_color_contrast);
@@ -672,7 +672,8 @@ th button:hover    {
 }
 
 .resume-education   {
-    background-color: var(--light_background);
+    background-color: var(--light_dark_contrast);
+    color: var(--light_background);
     grid-area: 1 / 2 / 2 / 3;
     padding-left: 5%;
 }
@@ -680,17 +681,29 @@ th button:hover    {
     margin: 0;
 }
 
+.resume-skills  {
+    background-color: var(--light_background);
+    grid-area: 2 / 2 / 3 / 3;
+    padding-left: 5%;
+}
+
+.resume-skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
 .resume-leadership  {
     background-color: var(--light_dark_contrast);
     color: var(--light_background);
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 3 / 2 / 4 / 3;
     padding-left: 5%;
     padding-bottom: 2%;
 }
 
 .resume-work    {
     background-color: var(--light_background);
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 4 / 2 / 5 / 3;
     padding-left: 5%;
 }
 
