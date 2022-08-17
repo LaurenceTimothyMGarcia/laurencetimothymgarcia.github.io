@@ -475,6 +475,10 @@ dd:last-of-type {
     font-size: 200%;
 }
 
+.portfolio-txt-main  {
+    color: var(--white);
+    font-size: 200%;
+}
 
 .portfolio-img-link{
     display: flex;
