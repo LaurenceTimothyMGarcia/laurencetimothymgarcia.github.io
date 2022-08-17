@@ -396,9 +396,9 @@ dd:last-of-type {
     background-image: url(../images/index/resume.png);
     background-attachment: fixed;
     background-size: cover;
-    background-color: var(--light_background);
+    background-color: var(--dark_contrast);
     background-blend-mode: soft-light;
-    color: var(--dark_contrast);
+    color: var(--white);
 }
 .home-resume p {
     margin: 0;
