@@ -725,13 +725,40 @@ table   {
 tr  {
     
 }
+
 tr:first-child  {
-    background-color: var(--primary_color_contrast);
+    background-color: var(--light_dark_contrast);
     color: var(--white);
+    font-size: 150%;
+}
+
+tr:first-child a:link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+tr:first-child a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+tr:first-child a:hover {
+    color: var(--dark_contrast);
+    text-decoration: none;
+}
+
+tr:first-child a:active {
+    color: var(--primary_color_contrast);
+    text-decoration: none;
 }
 
 tr:nth-child(even){
     background-color: var(--light_background);
+}
+
+tr:nth-child(2)  {
+    background-color: var(--primary_color_contrast);
+    color: var(--white);
 }
 
 th  {
