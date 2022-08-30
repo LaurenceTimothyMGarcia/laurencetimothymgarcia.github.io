@@ -727,7 +727,7 @@ tr  {
 }
 
 tr:first-child  {
-    background-color: var(--light_dark_contrast);
+    background-color: var(--primary_color_contrast);
     color: var(--white);
     font-size: 150%;
 }
@@ -754,11 +754,6 @@ tr:first-child a:active {
 
 tr:nth-child(even){
     background-color: var(--light_background);
-}
-
-tr:nth-child(2)  {
-    background-color: var(--primary_color_contrast);
-    color: var(--white);
 }
 
 th  {
