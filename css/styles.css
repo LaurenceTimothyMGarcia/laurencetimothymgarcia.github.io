@@ -556,6 +556,9 @@ dd:last-of-type {
     background-color: var(--secondary_color_contrast);
     color:var(--light_background);
 }
+.in-dev-background    {
+    background-color: var(--light_background);
+}
 
 .flex-img-gallery   {
     display: flex;
