@@ -70,8 +70,16 @@ Color Set 5
     --light_background: #e0e0ce;
     --white: #FFFFFF;
     --light_dark_contrast: #3b5249;
-    --primary_color_contrast: #461a8e;
-    --secondary_color_contrast: #ad343e;    DBB53D yellow also an option
+    --primary_color_contrast: #461a8e;      5b46a7
+    --secondary_color_contrast: #ad343e;    DBB53D yellow also an option    F2CF7E  d9866d
+    --dark_contrast: #181414;
+
+Color Set 5.1 - less vibrant 5
+    --light_background: #e0e0ce;
+    --white: #FFFFFF;
+    --light_dark_contrast: #373c2e;
+    --primary_color_contrast: #5b46a7;
+    --secondary_color_contrast: #d9866d;
     --dark_contrast: #181414;
 */
 
@@ -88,9 +96,9 @@ html    {
 :root   {
     --light_background: #e0e0ce;
     --white: #FFFFFF;
-    --light_dark_contrast: #143109;
-    --primary_color_contrast: #461a8e;
-    --secondary_color_contrast: #DBB53D;
+    --light_dark_contrast: #2f2b47;
+    --primary_color_contrast: #5b46a7;
+    --secondary_color_contrast: #d9866d;
     --dark_contrast: #181414;
 }
 
