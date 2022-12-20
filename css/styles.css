@@ -57,6 +57,22 @@ Color Set 3
     --primary_color_contrast: #48E5C2;
     --secondary_color_contrast: #F3D3BD;
     --dark_contrast: #333333;
+
+Color Set 4
+    --light_background: #f4eded;
+    --white: #FFFFFF;
+    --light_dark_contrast: #877666;
+    --primary_color_contrast: #464d77;
+    --secondary_color_contrast: #36827f;
+    --dark_contrast: #4a433c;
+
+Color Set 5
+    --light_background: #e0e0ce;
+    --white: #FFFFFF;
+    --light_dark_contrast: #3b5249;
+    --primary_color_contrast: #461a8e;
+    --secondary_color_contrast: #ad343e;
+    --dark_contrast: #181414;
 */
 
 /* border box fix */
@@ -70,12 +86,12 @@ html    {
 /* Variables for color pallete
 ---------------------------*/
 :root   {
-    --light_background: #D7CDCC;
+    --light_background: #e0e0ce;
     --white: #FFFFFF;
-    --light_dark_contrast: #5E5E7D;
-    --primary_color_contrast: #9C528B;
-    --secondary_color_contrast: #335C81;
-    --dark_contrast: #1D1E2C;
+    --light_dark_contrast: #143109;
+    --primary_color_contrast: #461a8e;
+    --secondary_color_contrast: #ad343e;
+    --dark_contrast: #181414;
 }
 
 /* Global Styles
