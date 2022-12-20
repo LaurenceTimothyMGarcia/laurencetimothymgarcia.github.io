@@ -71,7 +71,7 @@ Color Set 5
     --white: #FFFFFF;
     --light_dark_contrast: #3b5249;
     --primary_color_contrast: #461a8e;
-    --secondary_color_contrast: #ad343e;
+    --secondary_color_contrast: #ad343e;    DBB53D yellow also an option
     --dark_contrast: #181414;
 */
 
@@ -90,7 +90,7 @@ html    {
     --white: #FFFFFF;
     --light_dark_contrast: #143109;
     --primary_color_contrast: #461a8e;
-    --secondary_color_contrast: #ad343e;
+    --secondary_color_contrast: #DBB53D;
     --dark_contrast: #181414;
 }
 
