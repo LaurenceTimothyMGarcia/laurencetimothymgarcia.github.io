@@ -31,6 +31,11 @@ scene.add(ambientLight);
 //Control 3d scene
 const controls = new OrbitControls(camera, renderer.domElement);
 
+
+//adding my name as text
+// const textLoader = new FontLoader();
+// textLoader.load('')
+
 //Randomly generated stars
 //used for testing
 function addStar()
