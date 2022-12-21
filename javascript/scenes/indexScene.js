@@ -1,10 +1,10 @@
 //Scene for the index page of portfolio website
 
 //Import THREE JS 
-import * as THREE from '../../node_modules/three/build/three.module.js';
+import * as THREE from 'three';
 
 //Import Controls
-import { OrbitControls } from '../../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
 //Set up SCENE, CAMERA, RENDERER
