@@ -1,5 +1,24 @@
 {
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "three": "^0.147.0"
-  }
+  },
+  "name": "laurencetimothymgarcia.github.io",
+  "description": "Laurence Garcia's Personal Website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy" : "gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io/issues"
+  },
+  "homepage": "https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io#readme"
 }
