@@ -11,7 +11,10 @@ html    {
 /* Variables for color pallete
 ---------------------------*/
 :root   {
-
+    --primary_color: #FFFFFF;
+    --primary_variant_color: #FFFFFF;
+    --secondary_color: #FFFFFF;
+    --secondary_variant_color: #FFFFFF;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -26,10 +29,37 @@ html    {
         url(//fonts/Lato-Regular.ttf) format('truetype');
 }
 
+body 
+{
+    /* Font Details */
+    font-family: "lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--white);
+
+    /*Removing Space between elements*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* Canvas for THREE JS */
 canvas
 {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+main
+{
+    position: absolute;
+}
+
+
+/*** Specific Elements ***/
+header
+{
+
 }

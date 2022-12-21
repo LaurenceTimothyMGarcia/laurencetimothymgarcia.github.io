@@ -24,6 +24,30 @@ camera.position.setZ(30);
 renderer.render(scene, camera);
 //END Set up
 
+//Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff);
+scene.add(ambientLight);
+
+//Control 3d scene
+const controls = new OrbitControls(camera, renderer.domElement);
+
+//Randomly generated stars
+//used for testing
+function addStar()
+{
+    const geometry = new THREE.SphereGeometry(0.25, 25, 25);
+    const material = new THREE.MeshStandardMaterial( { color: 0xffffff } );
+    const star = new THREE.Mesh( geometry, material );
+
+    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ) );
+
+    star.position.set(x, y, z);
+
+    scene.add(star);
+}
+
+Array(200).fill().forEach(addStar);
+
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
