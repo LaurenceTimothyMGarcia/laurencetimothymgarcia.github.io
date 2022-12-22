@@ -119,8 +119,8 @@ body   {
     color: var(--dark_contrast);
 
     /*Removing Space between elements*/
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -566,6 +566,24 @@ dd:last-of-type {
 .image-card-art img, .image-card-art iframe {
     max-width: 100%;
 }
+
+/* Image Gallery that doesnt work */
+/* #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+}
+
+#image-track > .art-image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+} */
 
 /* Game Projects Page
 ---------------------------*/
