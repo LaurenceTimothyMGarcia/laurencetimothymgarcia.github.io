@@ -23,16 +23,16 @@ html    {
 /* Global Styles
 ---------------------------*/
 @font-face  {
-    font-family: "lato";
-    src: url(../fonts/Lato-Regular.woff2) format('woff2'),
-        url(../fonts/Lato-Regular.woff) format('woff'),
-        url(../fonts/Lato-Regular.ttf) format('truetype');
+    font-family: "comfortaa";
+    src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
+        url(../fonts/Comfortaa-Regular.woff) format('woff'),
+        url(../fonts/Comfortaa-Regular.ttf) format('truetype');
 }
 
 body 
 {
     /* Font Details */
-    font-family: "lato", sans-serif;
+    font-family: "comfortaa", sans-serif;
     font-size: 15px;
     line-height: 1.5;
     color: var(--white);

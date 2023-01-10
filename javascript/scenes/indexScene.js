@@ -3,6 +3,11 @@
 //Import THREE JS 
 import * as THREE from 'three';
 
+//Font and text loaders and text geometry addon
+import { TTFLoader } from 'three/addons/loaders/TTFLoader';
+import { FontLoader } from 'three/addons/loaders/FontLoader';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry';
+
 //Import Controls
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
@@ -33,8 +38,25 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 
 //adding my name as text
-// const textLoader = new FontLoader();
-// textLoader.load('')
+const fontLoader = new FontLoader();
+const ttfLoader = new TTFLoader();
+ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
+        const comfortaaFont = fontLoader.parse(json);
+
+        const nameGeometry = new TextGeometry('Laurence Garcia', {
+            font: comfortaaFont,
+            size: 5, 
+            height: 5
+        });
+
+        const nameMaterial = new THREE.MeshNormalMaterial();
+        const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
+
+        nameMesh.position.x = -36;
+        nameMesh.position.y = 5;
+        scene.add(nameMesh);
+    }
+);
 
 //Randomly generated stars
 //used for testing
