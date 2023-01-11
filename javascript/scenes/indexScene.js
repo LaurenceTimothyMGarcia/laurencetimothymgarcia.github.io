@@ -63,8 +63,7 @@ scene.add(dirHelper1);
 const modelLoader = new GLTFLoader();
 
 //Desk
-//Test atm
-modelLoader.load( '../../models/DeskScene.glb', function ( gltf ) {
+modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
 
     scene.add(gltf.scene);
 
@@ -72,7 +71,27 @@ modelLoader.load( '../../models/DeskScene.glb', function ( gltf ) {
     console.error( error );
 });
 
+//Left monitor
+modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 
+    const monitorL = gltf.scene.children[0];
+
+    scene.add(monitorL);
+
+}, undefined, function ( error ) {
+    console.error( error );
+});
+
+//Right monitor
+modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
+
+    const monitorR = gltf.scene.children[0];
+
+    scene.add(monitorR);
+
+}, undefined, function ( error ) {
+    console.error( error );
+});
 
 //adding my name as text
 const fontLoader = new FontLoader();
@@ -156,11 +175,15 @@ window.onmousemove = function (ev) {
     let changey = ev.y - oldY;
 
     //Higher you divide the value, the tighter it is
+    //Horizontal changes
     camera.position.x += changex/1250;
-    camera.rotateY(-changex/5000);
+    camera.rotateY(-changex/7500);
+    camera.rotation.z = 0;
 
+    //Vertical changes
     camera.position.y -= changey/1250;
     camera.rotateX(-changey/7500);
+    camera.rotation.z = 0;
 
     oldX = ev.x;
     oldY = ev.y;
