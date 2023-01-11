@@ -1,6 +1,3 @@
-//import css
-// import '../../css/style.css';
-
 //Scene for the index page of portfolio website
 
 //Import THREE JS 
@@ -76,6 +73,10 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 
     const monitorL = gltf.scene.children[0];
 
+    //Monitor CHILD 1 on array is the material for the screen
+    const testMat = new THREE.MeshBasicMaterial ( { color: 0x000000 } );
+    monitorL.children[1].material = testMat;
+
     scene.add(monitorL);
 
 }, undefined, function ( error ) {
@@ -86,6 +87,23 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
 
     const monitorR = gltf.scene.children[0];
+
+    //Monitor CHILD 1 on array is the material for the screen
+    const testMat = new THREE.MeshBasicMaterial ( { color: 0x000000 } );
+
+    //Video texture for testing
+    const testVid = document.getElementById("testVid");
+    const vidTexture = new THREE.VideoTexture(testVid);
+    vidTexture.minFilter = THREE.LinearFilter;
+    vidTexture.magFilter = THREE.LinearFilter;
+
+    const videoMat = new THREE.MeshBasicMaterial({
+        map: vidTexture,
+        side: THREE.FrontSide,
+        toneMapped: false
+    });
+
+    monitorR.children[1].material = videoMat;
 
     scene.add(monitorR);
 
@@ -177,7 +195,7 @@ window.onmousemove = function (ev) {
     //Higher you divide the value, the tighter it is
     //Horizontal changes
     camera.position.x += changex/1250;
-    camera.rotateY(-changex/7500);
+    camera.rotateY(-changex/10000);
     camera.rotation.z = 0;
 
     //Vertical changes
