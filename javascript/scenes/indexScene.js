@@ -35,6 +35,14 @@ renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 
 renderer.render(scene, camera);
+
+//Resizes window when window changes
+window.onresize = function (e) {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
 //END Set up
 
 //Lighting SET UP
@@ -62,6 +70,9 @@ const modelLoader = new GLTFLoader();
 //Desk
 modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
 
+    gltf.scene.castShadow = true;
+    gltf.scene.receiveShadow = true;
+
     scene.add(gltf.scene);
 
 }, undefined, function ( error ) {
@@ -73,9 +84,16 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 
     const monitorL = gltf.scene.children[0];
 
+    monitorL.castShadow = true;
+    monitorL.receiveShadow = true;
+
     //Monitor CHILD 1 on array is the material for the screen
-    const testMat = new THREE.MeshBasicMaterial ( { color: 0x000000 } );
-    monitorL.children[1].material = testMat;
+    const screenMat = new THREE.MeshBasicMaterial ( { color: 0x00ff00 } );
+    monitorL.children[1].material = screenMat;
+
+    //User data
+    monitorL.userData.select = true;
+    monitorL.userData.name = "Left Monitor";
 
     scene.add(monitorL);
 
@@ -129,6 +147,9 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
         nameMesh.position.x = -6;
         nameMesh.position.y = 5.5;
         nameMesh.position.z = -1;
+
+        nameMesh.userData.select = true;
+        nameMesh.userData.name = "Name";
         scene.add(nameMesh);
     }
 );
@@ -138,31 +159,54 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 const mouse = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
 
-const onMouseMove = ( event ) => {
+//still cant seem to find objects, even the text mesh
+window.addEventListener('click', event => {
 
-    //calc mouse pos in normalized device coords
-    // (-1 to 1 for both compoenents)
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObjects(scene.children);
 
-    //Debugging to see whats in the statement
-    // for (let i = 0; i < intersects.length; i++)
-    // {
-    //     console.log(intersects);
-    // }
+    const intersects = raycaster.intersectObjects(scene.children, true);
 
-    // Takes first object and makes red
-    // Doesnt work
-    // if (intersects.length > 0)
-    // {
-    //     intersects[0].object.material.color.set(0xff0000);
-    // }
-};
+    console.log("Mouse clicked");
 
-window.addEventListener('mousemove', onMouseMove);
+    if (intersects.length > 0) //&& intersects[0].object.userData.select)
+    {
+        console.log(`FOUND ${intersects[0].object.userData.name}`);
+    }
+})
+
+// const onMouseMove = ( event ) => {
+
+//     //calc mouse pos in normalized device coords
+//     // (-1 to 1 for both compoenents)
+//     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+//     mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
+
+//     raycaster.setFromCamera(mouse, camera);
+//     const intersects = raycaster.intersectObjects(scene.children, true);
+
+//     if (intersects.length > 0 && intersects[0].object.userData.select)
+//     {
+//         console.log(`FOUND ${intersects[0].object.userData.name}`);
+//     }
+
+//     //Debugging to see whats in the statement
+//     // for (let i = 0; i < intersects.length; i++)
+//     // {
+//     //     console.log(intersects);
+//     // }
+
+//     // Takes first object and makes red
+//     // Doesnt work
+//     // if (intersects.length > 0)
+//     // {
+//     //     intersects[0].object.material.color.set(0xff0000);
+//     // }
+// };
+
+// window.addEventListener('mousemove', onMouseMove);
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
@@ -175,14 +219,6 @@ function animate()
 }
 
 animate();
-
-//Resizes window when window changes
-window.onresize = function (e) {
-    camera.aspect = window.innerWidth/window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
 
 //adds paralax effect to site
 //changing these values changes the "center"
