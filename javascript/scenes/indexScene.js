@@ -1,3 +1,6 @@
+//import css
+// import '../../css/style.css';
+
 //Scene for the index page of portfolio website
 
 //Import THREE JS 
@@ -135,3 +138,26 @@ function animate()
 }
 
 animate();
+
+//Resizes window when window changes
+window.onresize = function (e) {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+//adds paralax effect to site
+let oldX = 0;
+let oldY = 0;
+window.onmousemove = function (ev) {
+    let changex = ev.x - oldX;
+    let changey = ev.y - oldY;
+
+    //Higher you divide the value, the tighter it is
+    camera.position.x -= changex/1250;
+    camera.position.y += changey/1000;
+
+    oldX = ev.x;
+    oldY = ev.y;
+}
