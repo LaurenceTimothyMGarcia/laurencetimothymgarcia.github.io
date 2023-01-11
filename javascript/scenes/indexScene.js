@@ -18,7 +18,10 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //Set up SCENE, CAMERA, RENDERER
 const scene = new THREE.Scene();
 //Camera initialization
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+//Offsets camera
+camera.position.set(0, 3, 8);
+
 //Uses dom element canvas with bg
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
@@ -26,22 +29,23 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-//Offsets camera
-camera.position.setZ(30);
 
 renderer.render(scene, camera);
 //END Set up
 
-//Lighting
-const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(ambientLight);
+//Lighting SET UP
 
-const light = new THREE.PointLight(0xffffff, 10, 100);
-light.position.set(0, 5, 10);
-scene.add(light);
+//Directional Light 1
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 25);
+dirLight1.position.set(5, 10, 7.5);
+scene.add(dirLight1);
+
+//Light helper - Remove later
+const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
+scene.add(dirHelper1);
 
 //Control 3d scene
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
 
 //Loader for 3d models
@@ -49,11 +53,9 @@ const modelLoader = new GLTFLoader();
 
 //Desk
 //Test atm
-modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
+modelLoader.load( '../../models/DeskScene.glb', function ( gltf ) {
 
-    const deskMesh = gltf.scene.children[0];
-
-    scene.add(deskMesh);
+    scene.add(gltf.scene);
 
 }, undefined, function ( error ) {
     console.error( error );
@@ -69,35 +71,19 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 
         const nameGeometry = new TextGeometry('Laurence Garcia', {
             font: comfortaaFont,
-            size: 5, 
-            height: 5
+            size: 1, 
+            height: 0.5
         });
 
         const nameMaterial = new THREE.MeshNormalMaterial();
         const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
 
-        nameMesh.position.x = -36;
-        nameMesh.position.y = 5;
+        nameMesh.position.x = -6;
+        nameMesh.position.y = 5.5;
+        nameMesh.position.z = -1;
         scene.add(nameMesh);
     }
 );
-
-//Randomly generated stars
-//used for testing
-function addStar()
-{
-    const geometry = new THREE.SphereGeometry(0.25, 25, 25);
-    const material = new THREE.MeshStandardMaterial( { color: 0xffffff } );
-    const star = new THREE.Mesh( geometry, material );
-
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ) );
-
-    star.position.set(x, y, z);
-
-    scene.add(star);
-}
-
-Array(200).fill().forEach(addStar);
 
 
 //Recursive function to repeatedly call and refresh the screen
