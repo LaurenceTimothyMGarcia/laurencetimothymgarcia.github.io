@@ -52,11 +52,11 @@ const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
 scene.add(dirHelper1);
 
 //Control 3d scene
-const controls = new OrbitControls(camera, renderer.domElement);
-//Uses direction to set up orbit control default 
-camera.getWorldPosition(controls.target);
-controls.target.addScaledVector(camDirection, 5);
-controls.update();
+// const controls = new OrbitControls(camera, renderer.domElement);
+// //Uses direction to set up orbit control default 
+// camera.getWorldPosition(controls.target);
+// controls.target.addScaledVector(camDirection, 5);
+// controls.update();
 
 
 //Loader for 3d models
@@ -117,8 +117,8 @@ const onMouseMove = ( event ) => {
     //     console.log(intersects);
     // }
 
-    //Takes first object and makes red
-    //Doesnt work
+    // Takes first object and makes red
+    // Doesnt work
     // if (intersects.length > 0)
     // {
     //     intersects[0].object.material.color.set(0xff0000);
@@ -132,7 +132,7 @@ function animate()
 {
     requestAnimationFrame( animate );
 
-    controls.update();
+    // controls.update();
 
     renderer.render( scene, camera );
 }
@@ -148,15 +148,19 @@ window.onresize = function (e) {
 }
 
 //adds paralax effect to site
-let oldX = 0;
-let oldY = 0;
+//changing these values changes the "center"
+let oldX = 750;
+let oldY = 500;
 window.onmousemove = function (ev) {
     let changex = ev.x - oldX;
     let changey = ev.y - oldY;
 
     //Higher you divide the value, the tighter it is
-    camera.position.x -= changex/1250;
-    camera.position.y += changey/1000;
+    camera.position.x += changex/1250;
+    camera.rotateY(-changex/5000);
+
+    camera.position.y -= changey/1250;
+    camera.rotateX(-changey/7500);
 
     oldX = ev.x;
     oldY = ev.y;
