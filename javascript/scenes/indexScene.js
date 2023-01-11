@@ -22,6 +22,10 @@ const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerH
 //Offsets camera
 camera.position.set(0, 3, 8);
 
+//Get direction of camera
+const camDirection = new THREE.Vector3();
+camera.getWorldDirection(camDirection);
+
 //Uses dom element canvas with bg
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
@@ -45,7 +49,11 @@ const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
 scene.add(dirHelper1);
 
 //Control 3d scene
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+//Uses direction to set up orbit control default 
+camera.getWorldPosition(controls.target);
+controls.target.addScaledVector(camDirection, 5);
+controls.update();
 
 
 //Loader for 3d models
@@ -86,12 +94,42 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 );
 
 
+//Mouse interaction
+const mouse = new THREE.Vector2();
+const raycaster = new THREE.Raycaster();
+
+const onMouseMove = ( event ) => {
+
+    //calc mouse pos in normalized device coords
+    // (-1 to 1 for both compoenents)
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(scene.children);
+
+    //Debugging to see whats in the statement
+    // for (let i = 0; i < intersects.length; i++)
+    // {
+    //     console.log(intersects);
+    // }
+
+    //Takes first object and makes red
+    //Doesnt work
+    // if (intersects.length > 0)
+    // {
+    //     intersects[0].object.material.color.set(0xff0000);
+    // }
+};
+
+window.addEventListener('mousemove', onMouseMove);
+
 //Recursive function to repeatedly call and refresh the screen
 function animate()
 {
     requestAnimationFrame( animate );
 
-    //controls.update();
+    controls.update();
 
     renderer.render( scene, camera );
 }
