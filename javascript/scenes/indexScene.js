@@ -214,6 +214,21 @@ modelLoader.load('../../models/Resume.gltf', function (gltf) {
     console.error( error );
 });
 
+//CLA
+modelLoader.load('../../models/CLA.gltf', function (gltf) {
+
+    const cla = gltf.scene.children[0];
+
+    cla.userData.select = true;
+    cla.userData.name = "CLA";
+    cla.userData.ogCol = cla.material.color.getHex();
+
+    scene.add(cla);
+
+}, undefined, function ( error ) {
+    console.error( error );
+});
+
 //Polaroids
 modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
 
@@ -322,22 +337,22 @@ window.addEventListener('mousemove', event => {
         switch(intersects[0].object.userData.name)
         {
             case "Name":
-                intersects[0].object.material.color.set(Math.random() * hoverColor);;
+                intersects[0].object.material.color.set(Math.random() * hoverColor);
                 break;
             case "Left Monitor":
-                intersects[1].object.material.color.set(Math.random() * hoverColor);;
+                intersects[1].object.material.color.set(Math.random() * hoverColor);
                 break;
             case "Right Monitor":
-                intersects[1].object.material.color.set(Math.random() * hoverColor);;
+                intersects[1].object.material.color.set(Math.random() * hoverColor);
                 break;
             case "Polaroid":
-                intersects[1].object.material.color.set(Math.random() * hoverColor);;
+                intersects[1].object.material.color.set(Math.random() * hoverColor);
                 break;
             case "Resume":
-                intersects[0].object.material.color.set(Math.random() * hoverColor);;
+                intersects[0].object.material.color.set(Math.random() * hoverColor);
                 break;
             case "CLA":
-                intersects[0].object.material.color.set(0x0000ff);;
+                intersects[0].object.material.color.set(Math.random() * hoverColor);
                 break;
         }
     }
