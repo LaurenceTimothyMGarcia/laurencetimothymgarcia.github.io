@@ -316,7 +316,7 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 const mouse = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
 
-//When clicking
+//When clicking on eligble mesh
 window.addEventListener('click', event => {
 
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
