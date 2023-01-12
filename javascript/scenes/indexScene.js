@@ -101,6 +101,7 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
     console.error( error );
 });
 
+
 //Right monitor
 modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
 
@@ -179,7 +180,7 @@ window.addEventListener('mousemove', event => {
         console.log(`FOUND ${intersects[0].object.userData.name}`);
 
         //Meant to highlight screen when hovering
-        // intersects[0].object.material.color.set(0xff0000);
+        intersects[1].object.material.color.set(0xffffff);
     }
 
 })
@@ -219,37 +220,6 @@ window.addEventListener('click', event => {
         }
     }
 })
-
-// const onMouseMove = ( event ) => {
-
-//     //calc mouse pos in normalized device coords
-//     // (-1 to 1 for both compoenents)
-//     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-//     mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
-
-//     raycaster.setFromCamera(mouse, camera);
-//     const intersects = raycaster.intersectObjects(scene.children, true);
-
-//     if (intersects.length > 0 && intersects[0].object.userData.select)
-//     {
-//         console.log(`FOUND ${intersects[0].object.userData.name}`);
-//     }
-
-//     //Debugging to see whats in the statement
-//     // for (let i = 0; i < intersects.length; i++)
-//     // {
-//     //     console.log(intersects);
-//     // }
-
-//     // Takes first object and makes red
-//     // Doesnt work
-//     // if (intersects.length > 0)
-//     // {
-//     //     intersects[0].object.material.color.set(0xff0000);
-//     // }
-// };
-
-// window.addEventListener('mousemove', onMouseMove);
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
