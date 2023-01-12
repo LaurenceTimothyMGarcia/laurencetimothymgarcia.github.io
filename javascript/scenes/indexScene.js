@@ -51,20 +51,30 @@ window.onresize = function (e) {
 //Lighting SET UP
 
 //Directional Light 1
-const dirLight1 = new THREE.DirectionalLight(0xffffff, 20);
-dirLight1.position.set(5, 10, 7.5);
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 1);
+dirLight1.position.set(50, 100, 7.5);
 dirLight1.castShadow = true;
-dirLight1.shadow.camera.near = 0.1;
-dirLight1.shadow.camera.far = 500.0;
-dirLight1.shadow.camera.left = -50;
-dirLight1.shadow.camera.right = 50;
-dirLight1.shadow.camera.top = 50;
-dirLight1.shadow.camera.bottom = -50;
 scene.add(dirLight1);
+
+//Spot Light 1
+const spotLight1 = new THREE.SpotLight(0xffffff, 1, 0, Math.PI/3, 1);
+spotLight1.position.set(-5, 15, 7.5);
+spotLight1.castShadow = true;
+scene.add(spotLight1);
+
+//Point Light 1
+const pointLight1 = new THREE.PointLight(0xffffff, 0.3);
+pointLight1.position.set(0, 3, -2);
+pointLight1.castShadow = true;
+scene.add(pointLight1);
 
 //Light helper - Remove later
 const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
 scene.add(dirHelper1);
+const spotHelper1 = new THREE.SpotLightHelper(spotLight1);
+scene.add(spotHelper1);
+const pointHelper1 = new THREE.PointLightHelper(pointLight1);
+scene.add(pointHelper1);
 
 //Control 3d scene
 // const controls = new OrbitControls(camera, renderer.domElement);
@@ -77,11 +87,28 @@ scene.add(dirHelper1);
 //Loader for 3d models
 const modelLoader = new GLTFLoader();
 
-//Desk
-modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
+//Room || Walls
+modelLoader.load('../../models/Room.gltf', function (gltf) {
 
-    gltf.scene.castShadow = true;
-    gltf.scene.receiveShadow = true;
+    gltf.scene.children[0].receiveShadow = true;
+
+    gltf.scene.children[0].userData.select = false;
+
+    scene.add(gltf.scene);
+
+}, undefined, function ( error ) {
+    console.error( error );
+});
+
+//Desk
+modelLoader.load( '../../models/Desk.gltf', function ( gltf ) {
+
+    gltf.scene.children[0].castShadow = true;
+    gltf.scene.children[0].receiveShadow = false;
+    gltf.scene.children[1].castShadow = true;
+    gltf.scene.children[1].receiveShadow = false;
+    gltf.scene.children[2].castShadow = true;
+    gltf.scene.children[2].receiveShadow = false;
 
     scene.add(gltf.scene);
 
@@ -90,16 +117,16 @@ modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
 });
 
 //Left monitor
-modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
+modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
 
     const monitorL = gltf.scene.children[0];
 
     //User data - must select the screen
     monitorL.children[1].userData.select = true;
     monitorL.children[1].userData.name = "Left Monitor";
+    monitorL.children[1].userData.ogCol = monitorL.children[0].material.color.getHex();
 
-    monitorL.castShadow = true;
-    monitorL.receiveShadow = true;
+    monitorL.children[0].castShadow = true;
 
     //Monitor CHILD 1 on array is the mesh for the screen
     const screenMat = new THREE.MeshBasicMaterial ( { color: 0x00ff00 } );
@@ -113,13 +140,16 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 
 
 //Right monitor
-modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
+modelLoader.load( '../../models/MonitorR.gltf', function ( gltf ) {
 
     const monitorR = gltf.scene.children[0];
 
     //User data
     monitorR.children[1].userData.select = true;
     monitorR.children[1].userData.name = "Right Monitor";
+    monitorR.children[1].userData.ogCol = monitorR.children[0].material.color.getHex();
+
+    monitorR.children[0].castShadow = true;
 
     //Monitor CHILD 1 on array is the material for the screen
     const testMat = new THREE.MeshBasicMaterial ( { color: 0x000000 } );
@@ -145,12 +175,13 @@ modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
 });
 
 //Resume
-modelLoader.load('../../models/Resume.glb', function (gltf) {
+modelLoader.load('../../models/Resume.gltf', function (gltf) {
 
     const resume = gltf.scene.children[0];
 
-    resume.userData.name = true;
+    resume.userData.select = true;
     resume.userData.name = "Resume";
+    resume.userData.ogCol = resume.material.color.getHex();
 
     scene.add(resume);
 
@@ -159,7 +190,7 @@ modelLoader.load('../../models/Resume.glb', function (gltf) {
 });
 
 //Polaroids
-modelLoader.load('../../models/Polaroids.glb', function (gltf) {
+modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
 
     //Initialize all 5 polaroids
     const polaroid1 = gltf.scene.children[0];
@@ -173,26 +204,36 @@ modelLoader.load('../../models/Polaroids.glb', function (gltf) {
     polaroid1.children[1].userData.select = true;
     polaroid1.children[0].userData.name = "Polaroid";
     polaroid1.children[1].userData.name = "Polaroid";
+    polaroid1.children[0].userData.ogCol = polaroid1.children[0].material.color.getHex();
+    polaroid1.children[1].userData.ogCol = polaroid1.children[0].material.color.getHex();
 
     polaroid2.children[0].userData.select = true;
     polaroid2.children[1].userData.select = true;
     polaroid2.children[0].userData.name = "Polaroid";
     polaroid2.children[1].userData.name = "Polaroid";
+    polaroid2.children[0].userData.ogCol = polaroid2.children[0].material.color.getHex();
+    polaroid2.children[1].userData.ogCol = polaroid2.children[0].material.color.getHex();
 
     polaroid3.children[0].userData.select = true;
     polaroid3.children[1].userData.select = true;
     polaroid3.children[0].userData.name = "Polaroid";
     polaroid3.children[1].userData.name = "Polaroid";
+    polaroid3.children[0].userData.ogCol = polaroid3.children[0].material.color.getHex();
+    polaroid3.children[1].userData.ogCol = polaroid3.children[0].material.color.getHex();
 
     polaroid4.children[0].userData.select = true;
     polaroid4.children[1].userData.select = true;
     polaroid4.children[0].userData.name = "Polaroid";
     polaroid4.children[1].userData.name = "Polaroid";
+    polaroid4.children[0].userData.ogCol = polaroid4.children[0].material.color.getHex();
+    polaroid4.children[1].userData.ogCol = polaroid4.children[0].material.color.getHex();
 
     polaroid5.children[0].userData.select = true;
     polaroid5.children[1].userData.select = true;
     polaroid5.children[0].userData.name = "Polaroid";
     polaroid5.children[1].userData.name = "Polaroid";
+    polaroid5.children[0].userData.ogCol = polaroid5.children[0].material.color.getHex();
+    polaroid5.children[1].userData.ogCol = polaroid5.children[0].material.color.getHex();
 
     //Add all polaroids to the scene
     scene.add(polaroid1);
@@ -250,11 +291,74 @@ window.addEventListener('mousemove', event => {
         //Debug naming
         console.log(`FOUND ${intersects[0].object.userData.name}`);
 
+        const hoverColor = 0x0000ff;
+
         //Meant to highlight screen when hovering
-        intersects[1].object.material.color.set(0x0000ff);
+        switch(intersects[0].object.userData.name)
+        {
+            case "Name":
+                intersects[0].object.material.color.set(Math.random() * hoverColor);;
+                break;
+            case "Left Monitor":
+                intersects[1].object.material.color.set(Math.random() * hoverColor);;
+                break;
+            case "Right Monitor":
+                intersects[1].object.material.color.set(Math.random() * hoverColor);;
+                break;
+            case "Polaroid":
+                intersects[1].object.material.color.set(Math.random() * hoverColor);;
+                break;
+            case "Resume":
+                intersects[0].object.material.color.set(Math.random() * hoverColor);;
+                break;
+            case "CLA":
+                intersects[0].object.material.color.set(0x0000ff);;
+                break;
+        }
     }
 
-})
+});
+
+//Mouse out restore color
+window.addEventListener('mouseout', event => {
+
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    const intersects = raycaster.intersectObjects(scene.children, true);
+
+    if (intersects.length > 0)
+    {
+        //Debug naming
+        console.log(`FOUND ${intersects[0].object.userData.name}`);
+
+        //Meant to highlight screen when hovering
+        switch(intersects[0].object.userData.name)
+        {
+            case "Name":
+                intersects[0].object.material.color.set(intersects[0].object.userData.ogCol);;
+                break;
+            case "Left Monitor":
+                intersects[1].object.material.color.set(intersects[0].object.userData.ogCol);;
+                break;
+            case "Right Monitor":
+                intersects[1].object.material.color.set(intersects[0].object.userData.ogCol);;
+                break;
+            case "Polaroid":
+                intersects[1].object.material.color.set(intersects[0].object.userData.ogCol);;
+                break;
+            case "Resume":
+                intersects[0].object.material.color.set(intersects[0].object.userData.ogCol);;
+                break;
+            case "CLA":
+                intersects[0].object.material.color.set(intersects[0].object.userData.ogCol);;
+                break;
+        }
+    }
+
+});
 
 //When clicking
 window.addEventListener('click', event => {
