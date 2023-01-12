@@ -102,11 +102,11 @@ scene.add(pointHelper3);
 
 
 //Control 3d scene
-const controls = new OrbitControls(camera, renderer.domElement);
-//Uses direction to set up orbit control default 
-camera.getWorldPosition(controls.target);
-controls.target.addScaledVector(camDirection, 5);
-controls.update();
+// const controls = new OrbitControls(camera, renderer.domElement);
+// //Uses direction to set up orbit control default 
+// camera.getWorldPosition(controls.target);
+// controls.target.addScaledVector(camDirection, 5);
+// controls.update();
 
 
 //Loader for 3d models
@@ -315,90 +315,6 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 //Mouse interaction
 const mouse = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
-
-//When hovering over object
-window.addEventListener('mousemove', event => {
-
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-    raycaster.setFromCamera(mouse, camera);
-
-    const intersects = raycaster.intersectObjects(scene.children, true);
-
-    if (intersects.length > 0 && intersects[0].object.userData.select)
-    {
-        //Debug naming
-        console.log(`FOUND ${intersects[0].object.userData.name}`);
-
-        const hoverColor = 0x0000ff;
-
-        //Meant to highlight screen when hovering
-        switch(intersects[0].object.userData.name)
-        {
-            case "Name":
-                intersects[0].object.material.color.set(Math.random() * hoverColor);
-                break;
-            case "Left Monitor":
-                intersects[1].object.material.color.set(Math.random() * hoverColor);
-                break;
-            case "Right Monitor":
-                intersects[1].object.material.color.set(Math.random() * hoverColor);
-                break;
-            case "Polaroid":
-                intersects[1].object.material.color.set(Math.random() * hoverColor);
-                break;
-            case "Resume":
-                intersects[0].object.material.color.set(Math.random() * hoverColor);
-                break;
-            case "CLA":
-                intersects[0].object.material.color.set(Math.random() * hoverColor);
-                break;
-        }
-    }
-
-});
-
-//Mouse out restore color
-window.addEventListener('mouseout', event => {
-
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-    raycaster.setFromCamera(mouse, camera);
-
-    const intersects = raycaster.intersectObjects(scene.children, true);
-
-    if (intersects.length > 0)
-    {
-        //Debug naming
-        console.log(`FOUND ${intersects[0].object.userData.name}`);
-
-        //Meant to highlight screen when hovering
-        switch(intersects[0].object.userData.name)
-        {
-            case "Name":
-                intersects[0].object.material.color.set(intersects[0].object.userData.ogCol);;
-                break;
-            case "Left Monitor":
-                intersects[1].object.material.color.set(intersects[0].object.userData.ogCol);;
-                break;
-            case "Right Monitor":
-                intersects[1].object.material.color.set(intersects[0].object.userData.ogCol);;
-                break;
-            case "Polaroid":
-                intersects[1].object.material.color.set(intersects[0].object.userData.ogCol);;
-                break;
-            case "Resume":
-                intersects[0].object.material.color.set(intersects[0].object.userData.ogCol);;
-                break;
-            case "CLA":
-                intersects[0].object.material.color.set(intersects[0].object.userData.ogCol);;
-                break;
-        }
-    }
-
-});
 
 //When clicking
 window.addEventListener('click', event => {
