@@ -84,16 +84,16 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 
     const monitorL = gltf.scene.children[0];
 
+    //User data - must select the screen
+    monitorL.children[1].userData.select = true;
+    monitorL.children[1].userData.name = "Left Monitor";
+
     monitorL.castShadow = true;
     monitorL.receiveShadow = true;
 
-    //Monitor CHILD 1 on array is the material for the screen
+    //Monitor CHILD 1 on array is the mesh for the screen
     const screenMat = new THREE.MeshBasicMaterial ( { color: 0x00ff00 } );
     monitorL.children[1].material = screenMat;
-
-    //User data
-    monitorL.userData.select = true;
-    monitorL.userData.name = "Left Monitor";
 
     scene.add(monitorL);
 
@@ -105,6 +105,10 @@ modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
 
     const monitorR = gltf.scene.children[0];
+
+    //User data
+    monitorR.children[1].userData.select = true;
+    monitorR.children[1].userData.name = "Right Monitor";
 
     //Monitor CHILD 1 on array is the material for the screen
     const testMat = new THREE.MeshBasicMaterial ( { color: 0x000000 } );
@@ -163,7 +167,7 @@ const raycaster = new THREE.Raycaster();
 window.addEventListener('click', event => {
 
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
 
@@ -171,7 +175,7 @@ window.addEventListener('click', event => {
 
     console.log("Mouse clicked");
 
-    if (intersects.length > 0) //&& intersects[0].object.userData.select)
+    if (intersects.length > 0 && intersects[0].object.userData.select)
     {
         console.log(`FOUND ${intersects[0].object.userData.name}`);
     }
