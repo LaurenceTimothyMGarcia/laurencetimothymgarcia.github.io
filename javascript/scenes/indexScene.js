@@ -34,6 +34,9 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
 renderer.render(scene, camera);
 
 //Resizes window when window changes
@@ -48,8 +51,15 @@ window.onresize = function (e) {
 //Lighting SET UP
 
 //Directional Light 1
-const dirLight1 = new THREE.DirectionalLight(0xffffff, 25);
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 20);
 dirLight1.position.set(5, 10, 7.5);
+dirLight1.castShadow = true;
+dirLight1.shadow.camera.near = 0.1;
+dirLight1.shadow.camera.far = 500.0;
+dirLight1.shadow.camera.left = -50;
+dirLight1.shadow.camera.right = 50;
+dirLight1.shadow.camera.top = 50;
+dirLight1.shadow.camera.bottom = -50;
 scene.add(dirLight1);
 
 //Light helper - Remove later
