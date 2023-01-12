@@ -163,7 +163,28 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 const mouse = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
 
-//still cant seem to find objects, even the text mesh
+//When hovering over object
+window.addEventListener('mousemove', event => {
+
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    const intersects = raycaster.intersectObjects(scene.children, true);
+
+    if (intersects.length > 0 && intersects[0].object.userData.select)
+    {
+        //Debug naming
+        console.log(`FOUND ${intersects[0].object.userData.name}`);
+
+        //Meant to highlight screen when hovering
+        // intersects[0].object.material.color.set(0xff0000);
+    }
+
+})
+
+//When clicking
 window.addEventListener('click', event => {
 
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -175,9 +196,27 @@ window.addEventListener('click', event => {
 
     console.log("Mouse clicked");
 
+    //Checks if object is selectable
     if (intersects.length > 0 && intersects[0].object.userData.select)
     {
+        //Debug naming
         console.log(`FOUND ${intersects[0].object.userData.name}`);
+
+        intersects[0].object.material.color.set(0xffffff);
+
+        //Depending on name, changes link
+        switch(intersects[0].object.userData.name)
+        {
+            case "Name":
+                location.href = '../../index.html';
+                break;
+            case "Left Monitor":
+                location.href = '../../gameprojects.html';
+                break;
+            case "Right Monitor":
+                location.href = '../../programmingprojects.html';
+                break;
+        }
     }
 })
 
