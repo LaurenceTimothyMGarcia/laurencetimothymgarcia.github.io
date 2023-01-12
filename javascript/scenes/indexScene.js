@@ -134,6 +134,67 @@ modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
     console.error( error );
 });
 
+//Resume
+modelLoader.load('../../models/Resume.glb', function (gltf) {
+
+    const resume = gltf.scene.children[0];
+
+    resume.userData.name = true;
+    resume.userData.name = "Resume";
+
+    scene.add(resume);
+
+}, undefined, function ( error ) {
+    console.error( error );
+});
+
+//Polaroids
+modelLoader.load('../../models/Polaroids.glb', function (gltf) {
+
+    //Initialize all 5 polaroids
+    const polaroid1 = gltf.scene.children[0];
+    const polaroid2 = gltf.scene.children[1];
+    const polaroid3 = gltf.scene.children[2];
+    const polaroid4 = gltf.scene.children[3];
+    const polaroid5 = gltf.scene.children[4];
+
+    //Initialize all polaroids user data to be selectable
+    polaroid1.children[0].userData.select = true;
+    polaroid1.children[1].userData.select = true;
+    polaroid1.children[0].userData.name = "Polaroid";
+    polaroid1.children[1].userData.name = "Polaroid";
+
+    polaroid2.children[0].userData.select = true;
+    polaroid2.children[1].userData.select = true;
+    polaroid2.children[0].userData.name = "Polaroid";
+    polaroid2.children[1].userData.name = "Polaroid";
+
+    polaroid3.children[0].userData.select = true;
+    polaroid3.children[1].userData.select = true;
+    polaroid3.children[0].userData.name = "Polaroid";
+    polaroid3.children[1].userData.name = "Polaroid";
+
+    polaroid4.children[0].userData.select = true;
+    polaroid4.children[1].userData.select = true;
+    polaroid4.children[0].userData.name = "Polaroid";
+    polaroid4.children[1].userData.name = "Polaroid";
+
+    polaroid5.children[0].userData.select = true;
+    polaroid5.children[1].userData.select = true;
+    polaroid5.children[0].userData.name = "Polaroid";
+    polaroid5.children[1].userData.name = "Polaroid";
+
+    //Add all polaroids to the scene
+    scene.add(polaroid1);
+    scene.add(polaroid2);
+    scene.add(polaroid3);
+    scene.add(polaroid4);
+    scene.add(polaroid5);
+
+}, undefined, function ( error ) {
+    console.error( error );
+});
+
 //adding my name as text
 const fontLoader = new FontLoader();
 const ttfLoader = new TTFLoader();
@@ -180,7 +241,7 @@ window.addEventListener('mousemove', event => {
         console.log(`FOUND ${intersects[0].object.userData.name}`);
 
         //Meant to highlight screen when hovering
-        intersects[1].object.material.color.set(0xffffff);
+        intersects[1].object.material.color.set(0x0000ff);
     }
 
 })
@@ -216,6 +277,15 @@ window.addEventListener('click', event => {
                 break;
             case "Right Monitor":
                 location.href = '../../programmingprojects.html';
+                break;
+            case "Polaroid":
+                location.href = '../../artprojects.html';
+                break;
+            case "Resume":
+                location.href = '../../resume.html';
+                break;
+            case "CLA":
+                location.href = '../../coursetaken.html';
                 break;
         }
     }
