@@ -51,37 +51,62 @@ window.onresize = function (e) {
 //Lighting SET UP
 
 //Directional Light 1
-const dirLight1 = new THREE.DirectionalLight(0xffffff, 1);
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.2);
 dirLight1.position.set(50, 100, 7.5);
 dirLight1.castShadow = true;
 scene.add(dirLight1);
 
 //Spot Light 1
-const spotLight1 = new THREE.SpotLight(0xffffff, 1, 0, Math.PI/3, 1);
+const spotLight1 = new THREE.SpotLight(0xffffff, 0.75, 0, Math.PI/3, 1);
 spotLight1.position.set(-5, 15, 7.5);
 spotLight1.castShadow = true;
 scene.add(spotLight1);
 
+//Spot Light 2
+const spotLight2 = new THREE.SpotLight(0xffffff, 0.3, 0, Math.PI/3, 1);
+spotLight2.position.set(2, 1, 20);
+spotLight2.castShadow = true;
+scene.add(spotLight2);
+
 //Point Light 1
-const pointLight1 = new THREE.PointLight(0xffffff, 0.3);
-pointLight1.position.set(0, 3, -2);
+const pointLight1 = new THREE.PointLight(0xffffff, 0.5);
+pointLight1.position.set(0, 4, -3);
 pointLight1.castShadow = true;
 scene.add(pointLight1);
+
+//Point Light 2
+const pointLight2 = new THREE.PointLight(0x8700ff, 2);
+pointLight2.position.set(-3, 3, -3);
+pointLight2.castShadow = true;
+scene.add(pointLight2);
+
+//Point Light 2
+const pointLight3 = new THREE.PointLight(0x0000ff, 2);
+pointLight3.position.set(3, 3, -3);
+pointLight3.castShadow = true;
+scene.add(pointLight3);
 
 //Light helper - Remove later
 const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
 scene.add(dirHelper1);
 const spotHelper1 = new THREE.SpotLightHelper(spotLight1);
 scene.add(spotHelper1);
+const spotHelper2 = new THREE.SpotLightHelper(spotLight2);
+scene.add(spotHelper2);
 const pointHelper1 = new THREE.PointLightHelper(pointLight1);
-scene.add(pointHelper1);
+// scene.add(pointHelper1);
+const pointHelper2 = new THREE.PointLightHelper(pointLight2);
+scene.add(pointHelper2);
+const pointHelper3 = new THREE.PointLightHelper(pointLight3);
+scene.add(pointHelper3);
+
 
 //Control 3d scene
-// const controls = new OrbitControls(camera, renderer.domElement);
-// //Uses direction to set up orbit control default 
-// camera.getWorldPosition(controls.target);
-// controls.target.addScaledVector(camDirection, 5);
-// controls.update();
+const controls = new OrbitControls(camera, renderer.domElement);
+//Uses direction to set up orbit control default 
+camera.getWorldPosition(controls.target);
+controls.target.addScaledVector(camDirection, 5);
+controls.update();
 
 
 //Loader for 3d models
@@ -104,11 +129,11 @@ modelLoader.load('../../models/Room.gltf', function (gltf) {
 modelLoader.load( '../../models/Desk.gltf', function ( gltf ) {
 
     gltf.scene.children[0].castShadow = true;
-    gltf.scene.children[0].receiveShadow = false;
+    gltf.scene.children[0].receiveShadow = true;
     gltf.scene.children[1].castShadow = true;
-    gltf.scene.children[1].receiveShadow = false;
+    gltf.scene.children[1].receiveShadow = true;
     gltf.scene.children[2].castShadow = true;
-    gltf.scene.children[2].receiveShadow = false;
+    gltf.scene.children[2].receiveShadow = true;
 
     scene.add(gltf.scene);
 
