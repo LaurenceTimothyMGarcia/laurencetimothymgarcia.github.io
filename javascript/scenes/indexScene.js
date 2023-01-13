@@ -12,16 +12,16 @@ import { FontLoader } from 'three/addons/loaders/FontLoader';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry';
 
 //Import Post processing
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass';
-import { ShaderPass } from 'three/addons/postprocessing/ShaderPass';
-import { OutlinePass } from 'three/addons/postprocessing/OutlinePass';
-import { FXAAShader } from 'three/addons/shaders/FXAAShader'
+// import { EffectComposer } from 'three/addons/postprocessing/EffectComposer';
+// import { RenderPass } from 'three/addons/postprocessing/RenderPass';
+// import { ShaderPass } from 'three/addons/postprocessing/ShaderPass';
+// import { OutlinePass } from 'three/addons/postprocessing/OutlinePass';
+// import { FXAAShader } from 'three/addons/shaders/FXAAShader'
 
 //Import Controls
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-let selectedObjects = [];
+// let selectedObjects = [];
 
 
 //
@@ -432,57 +432,64 @@ window.addEventListener('mousemove', event => {
 //Post Processing
 //
 
-let composer = new EffectComposer( renderer );
+// let composer = new EffectComposer( renderer );
 
-const renderPass = new RenderPass( scene, camera);
-composer.addPass(renderPass);
+// const renderPass = new RenderPass( scene, camera);
+// composer.addPass(renderPass);
 
-let outlinePass = new OutlinePass( new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
-composer.addPass(outlinePass);
+// let outlinePass = new OutlinePass( new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
+// //Outline pass initialization
+// outlinePass.edgeStrength = 10;
+// outlinePass.edgeGlow = 1;
+// outlinePass.edgeThickness = 1;
+// outlinePass.visibleEdgeColor = '#ffffff';
+// outlinePass.hiddenEdgeColor = '#190a05';
+// composer.addPass(outlinePass);
 
-let effectFXAA = new ShaderPass( FXAAShader );
-effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
-composer.addPass( effectFXAA );
+// let effectFXAA = new ShaderPass( FXAAShader );
+// effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+// composer.addPass( effectFXAA );
 
-renderer.domElement.addEventListener('pointermove', onPointerMove);
+// renderer.domElement.style.touchAction = 'none';
+// renderer.domElement.addEventListener('pointermove', onPointerMove);
 
-function onPointerMove( event ) {
+// function onPointerMove( event ) {
 
-    if ( event.isPrimary === false ) return;
+//     if ( event.isPrimary === false ) return;
 
-    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+//     mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+//     mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
-    checkIntersection();
+//     checkIntersection();
 
-}
+// }
 
-function addSelectedObject( object ) {
+// function addSelectedObject( object ) {
 
-    selectedObjects = [];
-    selectedObjects.push( object );
+//     selectedObjects = [];
+//     selectedObjects.push( object );
 
-}
+// }
 
-function checkIntersection() {
+// function checkIntersection() {
 
-    raycaster.setFromCamera( mouse, camera );
+//     raycaster.setFromCamera( mouse, camera );
 
-    const intersects = raycaster.intersectObject( scene, true );
+//     const intersects = raycaster.intersectObject( scene, true );
 
-    if ( intersects.length > 0 ) {
+//     if ( intersects.length > 0 ) {
 
-        const selectedObject = intersects[ 0 ].object;
-        addSelectedObject( selectedObject );
-        outlinePass.selectedObjects = selectedObjects;
+//         const selectedObject = intersects[ 0 ].object;
+//         addSelectedObject( selectedObject );
+//         outlinePass.selectedObjects = selectedObjects;
 
-    } else {
+//     } else {
 
-        // outlinePass.selectedObjects = [];
+//         // outlinePass.selectedObjects = [];
 
-    }
+//     }
 
-}
+// }
 
 //Resizes window when window changes
 window.onresize = function (e) {
@@ -490,8 +497,8 @@ window.onresize = function (e) {
     camera.updateProjectionMatrix();
 
     renderer.setSize(window.innerWidth, window.innerHeight);
-    composer.setSize(window.innerWidth, window.innerHeight);
-    effectFXAA.uniforms['resolution'].value.set(1/window.innerWidth, 1/window.innerHeight);
+    // composer.setSize(window.innerWidth, window.innerHeight);
+    // effectFXAA.uniforms['resolution'].value.set(1/window.innerWidth, 1/window.innerHeight);
 }
 
 
@@ -525,7 +532,7 @@ function animate()
     requestAnimationFrame( animate );
 
     // controls.update();
-    composer.render();
+    // composer.render();
 
     renderer.render( scene, camera );
 }
