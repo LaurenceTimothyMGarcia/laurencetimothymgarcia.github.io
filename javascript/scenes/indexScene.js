@@ -167,6 +167,20 @@ modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
     const screenMat = new THREE.MeshBasicMaterial ( { color: 0x00ff00 } );
     monitorL.children[1].material = screenMat;
 
+    //Video texture for testing
+    const testVid = document.getElementById("testVid");
+    const vidTexture = new THREE.VideoTexture(testVid);
+    vidTexture.minFilter = THREE.LinearFilter;
+    vidTexture.magFilter = THREE.LinearFilter;
+
+    const videoMat = new THREE.MeshBasicMaterial({
+        map: vidTexture,
+        side: THREE.FrontSide,
+        toneMapped: false
+    });
+
+    monitorL.children[1].material = videoMat;
+
     scene.add(monitorL);
 
 }, undefined, function ( error ) {
@@ -218,6 +232,10 @@ modelLoader.load('../../models/Resume.gltf', function (gltf) {
     resume.userData.name = "Resume";
     resume.userData.ogCol = resume.material.color.getHex();
 
+    const resumeImg = new THREE.TextureLoader().load("../../images/SoftEngScreenshot.png");
+    const resumeMat = new THREE.MeshLambertMaterial( {map: resumeImg} );
+    resume.material = resumeMat;
+
     scene.add(resume);
 
 }, undefined, function ( error ) {
@@ -248,6 +266,27 @@ modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
     const polaroid3 = gltf.scene.children[2];
     const polaroid4 = gltf.scene.children[3];
     const polaroid5 = gltf.scene.children[4];
+
+    //Loading Image
+    const image1 = new THREE.TextureLoader().load("../../images/artprojects/landscapes/The Apocolypse Fixed.png");
+    const imageMat1 = new THREE.MeshLambertMaterial( {map: image1} );
+    polaroid1.children[1].material = imageMat1;
+
+    const image2 = new THREE.TextureLoader().load("../../images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png");
+    const imageMat2 = new THREE.MeshLambertMaterial( {map: image2} );
+    polaroid2.children[1].material = imageMat2;
+
+    const image3 = new THREE.TextureLoader().load("../../images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png");
+    const imageMat3 = new THREE.MeshLambertMaterial( {map: image3} );
+    polaroid3.children[1].material = imageMat3;
+
+    const image4 = new THREE.TextureLoader().load("../../images/artprojects/FanArt/ArcaneEkko/HoverPose1.png");
+    const imageMat4 = new THREE.MeshLambertMaterial( {map: image4} );
+    polaroid4.children[1].material = imageMat4;
+
+    const image5 = new THREE.TextureLoader().load("../../images/artprojects/FanArt/VelvetRoomP5/Mementos Official Final.png");
+    const imageMat5 = new THREE.MeshLambertMaterial( {map: image5} );
+    polaroid5.children[1].material = imageMat5;
 
     //Initialize all polaroids user data to be selectable
     polaroid1.children[0].userData.select = true;
