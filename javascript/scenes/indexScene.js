@@ -109,6 +109,22 @@ scene.add(pointHelper3);
 // controls.update();
 
 
+//OutlineShader
+const outlineShaderMat = new THREE.ShaderMaterial(1, {
+    vertexShader: `
+    // uniform float offset = 1;
+    void main() {
+        vec4 pos = modelViewMatrix * vec4( position + normal * offset, 1.0 );
+        gl_Position = projectionMatrix * pos;
+    }
+    `,
+    fragmentShader: `
+    void main() {
+        gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+    }
+    `
+});
+
 //Loader for 3d models
 const modelLoader = new GLTFLoader();
 
@@ -145,6 +161,10 @@ modelLoader.load( '../../models/Desk.gltf', function ( gltf ) {
 modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
 
     const monitorL = gltf.scene.children[0];
+    
+    const monitorLGeo = monitorL.children[0].Mesh;
+    const monitorLOutline = new THREE.Mesh(monitorLGeo, outlineShaderMat);
+    monitorLOutline.material.depthWrite = false;
 
     //User data - must select the screen
     monitorL.children[1].userData.select = true;
@@ -158,6 +178,7 @@ modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
     monitorL.children[1].material = screenMat;
 
     scene.add(monitorL);
+    scene.add(monitorLOutline);
 
 }, undefined, function ( error ) {
     console.error( error );
