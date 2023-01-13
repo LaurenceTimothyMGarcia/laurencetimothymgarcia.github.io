@@ -346,7 +346,8 @@ window.addEventListener('click', event => {
         //Debug naming
         console.log(`FOUND ${intersects[0].object.userData.name}`);
 
-        intersects[0].object.material.color.set(0xffffff);
+        //Doesnt revert back to original color
+        // intersects[0].object.material.color.set(0xffffff);
 
         //Depending on name, changes link
         switch(intersects[0].object.userData.name)
