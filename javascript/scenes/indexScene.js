@@ -359,7 +359,61 @@ window.addEventListener('click', event => {
                 break;
         }
     }
-})
+});
+
+//Tracks what the mouse is currently on
+let currentHover = null;
+window.addEventListener('mousemove', event => {
+
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    const intersects = raycaster.intersectObjects(scene.children, true);
+
+    if (intersects.length > 0 && intersects[0].object.userData.select)
+    {
+        // const hoverColor = 0x0000ff;
+
+        //Set this to the light shining instead
+        if (intersects[0].object.userData.name != currentHover)
+        {
+            //Debug naming
+            console.log(`FOUND ${intersects[0].object.userData.name}`);
+
+            //Meant to highlight screen when hovering
+            currentHover = intersects[0].object.userData.name;
+            switch(intersects[0].object.userData.name)
+            {
+                case "Name":
+                    // intersects[0].object.material.color.set(Math.random() * hoverColor);
+                    break;
+                case "Left Monitor":
+                    // intersects[1].object.material.color.set(Math.random() * hoverColor);
+                    break;
+                case "Right Monitor":
+                    // intersects[1].object.material.color.set(Math.random() * hoverColor);
+                    break;
+                case "Polaroid":
+                    // intersects[1].object.material.color.set(Math.random() * hoverColor);
+                    break;
+                case "Resume":
+                    // intersects[0].object.material.color.set(Math.random() * hoverColor);
+                    break;
+                case "CLA":
+                    // intersects[0].object.material.color.set(Math.random() * hoverColor);
+                    break;
+            }
+        }
+        
+    }
+    else
+    {
+        currentHover = null;
+    }
+
+});
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
