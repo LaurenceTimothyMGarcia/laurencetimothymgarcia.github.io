@@ -11,11 +11,22 @@ import { TTFLoader } from 'three/addons/loaders/TTFLoader';
 import { FontLoader } from 'three/addons/loaders/FontLoader';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry';
 
+//Import Post processing
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass';
+import { OutlinePass } from 'three/addons/postprocessing/OutlinePass';
+import { FXAAShader } from 'three/addons/shaders/FXAAShader'
+
 //Import Controls
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+let selectedObjects = [];
 
+
+//
 //Set up SCENE, CAMERA, RENDERER
+//
 const scene = new THREE.Scene();
 //Camera initialization
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -38,17 +49,12 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 renderer.render(scene, camera);
-
-//Resizes window when window changes
-window.onresize = function (e) {
-    camera.aspect = window.innerWidth/window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
 //END Set up
 
+
+//
 //Lighting SET UP
+//
 
 //Directional Light 1
 const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.2);
@@ -109,21 +115,9 @@ scene.add(pointHelper3);
 // controls.update();
 
 
-//OutlineShader
-const outlineShaderMat = new THREE.ShaderMaterial(1, {
-    vertexShader: `
-    // uniform float offset = 1;
-    void main() {
-        vec4 pos = modelViewMatrix * vec4( position + normal * offset, 1.0 );
-        gl_Position = projectionMatrix * pos;
-    }
-    `,
-    fragmentShader: `
-    void main() {
-        gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
-    }
-    `
-});
+//
+//Loading 3D models
+//
 
 //Loader for 3d models
 const modelLoader = new GLTFLoader();
@@ -161,10 +155,6 @@ modelLoader.load( '../../models/Desk.gltf', function ( gltf ) {
 modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
 
     const monitorL = gltf.scene.children[0];
-    
-    const monitorLGeo = monitorL.children[0].Mesh;
-    const monitorLOutline = new THREE.Mesh(monitorLGeo, outlineShaderMat);
-    monitorLOutline.material.depthWrite = false;
 
     //User data - must select the screen
     monitorL.children[1].userData.select = true;
@@ -178,7 +168,6 @@ modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
     monitorL.children[1].material = screenMat;
 
     scene.add(monitorL);
-    scene.add(monitorLOutline);
 
 }, undefined, function ( error ) {
     console.error( error );
@@ -333,7 +322,9 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
 );
 
 
+//
 //Mouse interaction
+//
 const mouse = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
 
@@ -436,17 +427,73 @@ window.addEventListener('mousemove', event => {
 
 });
 
-//Recursive function to repeatedly call and refresh the screen
-function animate()
-{
-    requestAnimationFrame( animate );
 
-    // controls.update();
+//
+//Post Processing
+//
 
-    renderer.render( scene, camera );
+let composer = new EffectComposer( renderer );
+
+const renderPass = new RenderPass( scene, camera);
+composer.addPass(renderPass);
+
+let outlinePass = new OutlinePass( new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
+composer.addPass(outlinePass);
+
+let effectFXAA = new ShaderPass( FXAAShader );
+effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+composer.addPass( effectFXAA );
+
+renderer.domElement.addEventListener('pointermove', onPointerMove);
+
+function onPointerMove( event ) {
+
+    if ( event.isPrimary === false ) return;
+
+    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+    checkIntersection();
+
 }
 
-animate();
+function addSelectedObject( object ) {
+
+    selectedObjects = [];
+    selectedObjects.push( object );
+
+}
+
+function checkIntersection() {
+
+    raycaster.setFromCamera( mouse, camera );
+
+    const intersects = raycaster.intersectObject( scene, true );
+
+    if ( intersects.length > 0 ) {
+
+        const selectedObject = intersects[ 0 ].object;
+        addSelectedObject( selectedObject );
+        outlinePass.selectedObjects = selectedObjects;
+
+    } else {
+
+        // outlinePass.selectedObjects = [];
+
+    }
+
+}
+
+//Resizes window when window changes
+window.onresize = function (e) {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    composer.setSize(window.innerWidth, window.innerHeight);
+    effectFXAA.uniforms['resolution'].value.set(1/window.innerWidth, 1/window.innerHeight);
+}
+
 
 //adds paralax effect to site
 //changing these values changes the "center"
@@ -469,4 +516,18 @@ window.onmousemove = function (ev) {
 
     oldX = ev.x;
     oldY = ev.y;
+};
+
+
+//Recursive function to repeatedly call and refresh the screen
+function animate()
+{
+    requestAnimationFrame( animate );
+
+    // controls.update();
+    composer.render();
+
+    renderer.render( scene, camera );
 }
+
+animate();
