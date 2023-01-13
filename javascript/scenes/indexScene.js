@@ -354,8 +354,8 @@ ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
         nameMesh.position.y = 5.5;
         nameMesh.position.z = -1;
 
-        nameMesh.userData.select = true;
-        nameMesh.userData.name = "Name";
+        // nameMesh.userData.select = true;
+        // nameMesh.userData.name = "Name";
         scene.add(nameMesh);
     }
 );
