@@ -12,16 +12,16 @@ import { FontLoader } from 'three/addons/loaders/FontLoader';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry';
 
 //Import Post processing
-// import { EffectComposer } from 'three/addons/postprocessing/EffectComposer';
-// import { RenderPass } from 'three/addons/postprocessing/RenderPass';
-// import { ShaderPass } from 'three/addons/postprocessing/ShaderPass';
-// import { OutlinePass } from 'three/addons/postprocessing/OutlinePass';
-// import { FXAAShader } from 'three/addons/shaders/FXAAShader'
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass';
+import { OutlinePass } from 'three/addons/postprocessing/OutlinePass';
+import { FXAAShader } from 'three/addons/shaders/FXAAShader'
 
 //Import Controls
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-// let selectedObjects = [];
+let selectedObjects = [];
 
 
 //
@@ -64,7 +64,7 @@ scene.add(dirLight1);
 
 //Spot Light 1
 const spotLight1 = new THREE.SpotLight(0xffffff, 0.75, 0, Math.PI/3, 1);
-spotLight1.position.set(-5, 15, 7.5);
+spotLight1.position.set(-5, 20, 7.5);
 spotLight1.castShadow = true;
 scene.add(spotLight1);
 
@@ -93,18 +93,18 @@ pointLight3.castShadow = true;
 scene.add(pointLight3);
 
 //Light helper - Remove later
-const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
-scene.add(dirHelper1);
-const spotHelper1 = new THREE.SpotLightHelper(spotLight1);
-scene.add(spotHelper1);
-const spotHelper2 = new THREE.SpotLightHelper(spotLight2);
-scene.add(spotHelper2);
-const pointHelper1 = new THREE.PointLightHelper(pointLight1);
+// const dirHelper1 = new THREE.DirectionalLightHelper(dirLight1);
+// scene.add(dirHelper1);
+// const spotHelper1 = new THREE.SpotLightHelper(spotLight1);
+// scene.add(spotHelper1);
+// const spotHelper2 = new THREE.SpotLightHelper(spotLight2);
+// scene.add(spotHelper2);
+// const pointHelper1 = new THREE.PointLightHelper(pointLight1);
 // scene.add(pointHelper1);
-const pointHelper2 = new THREE.PointLightHelper(pointLight2);
-scene.add(pointHelper2);
-const pointHelper3 = new THREE.PointLightHelper(pointLight3);
-scene.add(pointHelper3);
+// const pointHelper2 = new THREE.PointLightHelper(pointLight2);
+// scene.add(pointHelper2);
+// const pointHelper3 = new THREE.PointLightHelper(pointLight3);
+// scene.add(pointHelper3);
 
 
 //Control 3d scene
@@ -373,123 +373,89 @@ window.addEventListener('click', event => {
     }
 });
 
-//Tracks what the mouse is currently on
-let currentHover = null;
-window.addEventListener('mousemove', event => {
-
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-    raycaster.setFromCamera(mouse, camera);
-
-    const intersects = raycaster.intersectObjects(scene.children, true);
-
-    if (intersects.length > 0 && intersects[0].object.userData.select)
-    {
-        // const hoverColor = 0x0000ff;
-
-        //Set this to the light shining instead
-        if (intersects[0].object.userData.name != currentHover)
-        {
-            //Debug naming
-            console.log(`FOUND ${intersects[0].object.userData.name}`);
-
-            //Meant to highlight screen when hovering
-            currentHover = intersects[0].object.userData.name;
-            switch(intersects[0].object.userData.name)
-            {
-                case "Name":
-                    // intersects[0].object.material.color.set(Math.random() * hoverColor);
-                    break;
-                case "Left Monitor":
-                    // intersects[1].object.material.color.set(Math.random() * hoverColor);
-                    break;
-                case "Right Monitor":
-                    // intersects[1].object.material.color.set(Math.random() * hoverColor);
-                    break;
-                case "Polaroid":
-                    // intersects[1].object.material.color.set(Math.random() * hoverColor);
-                    break;
-                case "Resume":
-                    // intersects[0].object.material.color.set(Math.random() * hoverColor);
-                    break;
-                case "CLA":
-                    // intersects[0].object.material.color.set(Math.random() * hoverColor);
-                    break;
-            }
-        }
-        
-    }
-    else
-    {
-        currentHover = null;
-    }
-
-});
-
 
 //
 //Post Processing
 //
 
-// let composer = new EffectComposer( renderer );
+let composer = new EffectComposer( renderer );
 
-// const renderPass = new RenderPass( scene, camera);
-// composer.addPass(renderPass);
+const renderPass = new RenderPass( scene, camera);
+composer.addPass(renderPass);
 
-// let outlinePass = new OutlinePass( new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
-// //Outline pass initialization
-// outlinePass.edgeStrength = 10;
-// outlinePass.edgeGlow = 1;
-// outlinePass.edgeThickness = 1;
-// outlinePass.visibleEdgeColor = '#ffffff';
-// outlinePass.hiddenEdgeColor = '#190a05';
-// composer.addPass(outlinePass);
+let outlinePass = new OutlinePass( new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
+//Outline pass initialization
+outlinePass.edgeStrength = 10;
+outlinePass.edgeGlow = 1;
+outlinePass.edgeThickness = 1;
+outlinePass.visibleEdgeColor.set('#ffffff');
+outlinePass.hiddenEdgeColor.set('#190a05');
+composer.addPass(outlinePass);
 
-// let effectFXAA = new ShaderPass( FXAAShader );
-// effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
-// composer.addPass( effectFXAA );
+let effectFXAA = new ShaderPass( FXAAShader );
+effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+composer.addPass( effectFXAA );
 
-// renderer.domElement.style.touchAction = 'none';
-// renderer.domElement.addEventListener('pointermove', onPointerMove);
+renderer.domElement.style.touchAction = 'none';
+renderer.domElement.addEventListener('pointermove', onPointerMove);
 
-// function onPointerMove( event ) {
+function onPointerMove( event ) {
 
-//     if ( event.isPrimary === false ) return;
+    if ( event.isPrimary === false ) return;
 
-//     mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-//     mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
-//     checkIntersection();
+    checkIntersection();
 
-// }
+}
 
-// function addSelectedObject( object ) {
+function addSelectedObject( object ) {
 
-//     selectedObjects = [];
-//     selectedObjects.push( object );
+    selectedObjects = [];
+    selectedObjects.push( object );
 
-// }
+}
 
-// function checkIntersection() {
+function checkIntersection() {
 
-//     raycaster.setFromCamera( mouse, camera );
+    raycaster.setFromCamera( mouse, camera );
 
-//     const intersects = raycaster.intersectObject( scene, true );
+    const intersects = raycaster.intersectObject( scene, true );
 
-//     if ( intersects.length > 0 ) {
+    if ( intersects.length > 0 && intersects[0].object.userData.select) {
 
-//         const selectedObject = intersects[ 0 ].object;
-//         addSelectedObject( selectedObject );
-//         outlinePass.selectedObjects = selectedObjects;
+        let selectedObject = null;
 
-//     } else {
+        switch(intersects[0].object.userData.name)
+        {
+            case "Left Monitor":
+                selectedObject = intersects[1].object;
+                break;
+            case "Right Monitor":
+                selectedObject = intersects[1].object;
+                break;
+            case "Polaroid":
+                selectedObject = intersects[0].object;
+                break;
+            case "Resume":
+                selectedObject = intersects[0].object;
+                break;
+            case "CLA":
+                selectedObject = intersects[0].object;
+                break;
+        }
 
-//         // outlinePass.selectedObjects = [];
+        addSelectedObject( selectedObject );
+        outlinePass.selectedObjects = selectedObjects;
 
-//     }
+    } else {
 
-// }
+        outlinePass.selectedObjects = [];
+
+    }
+
+}
 
 //Resizes window when window changes
 window.onresize = function (e) {
@@ -497,8 +463,8 @@ window.onresize = function (e) {
     camera.updateProjectionMatrix();
 
     renderer.setSize(window.innerWidth, window.innerHeight);
-    // composer.setSize(window.innerWidth, window.innerHeight);
-    // effectFXAA.uniforms['resolution'].value.set(1/window.innerWidth, 1/window.innerHeight);
+    composer.setSize(window.innerWidth, window.innerHeight);
+    effectFXAA.uniforms['resolution'].value.set(1/window.innerWidth, 1/window.innerHeight);
 }
 
 
@@ -532,9 +498,9 @@ function animate()
     requestAnimationFrame( animate );
 
     // controls.update();
-    // composer.render();
+    composer.render();
 
-    renderer.render( scene, camera );
+    // renderer.render( scene, camera );
 }
 
 animate();
