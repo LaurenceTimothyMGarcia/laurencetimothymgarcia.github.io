@@ -21,8 +21,9 @@ import { FXAAShader } from 'three/addons/shaders/FXAAShader'
 //Import Controls
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+//Other initial variables
+//Used for outline
 let selectedObjects = [];
-
 
 //
 //Set up SCENE, CAMERA, RENDERER
@@ -335,28 +336,45 @@ modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
     console.error( error );
 });
 
-//adding my name as text
+//Text Loader
 const fontLoader = new FontLoader();
 const ttfLoader = new TTFLoader();
 ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
         const comfortaaFont = fontLoader.parse(json);
 
+        //Name
         const nameGeometry = new TextGeometry('Laurence Garcia', {
             font: comfortaaFont,
             size: 1, 
-            height: 0.5
+            height: 0.25
         });
-
         const nameMaterial = new THREE.MeshNormalMaterial();
         const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
-
-        nameMesh.position.x = -6;
-        nameMesh.position.y = 5.5;
-        nameMesh.position.z = -1;
-
-        // nameMesh.userData.select = true;
-        // nameMesh.userData.name = "Name";
+        nameMesh.position.set(-6, 5.5, -1);
         scene.add(nameMesh);
+
+        //Programming Projects
+        // const programmingGeo = new TextGeometry('Programming Projects', {
+        //     font: comfortaaFont,
+        //     size: 0.25, 
+        //     height: 0.1
+        // });
+        // const programmingMat = new THREE.MeshNormalMaterial();
+        // const programmingMesh = new THREE.Mesh(programmingGeo, programmingMat);
+        // programmingMesh.position.set(-5, 4, -1);
+        // scene.add(programmingMesh);
+
+        //Game Projects
+
+
+        //Art Portfolio
+
+
+        //Resume
+
+
+        //Relevant Courses
+
     }
 );
 
@@ -467,6 +485,8 @@ function checkIntersection() {
 
         let selectedObject = null;
 
+        document.body.style.cursor = 'pointer';
+
         switch(intersects[0].object.userData.name)
         {
             case "Left Monitor":
@@ -492,6 +512,7 @@ function checkIntersection() {
     } else {
 
         outlinePass.selectedObjects = [];
+        document.body.style.cursor = 'default';
 
     }
 
