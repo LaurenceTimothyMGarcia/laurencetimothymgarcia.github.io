@@ -49,6 +49,9 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.physicallyCorrectLights = true;
+
 renderer.render(scene, camera);
 //END Set up
 
@@ -64,13 +67,13 @@ dirLight1.castShadow = true;
 scene.add(dirLight1);
 
 //Spot Light 1
-const spotLight1 = new THREE.SpotLight(0xffffff, 0.75, 0, Math.PI/3, 1);
+const spotLight1 = new THREE.SpotLight(0xffffff, 1000, 0, Math.PI/3, 1);
 spotLight1.position.set(-5, 20, 7.5);
 spotLight1.castShadow = true;
 scene.add(spotLight1);
 
 //Spot Light 2
-const spotLight2 = new THREE.SpotLight(0xffffff, 0.3, 0, Math.PI/3, 1);
+const spotLight2 = new THREE.SpotLight(0xffffff, 500, 0, Math.PI/3, 1);
 spotLight2.position.set(2, 1, 20);
 spotLight2.castShadow = true;
 scene.add(spotLight2);
@@ -82,13 +85,13 @@ pointLight1.castShadow = true;
 scene.add(pointLight1);
 
 //Point Light 2
-const pointLight2 = new THREE.PointLight(0x8700ff, 2);
-pointLight2.position.set(-3, 3, -3);
+const pointLight2 = new THREE.PointLight(0x8700ff, 50);
+pointLight2.position.set(-3, 2, -3);
 pointLight2.castShadow = true;
 scene.add(pointLight2);
 
 //Point Light 2
-const pointLight3 = new THREE.PointLight(0x0000ff, 2);
+const pointLight3 = new THREE.PointLight(0x0000ff, 50);
 pointLight3.position.set(3, 3, -3);
 pointLight3.castShadow = true;
 scene.add(pointLight3);
