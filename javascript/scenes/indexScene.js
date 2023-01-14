@@ -467,9 +467,13 @@ function init() {
                     break;
                 case "Resume":
                     location.href = '../../resume.html';
+                    // document.getElementById("overlay").style.display = "block";
+                    // document.getElementById("resume").style.display = "block";
                     break;
                 case "CLA":
                     location.href = '../../coursetaken.html';
+                    // document.getElementById("overlay").style.display = "block";
+                    // document.getElementById("course").style.display = "block";
                     break;
             }
         }
