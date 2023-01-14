@@ -37,12 +37,19 @@ const raycaster = new THREE.Raycaster();
 //Used for outline
 let selectedObjects = [];
 
-//
-//Program Running
-//
-init();
-animate();
 
+//Loading Screen
+var loadingScreen = {
+    scene: new THREE.Scene(),
+    camera: new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 100),
+    box: new THREE.Mesh(
+        new THREE.BoxGeometry(0.5,0.5,0.5),
+        new THREE.MeshBasicMaterial({color:0x4444ff})
+    )
+};
+//Boolean to track if resources is ready
+var loadingManager = null;
+var RESOURCES_LOADED = false;
 
 //
 //Initialize scene
@@ -55,6 +62,26 @@ function init() {
     scene = new THREE.Scene();
     //Camera initialization
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    //Loading Screen
+    loadingScreen.box.position.set(0,0,5);
+    loadingScreen.camera.lookAt(loadingScreen.box.position);
+    loadingScreen.scene.add(loadingScreen.box);
+
+    loadingManager = new THREE.LoadingManager();
+
+    loadingManager.onProgress = function (item, loaded, total)
+    {
+        console.log(item,loaded,total);
+    };
+
+    loadingManager.onLoad = function()
+    {
+        console.log("Loaded all resources");
+        RESOURCES_LOADED = true;
+    };
+
+    
     //Offsets camera
     camera.position.set(0, 3, 8);
 
@@ -148,7 +175,7 @@ function init() {
     //
 
     //Loader for 3d models
-    const modelLoader = new GLTFLoader();
+    const modelLoader = new GLTFLoader(loadingManager);
 
     //Room || Walls
     modelLoader.load('../../models/Room.gltf', function (gltf) {
@@ -364,8 +391,8 @@ function init() {
     });
 
     //Text Loader
-    const fontLoader = new FontLoader();
-    const ttfLoader = new TTFLoader();
+    const fontLoader = new FontLoader(loadingManager);
+    const ttfLoader = new TTFLoader(loadingManager);
     ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
             const comfortaaFont = fontLoader.parse(json);
 
@@ -578,6 +605,24 @@ window.onmousemove = function (ev) {
 //Recursive function to repeatedly call and refresh the screen
 function animate()
 {
+
+    if (!RESOURCES_LOADED)
+    {
+        requestAnimationFrame(animate);
+
+        loadingScreen.box.position.x -= 0.05;
+        if (loadingScreen.box.position.x < -12)
+        {
+            loadingScreen.box.position.x = 12;
+        }
+
+        loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
+
+        renderer.render(loadingScreen.scene, loadingScreen.camera);
+
+        return;
+    }
+
     requestAnimationFrame( animate );
 
     // controls.update();
@@ -585,3 +630,11 @@ function animate()
 
     // renderer.render( scene, camera );
 }
+
+
+
+//
+//Program Running
+//
+init();
+animate();
