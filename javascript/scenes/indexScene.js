@@ -282,7 +282,7 @@ function init() {
         resume.userData.ogCol = resume.material.color.getHex();
 
         const resumeImg = new THREE.TextureLoader().load("../../images/SoftEngScreenshot.png");
-        const resumeMat = new THREE.MeshLambertMaterial( {map: resumeImg} );
+        const resumeMat = new THREE.MeshPhongMaterial( {map: resumeImg} );
         resume.material = resumeMat;
 
         scene.add(resume);
