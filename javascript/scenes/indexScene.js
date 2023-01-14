@@ -587,23 +587,6 @@ window.onmousemove = function (ev) {
 function animate()
 {
 
-    // if (!RESOURCES_LOADED)
-    // {
-    //     requestAnimationFrame(animate);
-
-    //     loadingScreen.box.position.x -= 0.05;
-    //     if (loadingScreen.box.position.x < -12)
-    //     {
-    //         loadingScreen.box.position.x = 12;
-    //     }
-
-    //     loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
-
-    //     renderer.render(loadingScreen.scene, loadingScreen.camera);
-
-    //     return;
-    // }
-
     requestAnimationFrame( animate );
 
     // controls.update();

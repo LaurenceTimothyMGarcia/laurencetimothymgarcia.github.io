@@ -42,6 +42,9 @@ body
     height: 100%;
     margin: 0;
     padding: 0;
+
+    /* Hides scroll bar */
+    overflow: hidden;
 }
 
 /* Canvas for THREE JS */
