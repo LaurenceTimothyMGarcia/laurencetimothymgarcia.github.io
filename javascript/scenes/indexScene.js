@@ -28,28 +28,13 @@ let scene, camera, renderer;
 //Post processing
 let composer, effectFXAA, outlinePass;
 
-//
 //Mouse and raycaster
-//
 const mouse = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
 
 //Used for outline
 let selectedObjects = [];
 
-
-//Loading Screen
-var loadingScreen = {
-    scene: new THREE.Scene(),
-    camera: new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 100),
-    box: new THREE.Mesh(
-        new THREE.BoxGeometry(0.5,0.5,0.5),
-        new THREE.MeshBasicMaterial({color:0x4444ff})
-    )
-};
-//Boolean to track if resources is ready
-var loadingManager = null;
-var RESOURCES_LOADED = false;
 
 //
 //Initialize scene
@@ -63,23 +48,27 @@ function init() {
     //Camera initialization
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    //Loading Screen
-    loadingScreen.box.position.set(0,0,5);
-    loadingScreen.camera.lookAt(loadingScreen.box.position);
-    loadingScreen.scene.add(loadingScreen.box);
 
-    loadingManager = new THREE.LoadingManager();
+    //Loading Manager
+    const loadingManager = new THREE.LoadingManager();
 
-    loadingManager.onProgress = function (item, loaded, total)
+    const progressBarContainer = document.querySelector('.progress-bar-container');
+    const progressBar = document.getElementById('progress-bar');
+
+    loadingManager.onProgress = function(url, loaded, total)
     {
-        // console.log(item,loaded,total);
-    };
+        progressBar.value = (loaded/total) * 100;
+    }
 
     loadingManager.onLoad = function()
     {
-        console.log("Loaded all resources");
-        RESOURCES_LOADED = true;
-    };
+        progressBarContainer.style.display = 'none';
+    }
+
+    //Loaders
+    const modelLoader = new GLTFLoader(loadingManager);
+    const fontLoader = new FontLoader(loadingManager);
+    const ttfLoader = new TTFLoader(loadingManager);
 
 
     //Offsets camera
@@ -91,7 +80,7 @@ function init() {
 
     //Uses dom element canvas with bg
     renderer = new THREE.WebGLRenderer({
-        canvas: document.querySelector('#bg'),
+        canvas: document.querySelector('#scene'),
     });
 
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -173,10 +162,6 @@ function init() {
     //
     //Loading 3D models
     //
-
-    //Loader for 3d models
-    const modelLoader = new GLTFLoader(loadingManager);
-
     //Room || Walls
     modelLoader.load('../../models/Room.gltf', function (gltf) {
 
@@ -385,8 +370,6 @@ function init() {
     });
 
     //Text Loader
-    const fontLoader = new FontLoader(loadingManager);
-    const ttfLoader = new TTFLoader(loadingManager);
     ttfLoader.load('../../fonts/Comfortaa-Regular.ttf',(json) => {
             const comfortaaFont = fontLoader.parse(json);
 
@@ -604,22 +587,22 @@ window.onmousemove = function (ev) {
 function animate()
 {
 
-    if (!RESOURCES_LOADED)
-    {
-        requestAnimationFrame(animate);
+    // if (!RESOURCES_LOADED)
+    // {
+    //     requestAnimationFrame(animate);
 
-        loadingScreen.box.position.x -= 0.05;
-        if (loadingScreen.box.position.x < -12)
-        {
-            loadingScreen.box.position.x = 12;
-        }
+    //     loadingScreen.box.position.x -= 0.05;
+    //     if (loadingScreen.box.position.x < -12)
+    //     {
+    //         loadingScreen.box.position.x = 12;
+    //     }
 
-        loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
+    //     loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
 
-        renderer.render(loadingScreen.scene, loadingScreen.camera);
+    //     renderer.render(loadingScreen.scene, loadingScreen.camera);
 
-        return;
-    }
+    //     return;
+    // }
 
     requestAnimationFrame( animate );
 
