@@ -72,7 +72,7 @@ function init() {
 
     loadingManager.onProgress = function (item, loaded, total)
     {
-        console.log(item,loaded,total);
+        // console.log(item,loaded,total);
     };
 
     loadingManager.onLoad = function()
@@ -81,7 +81,7 @@ function init() {
         RESOURCES_LOADED = true;
     };
 
-    
+
     //Offsets camera
     camera.position.set(0, 3, 8);
 
