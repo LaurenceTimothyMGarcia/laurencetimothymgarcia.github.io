@@ -412,10 +412,10 @@ window.addEventListener('click', event => {
             case "Name":
                 location.href = '../../index.html';
                 break;
-            case "Left Monitor":
+            case "Right Monitor":
                 location.href = '../../gameprojects.html';
                 break;
-            case "Right Monitor":
+            case "Left Monitor":
                 location.href = '../../programmingprojects.html';
                 break;
             case "Polaroid":
