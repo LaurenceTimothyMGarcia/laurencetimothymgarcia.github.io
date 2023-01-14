@@ -269,7 +269,7 @@ modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
     const polaroid5 = gltf.scene.children[4];
 
     //Loading Image
-    const image1 = new THREE.TextureLoader().load("../../images/artprojects/landscapes/The Apocolypse Fixed.png");
+    const image1 = new THREE.TextureLoader().load("../../images/artprojects/Landscapes/The Apocolypse Fixed.png");
     const imageMat1 = new THREE.MeshLambertMaterial( {map: image1} );
     polaroid1.children[1].material = imageMat1;
 
