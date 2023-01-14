@@ -218,13 +218,9 @@ function init() {
 
         monitorL.children[0].castShadow = true;
 
-        //Monitor CHILD 1 on array is the mesh for the screen
-        const screenMat = new THREE.MeshBasicMaterial ( { color: 0x00ff00 } );
-        monitorL.children[1].material = screenMat;
-
         //Video texture for testing
-        const testVid = document.getElementById("testVid");
-        const vidTexture = new THREE.VideoTexture(testVid);
+        const progVid = document.getElementById("programVid");
+        const vidTexture = new THREE.VideoTexture(progVid);
         vidTexture.minFilter = THREE.LinearFilter;
         vidTexture.magFilter = THREE.LinearFilter;
 
@@ -234,6 +230,7 @@ function init() {
             toneMapped: false
         });
 
+        //Monitor CHILD 1 on array is the material for the screen
         monitorL.children[1].material = videoMat;
 
         scene.add(monitorL);
@@ -254,13 +251,9 @@ function init() {
         monitorR.children[1].userData.ogCol = monitorR.children[0].material.color.getHex();
 
         monitorR.children[0].castShadow = true;
-
-        //Monitor CHILD 1 on array is the material for the screen
-        const testMat = new THREE.MeshBasicMaterial ( { color: 0x000000 } );
-
-        //Video texture for testing
-        const testVid = document.getElementById("testVid");
-        const vidTexture = new THREE.VideoTexture(testVid);
+        
+        const gameVid = document.getElementById("gameVid");
+        const vidTexture = new THREE.VideoTexture(gameVid);
         vidTexture.minFilter = THREE.LinearFilter;
         vidTexture.magFilter = THREE.LinearFilter;
 
@@ -270,6 +263,7 @@ function init() {
             toneMapped: false
         });
 
+        //Monitor CHILD 1 on array is the material for the screen
         monitorR.children[1].material = videoMat;
 
         scene.add(monitorR);
