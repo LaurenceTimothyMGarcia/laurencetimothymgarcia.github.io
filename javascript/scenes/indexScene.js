@@ -513,7 +513,7 @@ function init() {
         console.log("Mouse clicked");
 
         //Checks if object is selectable
-        if (intersects.length > 0 && intersects[0].object.userData.select)
+        if (intersects.length > 0 && intersects[0].object.userData.select && !isOverlayOn)
         {
             //Debug naming
             console.log(`FOUND ${intersects[0].object.userData.name}`);
@@ -538,18 +538,15 @@ function init() {
                     break;
                 case "Resume":
                     // location.href = '../../resume.html';
-                    overlayOn();
-                    overlayDataOn("resume");
+                    overlayOn("resume");
                     break;
                 case "CLA":
                     // location.href = '../../coursetaken.html';
-                    overlayOn();
-                    overlayDataOn("course");
+                    overlayOn("course");
                     break;
                 case "Phone":
                     //Overlay to socials here
-                    overlayOn();
-                    overlayDataOn("socials");
+                    overlayOn("socials");
                     break;
             }
         }
@@ -605,7 +602,7 @@ function init() {
 
         const intersects = raycaster.intersectObject( scene, true );
 
-        if ( intersects.length > 0 && intersects[0].object.userData.select) {
+        if ( intersects.length > 0 && intersects[0].object.userData.select && !isOverlayOn) {
 
             let selectedObject = null;
 

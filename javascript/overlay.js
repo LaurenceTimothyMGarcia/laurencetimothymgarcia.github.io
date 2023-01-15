@@ -1,23 +1,18 @@
+var isOverlayOn;
 
 //Displays overlay
-function overlayOn()
+function overlayOn(id)
 {
     document.getElementById("overlay").style.display = "block";
+    document.getElementById("overlay").innerHTML += document.getElementById("exitbutton").innerHTML;
+    document.getElementById("overlay").innerHTML += document.getElementById(id).innerHTML;
+    isOverlayOn = true;
 }
 
 //Removes overlay
 function overlayOff()
 {
     document.getElementById("overlay").style.display = "none";
-}
-
-//Adds webpage data to overlay
-function overlayDataOn(id)
-{
-    document.getElementById(id).style.display = "block";
-}
-
-function overlayDataOff(id)
-{
-    document.getElementById(id).style.display = "none";
+    document.getElementById("overlay").innerHTML = "";
+    isOverlayOn = false;
 }
