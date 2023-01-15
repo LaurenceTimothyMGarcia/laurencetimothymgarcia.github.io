@@ -397,8 +397,8 @@ function init() {
                 size: 1, 
                 height: 0.25
             });
-            const nameMaterial = new THREE.MeshToonMaterial();
-            nameMaterial.color.set(0xB6C3E3);
+            const nameMaterial = new THREE.MeshPhongMaterial();
+            nameMaterial.color.set(0x35A816);
             const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
             nameMesh.position.set(-6, 5.5, -1);
             scene.add(nameMesh);

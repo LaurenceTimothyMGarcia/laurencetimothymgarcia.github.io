@@ -73,8 +73,7 @@ header
 /*** Heading Text elements ***/
 h2 {
     font-size: 3em;
-    top: 50%;
-    right: 50%;
+    text-align: center;
 }
 
 /* Loading Bar */
