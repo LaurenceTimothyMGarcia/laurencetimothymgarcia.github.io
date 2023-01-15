@@ -116,16 +116,34 @@ label {
 
     overflow-y: scroll;
 }
+
+/* Resume Overlay */
 #resume {
     display: none;
 }
+
+/* Courses Overlay */
 #course {
     display: none;
 }
+
+/* Socials Overlay */
 #socials {
     display: none;
 }
+.socialsLinks table {
+    align-items: center;
+}
+.socialsLinks img {
+    width: 10%;
+    height: auto;
+}
+/* Used for testing */
+/* .socialsLinks tr:nth-child(even) {
+    background-color: aqua;
+} */
 
+/* Exit button */
 #exitbutton {
     display: none;
 }
