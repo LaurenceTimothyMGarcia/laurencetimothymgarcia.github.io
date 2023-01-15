@@ -291,6 +291,20 @@ function init() {
         console.error( error );
     });
 
+    //Phone
+    modelLoader.load('../../models/SmartPhone.gltf', function (gltf) {
+
+        const phone = gltf.scene.children[0];
+
+        phone.children[1].userData.select = true;
+        phone.children[1].userData.name = "Phone";
+
+        scene.add(phone);
+
+    }, undefined, function ( error ) {
+        console.error( error );
+    });
+
     //Polaroids
     modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
 
@@ -446,6 +460,21 @@ function init() {
             courseTextMesh.rotateZ(-1.5708);
             courseTextMesh.rotateX(0.436332);
             scene.add(courseTextMesh);
+
+            //Socials
+            const socialsTextGeo = new TextGeometry('Socials', {
+                font: comfortaaFont,
+                size: 0.30, 
+                height: 0.05
+            });
+            const socialsTextMat = new THREE.MeshPhongMaterial();
+            socialsTextMat.color.set(0xffffff);
+            const socialsTextMesh = new THREE.Mesh(socialsTextGeo, socialsTextMat);
+            socialsTextMesh.position.set(-3.35, 1, 1.75);
+            socialsTextMesh.rotateY(1.2836897);
+            socialsTextMesh.rotateX(-1.0472);
+            
+            scene.add(socialsTextMesh);
         }
     );
 
@@ -497,6 +526,9 @@ function init() {
                     location.href = '../../coursetaken.html';
                     // document.getElementById("overlay").style.display = "block";
                     // document.getElementById("course").style.display = "block";
+                    break;
+                case "Phone":
+                    //Overlay to socials here
                     break;
             }
         }
@@ -572,6 +604,9 @@ function init() {
                     selectedObject = intersects[0].object;
                     break;
                 case "CLA":
+                    selectedObject = intersects[0].object;
+                    break;
+                case "Phone":
                     selectedObject = intersects[0].object;
                     break;
             }
