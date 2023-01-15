@@ -100,6 +100,10 @@ function init() {
     //Lighting SET UP
     //
 
+    //Ambient Light
+    const ambiLight = new THREE.AmbientLight(0xF5D9C8, 0.25);
+    scene.add(ambiLight);
+
     //Directional Light 1
     const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.2);
     dirLight1.position.set(50, 100, 7.5);
@@ -107,7 +111,7 @@ function init() {
     scene.add(dirLight1);
 
     //Spot Light 1
-    const spotLight1 = new THREE.SpotLight(0xffffff, 1000, 0, Math.PI/3, 1);
+    const spotLight1 = new THREE.SpotLight(0xffffff, 850, 0, Math.PI/3, 1);
     spotLight1.position.set(-5, 20, 7.5);
     spotLight1.castShadow = true;
     scene.add(spotLight1);
@@ -199,7 +203,6 @@ function init() {
         //User data - must select the screen
         monitorL.children[1].userData.select = true;
         monitorL.children[1].userData.name = "Left Monitor";
-        monitorL.children[1].userData.ogCol = monitorL.children[0].material.color.getHex();
 
         monitorL.children[0].castShadow = true;
 
@@ -233,7 +236,6 @@ function init() {
         //User data
         monitorR.children[1].userData.select = true;
         monitorR.children[1].userData.name = "Right Monitor";
-        monitorR.children[1].userData.ogCol = monitorR.children[0].material.color.getHex();
 
         monitorR.children[0].castShadow = true;
         
@@ -264,7 +266,6 @@ function init() {
 
         resume.userData.select = true;
         resume.userData.name = "Resume";
-        resume.userData.ogCol = resume.material.color.getHex();
 
         const resumeImg = new THREE.TextureLoader().load("../../images/SoftEngScreenshot.png");
         const resumeMat = new THREE.MeshPhongMaterial( {map: resumeImg} );
@@ -281,9 +282,8 @@ function init() {
 
         const cla = gltf.scene.children[0];
 
-        cla.userData.select = true;
-        cla.userData.name = "CLA";
-        cla.userData.ogCol = cla.material.color.getHex();
+        cla.children[0].userData.select = true;
+        cla.children[0].userData.name = "CLA";
 
         scene.add(cla);
 
@@ -327,36 +327,26 @@ function init() {
         polaroid1.children[1].userData.select = true;
         polaroid1.children[0].userData.name = "Polaroid";
         polaroid1.children[1].userData.name = "Polaroid";
-        polaroid1.children[0].userData.ogCol = polaroid1.children[0].material.color.getHex();
-        polaroid1.children[1].userData.ogCol = polaroid1.children[0].material.color.getHex();
 
         polaroid2.children[0].userData.select = true;
         polaroid2.children[1].userData.select = true;
         polaroid2.children[0].userData.name = "Polaroid";
         polaroid2.children[1].userData.name = "Polaroid";
-        polaroid2.children[0].userData.ogCol = polaroid2.children[0].material.color.getHex();
-        polaroid2.children[1].userData.ogCol = polaroid2.children[0].material.color.getHex();
 
         polaroid3.children[0].userData.select = true;
         polaroid3.children[1].userData.select = true;
         polaroid3.children[0].userData.name = "Polaroid";
         polaroid3.children[1].userData.name = "Polaroid";
-        polaroid3.children[0].userData.ogCol = polaroid3.children[0].material.color.getHex();
-        polaroid3.children[1].userData.ogCol = polaroid3.children[0].material.color.getHex();
 
         polaroid4.children[0].userData.select = true;
         polaroid4.children[1].userData.select = true;
         polaroid4.children[0].userData.name = "Polaroid";
         polaroid4.children[1].userData.name = "Polaroid";
-        polaroid4.children[0].userData.ogCol = polaroid4.children[0].material.color.getHex();
-        polaroid4.children[1].userData.ogCol = polaroid4.children[0].material.color.getHex();
 
         polaroid5.children[0].userData.select = true;
         polaroid5.children[1].userData.select = true;
         polaroid5.children[0].userData.name = "Polaroid";
         polaroid5.children[1].userData.name = "Polaroid";
-        polaroid5.children[0].userData.ogCol = polaroid5.children[0].material.color.getHex();
-        polaroid5.children[1].userData.ogCol = polaroid5.children[0].material.color.getHex();
 
         //Add all polaroids to the scene
         scene.add(polaroid1);
@@ -379,33 +369,83 @@ function init() {
                 size: 1, 
                 height: 0.25
             });
-            const nameMaterial = new THREE.MeshNormalMaterial();
+            const nameMaterial = new THREE.MeshPhongMaterial();
+            nameMaterial.color.set(0xcccccc);
             const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
             nameMesh.position.set(-6, 5.5, -1);
             scene.add(nameMesh);
 
             //Programming Projects
-            // const programmingGeo = new TextGeometry('Programming Projects', {
-            //     font: comfortaaFont,
-            //     size: 0.25, 
-            //     height: 0.1
-            // });
-            // const programmingMat = new THREE.MeshNormalMaterial();
-            // const programmingMesh = new THREE.Mesh(programmingGeo, programmingMat);
-            // programmingMesh.position.set(-5, 4, -1);
-            // scene.add(programmingMesh);
+            const programmingGeo = new TextGeometry('Programming Portfolio', {
+                font: comfortaaFont,
+                size: 0.25, 
+                height: 0.1
+            });
+            const programmingMat = new THREE.MeshPhongMaterial();
+            programmingMat.color.set(0xffffff);
+            const programmingMesh = new THREE.Mesh(programmingGeo, programmingMat);
+            programmingMesh.position.set(-4.55, 3.9, -2);
+            programmingMesh.rotateY(0.18);
+            scene.add(programmingMesh);
 
             //Game Projects
+            const gameTextGeo = new TextGeometry('Game Dev Portfolio', {
+                font: comfortaaFont,
+                size: 0.25, 
+                height: 0.1
+            });
+            const gameTextMat = new THREE.MeshPhongMaterial();
+            gameTextMat.color.set(0xffffff);
+            const gameTextMesh = new THREE.Mesh(gameTextGeo, gameTextMat);
+            gameTextMesh.position.set(0.85, 1.85, -1.531);
+            gameTextMesh.rotateY(-0.36163222);
+            scene.add(gameTextMesh);
 
 
             //Art Portfolio
+            const artTextGeo = new TextGeometry('Art Portfolio', {
+                font: comfortaaFont,
+                size: 0.35, 
+                height: 0.1
+            });
+            const artTextMat = new THREE.MeshPhongMaterial();
+            artTextMat.color.set(0xffffff);
+            const artTextMesh = new THREE.Mesh(artTextGeo, artTextMat);
+            artTextMesh.position.set(-6, 1.5, -1.2);
+            artTextMesh.rotateZ(1.5708);
+            artTextMesh.rotateX(0.436332);
+            scene.add(artTextMesh);
 
 
             //Resume
+            const resumeTextGeo = new TextGeometry('Resume', {
+                font: comfortaaFont,
+                size: 0.25, 
+                height: 0.1
+            });
+            const resumeTextMat = new THREE.MeshPhongMaterial();
+            resumeTextMat.color.set(0xffffff);
+            const resumeTextMesh = new THREE.Mesh(resumeTextGeo, resumeTextMat);
+            //Front
+            resumeTextMesh.position.set(-0.85, 0.85, 2.5);
+            //Back
+            // resumeTextMesh.position.set(-0.85, 1.10, -1.5);
+            scene.add(resumeTextMesh);
 
 
             //Relevant Courses
-
+            const courseTextGeo = new TextGeometry('Relevant\nCourses', {
+                font: comfortaaFont,
+                size: 0.15, 
+                height: 0.1
+            });
+            const courseTextMat = new THREE.MeshPhongMaterial();
+            courseTextMat.color.set(0xffffff);
+            const courseTextMesh = new THREE.Mesh(courseTextGeo, courseTextMat);
+            courseTextMesh.position.set(5, 3, 2);
+            courseTextMesh.rotateZ(-1.5708);
+            courseTextMesh.rotateX(0.436332);
+            scene.add(courseTextMesh);
         }
     );
 
