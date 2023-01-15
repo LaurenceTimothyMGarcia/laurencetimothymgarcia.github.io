@@ -143,7 +143,7 @@ function init() {
     pointLight2.castShadow = true;
     scene.add(pointLight2);
 
-    //Point Light 2
+    //Point Light 3
     const pointLight3 = new THREE.PointLight(0x0000ff, 50);
     pointLight3.position.set(3, 3, -3);
     pointLight3.castShadow = true;
@@ -190,6 +190,11 @@ function init() {
 
     //Desk
     modelLoader.load( '../../models/Desk.gltf', function ( gltf ) {
+
+        gltf.scene.children[0].material = new THREE.MeshPhongMaterial();
+        gltf.scene.children[0].material.color.set(0x242322);
+        gltf.scene.children[2].material = new THREE.MeshPhongMaterial();
+        gltf.scene.children[2].material.color.set(0x242322);
 
         gltf.scene.children[0].castShadow = true;
         gltf.scene.children[0].receiveShadow = true;
