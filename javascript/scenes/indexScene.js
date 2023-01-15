@@ -537,17 +537,19 @@ function init() {
                     location.href = '../../artprojects.html';
                     break;
                 case "Resume":
-                    location.href = '../../resume.html';
-                    // document.getElementById("overlay").style.display = "block";
-                    // document.getElementById("resume").style.display = "block";
+                    // location.href = '../../resume.html';
+                    overlayOn();
+                    overlayDataOn("resume");
                     break;
                 case "CLA":
-                    location.href = '../../coursetaken.html';
-                    // document.getElementById("overlay").style.display = "block";
-                    // document.getElementById("course").style.display = "block";
+                    // location.href = '../../coursetaken.html';
+                    overlayOn();
+                    overlayDataOn("course");
                     break;
                 case "Phone":
                     //Overlay to socials here
+                    overlayOn();
+                    overlayDataOn("socials");
                     break;
             }
         }

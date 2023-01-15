@@ -19,7 +19,8 @@
                 }
             }
         </script>
-        <script type="module" src="./javascript/scenes/indexScene.js"></script>
+        <script async src="./javascript/overlay.js"></script>
+        <script async type="module" src="./javascript/scenes/indexScene.js"></script>
     </head>
 
     <body>
@@ -75,9 +76,17 @@
             <!-- Called an overlay
                 google javascript div overlay
             -->
-            <div id="overlay" onclick="display: none">
-                <div id="resume">Resume</h2>
-                <div id="course">Courses Taken</h2>
+            <div id="overlay">
+                <button onclick="overlayOff()">Exit Button</button>
+            </div>
+
+            <div id="resume"><h2>Resume</h2></div>
+            <div id="course"><h2>Courses Taken</h2></div>
+            <div id="socials">
+                <h2>Socials</h2>
+                <table>
+                    
+                </table>
             </div>
 
             <!----- Footer ----->
