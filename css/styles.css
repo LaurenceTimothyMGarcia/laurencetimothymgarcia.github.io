@@ -116,9 +116,6 @@ label {
 
     overflow-y: scroll;
 }
-#exitbutton {
-    display: none;
-}
 #resume {
     display: none;
 }
@@ -127,5 +124,14 @@ label {
 }
 #socials {
     display: none;
+}
+
+#exitbutton {
+    display: none;
+    width: 10%;
+    height: 10%;
+}
+#exitbutton img:hover {
+    cursor: pointer;
 }
 
