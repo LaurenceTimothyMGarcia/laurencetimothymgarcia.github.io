@@ -48,6 +48,15 @@ function init() {
     //Camera initialization
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+    //Layers System
+    camera.layers.enable(0);
+    camera.layers.disable(1);
+    camera.layers.disable(2);
+    camera.layers.disable(3);
+    camera.layers.disable(4);
+    camera.layers.disable(5);
+    camera.layers.disable(6);
+
 
     //Loading Manager
     const loadingManager = new THREE.LoadingManager();
@@ -383,8 +392,8 @@ function init() {
                 size: 1, 
                 height: 0.25
             });
-            const nameMaterial = new THREE.MeshPhongMaterial();
-            nameMaterial.color.set(0xcccccc);
+            const nameMaterial = new THREE.MeshToonMaterial();
+            nameMaterial.color.set(0xB6C3E3);
             const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
             nameMesh.position.set(-6, 5.5, -1);
             scene.add(nameMesh);
@@ -395,11 +404,12 @@ function init() {
                 size: 0.25, 
                 height: 0.1
             });
-            const programmingMat = new THREE.MeshPhongMaterial();
+            const programmingMat = new THREE.MeshToonMaterial();
             programmingMat.color.set(0xffffff);
             const programmingMesh = new THREE.Mesh(programmingGeo, programmingMat);
             programmingMesh.position.set(-4.55, 3.9, -2);
             programmingMesh.rotateY(0.18);
+            programmingMesh.layers.set(1);
             scene.add(programmingMesh);
 
             //Game Projects
@@ -408,11 +418,12 @@ function init() {
                 size: 0.25, 
                 height: 0.1
             });
-            const gameTextMat = new THREE.MeshPhongMaterial();
+            const gameTextMat = new THREE.MeshToonMaterial();
             gameTextMat.color.set(0xffffff);
             const gameTextMesh = new THREE.Mesh(gameTextGeo, gameTextMat);
-            gameTextMesh.position.set(0.85, 1.85, -1.531);
+            gameTextMesh.position.set(0.85, 1.35, -1.531);
             gameTextMesh.rotateY(-0.36163222);
+            gameTextMesh.layers.set(2);
             scene.add(gameTextMesh);
 
 
@@ -422,12 +433,13 @@ function init() {
                 size: 0.35, 
                 height: 0.1
             });
-            const artTextMat = new THREE.MeshPhongMaterial();
+            const artTextMat = new THREE.MeshToonMaterial();
             artTextMat.color.set(0xffffff);
             const artTextMesh = new THREE.Mesh(artTextGeo, artTextMat);
             artTextMesh.position.set(-6, 1.5, -1.2);
             artTextMesh.rotateZ(1.5708);
             artTextMesh.rotateX(0.436332);
+            artTextMesh.layers.set(3);
             scene.add(artTextMesh);
 
 
@@ -437,13 +449,14 @@ function init() {
                 size: 0.25, 
                 height: 0.1
             });
-            const resumeTextMat = new THREE.MeshPhongMaterial();
+            const resumeTextMat = new THREE.MeshToonMaterial();
             resumeTextMat.color.set(0xffffff);
             const resumeTextMesh = new THREE.Mesh(resumeTextGeo, resumeTextMat);
             //Front
             resumeTextMesh.position.set(-0.85, 0.85, 2.5);
             //Back
             // resumeTextMesh.position.set(-0.85, 1.10, -1.5);
+            resumeTextMesh.layers.set(4);
             scene.add(resumeTextMesh);
 
 
@@ -453,12 +466,13 @@ function init() {
                 size: 0.15, 
                 height: 0.1
             });
-            const courseTextMat = new THREE.MeshPhongMaterial();
+            const courseTextMat = new THREE.MeshToonMaterial();
             courseTextMat.color.set(0xffffff);
             const courseTextMesh = new THREE.Mesh(courseTextGeo, courseTextMat);
             courseTextMesh.position.set(5, 3, 2);
             courseTextMesh.rotateZ(-1.5708);
             courseTextMesh.rotateX(0.436332);
+            courseTextMesh.layers.set(5);
             scene.add(courseTextMesh);
 
             //Socials
@@ -467,13 +481,13 @@ function init() {
                 size: 0.30, 
                 height: 0.05
             });
-            const socialsTextMat = new THREE.MeshPhongMaterial();
+            const socialsTextMat = new THREE.MeshToonMaterial();
             socialsTextMat.color.set(0xffffff);
             const socialsTextMesh = new THREE.Mesh(socialsTextGeo, socialsTextMat);
             socialsTextMesh.position.set(-3.35, 1, 1.75);
             socialsTextMesh.rotateY(1.2836897);
             socialsTextMesh.rotateX(-1.0472);
-            
+            socialsTextMesh.layers.set(6);
             scene.add(socialsTextMesh);
         }
     );
@@ -577,6 +591,7 @@ function init() {
 
     }
 
+    let word = 1;
     function checkIntersection() {
 
         raycaster.setFromCamera( mouse, camera );
@@ -593,23 +608,31 @@ function init() {
             {
                 case "Left Monitor":
                     selectedObject = intersects[1].object;
+                    word = 1;
                     break;
                 case "Right Monitor":
                     selectedObject = intersects[1].object;
+                    word = 2;
                     break;
                 case "Polaroid":
                     selectedObject = intersects[0].object;
+                    word = 3;
                     break;
                 case "Resume":
                     selectedObject = intersects[0].object;
+                    word = 4;
                     break;
                 case "CLA":
                     selectedObject = intersects[0].object;
+                    word = 5;
                     break;
                 case "Phone":
                     selectedObject = intersects[0].object;
+                    word = 6;
                     break;
             }
+
+            camera.layers.enable(word);
 
             addSelectedObject( selectedObject );
             outlinePass.selectedObjects = selectedObjects;
@@ -619,6 +642,7 @@ function init() {
             outlinePass.selectedObjects = [];
             document.body.style.cursor = 'default';
 
+            camera.layers.disable(word);
         }
     }
 
