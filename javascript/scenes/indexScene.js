@@ -537,15 +537,12 @@ function init() {
                     location.href = '../../artprojects.html';
                     break;
                 case "Resume":
-                    // location.href = '../../resume.html';
                     overlayOn("resume");
                     break;
                 case "CLA":
-                    // location.href = '../../coursetaken.html';
                     overlayOn("course");
                     break;
                 case "Phone":
-                    //Overlay to socials here
                     overlayOn("socials");
                     break;
             }

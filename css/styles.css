@@ -44,6 +44,9 @@ body
     padding: 0;
 
     /* Hides scroll bar */
+    display:block;
+    position: fixed;
+    inset: 0;
     /* overflow: hidden; */
 }
 
@@ -108,9 +111,11 @@ label {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color: rgba(35, 33, 58, 0.95); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: default; /*Add a pointer on hover*/
+
+    overflow-y: scroll;
 }
 #exitbutton {
     display: none;
