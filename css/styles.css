@@ -128,10 +128,18 @@ label {
 
 #exitbutton {
     display: none;
-    width: 10%;
-    height: 10%;
 }
-#exitbutton img:hover {
+.exitImage img {
+    color: #FFFFFF;
     cursor: pointer;
+    width: 2%;
+    height: auto;
+
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.exitImage img:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
