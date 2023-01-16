@@ -125,8 +125,52 @@ label {
 #resume {
     display: none;
 }
-.resumeInfo a {
-    align-content: center;
+/* Setting up header and fonts for resume info */
+.resumeInfo h4 {
+    font-size: 1.75em;
+    margin: 0;
+}
+.resumeInfo h5 {
+    font-size: 1.25em;
+    margin: 0;
+}
+.resumeInfo ul {
+    margin-top: 0;
+    padding-bottom: 1%;
+}
+.resumeButton {
+    text-align: center;
+}
+.resumeButton a button {
+    background-color: #12c538;
+    padding: 1%;
+    margin: 0;
+    border: none;
+
+    font-size: 1.5em;
+}
+.resumeButton a button:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+/* Education Div */
+#resume-education {
+    background-color: #000000;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/* Skills Div */
+#resume-skills {
+
+}
+/* Leadership Div */
+#resume-leadership {
+
+}
+/* Work Experience Div */
+#resume-work {
+
 }
 
 /* Courses Overlay */
