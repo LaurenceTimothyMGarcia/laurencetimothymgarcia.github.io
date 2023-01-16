@@ -75,6 +75,10 @@ h2 {
     font-size: 3em;
     text-align: center;
 }
+h3 {
+    font-size: 2em;
+    text-align: center;
+}
 
 /* Loading Bar */
 .progress-bar-container {
@@ -120,6 +124,9 @@ label {
 /* Resume Overlay */
 #resume {
     display: none;
+}
+.resumeInfo a {
+    align-content: center;
 }
 
 /* Courses Overlay */
