@@ -23,14 +23,14 @@ const handleOnMove = e => {
         maxDelta = window.innerWidth / 2;
 
     const percentage = (mouseDelta / maxDelta) * -100;
-    console.log(`PERCENTAGE: ${percentage}`);
+    // console.log(`PERCENTAGE: ${percentage}`);
 
     const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
-    console.log(`Track data prev percent: ${track.dataset.prevPercentage}`);
-    console.log(`PERCENTAGE UNCONSTRAINED: ${nextPercentageUnconstrained}`);
+    // console.log(`Track data prev percent: ${track.dataset.prevPercentage}`);
+    // console.log(`PERCENTAGE UNCONSTRAINED: ${nextPercentageUnconstrained}`);
 
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-    console.log(`NEXT PERCENTAGE: ${nextPercentage}`);
+    // console.log(`NEXT PERCENTAGE: ${nextPercentage}`);
 
     track.dataset.percentage = nextPercentage;
 
