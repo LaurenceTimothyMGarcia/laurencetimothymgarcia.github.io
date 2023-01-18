@@ -31,18 +31,19 @@ body {
     overflow-x: hidden;
 }
 
-.image-track {
+#image-track {
     display: flex;
     gap: 4vmin;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%);
+    user-select: none;
 }
 
-.image-track > .image {
+#image-track > .image {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: center;
+    object-position: 100% center;
 }

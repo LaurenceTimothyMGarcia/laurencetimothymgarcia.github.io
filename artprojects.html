@@ -14,6 +14,9 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Art Gallery JS Code -->
+        <script async src="./javascript/artGallery.js"></script>
     </head>
 
     <body>
@@ -23,11 +26,11 @@
                 <h1>Art Gallery coming soon</h1>
             </header>
             
-            <div class="image-track">
-                <img class="image" src="../../images/artprojects/GameAssets/Chachi/ChachiMapIso.png">
-                <img class="image" src="../../images/artprojects/GameAssets/CircleOfGrowth/GrowthSceneUnMarkedNoBG.png">
-                <img class="image" src="../../images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Models.png">
-                <img class="image" src="../../images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Rooms.png">
+            <div id="image-track" data-mouse-down-at="0" data-prev-precentage="0">
+                <img class="image" src="../../images/artprojects/GameAssets/Chachi/ChachiMapIso.png" draggable="false">
+                <img class="image" src="../../images/artprojects/GameAssets/CircleOfGrowth/GrowthSceneUnMarkedNoBG.png" draggable="false">
+                <img class="image" src="../../images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Models.png" draggable="false">
+                <img class="image" src="../../images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Rooms.png" draggable="false">
             </div>
 
             <!----- Footer ----->
