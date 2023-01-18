@@ -666,7 +666,7 @@ window.onresize = function (e) {
 //changing these values changes the "center"
 let oldX = 750;
 let oldY = 500;
-window.onmousemove = function (ev) {
+const parallax = function (ev) {
     let changex = ev.x - oldX;
     let changey = ev.y - oldY;
 
@@ -684,6 +684,9 @@ window.onmousemove = function (ev) {
     oldX = ev.x;
     oldY = ev.y;
 };
+
+window.onmousemove = ev => parallax(ev);
+window.ontouchmove = ev => parallax(ev.touches[0]);
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
