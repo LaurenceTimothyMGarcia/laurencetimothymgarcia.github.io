@@ -31,7 +31,7 @@ body {
     overflow-x: hidden;
 }
 
-#image-track {
+.image-track {
     display: flex;
     gap: 4vmin;
     position: absolute;
@@ -41,8 +41,8 @@ body {
     user-select: none;
 }
 
-#image-track > .image {
-    width: 40vmin;
+.image-track > .image {
+    width: 25vmin;
     height: 56vmin;
     object-fit: cover;
     object-position: 100% center;

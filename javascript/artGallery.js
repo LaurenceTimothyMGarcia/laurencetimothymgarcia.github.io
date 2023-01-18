@@ -2,7 +2,7 @@
 // JS file for 2d art gallery, temporary until we create 3d one
 // 
 
-const track = document.getElementById("image-track");
+const track = document.getElementsByClassName("image-track")[0];
 
 const handleOnDown = e => {
     track.dataset.mouseDownAt = e.clientX;
