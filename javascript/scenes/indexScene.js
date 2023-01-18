@@ -46,7 +46,9 @@ function init() {
     //
     scene = new THREE.Scene();
     //Camera initialization
-    camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    console.log(window.innerWidth / window.innerHeight);
 
     //Layers System
     camera.layers.enable(0);
