@@ -125,7 +125,14 @@ label {
 #resume {
     display: none;
 }
+.resumeInfo {
+    margin: 0;
+}
 /* Setting up header and fonts for resume info */
+.resumeInfo h3 {
+    margin-top: 0;
+    padding-top: 2%;
+}
 .resumeInfo h4 {
     font-size: 1.75em;
     margin: 0;
@@ -136,6 +143,7 @@ label {
 }
 .resumeInfo ul {
     margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 1%;
 }
 .resumeButton {
@@ -153,6 +161,10 @@ label {
     cursor: pointer;
     opacity: 50%;
 }
+.resume-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 /* Education Div */
 #resume-education {
@@ -162,15 +174,32 @@ label {
 }
 /* Skills Div */
 #resume-skills {
+    background-color: #000000;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.skills-programming {
+
+}
+.skills-tools {
 
 }
 /* Leadership Div */
 #resume-leadership {
-
+    background-color: #000000;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.club-insta {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
 }
 /* Work Experience Div */
 #resume-work {
-
+    background-color: #000000;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* Courses Overlay */
