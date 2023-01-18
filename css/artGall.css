@@ -1,0 +1,48 @@
+/* Variables for color pallete
+---------------------------*/
+:root   {
+    --primary_color: #FFFFFF;
+    --primary_variant_color: #FFFFFF;
+    --secondary_color: #FFFFFF;
+    --secondary_variant_color: #FFFFFF;
+
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+@font-face  {
+    font-family: "comfortaa";
+    src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
+        url(../fonts/Comfortaa-Regular.woff) format('woff'),
+        url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+}
+
+body {
+    /* Font Details */
+    font-family: "comfortaa", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: var(--white);
+
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin: 0em;
+    overflow-x: hidden;
+}
+
+.image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center;
+}
