@@ -20,11 +20,13 @@ function showDescription(flexHolder)
     const image = flexHolder.children[0];
     const imageDescription = flexHolder.children[1];
 
-    image.setAttribute("style", "width: 56vmin;");
-    console.log(image);
+    image.setAttribute("style", "width: 25vmin;");
+
+    image.animate({
+        width: "56vmin"
+    }, {duration: 250, fill: "forwards"});
     
     imageDescription.setAttribute("style", "display:block;");
-    console.log(imageDescription);
     
 }
 
@@ -34,6 +36,15 @@ function hideDescription(flexHolder)
 
     const image = flexHolder.children[0];
     const imageDescription = flexHolder.children[1];
+
+    if (!image.hasAttribute("style") && !imageDescription.hasAttribute("style"))
+    {
+        return;
+    }
+
+    image.animate({
+        width: "25vmin"
+    }, {duration: 250, fill: "forwards"});
 
     image.removeAttribute("style");
     imageDescription.removeAttribute("style");
