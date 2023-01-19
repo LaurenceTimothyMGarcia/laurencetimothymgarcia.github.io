@@ -45,6 +45,8 @@ function showDescription(flexHolder)
 
     //Sets background image to match the selected image
     // Removed too busy 
+    const background = document.getElementById("background");
+    background.style.backgroundImage = `url(${image.src})`;
     // document.body.style.backgroundImage = `url(${image.src})`;
     
     // Text slide animation
