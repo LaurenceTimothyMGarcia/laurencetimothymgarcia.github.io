@@ -42,7 +42,7 @@ header h1 {
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 50%;
+    left: 5%;
     top: 50%;
     transform: translate(0%, -50%);
     user-select: none;
@@ -63,7 +63,6 @@ header h1 {
 
 .image-track .image:hover {
     cursor: pointer;
-    opacity: 50%;
 }
 
 .image-info {

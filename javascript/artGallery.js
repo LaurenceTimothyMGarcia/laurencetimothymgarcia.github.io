@@ -35,7 +35,7 @@ const handleOnMove = e => {
     // console.log(`Track data prev percent: ${track.dataset.prevPercentage}`);
     // console.log(`PERCENTAGE UNCONSTRAINED: ${nextPercentageUnconstrained}`);
 
-    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -90);
     // console.log(`NEXT PERCENTAGE: ${nextPercentage}`);
 
     track.dataset.percentage = nextPercentage;
