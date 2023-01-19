@@ -143,6 +143,7 @@ header h2 {
     flex-direction: column;
 
     text-align: center;
+    box-shadow: none;
 }
 
 #socials:hover {
