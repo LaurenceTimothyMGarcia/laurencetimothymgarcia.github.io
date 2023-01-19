@@ -34,10 +34,19 @@ const handleOnMove = e => {
 
     track.dataset.percentage = nextPercentage;
 
+    // Direct update to the css, not as smooth
+    // track.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+    // Using animation to translate, looks more smooth
     track.animate({
         transform: `translate(${nextPercentage}%, -50%)`
     }, {duration: 1200, fill: "forwards"});
 
+
+    // Direct update to the css, not as smooth
+    // image.style.objectPosition = `${100 + nextPercentage}% center`;
+
+    // Using animation to change object
     for (const image of track.getElementsByClassName("image")) {
         image.animate({
             objectPosition: `${100 + nextPercentage}% center`

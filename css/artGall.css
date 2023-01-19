@@ -31,6 +31,23 @@ body {
     overflow-x: hidden;
 }
 
+/* Testing purpose for image modal */
+/* #image-expand {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(20, 19, 19, 0.95);
+    z-index: 2;
+    cursor: default;
+
+} */
+
 .image-track {
     display: flex;
     gap: 4vmin;
@@ -41,9 +58,24 @@ body {
     user-select: none;
 }
 
-.image-track > .image {
+.flex-holder {
+    display: flex;
+    gap: 5%;
+    justify-content: space-evenly;
+}
+
+.image-track .image {
     width: 25vmin;
     height: 56vmin;
     object-fit: cover;
     object-position: 100% center;
+}
+
+.image-track .image:hover {
+    cursor: pointer;
+}
+
+.image-info {
+    /* default display is block */
+    display: none;
 }

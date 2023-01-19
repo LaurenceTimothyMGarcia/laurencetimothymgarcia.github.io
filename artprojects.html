@@ -17,6 +17,7 @@
 
         <!-- Art Gallery JS Code -->
         <script async src="./javascript/artGallery.js"></script>
+        <script async src="./javascript/artImageSelect.js"></script>
     </head>
 
     <body>
@@ -25,15 +26,53 @@
             <header>
                 <h1>Art Gallery coming soon</h1>
             </header>
+
+            <!-- Overlay for image expand -->
+            <!-- <div id="image-expand">
+                
+            </div> -->
             
             <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
 
+                <!-- Template, remove later -->
+                <!-- <div class="flex-holder" onclick="imageSelect(this)">
+                    
+                    <div class="image-info">
+                        <h2></h2>
+                    </div>
+                </div> -->
+
                 <!-- OC characters -->
-                <img class="image" src="../../images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png" draggable="false">
-                <img class="image" src="../../images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png" draggable="false">
-                <img class="image" src="../../images/artprojects/OriginalCharacters/Pakabi/Pakabi Forest Fixed Purple Grass Purple Fog Green Crystals.png" draggable="false">
-                <img class="image" src="../../images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png" draggable="false">
-                <img class="image" src="../../images/artprojects/OriginalCharacters/Rakukulam/Rakukulam_Freefalling_Glow.png" draggable="false">
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Detective Incognito</h2>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Oras</h2>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Pakabi/Pakabi Forest Fixed Purple Grass Purple Fog Green Crystals.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Pakabi</h2>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Phroglyt</h2>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Rakukulam/Rakukulam_Freefalling_Glow.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Rakukulam</h2>
+                    </div>
+                </div>
 
                 <!-- Game Assets -->
                 <img class="image" src="../../images/artprojects/GameAssets/Chachi/ChachiMapIso.png" draggable="false">
