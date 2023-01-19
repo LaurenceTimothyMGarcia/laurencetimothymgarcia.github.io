@@ -12,12 +12,19 @@ function imageSelect(flexHolder)
     //     hideDescription(image);
     // }
 
-    if (currentImage != null)
+    if (currentImage == flexHolder)
     {
         hideDescription(currentImage);
     }
-
-    showDescription(flexHolder);
+    else
+    {
+        if (currentImage != null)
+        {
+            hideDescription(currentImage);
+        }
+    
+        showDescription(flexHolder);
+    }
 }
 
 //Displays description
@@ -29,8 +36,8 @@ function showDescription(flexHolder)
 
     currentImage = flexHolder;
 
+    //Image grow animation
     image.setAttribute("style", "width: 25vmin;");
-
     image.animate({
         width: "56vmin"
     }, {duration: 250, fill: "forwards"});
@@ -39,8 +46,11 @@ function showDescription(flexHolder)
     // Removed too busy 
     // document.body.style.backgroundImage = `url(${image.src})`;
     
-    imageDescription.setAttribute("style", "display:block;");
-    
+    // Text slide animation
+    imageDescription.setAttribute("style", "display:block; z-index: -1; transform:translate(-100%, 0%);");
+    imageDescription.animate({
+        transform: "translate(0%, 0%)"
+    }, {duration: 250, fill: "forwards"});
 }
 
 function hideDescription(flexHolder)
