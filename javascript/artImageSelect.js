@@ -2,12 +2,19 @@
 // Selects image of art gallery
 // 
 
+let currentImage = null;
+
 function imageSelect(flexHolder)
 {
-    const allImages = document.getElementsByClassName("flex-holder");
-    for (image of allImages)
+    // const allImages = document.getElementsByClassName("flex-holder");
+    // for (image of allImages)
+    // {
+    //     hideDescription(image);
+    // }
+
+    if (currentImage != null)
     {
-        hideDescription(image);
+        hideDescription(currentImage);
     }
 
     showDescription(flexHolder);
@@ -19,6 +26,8 @@ function showDescription(flexHolder)
     console.log("open image");
     const image = flexHolder.children[0];
     const imageDescription = flexHolder.children[1];
+
+    currentImage = flexHolder;
 
     image.setAttribute("style", "width: 25vmin;");
 
