@@ -20,24 +20,49 @@
         <script async src="./javascript/overlay.js"></script>
     </head>
 
-    <body>
+    <body class="wrapper flex flex-col">
 
         <!----- Header ----->
         <!-- Header stores the socials (github and itch) and the time -->
-        <header>
+        <header class="flex v-center">
             <!-- <a href="index.html"><button>Home</button></a><a href="programmingprojects.html"><button>Programming</button></a><a href="artprojects.html"><button>Art</button></a> -->
             <!-- <h1>Game Projects coming soon</h1> -->
 
+            <!-- Socials as "user profiles" -->
+            <a href="https://github.com/LaurenceTimothyMGarcia" class="profile">
+                <img src="./images/footer/GithubLogo.png">
+            </a>
+            <a href="https://emergencyplayer.itch.io/" class="profile">
+                <img src="./images/footer/ItchIO.png">
+            </a>
+
+            <!-- Time -->
+            <div class="time">
+                <span id="time"></span>
+            </div>
         </header>
 
         <!-- Main -->
         <!-- First row of main is a div that contains the games -->
         <!-- Second row of main is a nav that contains navs to other parts of the website -->
         <main>
+            <!-- Game Information -->
+            <div class="games">
+                <a href="#" class="item"><img src="./images/gameprojects/GameJam/ChachiLogo.png"></a>
+                <a href="#" class="item"><img src="./images/gameprojects/GamePitch/TankLogo.png"></a>
+                <a href="#" class="item"><img src="./images/gameprojects/GameJam/LockedLoadedDieLogo.jpg"></a>
+                <a href="#" class="item"><img src="./images/gameprojects/GamePitch/LabyrinthRunLogo.png"></a>
+                <a href="#" class="item"><img src="./images/gameprojects/GameJam/StickToItLogo.png"></a>
+                <a href="#" class="item"><img src="./images/gameprojects/GamePitch/CowboyZeldaLogo.png"></a>
+                <a href="#" class="item"><img src="./images/gameprojects/GameJam/TheBoxLogo.png"></a>
+            </div>
 
-            
-
-
+            <!-- Navigation Information -->
+            <nav>
+                <a href="./index.html"><img src=""></a>
+                <a href="./programmingprojects.html"><img src=""></a>
+                <a href="./artprojects.html"><img src=""></a>
+            </nav>
         </main>
 
         <!----- Footer ----->

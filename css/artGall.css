@@ -88,11 +88,11 @@ header h2 {
     object-position: 100% center;
 
     /* Border around iamges */
-    /* border: #FFFFFF;
-    border-style: solid; */
+    border: #FFFFFF;
+    border-style: solid;
 
     /* Box shadow alternative */
-    box-shadow: 0vmin 0vmin 1vmin 0.75vmin #000000;
+    /* box-shadow: 0vmin 0vmin 1vmin 0.75vmin #000000; */
 }
 
 .image-track .image:hover {
@@ -144,6 +144,7 @@ header h2 {
 
     text-align: center;
     box-shadow: none;
+    border: none;
 }
 
 #socials:hover {
