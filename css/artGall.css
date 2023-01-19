@@ -31,22 +31,12 @@ body {
     overflow-x: hidden;
 }
 
-/* Testing purpose for image modal */
-/* #image-expand {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+header h1 {
+    font-size: 4em;
+    text-align: center;
 
-    background-color: rgba(20, 19, 19, 0.95);
-    z-index: 2;
-    cursor: default;
-
-} */
+    user-select: none;
+}
 
 .image-track {
     display: flex;
@@ -73,9 +63,28 @@ body {
 
 .image-track .image:hover {
     cursor: pointer;
+    opacity: 50%;
 }
 
 .image-info {
     /* default display is block */
     display: none;
+    width: 56vmin;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+#socials img {
+    width: 100%;
+    height: auto;
+}
+
+#socials img:hover {
+    opacity: 50%;
 }
