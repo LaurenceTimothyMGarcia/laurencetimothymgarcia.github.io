@@ -15,6 +15,7 @@ function imageSelect(flexHolder)
     if (currentImage == flexHolder)
     {
         hideDescription(currentImage);
+        currentImage = null;
     }
     else
     {
@@ -67,6 +68,10 @@ function hideDescription(flexHolder)
 
     image.animate({
         width: "25vmin"
+    }, {duration: 250, fill: "forwards"});
+
+    imageDescription.animate({
+        transform: "translate(-100%, 0%)"
     }, {duration: 250, fill: "forwards"});
 
     image.removeAttribute("style");
