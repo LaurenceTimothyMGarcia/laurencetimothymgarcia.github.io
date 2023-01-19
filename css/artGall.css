@@ -31,11 +31,37 @@ body {
     overflow-x: hidden;
 }
 
-header h1 {
-    font-size: 4em;
-    text-align: center;
+button {
+    border: none;
+    /* border-radius: 12%; */
+    background-color: var(--primary_color);
 
+    /* float: left; */
+
+    padding: 1%;
+
+    font-size: 1.25em;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+header {
     user-select: none;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
 }
 
 .image-track {
@@ -63,6 +89,7 @@ header h1 {
 
 .image-track .image:hover {
     cursor: pointer;
+    opacity: 50%;
 }
 
 .image-info {
@@ -77,6 +104,11 @@ header h1 {
     flex-direction: column;
 
     text-align: center;
+}
+
+#socials:hover {
+    cursor: default;
+    opacity: 100%;
 }
 
 #socials img {
