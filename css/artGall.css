@@ -90,6 +90,9 @@ header h2 {
     /* Border around iamges */
     /* border: #FFFFFF;
     border-style: solid; */
+
+    /* Box shadow alternative */
+    box-shadow: 0vmin 0vmin 1vmin 0.75vmin #000000;
 }
 
 .image-track .image:hover {
