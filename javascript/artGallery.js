@@ -25,6 +25,12 @@ const handleOnMove = e => {
     const percentage = (mouseDelta / maxDelta) * -100;
     // console.log(`PERCENTAGE: ${percentage}`);
 
+    //Solves edge case of mouse not initializing
+    if (track.dataset.prevPercentage == "undefined")
+    {
+        track.dataset.prevPercentage = 0;
+    }
+
     const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
     // console.log(`Track data prev percent: ${track.dataset.prevPercentage}`);
     // console.log(`PERCENTAGE UNCONSTRAINED: ${nextPercentageUnconstrained}`);
