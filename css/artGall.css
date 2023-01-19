@@ -98,6 +98,15 @@ header h2 {
     width: 56vmin;
 }
 
+.image-info h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.image-info h3 {
+    font-size: 1.5em;
+}
+
 #socials {
     display: flex;
     justify-content: space-evenly;
