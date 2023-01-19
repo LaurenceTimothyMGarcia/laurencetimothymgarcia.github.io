@@ -25,6 +25,10 @@ function showDescription(flexHolder)
     image.animate({
         width: "56vmin"
     }, {duration: 250, fill: "forwards"});
+
+    //Sets background image to match the selected image
+    // Removed too busy 
+    // document.body.style.backgroundImage = `url(${image.src})`;
     
     imageDescription.setAttribute("style", "display:block;");
     
