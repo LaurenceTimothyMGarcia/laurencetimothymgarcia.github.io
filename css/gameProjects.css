@@ -4,7 +4,7 @@
 :root   {
     --primary_color: #3a3a3a;
     --primary_variant_color: #FFFFFF;
-    --secondary_color: #FFFFFF;
+    --secondary_color: #8f8f8f;
     --shadow: #7a1111;
 
     --black: #000000;
@@ -25,27 +25,43 @@
 
 .flex-col {
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .flex-row {
     flex-direction: row;
 }
 
+body.flex-col {
+    justify-content: left;
+    gap: 12vmin;
+}
+
 .v-center {
     align-items: center;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
 body {
     /* Font Details */
     font-family: "comfortaa", sans-serif;
     font-size: 100%;
     line-height: 1.5;
-    color: var(--black);
+    color: var(--white);
     background: var(--primary_color);
 
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+main {
+    min-width: 100%;
+    min-height: 100%;
+
+    gap: 5vmin;
 }
 
 a img {
@@ -54,12 +70,20 @@ a img {
 }
 
 /* Profiles */
+header {
+    gap: 1vmin;
+}
 a.profile {
     width: 7vmin;
     height: 7vmin;
 }
 
 /* Games */
+h1 {
+    text-align: center;
+    font-size: 8vmin;
+    margin: 0;
+}
 .games {
     gap: 2vmin;
 
@@ -71,8 +95,8 @@ a.profile {
 a.item {
     display: inline-block;
 
-    width: 20vmin;
-    height: 20vmin;
+    width: 30vmin;
+    height: 30vmin;
 
     flex-shrink: 0;
 
