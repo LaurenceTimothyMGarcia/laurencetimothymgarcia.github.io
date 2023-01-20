@@ -2,7 +2,7 @@
 
 /* Global */
 :root   {
-    --primary_color: #FFFFFF;
+    --primary_color: #d42626;
     --primary_variant_color: #FFFFFF;
     --secondary_color: #FFFFFF;
     --secondary_variant_color: #FFFFFF;
@@ -18,10 +18,30 @@
         url(../fonts/Comfortaa-Regular.ttf) format('truetype');
 }
 
+/* Flex Settings */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.v-center {
+    align-items: center;
+}
+
 body {
     /* Font Details */
     font-family: "comfortaa", sans-serif;
     font-size: 100%;
     line-height: 1.5;
     color: var(--black);
+
+    width: 100%;
+    height: 100%;
 }

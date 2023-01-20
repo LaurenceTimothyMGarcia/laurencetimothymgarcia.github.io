@@ -20,14 +20,11 @@
         <script async src="./javascript/overlay.js"></script>
     </head>
 
-    <body class="wrapper flex flex-col">
+    <body class="flex flex-col">
 
         <!----- Header ----->
         <!-- Header stores the socials (github and itch) and the time -->
-        <header class="flex v-center">
-            <!-- <a href="index.html"><button>Home</button></a><a href="programmingprojects.html"><button>Programming</button></a><a href="artprojects.html"><button>Art</button></a> -->
-            <!-- <h1>Game Projects coming soon</h1> -->
-
+        <header class="flex flex-row v-center">
             <!-- Socials as "user profiles" -->
             <a data-name="GitHub Page" href="https://github.com/LaurenceTimothyMGarcia" class="profile">
                 <img src="./images/footer/GithubLogo.png">
@@ -35,11 +32,6 @@
             <a data-name="Itch.io Page" href="https://emergencyplayer.itch.io/" class="profile">
                 <img src="./images/footer/ItchIO.png">
             </a>
-
-            <!-- Time -->
-            <div class="time">
-                <span id="time"></span>
-            </div>
         </header>
 
         <!-- Main -->
@@ -47,7 +39,7 @@
         <!-- Second row of main is a nav that contains navs to other parts of the website -->
         <main>
             <!-- Game Information -->
-            <div class="games">
+            <div class="flex flex-row games">
                 <a data-name="Chachi" href="#" class="item"><img src="./images/gameprojects/GameJam/ChachiLogo.png"></a>
                 <a data-name="We Play Tanks! Tanks!" href="#" class="item"><img src="./images/gameprojects/GamePitch/TankLogo.png"></a>
                 <a data-name="Locked and Loaded Die" href="#" class="item"><img src="./images/gameprojects/GameJam/LockedLoadedDieLogo.jpg"></a>
