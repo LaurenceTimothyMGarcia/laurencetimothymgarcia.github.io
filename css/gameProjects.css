@@ -45,7 +45,7 @@
 }
 
 body {
-    --bg: #EBEBEB;
+    --bg: #666666;
     background: var(--bg);
 
     /* Font Details */
@@ -57,7 +57,7 @@ body {
 
 .wrapper {
     --static: #2D2D2D;
-    --solid: #FFF;
+    --solid: rgb(255, 255, 255);
     --shadow: 0 0 5px rgba(0, 0, 0, .05);
     position: relative;
     margin: 0 auto;
@@ -137,12 +137,14 @@ header > *:first-child,
 
 header > *:last-child,
 .games .item:last-child {
-    margin-right: 0;
+    margin-right: 5em;
 }
 
 a.profile {
-    margin-right: auto;
     --d: 60px;
+    display: inline-flex;
+    justify-content: center;
+
     width: var(--d);
     height: var(--d);
     border: 3px solid var(--solid);
