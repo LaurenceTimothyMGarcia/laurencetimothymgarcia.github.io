@@ -5,10 +5,14 @@
     --primary_color: #3a3a3a;
     --primary_variant_color: #FFFFFF;
     --secondary_color: #8f8f8f;
-    --shadow: 0 0 0.75vmin rgba(0, 0, 0, .05);
+    --shadow: 0 0 0.5vmin rgba(0, 0, 0, .05);
 
     --black: #000000;
     --white: #FFFFFF;
+
+    /* Select Colors */
+    --select-light: #3FE9D3;
+    --select-dark: #04B9C3;
 }
 
 @font-face  {
@@ -41,52 +45,42 @@ body.flex-col {
 }
 
 /* Global */
+:focus {
+    outline: 0;
+}
+
 /* Get name */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-a {
-    /* position: relative; */
-    /* Select Colors */
-    --select-light: #3FE9D3;
-    --select-dark: #04B9C3;
-}
-
 a::after {
     display: none;
     content:attr(data-name);
-    bottom: 80%;
-    left: -30%;
-    transform: translate(-10%, 0%);
 
     font-size: 3vmin;
     font-weight: 300;
     white-space: pre;
     color: var(--select-dark);
 }
-a:hover::after {
-    display: inline-block;
+a:hover::after,
+a:focus::after {
+    display:inline-block;
 }
 
 /* Blue highlight animation */
 @keyframes select {
     0% {
-        box-shadow: var(--shadow), 0 0 0 0.75vmin var(--select-light);
+        box-shadow: var(--shadow), 0 0 0 0.5vmin var(--select-light);
     }
 
     50% {
-        box-shadow: var(--shadow), 0 0 0 0.75vmin var(--select-dark);
+        box-shadow: var(--shadow), 0 0 0 0.5vmin var(--select-dark);
     }
 
     100% {
-        box-shadow: var(--shadow), 0 0 0 0.75vmin var(--select-light);
+        box-shadow: var(--shadow), 0 0 0 0.5vmin var(--select-light);
     }
 }
 
-a:hover {
+a:hover,
+a:focus {
     animation: select 1s infinite;
 }
 
