@@ -435,7 +435,7 @@ function init() {
 
 
             //Art Portfolio
-            const artTextGeo = new TextGeometry('Art Portfolio', {
+            const artTextGeo = new TextGeometry('Art Projects', {
                 font: comfortaaFont,
                 size: 0.35, 
                 height: 0.1
