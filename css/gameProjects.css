@@ -3,7 +3,7 @@
 /* Global */
 :root   {
     --primary_color: #3a3a3a;
-    --primary_variant_color: #FFFFFF;
+    --background_col: #ffffff;
     --secondary_color: #8f8f8f;
     --shadow: 0 0 0.5vmin rgba(0, 0, 0, .05);
 
@@ -37,7 +37,7 @@
 
 body.flex-col {
     justify-content: left;
-    gap: 5vmin;
+    gap: 1vmin;
 }
 
 .v-center {
@@ -100,6 +100,8 @@ body {
 
     min-width: 100%;
     min-height: 100%;
+
+    margin:0;
 }
 main {
     min-width: 100%;
@@ -121,8 +123,11 @@ a.profile {
     width: 7vmin;
     height: 7vmin;
 
+    margin-top: 3vmin;
+    margin-left: 3vmin;
+
     border: 0.5vmin solid var(--secondary_color);
-    background: var(--primary_color);
+    background: var(--background_col);
     box-shadow: var(--shadow);
     border-radius: 100%;
 }
@@ -160,9 +165,6 @@ a.item {
     box-shadow: var(--shadow);
     overflow: hidden;
 }
-a.item:hover::after {
-    transform: translate(0%, 500%);
-}
 
 /* Nav Bar */
 nav a {
@@ -170,7 +172,7 @@ nav a {
     height: 10vmin;
 
     border: 0.5vmin solid var(--secondary_color);
-    background: var(--primary_color);
+    background: var(--background_col);
     box-shadow: var(--shadow);
     border-radius: 100%;
 }
