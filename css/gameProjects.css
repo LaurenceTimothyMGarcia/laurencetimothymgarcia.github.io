@@ -42,20 +42,51 @@ body.flex-col {
 
 /* Global */
 /* Get name */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    /* Select Colors */
+    --select-light: #3FE9D3;
+    --select-dark: #04B9C3;
+}
+
 a::after {
     display: none;
     content:attr(data-name);
     bottom: 80%;
     left: -30%;
-    transform: translate(0%, 0%);
+    transform: translate(-10%, 0%);
 
     font-size: 3vmin;
     font-weight: 300;
     white-space: pre;
-    color: var(--primary_variant_color);
+    color: var(--select-dark);
 }
 a:hover::after {
     display: inline-block;
+}
+
+a:hover {
+    animation: select 1s infinite;
+}
+
+/* Blue highlight animation */
+@keyframes select {
+    0% {
+        box-shadow: var(--shadow), 0 0 0 100px var(--select-light);
+    }
+
+    50% {
+        box-shadow: var(--shadow), 0 0 0 100px var(--select-dark);
+    }
+
+    100% {
+        box-shadow: var(--shadow), 0 0 0 100px var(--select-light);
+    }
 }
 
 html {
@@ -116,6 +147,8 @@ h1 {
     overflow-x: scroll;
 
     white-space: nowrap;
+
+    user-select: none;
 }
 a.item {
     display: inline-block;
