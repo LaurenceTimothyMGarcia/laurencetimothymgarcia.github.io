@@ -5,7 +5,7 @@
     --primary_color: #3a3a3a;
     --primary_variant_color: #FFFFFF;
     --secondary_color: #8f8f8f;
-    --shadow: #7a1111;
+    --shadow: 0 0 0.75vmin rgba(0, 0, 0, .05);
 
     --black: #000000;
     --white: #FFFFFF;
@@ -49,6 +49,7 @@ body.flex-col {
 }
 
 a {
+    /* position: relative; */
     /* Select Colors */
     --select-light: #3FE9D3;
     --select-dark: #04B9C3;
@@ -70,23 +71,23 @@ a:hover::after {
     display: inline-block;
 }
 
-a:hover {
-    animation: select 1s infinite;
-}
-
 /* Blue highlight animation */
 @keyframes select {
     0% {
-        box-shadow: var(--shadow), 0 0 0 100px var(--select-light);
+        box-shadow: var(--shadow), 0 0 0 0.75vmin var(--select-light);
     }
 
     50% {
-        box-shadow: var(--shadow), 0 0 0 100px var(--select-dark);
+        box-shadow: var(--shadow), 0 0 0 0.75vmin var(--select-dark);
     }
 
     100% {
-        box-shadow: var(--shadow), 0 0 0 100px var(--select-light);
+        box-shadow: var(--shadow), 0 0 0 0.75vmin var(--select-light);
     }
+}
+
+a:hover {
+    animation: select 1s infinite;
 }
 
 html {
@@ -141,7 +142,7 @@ h1 {
     user-select: none;
 }
 .games {
-    gap: 2vmin;
+    gap: 1vmin;
 
     overflow-y: hidden;
     overflow-x: scroll;
@@ -152,6 +153,7 @@ h1 {
 }
 a.item {
     display: inline-block;
+    margin: 2vmin;
 
     width: 40vmin;
     height: 40vmin;
