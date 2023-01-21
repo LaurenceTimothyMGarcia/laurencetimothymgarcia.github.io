@@ -104,7 +104,6 @@ label {
     font-size: 2rem;
 }
 
-/* Overlay NOT working how i want it to*/
 #overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */

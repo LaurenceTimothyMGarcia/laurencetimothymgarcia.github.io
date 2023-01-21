@@ -22,6 +22,16 @@
 
     <body class="flex flex-col">
 
+        <!-- Overlay holder -->
+        <div id="overlay"></div>
+
+        <!-- Exit Button for overlay -->
+        <div id="exitbutton">
+            <div id="exitButt">
+                <img  onclick="overlayOff()" src="./images/exiticonwhite.png">
+            </div>
+        </div>
+
         <!----- Header ----->
         <!-- Header stores the socials (github and itch) and the time -->
         <header class="flex flex-row v-center">
@@ -42,13 +52,13 @@
 
             <!-- Game Information -->
             <div class="flex flex-row games">
-                <a id="chachi" data-name="Chachi" href="#" class="item" draggable="false"><img src="./images/gameprojects/GameJam/ChachiLogo.png" draggable="false"></a>
-                <a id="tank" data-name="We Play Tanks! Tanks!" href="#" class="item" draggable="false"><img src="./images/gameprojects/GamePitch/TankLogo.png" draggable="false"></a>
-                <a id="lockedloadeddie" data-name="Locked and Loaded Die" href="#" class="item" draggable="false"><img src="./images/gameprojects/GameJam/LockedLoadedDieLogo.jpg" draggable="false"></a>
-                <a id="mazerun" data-name="Labyrinth Run" href="#" class="item" draggable="false"><img src="./images/gameprojects/GamePitch/LabyrinthRunLogo.png" draggable="false"></a>
-                <a id="sticktoit" data-name="Stick To It" href="#" class="item" draggable="false"><img src="./images/gameprojects/GameJam/StickToItLogo.png" draggable="false"></a>
-                <a id="box" data-name="The Box" href="#" class="item" draggable="false"><img src="./images/gameprojects/GameJam/TheBoxLogo.png" draggable="false"></a>
-                <a id="cowboyzelda" data-name="Cowboy Zelda" href="#" class="item" draggable="false"><img src="./images/gameprojects/GamePitch/CowboyZeldaLogo.png" draggable="false"></a>
+                <a id="chachi" data-name="Chachi" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GameJam/ChachiLogo.png" draggable="false"></a>
+                <a id="tank" data-name="We Play Tanks! Tanks!" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GamePitch/TankLogo.png" draggable="false"></a>
+                <a id="lockedloadeddie" data-name="Locked and Loaded Die" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GameJam/LockedLoadedDieLogo.jpg" draggable="false"></a>
+                <a id="mazerun" data-name="Labyrinth Run" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GamePitch/LabyrinthRunLogo.png" draggable="false"></a>
+                <a id="sticktoit" data-name="Stick To It" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GameJam/StickToItLogo.png" draggable="false"></a>
+                <a id="box" data-name="The Box" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GameJam/TheBoxLogo.png" draggable="false"></a>
+                <a id="cowboyzelda" data-name="Cowboy Zelda" href="#" class="item" draggable="false" onclick="overlayOn()"><img src="./images/gameprojects/GamePitch/CowboyZeldaLogo.png" draggable="false"></a>
                 <a data-name="" href="#" class="item" draggable="false"></a>
                 <a data-name="" href="#" class="item" draggable="false"></a>
                 <a data-name="" href="#" class="item" draggable="false"></a>
