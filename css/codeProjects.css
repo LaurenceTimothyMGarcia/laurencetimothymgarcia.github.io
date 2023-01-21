@@ -5,6 +5,8 @@
     --primary_color_var: #594175;
     --secondary_color: #7dd875;
     --secondary_color_var: #53914d;
+    --third_color: #d87575;
+    --third_color_var: #b33e3e;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -32,19 +34,80 @@ body {
     margin:0;
 }
 
-/* Flex options */
-.flex {
-    display: flex;
+header {
+    text-align: center;
 }
-.flex-row {
+
+main {
+    /* text-align: center; */
+
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+
+}
+h2 {
+    margin: 0;
+}
+h3 {
+    margin: 0;
+}
+
+/* Card holding information */
+.card {
+    width: 80%;
+    height: 80%;
+    padding: 1vmin;
+
+    cursor: pointer;
+
+    background: var(--primary_color);
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    /* gap: 5vmin; */
+
+    text-align: center;
+    font-size: 2vmin;
+}
+/* .title-left {
+    justify-content: center;
     flex-direction: row;
 }
-.flex-r-row {
+.title-right {
+    justify-content: right;
     flex-direction: row-reverse;
+} */
+
+.lang-tool {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 5vmin; */
+
+    background-color: var(--third_color);
+    padding: 1vmin;
 }
-.flex-col {
-    flex-direction: column;
+.languages {
+
 }
-.flex-r-col {
-    flex-direction: column-reverse;
+.tools {
+    text-align: right;
+}
+
+.summary-img {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vmin;
+
+    background-color: var(--secondary_color);
+    padding: 1vmin;
+}
+.sum-left {
+    flex-direction: row;
+}
+.sum-right {
+    flex-direction: row-reverse;
 }
