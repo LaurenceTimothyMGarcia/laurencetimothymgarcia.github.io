@@ -240,6 +240,10 @@ a#Art:focus::after {
 }
 
 /* Overlay */
+.overlay-detail {
+    display: none;
+}
+
 #overlay {
     position: fixed; /* Sit on top of page content */
     display: none; /* Hidden by default */
