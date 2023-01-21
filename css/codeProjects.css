@@ -1,0 +1,50 @@
+/* CSS for programming page */
+
+:root   {
+    --primary_color: #a077cf;
+    --primary_color_var: #594175;
+    --secondary_color: #7dd875;
+    --secondary_color_var: #53914d;
+
+    --black: #000000;
+    --white: #FFFFFF;
+
+}
+
+@font-face  {
+    font-family: "comfortaa";
+    src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
+        url(../fonts/Comfortaa-Regular.woff) format('woff'),
+        url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+}
+
+body {
+    /* Font Details */
+    font-family: "comfortaa", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+
+    min-width: 100%;
+    min-height: 100%;
+
+    margin:0;
+}
+
+/* Flex options */
+.flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-r-row {
+    flex-direction: row-reverse;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-r-col {
+    flex-direction: column-reverse;
+}
