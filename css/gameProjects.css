@@ -292,12 +292,16 @@ a#Art:focus::after {
 }
 
 .game-col1 {
-    width: 90%;
+    min-width: 40%;
+}
+
+.game-col2 {
+    min-width: 60%;
 }
 
 /* Title of game */
 h2 {
-    font-size: 8vmin;
+    font-size: 6vmin;
     margin: 0;
 }
 
