@@ -43,6 +43,9 @@ main {
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vmin;
 }
 
 h1 {
@@ -58,7 +61,7 @@ h3 {
 /* Card holding information */
 .card {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 3fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px; 
@@ -69,7 +72,6 @@ h3 {
 
     /* cursor: pointer; */
 
-
     background: var(--primary_color);
 }
 .title {
@@ -78,7 +80,9 @@ h3 {
     grid-area: 1 / 1 / 2 / 3;
 
     text-align: left;
-    font-size: 4vmin;
+    font-size: 2.5em;
+
+    padding-left: 2vmin;
 
     background-color: var(--primary_color_var);
 }
@@ -89,6 +93,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 1vmin;
+    justify-content: space-evenly;
 
     background-color: var(--third_color);
     padding: 1vmin;
@@ -103,11 +108,8 @@ h3 {
 .lang-tool h4 {
     color: var(--white);
 
-    margin: 0;
-    font-size: 1.5em;
-
-    text-align: left;
-    /* vertical-align: middle; */
+    margin: auto;
+    font-size: 1em;
 }
 .lang-tool div {
     display: flex;
@@ -121,6 +123,7 @@ h3 {
     justify-content: space-between;
     gap: 5vmin;
     flex-direction: row;
+    align-items: center;
 
     background-color: var(--secondary_color);
     padding: 1vmin;
