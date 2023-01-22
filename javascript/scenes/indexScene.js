@@ -92,6 +92,7 @@ function init() {
     //Uses dom element canvas with bg
     renderer = new THREE.WebGLRenderer({
         canvas: document.querySelector('#scene'),
+        antialias: false,
     });
 
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -178,7 +179,7 @@ function init() {
     //Loading 3D models
     //
     //Room || Walls
-    modelLoader.load('../../models/Room.gltf', function (gltf) {
+    modelLoader.load('../../models/Room.glb', function (gltf) {
 
         gltf.scene.children[0].receiveShadow = true;
 
@@ -191,7 +192,7 @@ function init() {
     });
 
     //Desk
-    modelLoader.load( '../../models/Desk.gltf', function ( gltf ) {
+    modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
 
         gltf.scene.children[0].material = new THREE.MeshPhongMaterial();
         gltf.scene.children[0].material.color.set(0x242322);
@@ -212,7 +213,7 @@ function init() {
     });
 
     //Left monitor
-    modelLoader.load( '../../models/MonitorL.gltf', function ( gltf ) {
+    modelLoader.load( '../../models/MonitorL.glb', function ( gltf ) {
 
         const monitorL = gltf.scene.children[0];
 
@@ -245,7 +246,7 @@ function init() {
 
 
     //Right monitor
-    modelLoader.load( '../../models/MonitorR.gltf', function ( gltf ) {
+    modelLoader.load( '../../models/MonitorR.glb', function ( gltf ) {
 
         const monitorR = gltf.scene.children[0];
 
@@ -276,7 +277,7 @@ function init() {
     });
 
     //Resume
-    modelLoader.load('../../models/Resume.gltf', function (gltf) {
+    modelLoader.load('../../models/Resume.glb', function (gltf) {
 
         const resume = gltf.scene.children[0];
 
@@ -294,7 +295,7 @@ function init() {
     });
 
     //CLA
-    modelLoader.load('../../models/CLA.gltf', function (gltf) {
+    modelLoader.load('../../models/CLA.glb', function (gltf) {
 
         const cla = gltf.scene.children[0];
 
@@ -308,7 +309,7 @@ function init() {
     });
 
     //Phone
-    modelLoader.load('../../models/SmartPhone.gltf', function (gltf) {
+    modelLoader.load('../../models/SmartPhone.glb', function (gltf) {
 
         const phone = gltf.scene.children[0];
 
@@ -322,7 +323,7 @@ function init() {
     });
 
     //Polaroids
-    modelLoader.load('../../models/Polaroids.gltf', function (gltf) {
+    modelLoader.load('../../models/Polaroids.glb', function (gltf) {
 
         //Initialize all 5 polaroids
         const polaroid1 = gltf.scene.children[0];
@@ -468,7 +469,7 @@ function init() {
 
 
             //Relevant Courses
-            const courseTextGeo = new TextGeometry('Relevant\nCourses', {
+            const courseTextGeo = new TextGeometry('Relevant Courses', {
                 font: comfortaaFont,
                 size: 0.15, 
                 height: 0.1
@@ -476,7 +477,7 @@ function init() {
             const courseTextMat = new THREE.MeshToonMaterial();
             courseTextMat.color.set(0xffffff);
             const courseTextMesh = new THREE.Mesh(courseTextGeo, courseTextMat);
-            courseTextMesh.position.set(5, 3, 2);
+            courseTextMesh.position.set(5.25, 3, 2);
             courseTextMesh.rotateZ(-1.5708);
             courseTextMesh.rotateX(0.436332);
             courseTextMesh.layers.set(5);
