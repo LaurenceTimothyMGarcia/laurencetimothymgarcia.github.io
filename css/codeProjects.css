@@ -64,7 +64,7 @@ h3 {
 /* Card holding information */
 .card {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 3fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px; 
@@ -103,6 +103,7 @@ h3 {
 }
 .lang-tool img {
     max-width: 15%;
+    object-fit:contain;
 }
 .lang-tool h3 {
     color: var(--white);
@@ -111,14 +112,15 @@ h3 {
 .lang-tool h4 {
     color: var(--white);
 
-    padding-left: 1vmin;
     margin: auto;
     margin-left: 0;
+    margin-right: 0;
     font-size: 1.25em;
 }
 .lang-tool div {
     display: flex;
     justify-content: left;
+    gap: 1em;
 }
 
 .summary-img {
