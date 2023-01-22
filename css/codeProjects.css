@@ -168,7 +168,29 @@ h3 {
 }
 
 
-/* Buttons */
+/* Navigation Bar */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    float: left;
+    position: fixed;
+
+    margin: 1em;
+}
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--white);
+}
+nav a:hover {
+    color: var(--black);
+}
 
 
 footer {
