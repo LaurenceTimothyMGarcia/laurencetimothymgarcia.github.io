@@ -49,7 +49,10 @@ main {
 }
 
 h1 {
+    font-family: monospace;
+    font-size: 5em;
 
+    margin: 0;
 }
 h2 {
     margin: 0;
@@ -99,7 +102,7 @@ h3 {
     padding: 1vmin;
 }
 .lang-tool img {
-    max-width: 25%;
+    max-width: 15%;
 }
 .lang-tool h3 {
     color: var(--white);
@@ -108,8 +111,10 @@ h3 {
 .lang-tool h4 {
     color: var(--white);
 
+    padding-left: 1vmin;
     margin: auto;
-    font-size: 1em;
+    margin-left: 0;
+    font-size: 1.25em;
 }
 .lang-tool div {
     display: flex;
@@ -127,4 +132,13 @@ h3 {
 
     background-color: var(--secondary_color);
     padding: 1vmin;
+}
+.summary-img h2 {
+    font-size: 1.5em;
+}
+.summary-img p {
+    font-size: 1.10em;
+}
+.summary-img img {
+    width: 100%;
 }
