@@ -257,12 +257,12 @@ function init() {
         monitorR.children[0].castShadow = true;
         
         const gameVid = document.getElementById("gameVid");
-        const vidTexture = new THREE.VideoTexture(gameVid);
-        vidTexture.minFilter = THREE.LinearFilter;
-        vidTexture.magFilter = THREE.LinearFilter;
+        const vidTexture2 = new THREE.VideoTexture(gameVid);
+        vidTexture2.minFilter = THREE.LinearFilter;
+        vidTexture2.magFilter = THREE.LinearFilter;
 
         const videoMat = new THREE.MeshBasicMaterial({
-            map: vidTexture,
+            map: vidTexture2,
             side: THREE.FrontSide,
             toneMapped: false
         });
