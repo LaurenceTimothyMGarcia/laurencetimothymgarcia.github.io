@@ -1,12 +1,12 @@
 /* CSS for programming page */
 
 :root   {
-    --primary_color: #a077cf;
-    --primary_color_var: #f1c98b;
-    --secondary_color: #7dd875;
+    --primary_color: #b9b9b9;
+    --primary_color_var: #9c9c9c;
+    --secondary_color: #0c0fa1;
     --secondary_color_var: #53914d;
     --third_color: #272727;
-    --third_color_var: #b33e3e;
+    --background_color: #009696;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -26,7 +26,7 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: var(--black);
-    background: var(--white);
+    background: var(--background_color);
 
     min-width: 100%;
     min-height: 100%;
@@ -36,6 +36,7 @@ body {
 
 header {
     text-align: center;
+    color: var(--white);
 }
 
 main {
@@ -45,7 +46,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 1vmin;
+    gap: 2vmin;
 }
 
 h1 {
@@ -71,7 +72,10 @@ h3 {
 
     width: 80%;
     height: 80%;
-    padding: 1vmin;
+    /* padding: 1vmin; */
+    box-shadow: 0.25em 0.25em 0.25em var(--black);
+
+    border: 0.5em outset;
 
     /* cursor: pointer; */
 
@@ -87,7 +91,8 @@ h3 {
 
     padding-left: 2vmin;
 
-    background-color: var(--primary_color_var);
+    background-color: var(--secondary_color);
+    color: var(--white);
 }
 
 .lang-tool {
@@ -100,6 +105,8 @@ h3 {
 
     background-color: var(--third_color);
     padding: 1vmin;
+
+    box-shadow: inset 0.25em 0.25em 0.25em var(--black);
 }
 .lang-tool img {
     max-width: 15%;
@@ -120,7 +127,7 @@ h3 {
 .lang-tool div {
     display: flex;
     justify-content: left;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .summary-img {
@@ -132,8 +139,11 @@ h3 {
     flex-direction: row;
     align-items: center;
 
-    background-color: var(--secondary_color);
-    padding: 1vmin;
+    background-color: var(--primary_color_var);
+    padding: 1.5vmin;
+    padding-left: 3vmin;
+
+    box-shadow: inset 0.5em 0.5em 0.5em var(--black);
 }
 .description {
     max-width: 75%;
@@ -155,4 +165,17 @@ h3 {
 }
 .summary-img img:hover {
     opacity: 50%;
+}
+
+
+/* Buttons */
+
+
+footer {
+    background-color: var(--primary_color);
+
+    padding: 0.75em;
+    margin-top: 2em;
+
+    border: 0.5em outset;
 }
