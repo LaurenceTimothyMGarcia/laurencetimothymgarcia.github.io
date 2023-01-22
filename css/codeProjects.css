@@ -128,12 +128,19 @@ h3 {
 
     display: flex;
     justify-content: space-between;
-    gap: 5vmin;
+    /* gap: 5vmin; */
     flex-direction: row;
     align-items: center;
 
     background-color: var(--secondary_color);
     padding: 1vmin;
+}
+.description {
+    max-width: 75%;
+}
+.image {
+    display: flex;
+    justify-self: center;
 }
 .summary-img h2 {
     font-size: 1.5em;
@@ -142,5 +149,10 @@ h3 {
     font-size: 1.10em;
 }
 .summary-img img {
-    width: 100%;
+    width: 65%;
+
+    margin: auto;
+}
+.summary-img img:hover {
+    opacity: 50%;
 }
