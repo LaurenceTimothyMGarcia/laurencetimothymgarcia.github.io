@@ -20,6 +20,11 @@
     src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
         url(../fonts/Comfortaa-Regular.woff) format('woff'),
         url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+
+    font-family: "lato";
+        src: url(../fonts/Lato-Regular.woff2) format('woff2'),
+            url(../fonts/Lato-Regular.woff) format('woff'),
+            url(../fonts/Lato-Regular.ttf) format('truetype');
 }
 
 /* Flex Settings */
@@ -88,7 +93,7 @@ html {
 }
 body {
     /* Font Details */
-    font-family: "comfortaa", sans-serif;
+    font-family: "lato", sans-serif;
     font-size: 100%;
     line-height: 1.5;
     color: var(--white);
@@ -193,50 +198,50 @@ a.item:focus::after {
 }
 a#chachi:hover::after,
 a#chachi:focus::after {
-    transform: translate(-190%, -700%);
+    transform: translate(-217%, -700%);
 }
 a#tank:hover::after,
 a#tank:focus::after {
-    transform: translate(-95%, -700%);
+    transform: translate(-100%, -700%);
 }
 a#lockedloadeddie:hover::after,
 a#lockedloadeddie:focus::after {
-    transform: translate(-90%, -700%);
+    transform: translate(-100%, -700%);
 }
 a#mazerun:hover::after,
 a#mazerun:focus::after {
-    transform: translate(-117%, -700%);
+    transform: translate(-130%, -700%);
 }
 a#sticktoit:hover::after,
 a#sticktoit:focus::after {
-    transform: translate(-150%, -700%);
+    transform: translate(-165%, -700%);
 }
 a#box:hover::after,
 a#box:focus::after {
-    transform: translate(-170%, -700%);
+    transform: translate(-195%, -700%);
 }
 a#cowboyzelda:hover::after,
 a#cowboyzelda:focus::after {
-    transform: translate(-120%, -700%);
+    transform: translate(-130%, -700%);
 }
 
 a#Home:hover::after,
 a#Home:focus::after {
     display:inline-block;
 
-    transform: translate(5%, 0%);
+    transform: translate(15%, 0%);
 }
 a#Code:hover::after,
 a#Code:focus::after {
     display:inline-block;
 
-    transform: translate(-25%, 0%);
+    transform: translate(-22%, 0%);
 }
 a#Art:hover::after,
 a#Art:focus::after {
     display:inline-block;
 
-    transform: translate(50%, 0%);
+    transform: translate(60%, 0%);
 }
 
 /* Overlay */

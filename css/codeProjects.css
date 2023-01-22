@@ -2,10 +2,10 @@
 
 :root   {
     --primary_color: #a077cf;
-    --primary_color_var: #594175;
+    --primary_color_var: #f1c98b;
     --secondary_color: #7dd875;
     --secondary_color_var: #53914d;
-    --third_color: #d87575;
+    --third_color: #272727;
     --third_color_var: #b33e3e;
 
     --black: #000000;
@@ -14,15 +14,15 @@
 }
 
 @font-face  {
-    font-family: "comfortaa";
-    src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
-        url(../fonts/Comfortaa-Regular.woff) format('woff'),
-        url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+    font-family: "lato";
+    src: url(../fonts/Lato-Regular.woff2) format('woff2'),
+        url(../fonts/Lato-Regular.woff) format('woff'),
+        url(../fonts/Lato-Regular.ttf) format('truetype');
 }
 
 body {
     /* Font Details */
-    font-family: "comfortaa", sans-serif;
+    font-family: "lato", sans-serif;
     font-size: 100%;
     line-height: 1.5;
     color: var(--black);
@@ -57,57 +57,71 @@ h3 {
 
 /* Card holding information */
 .card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
     width: 80%;
     height: 80%;
     padding: 1vmin;
 
-    cursor: pointer;
+    /* cursor: pointer; */
+
 
     background: var(--primary_color);
 }
 .title {
-    display: flex;
-    flex-direction: column;
-    /* gap: 5vmin; */
+    font-family:monospace;
 
-    text-align: center;
-    font-size: 2vmin;
+    grid-area: 1 / 1 / 2 / 3;
+
+    text-align: left;
+    font-size: 4vmin;
+
+    background-color: var(--primary_color_var);
 }
-/* .title-left {
-    justify-content: center;
-    flex-direction: row;
-}
-.title-right {
-    justify-content: right;
-    flex-direction: row-reverse;
-} */
 
 .lang-tool {
+    grid-area: 2 / 1 / 3 / 2;
+
     display: flex;
-    justify-content: space-between;
-    /* gap: 5vmin; */
+    flex-direction: column;
+    gap: 1vmin;
 
     background-color: var(--third_color);
     padding: 1vmin;
 }
-.languages {
-
+.lang-tool img {
+    max-width: 25%;
 }
-.tools {
-    text-align: right;
+.lang-tool h3 {
+    color: var(--white);
+    text-align: center;
+}
+.lang-tool h4 {
+    color: var(--white);
+
+    margin: 0;
+    font-size: 1.5em;
+
+    text-align: left;
+    /* vertical-align: middle; */
+}
+.lang-tool div {
+    display: flex;
+    justify-content: left;
 }
 
 .summary-img {
+    grid-area: 2 / 2 / 3 / 3;
+
     display: flex;
     justify-content: space-between;
     gap: 5vmin;
+    flex-direction: row;
 
     background-color: var(--secondary_color);
     padding: 1vmin;
-}
-.sum-left {
-    flex-direction: row;
-}
-.sum-right {
-    flex-direction: row-reverse;
 }

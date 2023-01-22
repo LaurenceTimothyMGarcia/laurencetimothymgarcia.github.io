@@ -11,6 +11,11 @@
 }
 
 @font-face  {
+    font-family: "lato";
+    src: url(../fonts/Lato-Regular.woff2) format('woff2'),
+        url(../fonts/Lato-Regular.woff) format('woff'),
+        url(../fonts/Lato-Regular.ttf) format('truetype');
+
     font-family: "comfortaa";
     src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
         url(../fonts/Comfortaa-Regular.woff) format('woff'),
@@ -19,7 +24,7 @@
 
 body {
     /* Font Details */
-    font-family: "comfortaa", sans-serif;
+    font-family: "lato", sans-serif;
     font-size: 100%;
     line-height: 1.5;
     color: var(--white);
