@@ -10,16 +10,62 @@
     --background_color: #009600;
     --random_color: #53914d;
 
+    Set 1
+    --outline_card_color: #E1E5EE;
+    --description_color: #767b91;
+    --title_color: #F7C59F;
+    --language_color: #2A324B;
+    --background_color: #C7ccdb;
+    --random_color: #53914d;
 
+    Set 2
+    --outline_card_color: #D2D6Ef;
+    --description_color: #4B5358;
+    --title_color: #727072;
+    --language_color: #104547;
+    --background_color: #Af929d;
+    --random_color: #53914d;
+
+    Set 3
+    --outline_card_color: #7E7F9A;
+    --description_color: #F9F8F8;
+    --title_color: #F3DE8A;
+    --language_color: #272838;
+    --background_color: #EB9486;
+    --random_color: #F3DE8A;
+
+    Set 4
+    --outline_card_color: #885A5A;
+    --description_color: #F7C1BB;
+    --title_color: #84B082;
+    --language_color: #353A47;
+    --background_color: #748CAB;
+    --random_color: #78A1BB; 78A1BB 9DACFF 9593D9
+
+    Set 5 
+    --outline_card_color: #2B59C3;
+    --description_color: #FFEECF;
+    --title_color: #A4243B;
+    --language_color: #253C78;
+    --background_color: #C9A690;
+    --random_color: #78A1BB;
+
+    Set 6
+    --outline_card_color: #62A87C;
+    --description_color: #FECEE9;
+    --title_color: #03254E;
+    --language_color: #011C27;
+    --background_color: #545677;
+    --random_color: #78A1BB;
 */
 
 :root   {
-    --outline_card_color: #b9b9b9;
-    --description_color: #9c9c9c;
-    --title_color: #0c0fa1;
-    --language_color: #272727;
-    --background_color: #009600;
-    --random_color: #53914d;
+    --outline_card_color: #885A5A;
+    --description_color: #F7C1BB;
+    --title_color: #84B082;
+    --language_color: #353A47;
+    --background_color: #748CAB;
+    --random_color: #78A1BB;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -49,7 +95,7 @@ body {
 
 header {
     text-align: center;
-    color: var(--white);
+    color: var(--black);
 }
 
 main {
@@ -105,7 +151,7 @@ h3 {
     padding-left: 2vmin;
 
     background-color: var(--title_color);
-    color: var(--white);
+    color: var(--black);
 }
 
 .lang-tool {
@@ -199,18 +245,18 @@ nav a {
     align-items: center;
 
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
 }
 nav a:hover {
-    color: var(--black);
+    color: var(--white);
 }
 
 
 footer {
-    background-color: var(--primary_color);
+    background-color: var(--background_color);
 
     padding: 0.75em;
     margin-top: 2em;
 
-    border: 0.5em outset;
+    /* border: 0.5em outset; */
 }
