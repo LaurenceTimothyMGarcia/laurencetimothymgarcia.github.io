@@ -165,15 +165,11 @@ label {
 .resumeButton {
     text-align: center;
 }
-.resumeButton a button {
-    background-color: #12c538;
-    padding: 1%;
-    margin: 0;
-    border: none;
-
-    font-size: 1.5em;
+.resumeButton a img {
+    max-width: 5%;
+    max-height: 5%;
 }
-.resumeButton a button:hover {
+.resumeButton a img:hover {
     cursor: pointer;
     opacity: 50%;
 }
@@ -186,7 +182,7 @@ label {
 }
 /* Education */
 #edu {
-    min-width: 40%;
+    min-width: 50%;
 }
 #edu h3 {
     text-align: center;
@@ -195,6 +191,13 @@ label {
     display: flex;
     justify-content: space-evenly;
     align-items:baseline;
+    gap: 0.5em;
+}
+.div-flex div {
+    width: 100%;
+}
+#edu .div-flex {
+    text-align: center;
 }
 
 /* Skills */
@@ -220,10 +223,11 @@ label {
 
     /* padding-top: 1em; */
 
-    width: 100%;
+    width: 10%;
 }
 #skills .skill-list div p {
     margin: 0;
+    font-size: 0.95em;
 }
 #skills img {
     max-width: 35%;
@@ -232,12 +236,17 @@ label {
 
 /* Leadership */
 #leadership {
-
+    text-align: center;
+}
+#leadership ul,
+#work-exp ul,
+#edu ul {
+    text-align: left;
 }
 
 /* Work Exp */
 #work-exp {
-
+    text-align: center;
 }
 
 /* Game Dev Club Instagram display */
