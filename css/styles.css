@@ -191,7 +191,7 @@ label {
 #edu h3 {
     text-align: left;
 }
-.edu-div {
+.div-flex {
     display: flex;
     justify-content: space-evenly;
     align-items:baseline;
