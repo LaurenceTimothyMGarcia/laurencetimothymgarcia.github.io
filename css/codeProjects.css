@@ -152,6 +152,8 @@ h3 {
 
     background-color: var(--title_color);
     color: var(--black);
+
+    box-shadow: inset 0.1em 0.1em 0.1em var(--black);
 }
 
 .lang-tool {
