@@ -180,16 +180,16 @@ label {
 
 /* 4 main resume sections */
 
-/* .edu-skill {
+.edu-skill {
     display: flex;
     justify-content: center;
-} */
+}
 /* Education */
 #edu {
-    width: 100%;
+    min-width: 40%;
 }
 #edu h3 {
-    text-align: left;
+    text-align: center;
 }
 .div-flex {
     display: flex;
@@ -199,30 +199,34 @@ label {
 
 /* Skills */
 #skills {
-
+    text-align: center;
 }
 
 .skill-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: right;
+    align-items:baseline;
 
-    /* width: 100%; */
+    width: 100%;
 }
 #skills .skill-list div {
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.5em;
     justify-content: left;
 
-    padding-top: 1em;
+    /* padding-top: 1em; */
 
     width: 100%;
 }
+#skills .skill-list div p {
+    margin: 0;
+}
 #skills img {
-    max-width: 25%;
+    max-width: 35%;
     object-fit: contain;
 }
 
