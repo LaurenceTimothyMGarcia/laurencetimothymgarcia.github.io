@@ -72,10 +72,10 @@ h3 {
 
     width: 80%;
     height: 80%;
-    /* padding: 1vmin; */
+    padding: 1vmin;
     box-shadow: 0.25em 0.25em 0.25em var(--black);
 
-    border: 0.5em outset;
+    /* border: 0.5em outset; */
 
     /* cursor: pointer; */
 
