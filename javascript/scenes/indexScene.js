@@ -71,11 +71,6 @@ function init() {
         progressBar.value = (loaded/total) * 100;
     }
 
-    loadingManager.onLoad = function()
-    {
-        progressBarContainer.style.display = 'none';
-    }
-
     //Loaders
     const modelLoader = new GLTFLoader(loadingManager);
     const fontLoader = new FontLoader(loadingManager);
@@ -648,6 +643,11 @@ function init() {
 
             camera.layers.disable(word);
         }
+    }
+
+    loadingManager.onLoad = function()
+    {
+        progressBarContainer.style.display = 'none';
     }
 
 }
