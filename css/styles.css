@@ -133,23 +133,8 @@ label {
     margin: 0;
 }
 /* Setting up header and fonts for resume info */
-.resumeInfo h3 {
-    margin-top: 0;
-    padding-top: 2%;
-}
-.resumeInfo h4 {
-    font-size: 1.75em;
-    margin: 0;
-}
-.resumeInfo h5 {
-    font-size: 1.25em;
-    margin: 0;
-}
-.resumeInfo ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 1%;
-}
+
+/* CSS Resume Button */
 .resumeButton {
     text-align: center;
 }
@@ -165,45 +150,12 @@ label {
     cursor: pointer;
     opacity: 50%;
 }
-.resume-flex {
-    display: flex;
-    justify-content: space-evenly;
-}
 
-/* Education Div */
-#resume-education {
-    background-color: #000000;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-/* Skills Div */
-#resume-skills {
-    background-color: #000000;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-.skills-programming {
-
-}
-.skills-tools {
-
-}
-/* Leadership Div */
-#resume-leadership {
-    background-color: #000000;
-    padding-left: 10%;
-    padding-right: 10%;
-}
+/* Game Dev Club Instagram display */
 .club-insta {
     display: flex;
     justify-content: center;
     gap: 2%;
-}
-/* Work Experience Div */
-#resume-work {
-    background-color: #000000;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 /* Courses Overlay */
