@@ -1,12 +1,25 @@
 /* CSS for programming page */
 
+/* Other colors */
+/* 
+    Windows 98
+    --outline_card_color: #b9b9b9;
+    --description_color: #9c9c9c;
+    --title_color: #0c0fa1;
+    --language_color: #272727;
+    --background_color: #009600;
+    --random_color: #53914d;
+
+
+*/
+
 :root   {
-    --primary_color: #b9b9b9;
-    --primary_color_var: #9c9c9c;
-    --secondary_color: #0c0fa1;
-    --secondary_color_var: #53914d;
-    --third_color: #272727;
-    --background_color: #009696;
+    --outline_card_color: #b9b9b9;
+    --description_color: #9c9c9c;
+    --title_color: #0c0fa1;
+    --language_color: #272727;
+    --background_color: #009600;
+    --random_color: #53914d;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -79,7 +92,7 @@ h3 {
 
     /* cursor: pointer; */
 
-    background: var(--primary_color);
+    background: var(--outline_card_color);
 }
 .title {
     font-family:monospace;
@@ -91,7 +104,7 @@ h3 {
 
     padding-left: 2vmin;
 
-    background-color: var(--secondary_color);
+    background-color: var(--title_color);
     color: var(--white);
 }
 
@@ -103,7 +116,7 @@ h3 {
     gap: 1vmin;
     justify-content: space-evenly;
 
-    background-color: var(--third_color);
+    background-color: var(--language_color);
     padding: 1vmin;
 
     box-shadow: inset 0.25em 0.25em 0.25em var(--black);
@@ -139,7 +152,7 @@ h3 {
     flex-direction: row;
     align-items: center;
 
-    background-color: var(--primary_color_var);
+    background-color: var(--description_color);
     padding: 1.5vmin;
     padding-left: 3vmin;
 
