@@ -12,9 +12,9 @@ html    {
 ---------------------------*/
 :root   {
     --primary_color: #FFFFFF;
-    --primary_variant_color: #FFFFFF;
-    --secondary_color: #FFFFFF;
-    --secondary_variant_color: #FFFFFF;
+    --primary_variant_color: #a1a1a1;
+    --secondary_color: #e77e7e;
+    --secondary_variant_color: #ff0000;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -158,10 +158,42 @@ label {
     gap: 2%;
 }
 
+
+
 /* Courses Overlay */
 #course {
     display: none;
 }
+.coursesInfo {
+    font-size: 1.2em;
+}
+
+.coursesInfo table {
+    border-collapse: collapse;
+}
+.coursesInfo tr:nth-child(even) {
+    background-color: var(--primary_color);
+    color: var(--black);
+}
+.coursesInfo tr:nth-child(odd) {
+    background-color: var(--primary_variant_color);
+    color: var(--black);
+}
+.coursesInfo tr td:last-child {
+    font-size: 1em;
+}
+.coursesInfo tr:first-child {
+    background-color: var(--secondary_color);
+    color: var(--black);
+
+    font-size: 1.5em;
+}
+.coursesInfo tr:hover {
+    background-color: var(--secondary_variant_color);
+    color: var(--black);
+}
+
+
 
 /* Socials Overlay */
 #socials {
