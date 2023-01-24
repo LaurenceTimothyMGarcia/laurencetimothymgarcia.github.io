@@ -7,6 +7,39 @@
     --secondary_color: #BFB48F;
     --secondary_variant_color: #F2EFE9;
     --overlay_color: rgba(37, 38, 39, 0.99);
+
+    Set 2
+    --primary_color: #488286;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #77878B;
+    --secondary_variant_color: #B7D5D4;
+    --overlay_color: rgba(37, 38, 39, 0.99);
+
+    --header-row: #b7d5d4;
+    --odd-rows: rgba(48, 82, 82, 0.99);
+    --even-rows: ;
+
+    Set 3
+    --primary_color: #8A95A5;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #757083;
+    --secondary_variant_color: #B9C6AE;
+    --overlay_color: rgba(9, 8, 12, 0.99);
+
+    --header-row: #8A95A5;
+    --odd-rows: rgba(71, 64, 86, 0.99);
+    --even-rows: ;
+
+    Set 4
+    --primary_color: #5F5AA2;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #355691;
+    --secondary_variant_color: #FFFFFF;
+    --overlay_color: rgba(48, 41, 47, 0.99);
+
+    --header-row: #413F54;
+    --odd-rows: rgba(63, 64, 69, 0.5);
+    --even-rows: ;
 */
 
 /*** Universal Style ***/
@@ -22,15 +55,14 @@ html    {
 /* Variables for color pallete
 ---------------------------*/
 :root   {
-    --primary_color: #c23846;
+    --primary_color: #5F5AA2;
     --primary_variant_color: #DE639A;
-    --secondary_color: #BFB48F;
-    --secondary_variant_color: #F2EFE9;
-    --overlay_color: rgba(37, 38, 39, 0.99);
+    --secondary_color: #355691;
+    --secondary_variant_color: #FFFFFF;
+    --overlay_color: rgba(48, 41, 47, 0.99);
 
-    /* Courses info colors */
-    --header-row: #b7d5d4;
-    --odd-rows: rgba(48, 82, 82, 0.99);
+    --header-row: #413F54;
+    --odd-rows: rgba(63, 64, 69, 0.5);
     --even-rows: ;
 
     --black: #000000;
@@ -309,7 +341,7 @@ label {
 }
 .coursesInfo tr:first-child {
     background-color: var(--header-row);
-    color: var(--black);
+    color: var(--white);
 
     font-size: 1.5em;
 }
