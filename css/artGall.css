@@ -43,7 +43,7 @@ button {
 
     /* float: left; */
 
-    padding: 1%;
+    padding: 0.5%;
 
     font-size: 1.25em;
 }
@@ -67,10 +67,15 @@ header h1 {
 
 header h2 {
     text-align: center;
-    font-size: 1em;
+    font-size: 2em;
     margin: 0;
 
     color: var(--primary_color);
+}
+
+main {
+    width: 35em;
+    height: 35em;
 }
 
 /* Image gallery information */
@@ -194,4 +199,12 @@ header h2 {
     /* Blur effect */
     filter: blur(5px);
     -webkit-filter: blur(5px);
+}
+
+footer h3 {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+
+    color: var(--primary_color);
 }

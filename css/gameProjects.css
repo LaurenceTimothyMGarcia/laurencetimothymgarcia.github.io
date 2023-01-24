@@ -108,7 +108,7 @@ main {
     min-width: 100%;
     min-height: 100%;
 
-    gap: 2vmin;
+    gap: 0vmin;
 }
 
 a img {
@@ -136,7 +136,14 @@ a.profile {
 /* Games */
 h1 {
     text-align: center;
-    font-size: 8vmin;
+    font-size: 5em;
+    margin: 0;
+
+    user-select: none;
+}
+h2 {
+    text-align: center;
+    font-size: 2em;
     margin: 0;
 
     user-select: none;
@@ -177,6 +184,8 @@ nav a {
     background: var(--background_col);
     box-shadow: var(--shadow);
     border-radius: 100%;
+
+    margin-top: 1em;
 }
 nav.flex {
     justify-content: center;
@@ -306,7 +315,7 @@ a#Art:focus::after {
 
 /* Title of game */
 h2 {
-    font-size: 6vmin;
+    /* font-size: 6vmin; */
     margin: 0;
 }
 

@@ -110,7 +110,7 @@ main {
 
 h1 {
     font-family: monospace;
-    font-size: 5em;
+    font-size: 4em;
 
     margin: 0;
 }
@@ -119,6 +119,11 @@ h2 {
 }
 h3 {
     margin: 0;
+}
+
+header h2:first-of-type {
+    font-size: 2.5em;
+    font-family: monospace;
 }
 
 /* Card holding information */
@@ -131,10 +136,11 @@ h3 {
 
     width: 80%;
     height: 80%;
-    padding: 1vmin;
+    /* padding: 1vmin; */
     box-shadow: 0.25em 0.25em 0.25em var(--black);
 
-    /* border: 0.5em outset; */
+    border: 0.5em outset;
+    border-color: var(--outline_card_color);
 
     /* cursor: pointer; */
 
