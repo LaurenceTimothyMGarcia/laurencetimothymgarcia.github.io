@@ -1,60 +1,12 @@
 /* Color pallets */
 /* 
+
     Set 1
-    --primary_color: #F42C04;
-    --primary_variant_color: #DE639A;
-    --secondary_color: #E2856E;
-    --secondary_variant_color: #88A2AA;
-    --overlay_color: rgba(15, 26, 32, 0.95);
-
-    Set 2
-    --primary_color: #95C623;
-    --primary_variant_color: #DE639A;
-    --secondary_color: #E55812;
-    --secondary_variant_color: #EFE7DA;
-    --overlay_color: rgba(0, 38, 38, 0.95);
-
-    Set 3
     --primary_color: #c23846;
     --primary_variant_color: #DE639A;
     --secondary_color: #BFB48F;
     --secondary_variant_color: #F2EFE9;
-    --overlay_color: rgba(37, 38, 39, 0.95);
-
-    Set 4
-    --primary_color: #E71D36;
-    --primary_variant_color: #FF9F1C;
-    --secondary_color: #2EC4B6;
-    --secondary_variant_color: #FDFFFC;
-    --overlay_color: rgba(1, 22, 39, 0.95);
-
-    Set 5
-    --primary_color: #FF8600;
-    --primary_variant_color: #F9E900;
-    --secondary_color: #a894ff;
-    --secondary_variant_color: #F1F2F6;
-    --overlay_color: rgba(39, 24, 126, 0.95);
-
-    Set 5V2
-    --primary_color: #F9E900;
-    --primary_variant_color: #F9E900;
-    --secondary_color: #FF8600;
-    --secondary_variant_color: #F1F2F6;
-    --overlay_color: rgba(39, 24, 126, 0.95);
-
-    Set 6
-    --primary_color: #0E79B2;
-    --primary_variant_color: #F9E900;
-    --secondary_color: #BF1363;
-    --secondary_variant_color: #FBFEF9;
-    --overlay_color: rgba(25, 25, 35, 0.95);
-
-    Set 7
-    --primary_color: #90DDF0;
-    --primary_variant_color: #F9E900;
-    --secondary_color: #BB0A21;
-    --secondary_variant_color: #F0EDEE;
-    --overlay_color: rgba(10, 9, 12, 0.95);
+    --overlay_color: rgba(37, 38, 39, 0.99);
 */
 
 /*** Universal Style ***/
@@ -70,11 +22,11 @@ html    {
 /* Variables for color pallete
 ---------------------------*/
 :root   {
-    --primary_color: #E71D36;
-    --primary_variant_color: #FF9F1C;
-    --secondary_color: #FF9F1C;
-    --secondary_variant_color: #FDFFFC;
-    --overlay_color: rgba(1, 22, 39, 0.95);
+    --primary_color: #c23846;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #BFB48F;
+    --secondary_variant_color: #F2EFE9;
+    --overlay_color: rgba(37, 38, 39, 0.99);
 
     --black: #000000;
     --white: #FFFFFF;
