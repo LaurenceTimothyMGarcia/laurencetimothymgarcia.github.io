@@ -28,6 +28,11 @@ html    {
     --secondary_variant_color: #F2EFE9;
     --overlay_color: rgba(37, 38, 39, 0.99);
 
+    /* Courses info colors */
+    --header-row: #b7d5d4;
+    --odd-rows: rgba(48, 82, 82, 0.99);
+    --even-rows: ;
+
     --black: #000000;
     --white: #FFFFFF;
 }
@@ -289,20 +294,21 @@ label {
 
 .coursesInfo table {
     border-collapse: collapse;
+    color: var(--white);
 }
 .coursesInfo tr:nth-child(even) {
-    background-color: var(--primary_color);
-    color: var(--black);
+    background-color: var(--even-rows);
+    /* color: var(--black); */
 }
 .coursesInfo tr:nth-child(odd) {
-    background-color: var(--primary_variant_color);
-    color: var(--black);
+    background-color: var(--odd-rows);
+    /* color: var(--black); */
 }
 .coursesInfo tr td:last-child {
     font-size: 1em;
 }
 .coursesInfo tr:first-child {
-    background-color: var(--secondary_color);
+    background-color: var(--header-row);
     color: var(--black);
 
     font-size: 1.5em;
@@ -310,6 +316,14 @@ label {
 .coursesInfo tr:hover {
     background-color: var(--secondary_variant_color);
     color: var(--black);
+}
+.coursesInfo tr>th {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.coursesInfo tr>td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 
