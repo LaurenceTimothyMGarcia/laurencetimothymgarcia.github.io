@@ -112,25 +112,25 @@ function init() {
     scene.add(ambiLight);
 
     //Directional Light 1
-    const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.2);
+    const dirLight1 = new THREE.DirectionalLight(0xFFF4E5, 0.2);
     dirLight1.position.set(50, 100, 7.5);
     dirLight1.castShadow = true;
     scene.add(dirLight1);
 
     //Spot Light 1
-    const spotLight1 = new THREE.SpotLight(0xffffff, 850, 0, Math.PI/3, 1);
+    const spotLight1 = new THREE.SpotLight(0xf5e7d5, 850, 0, Math.PI/3, 1);
     spotLight1.position.set(-5, 20, 7.5);
     spotLight1.castShadow = true;
     scene.add(spotLight1);
 
     //Spot Light 2
-    const spotLight2 = new THREE.SpotLight(0xffffff, 500, 0, Math.PI/3, 1);
+    const spotLight2 = new THREE.SpotLight(0xFFF4E5, 500, 0, Math.PI/3, 1);
     spotLight2.position.set(2, 1, 20);
     spotLight2.castShadow = true;
     scene.add(spotLight2);
 
     //Point Light 1
-    const pointLight1 = new THREE.PointLight(0xffffff, 0.5);
+    const pointLight1 = new THREE.PointLight(0xFFF4E5, 0.5);
     pointLight1.position.set(0, 4, -3);
     pointLight1.castShadow = true;
     scene.add(pointLight1);
