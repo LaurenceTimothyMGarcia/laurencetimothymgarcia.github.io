@@ -114,7 +114,7 @@ function init() {
     renderer.setSize( window.innerWidth, window.innerHeight );
 
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type = THREE.PCFShadowMap;
 
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.physicallyCorrectLights = true;
@@ -727,8 +727,8 @@ function animate()
     target.x = ( 1.0 - mouse.x ) * 0.0003;
     target.y = ( 1.0 - mouse.y ) * 0.00025;
 
-    camera.rotation.x += 0.05 * ( target.y - camera.rotation.x );
-    camera.rotation.y += 0.05 * ( target.x - camera.rotation.y );
+    camera.rotation.x += 0.075 * ( target.y - camera.rotation.x );
+    camera.rotation.y += 0.075 * ( target.x - camera.rotation.y );
 
     camera.rotation.z = 0;
 
