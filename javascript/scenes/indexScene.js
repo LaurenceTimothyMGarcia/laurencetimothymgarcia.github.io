@@ -696,7 +696,7 @@ const parallax = function (ev) {
 };
 
 window.onmousemove = ev => parallax(ev);
-window.ontouchmove = ev => parallax(ev.touches[0]);
+// window.ontouchmove = ev => parallax(ev.touches[0]);
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
