@@ -666,7 +666,7 @@ function init() {
     }
 
     document.addEventListener('mousemove', onMouseMove, false);
-    document.addEventListener('touchmove', onMouseMove, false);
+    document.addEventListener('touchstart', onMouseMove, false);
 
     loadingManager.onLoad = function()
     {
