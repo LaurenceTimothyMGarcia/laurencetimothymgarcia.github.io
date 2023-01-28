@@ -193,7 +193,7 @@ function init() {
     //
     //Loading 3D models
     //
-    //Room || Walls
+    // Room || Walls
     modelLoader.load('../../models/Room.glb', function (gltf) {
 
         gltf.scene.children[0].receiveShadow = true;
@@ -214,12 +214,12 @@ function init() {
         gltf.scene.children[2].material = new THREE.MeshLambertMaterial();
         gltf.scene.children[2].material.color.set(0x242322);
 
-        gltf.scene.children[0].castShadow = true;
-        gltf.scene.children[0].receiveShadow = true;
-        gltf.scene.children[1].castShadow = true;
-        gltf.scene.children[1].receiveShadow = true;
-        gltf.scene.children[2].castShadow = true;
-        gltf.scene.children[2].receiveShadow = true;
+        // gltf.scene.children[0].castShadow = true;
+        // gltf.scene.children[0].receiveShadow = true;
+        // gltf.scene.children[1].castShadow = true;
+        // gltf.scene.children[1].receiveShadow = true;
+        // gltf.scene.children[2].castShadow = true;
+        // gltf.scene.children[2].receiveShadow = true;
 
         scene.add(gltf.scene);
 
@@ -236,7 +236,7 @@ function init() {
         monitorL.children[1].userData.select = true;
         monitorL.children[1].userData.name = "Left Monitor";
 
-        monitorL.children[0].castShadow = true;
+        // monitorL.children[0].castShadow = true;
 
         //Video texture for testing
         const progVid = document.getElementById("programVid");
@@ -269,7 +269,7 @@ function init() {
         monitorR.children[1].userData.select = true;
         monitorR.children[1].userData.name = "Right Monitor";
 
-        monitorR.children[0].castShadow = true;
+        // monitorR.children[0].castShadow = true;
         
         const gameVid = document.getElementById("gameVid");
         const vidTexture2 = new THREE.VideoTexture(gameVid);
@@ -666,7 +666,7 @@ function init() {
     }
 
     document.addEventListener('mousemove', onMouseMove, false);
-    document.addEventListener('touchstart', onMouseMove, false);
+    // document.addEventListener('touchstart', onMouseMove, false);
 
     loadingManager.onLoad = function()
     {
