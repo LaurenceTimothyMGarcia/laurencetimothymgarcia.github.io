@@ -673,30 +673,31 @@ window.onresize = function (e) {
 
 
 //adds paralax effect to site
+//Current issue with this is making moble just go black
 //changing these values changes the "center"
-// let oldX = 750;
-// let oldY = 500;
-// const parallax = function (ev) {
-//     let changex = ev.x - oldX;
-//     let changey = ev.y - oldY;
+let oldX = 750;
+let oldY = 500;
+const parallax = function (ev) {
+    let changex = ev.x - oldX;
+    let changey = ev.y - oldY;
 
-//     //Higher you divide the value, the tighter it is
-//     //Horizontal changes
-//     camera.position.x += changex/1250;
-//     camera.rotateY(-changex/10000);
-//     camera.rotation.z = 0;
+    //Higher you divide the value, the tighter it is
+    //Horizontal changes
+    camera.position.x += changex/1250;
+    camera.rotateY(-changex/10000);
+    camera.rotation.z = 0;
 
-//     //Vertical changes
-//     camera.position.y -= changey/1250;
-//     camera.rotateX(-changey/7500);
-//     camera.rotation.z = 0;
+    //Vertical changes
+    camera.position.y -= changey/1250;
+    camera.rotateX(-changey/7500);
+    camera.rotation.z = 0;
 
-//     oldX = ev.x;
-//     oldY = ev.y;
-// };
+    oldX = ev.x;
+    oldY = ev.y;
+};
 
-// window.onmousemove = ev => parallax(ev);
-// window.ontouchmove = ev => parallax(ev.touches[0]);
+window.onmousemove = ev => parallax(ev);
+window.ontouchmove = ev => parallax(ev.touches[0]);
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
