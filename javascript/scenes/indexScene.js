@@ -30,10 +30,21 @@ let composer, effectFXAA, outlinePass;
 
 //Mouse and raycaster
 const mouse = new THREE.Vector2();
+const target = new THREE.Vector2();
 const raycaster = new THREE.Raycaster();
+
+const windowHalf = new THREE.Vector2( window.innerWidth / 2, window.innerHeight / 2 );
 
 //Used for outline
 let selectedObjects = [];
+
+
+
+//
+//Program Running
+//
+init();
+animate();
 
 
 //
@@ -654,6 +665,8 @@ function init() {
         }
     }
 
+    document.addEventListener('mousemove', onMouseMove, false);
+
     loadingManager.onLoad = function()
     {
         progressBarContainer.style.display = 'none';
@@ -674,34 +687,51 @@ window.onresize = function (e) {
 
 //adds paralax effect to site
 //Current issue with this is making moble just go black
+
+function onMouseMove ( ev )
+{
+    mouse.x = ( ev.clientX - windowHalf.x );
+    mouse.y = ( ev.clientY - windowHalf.x );
+}
+
 //changing these values changes the "center"
-let oldX = 750;
-let oldY = 500;
-const parallax = function (ev) {
-    let changex = ev.x - oldX;
-    let changey = ev.y - oldY;
+// let oldX = 750;
+// let oldY = 500;
+// const parallax = function (ev) {
+//     let changex = ev.x - oldX;
+//     let changey = ev.y - oldY;
 
-    //Higher you divide the value, the tighter it is
-    //Horizontal changes
-    camera.position.x += changex/1250;
-    camera.rotateY(-changex/10000);
-    camera.rotation.z = 0;
+//     //Higher you divide the value, the tighter it is
+//     //Horizontal changes
+//     camera.position.x += changex/1250;
+//     camera.rotateY(-changex/10000);
+//     camera.rotation.z = 0;
 
-    //Vertical changes
-    camera.position.y -= changey/1250;
-    camera.rotateX(-changey/7500);
-    camera.rotation.z = 0;
+//     //Vertical changes
+//     camera.position.y -= changey/1250;
+//     camera.rotateX(-changey/7500);
+//     camera.rotation.z = 0;
 
-    oldX = ev.x;
-    oldY = ev.y;
-};
+//     oldX = ev.x;
+//     oldY = ev.y;
+// };
 
-window.onmousemove = ev => parallax(ev);
-window.ontouchmove = ev => parallax(ev.touches[0]);
+// window.onmousemove = ev => parallax(ev);
+// window.ontouchmove = ev => parallax(ev.touches[0]);
 
 //Recursive function to repeatedly call and refresh the screen
 function animate()
 {
+
+    // Update parallax effect
+    target.x = ( 1.0 - mouse.x ) * 0.0005;
+    target.y = ( 1.0 - mouse.y ) * 0.0005;
+
+    camera.rotation.x += 0.05 * ( target.y - camera.rotation.x );
+    camera.rotation.y += 0.05 * ( target.x - camera.rotation.y );
+
+    camera.rotation.z = 0;
+
 
     requestAnimationFrame( animate );
 
@@ -710,11 +740,3 @@ function animate()
 
     // renderer.render( scene, camera );
 }
-
-
-
-//
-//Program Running
-//
-init();
-animate();
