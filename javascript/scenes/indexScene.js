@@ -90,7 +90,16 @@ function init() {
         antialias: false,
     });
 
-    renderer.setPixelRatio( window.devicePixelRatio );
+    // If statement added to check if on phone or not
+    if (window.innerWidth / window.innerHeight < 0.95)
+    {
+        renderer.setPixelRatio( window.devicePixelRatio * 0.65 );
+    }
+    else
+    {
+        renderer.setPixelRatio( window.devicePixelRatio );
+    }
+    
     renderer.setSize( window.innerWidth, window.innerHeight );
 
     renderer.shadowMap.enabled = true;
@@ -189,9 +198,9 @@ function init() {
     //Desk
     modelLoader.load( '../../models/Desk.glb', function ( gltf ) {
 
-        gltf.scene.children[0].material = new THREE.MeshPhongMaterial();
+        gltf.scene.children[0].material = new THREE.MeshLambertMaterial();
         gltf.scene.children[0].material.color.set(0x242322);
-        gltf.scene.children[2].material = new THREE.MeshPhongMaterial();
+        gltf.scene.children[2].material = new THREE.MeshLambertMaterial();
         gltf.scene.children[2].material.color.set(0x242322);
 
         gltf.scene.children[0].castShadow = true;
@@ -280,7 +289,7 @@ function init() {
         resume.userData.name = "Resume";
 
         const resumeImg = new THREE.TextureLoader().load("../../images/SoftEngScreenshot.png");
-        const resumeMat = new THREE.MeshPhongMaterial( {map: resumeImg} );
+        const resumeMat = new THREE.MeshLambertMaterial( {map: resumeImg} );
         resume.material = resumeMat;
 
         scene.add(resume);
