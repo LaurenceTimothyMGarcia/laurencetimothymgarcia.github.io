@@ -79,7 +79,7 @@ function init() {
 
     loadingManager.onProgress = function(url, loaded, total)
     {
-        progressBar.value = (loaded/total) * 100 + '%';
+        progressBar.value = (loaded/total) * 100;
         progressBar.animate(1.0);
     }
 
@@ -458,7 +458,7 @@ function init() {
                 height: 0.1
             });
             const programmingMat = new THREE.MeshToonMaterial();
-            programmingMat.color.set(0xffffff);
+            programmingMat.color.set(0x201A23);
             const programmingMesh = new THREE.Mesh(programmingGeo, programmingMat);
             programmingMesh.position.set(-4.55, 3.9, -2);
             programmingMesh.rotateY(0.18);
@@ -472,9 +472,9 @@ function init() {
                 height: 0.1
             });
             const gameTextMat = new THREE.MeshToonMaterial();
-            gameTextMat.color.set(0xffffff);
+            gameTextMat.color.set(0xFBFBFB);
             const gameTextMesh = new THREE.Mesh(gameTextGeo, gameTextMat);
-            gameTextMesh.position.set(0.85, 1.35, -1.531);
+            gameTextMesh.position.set(0.85, 1.475, -1.531);
             gameTextMesh.rotateY(-0.36163222);
             gameTextMesh.layers.set(2);
             scene.add(gameTextMesh);
@@ -503,7 +503,7 @@ function init() {
                 height: 0.1
             });
             const resumeTextMat = new THREE.MeshToonMaterial();
-            resumeTextMat.color.set(0xffffff);
+            resumeTextMat.color.set(0xAFFFAE);
             const resumeTextMesh = new THREE.Mesh(resumeTextGeo, resumeTextMat);
             //Front
             resumeTextMesh.position.set(-0.85, 0.85, 2.5);
@@ -520,7 +520,7 @@ function init() {
                 height: 0.1
             });
             const courseTextMat = new THREE.MeshToonMaterial();
-            courseTextMat.color.set(0xffffff);
+            courseTextMat.color.set(0x96BCFF);
             const courseTextMesh = new THREE.Mesh(courseTextGeo, courseTextMat);
             courseTextMesh.position.set(5.25, 3, 2);
             courseTextMesh.rotateZ(-1.5708);
@@ -535,7 +535,7 @@ function init() {
                 height: 0.05
             });
             const socialsTextMat = new THREE.MeshToonMaterial();
-            socialsTextMat.color.set(0xffffff);
+            socialsTextMat.color.set(0x96BCFF);
             const socialsTextMesh = new THREE.Mesh(socialsTextGeo, socialsTextMat);
             socialsTextMesh.position.set(-3.35, 1, 1.75);
             socialsTextMesh.rotateY(1.2836897);
