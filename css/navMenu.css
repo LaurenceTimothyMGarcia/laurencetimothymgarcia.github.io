@@ -2,7 +2,6 @@
     overflow: hidden;
     /* background-color: white; */
     position: fixed;
-    height: 100vmin;
 
     z-index: 5;
 }
