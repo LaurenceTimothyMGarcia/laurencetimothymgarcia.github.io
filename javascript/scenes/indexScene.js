@@ -79,7 +79,8 @@ function init() {
 
     loadingManager.onProgress = function(url, loaded, total)
     {
-        progressBar.value = (loaded/total) * 100;
+        progressBar.value = (loaded/total) * 100 + '%';
+        progressBar.animate(1.0);
     }
 
     //Loaders
