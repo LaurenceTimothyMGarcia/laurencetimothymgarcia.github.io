@@ -183,11 +183,27 @@ function init() {
 
 
     //Control 3d scene
-    // const controls = new OrbitControls(camera, renderer.domElement);
-    // //Uses direction to set up orbit control default 
-    // camera.getWorldPosition(controls.target);
-    // controls.target.addScaledVector(camDirection, 5);
-    // controls.update();
+    const controls = new OrbitControls(camera, renderer.domElement);
+    //Uses direction to set up orbit control default 
+    camera.getWorldPosition(controls.target);
+    controls.target.addScaledVector(camDirection, 5);
+
+    // controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.enableZoom = false;
+
+    //Vertical orbit
+    controls.minPolarAngle = 3 * (Math.PI/8);
+    controls.maxPolarAngle = 5 * (Math.PI/8);
+    // Keeps from moving
+    // controls.minPolarAngle = Math.PI/2;
+    // controls.maxPolarAngle = Math.PI/2;
+
+    //Horizontal orbit
+    controls.minAzimuthAngle = -1 * (Math.PI/8);
+    controls.maxAzimuthAngle = 1 * (Math.PI/8);
+
+    controls.update();
 
     
     //
@@ -665,7 +681,7 @@ function init() {
         }
     }
 
-    document.addEventListener('mousemove', onMouseMove, false);
+    // document.addEventListener('mousemove', onMouseMove, false);
     // document.addEventListener('touchstart', onMouseMove, false);
 
     loadingManager.onLoad = function()
@@ -689,13 +705,14 @@ window.onresize = function (e) {
 //adds paralax effect to site
 //Current issue with this is making moble just go black
 
-function onMouseMove ( ev )
-{
-    mouse.x = ( ev.clientX - windowHalf.x );
-    mouse.y = ( ev.clientY - windowHalf.x );
-}
+//New system, moves more smoothly
+// function onMouseMove ( ev )
+// {
+//     mouse.x = ( ev.clientX - windowHalf.x );
+//     mouse.y = ( ev.clientY - windowHalf.x );
+// }
 
-//changing these values changes the "center"
+// changing these values changes the "center"
 // let oldX = 750;
 // let oldY = 500;
 // const parallax = function (ev) {
@@ -725,13 +742,13 @@ function animate()
 {
 
     // Update parallax effect
-    target.x = ( 1.0 - mouse.x ) * 0.0003;
-    target.y = ( 1.0 - mouse.y ) * 0.00025;
+    // target.x = ( 1.0 - mouse.x ) * 0.0003;
+    // target.y = ( 1.0 - mouse.y ) * 0.00025;
 
-    camera.rotation.x += 0.075 * ( target.y - camera.rotation.x );
-    camera.rotation.y += 0.075 * ( target.x - camera.rotation.y );
+    // camera.rotation.x += 0.075 * ( target.y - camera.rotation.x );
+    // camera.rotation.y += 0.075 * ( target.x - camera.rotation.y );
 
-    camera.rotation.z = 0;
+    // camera.rotation.z = 0;
 
 
     requestAnimationFrame( animate );
