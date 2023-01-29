@@ -136,14 +136,14 @@ a.profile {
 /* Games */
 h1 {
     text-align: center;
-    font-size: 5em;
+    font-size: 10vmin;
     margin: 0;
 
     user-select: none;
 }
 h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 4vmin;
     margin: 0;
 
     user-select: none;

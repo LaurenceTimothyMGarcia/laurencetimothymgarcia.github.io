@@ -110,7 +110,7 @@ main {
 
 h1 {
     font-family: monospace;
-    font-size: 4em;
+    font-size: 7vmin;
 
     margin: 0;
 }
@@ -121,8 +121,11 @@ h3 {
     margin: 0;
 }
 
+header h2 {
+    font-size: 3vmin;
+}
 header h2:first-of-type {
-    font-size: 2.5em;
+    font-size: 5vmin;
     font-family: monospace;
 }
 
@@ -152,7 +155,7 @@ header h2:first-of-type {
     grid-area: 1 / 1 / 2 / 3;
 
     text-align: left;
-    font-size: 2.5em;
+    font-size: 4vmin;
 
     padding-left: 2vmin;
 
@@ -189,7 +192,7 @@ header h2:first-of-type {
     margin: auto;
     margin-left: 0;
     margin-right: 0;
-    font-size: 1.25em;
+    font-size: 2vmin;
 }
 .lang-tool div {
     display: flex;
@@ -220,10 +223,10 @@ header h2:first-of-type {
     justify-self: center;
 }
 .summary-img h2 {
-    font-size: 1.5em;
+    font-size: 3vmin;
 }
 .summary-img p {
-    font-size: 1.10em;
+    font-size: 2.25vmin;
 }
 .summary-img img {
     width: 65%;

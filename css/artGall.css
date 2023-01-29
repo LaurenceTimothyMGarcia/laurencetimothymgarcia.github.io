@@ -59,7 +59,7 @@ header {
 
 header h1 {
     text-align: center;
-    font-size: 4em;
+    font-size: 8vmin;
     margin: 0;
 
     padding-top: 2vmin;
@@ -69,7 +69,7 @@ header h1 {
 
 header h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 4vmin;
     margin: 0;
 
     color: var(--primary_color);
@@ -123,14 +123,14 @@ main {
 }
 
 .image-info h2 {
-    font-size: 2em;
+    font-size: 4vmin;
     margin: 0;
 
     color: var(--primary_color);
 }
 
 .image-info h3 {
-    font-size: 1.5em;
+    font-size: 2.75vmin;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
 
@@ -229,7 +229,7 @@ main {
 
 footer h3 {
     text-align: center;
-    font-size: 2em;
+    font-size: 4vmin;
     margin: 0;
 
     color: var(--primary_color);
