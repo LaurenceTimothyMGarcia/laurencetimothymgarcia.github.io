@@ -36,12 +36,12 @@ body {
     overflow-x: hidden;
 }
 
-button {
+/* button {
     border: none;
-    /* border-radius: 12%; */
+    border-radius: 12%;
     background-color: var(--primary_color);
 
-    /* float: left; */
+    float: left;
 
     padding: 0.5%;
 
@@ -51,7 +51,7 @@ button {
 button:hover {
     cursor: pointer;
     opacity: 50%;
-}
+} */
 
 header {
     user-select: none;
@@ -61,6 +61,8 @@ header h1 {
     text-align: center;
     font-size: 4em;
     margin: 0;
+
+    padding-top: 2vmin;
 
     color: var(--primary_color);
 }
@@ -74,8 +76,8 @@ header h2 {
 }
 
 main {
-    width: 35em;
-    height: 35em;
+    width: 50vmin;
+    height: 65vmin;
 }
 
 /* Image gallery information */
@@ -158,6 +160,30 @@ main {
     width: 100%;
     height: auto;
 } */
+
+#nav-pages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    text-align: center;
+    box-shadow: none;
+    border: none;
+}
+
+#nav-pages:hover {
+    cursor: default;
+    opacity: 100%;
+}
+
+#nav-pages img {
+    width: 40%;
+    height: auto;
+}
+
+#nav-pages img:hover {
+    opacity: 50%;
+}
 
 #socials {
     display: flex;
