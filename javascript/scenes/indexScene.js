@@ -433,10 +433,23 @@ function init() {
                 height: 0.25
             });
             const nameMaterial = new THREE.MeshPhongMaterial();
-            nameMaterial.color.set(0x35A816);
+            // 0x373F51 0x08BDBD
+            nameMaterial.color.set(0x08BDBD);
             const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
-            nameMesh.position.set(-6, 5.5, -1);
+            nameMesh.position.set(-6.25, 6.5, -1);
             scene.add(nameMesh);
+
+            //SubTitle
+            const subTitle = new TextGeometry('Software && Game Developer', {
+                font: comfortaaFont,
+                size: 0.5, 
+                height: 0.25
+            });
+            const subTitleMaterial = new THREE.MeshPhongMaterial();
+            subTitleMaterial.color.set(0x08BDBD);
+            const subTitleMesh = new THREE.Mesh(subTitle, subTitleMaterial);
+            subTitleMesh.position.set(-5.5, 5.5, -1);
+            scene.add(subTitleMesh);
 
             //Programming Projects
             const programmingGeo = new TextGeometry('Programming Portfolio', {
