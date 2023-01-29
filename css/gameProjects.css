@@ -108,7 +108,7 @@ main {
     min-width: 100%;
     min-height: 100%;
 
-    gap: 0vmin;
+    gap: 5vmin;
 }
 
 a img {
@@ -251,6 +251,18 @@ a#Art:focus::after {
     display:inline-block;
 
     transform: translate(60%, 0%);
+}
+a#GitHub:hover::after,
+a#GitHub:focus::after {
+    display:inline-block;
+
+    transform: translate(5%, 0%);
+}
+a#Itch-io:hover::after,
+a#Itch-io:focus::after {
+    display:inline-block;
+
+    transform: translate(10%, 0%);
 }
 
 /* Overlay */

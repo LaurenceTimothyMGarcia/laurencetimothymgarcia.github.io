@@ -9,6 +9,7 @@
 
         <!-- Import CSS style sheet -->
         <link rel="stylesheet" href="css/gameProjects.css">
+        <link rel="stylesheet" href="css/navMenu.css">
 
         <!-- Import icon for website -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -18,6 +19,7 @@
 
         <!-- Javascript imports -->
         <script async src="./javascript/overlay.js"></script>
+        <script async src="./javascript/navMenu.js"></script>
     </head>
 
     <body class="flex flex-col">
@@ -32,16 +34,29 @@
             </div>
         </div> -->
 
+        <div id="top-nav">
+            <a class="icon" onclick="navToggle()">
+                <img src="./images/footer/hamburgerMenuWhite.png" draggable="false">
+            </a>
+            <div id="nav-links">
+                <div id="overlay"></div>
+                <a href="./index.html"><h3>Home</h3></a>
+                <a href="./programmingprojects.html"><h3>Programming Porfolio</h3></a>
+                <a href="./gameprojects.html"><h3>Game Dev Porfolio</h3></a>
+                <a href="./artprojects.html"><h3>Art Porfolio</h3></a>
+            </div>
+        </div>
+
         <!----- Header ----->
         <!-- Header stores the socials (github and itch) and the time -->
         <header class="flex flex-row v-center">
             <!-- Socials as "user profiles" -->
-            <a data-name="GitHub" href="https://github.com/LaurenceTimothyMGarcia" class="profile">
+            <!-- <a data-name="GitHub" href="https://github.com/LaurenceTimothyMGarcia" class="profile">
                 <img src="./images/footer/GithubLogoPurple.png" draggable="false">
             </a>
             <a data-name="Itch.io" href="https://emergencyplayer.itch.io/" class="profile">
                 <img src="./images/footer/ItchIORed.png" draggable="false">
-            </a>
+            </a> -->
         </header>
 
         <!-- Main -->
@@ -75,9 +90,12 @@
 
             <!-- Navigation Information -->
             <nav class="flex flex-row">
-                <a id="Home" data-name="Home" href="./index.html"><img src="./images/footer/HomeRed.png" draggable="false"></a>
+                <!-- <a id="Home" data-name="Home" href="./index.html"><img src="./images/footer/HomeRed.png" draggable="false"></a>
                 <a id="Code" data-name="Programming" href="./programmingprojects.html"><img src="./images/footer/programmingGreen.png" draggable="false"></a>
-                <a id="Art" data-name="Art" href="./artprojects.html"><img src="./images/footer/ArtBlue.png" draggable="false"></a>
+                <a id="Art" data-name="Art" href="./artprojects.html"><img src="./images/footer/ArtBlue.png" draggable="false"></a> -->
+
+                <a id="GitHub" data-name="GitHub" href="https://github.com/LaurenceTimothyMGarcia"><img src="./images/footer/GithubLogoPurple.png" draggable="false"></a>
+                <a id="Itch-io" data-name="Itch.io" href="https://emergencyplayer.itch.io/"><img src="./images/footer/ItchIORed.png" draggable="false"></a>
             </nav>
         </main>
 
