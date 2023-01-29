@@ -8,6 +8,7 @@
         <title>Laurence Timothy M. Garcia | Software Developer | Game Designer</title>
 
         <link rel="stylesheet" href="css/artGall.css">
+        <link rel="stylesheet" href="css/navMenu.css">
 
         <!-- Import icon for website -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -18,6 +19,9 @@
         <!-- Art Gallery JS Code -->
         <script async src="./javascript/artGallery.js"></script>
         <script async src="./javascript/artImageSelect.js"></script>
+
+        <!-- Nav Menu JS Code -->
+        <script async src="./javascript/navMenu.js"></script>
     </head>
 
     <body>
@@ -28,7 +32,16 @@
         </div>
 
         <div id="top-nav">
-            
+            <a class="icon" onclick="navToggle()">
+                <img src="./images/footer/hamburgerMenuWhite.png" draggable="false">
+            </a>
+            <div id="nav-links">
+                <div id="overlay"></div>
+                <a href="./index.html"><h3>Home</h3></a>
+                <a href="./programmingprojects.html"><h3>Programming Porfolio</h3></a>
+                <a href="./gameprojects.html"><h3>Game Dev Porfolio</h3></a>
+                <a href="./artprojects.html"><h3>Art Porfolio</h3></a>
+            </div>
         </div>
 
         <!----- Header ----->
