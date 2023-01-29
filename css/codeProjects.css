@@ -245,7 +245,7 @@ nav {
     float: left;
     position: fixed;
 
-    margin: 1em;
+    margin: 1vmin;
 }
 nav a {
     display: flex;
