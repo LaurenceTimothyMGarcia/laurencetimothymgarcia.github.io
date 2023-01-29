@@ -55,14 +55,14 @@ html    {
 /* Variables for color pallete
 ---------------------------*/
 :root   {
-    --primary_color: #5F5AA2;
+    --primary_color: #8A95A5;
     --primary_variant_color: #DE639A;
-    --secondary_color: #355691;
-    --secondary_variant_color: #FFFFFF;
-    --overlay_color: rgba(48, 41, 47, 0.99);
+    --secondary_color: #757083;
+    --secondary_variant_color: #B9C6AE;
+    --overlay_color: rgba(9, 8, 12, 0.99);
 
-    --header-row: #413F54;
-    --odd-rows: rgba(63, 64, 69, 0.5);
+    --header-row: #8A95A5;
+    --odd-rows: rgba(71, 64, 86, 0.99);
     --even-rows: ;
 
     --black: #000000;
@@ -179,8 +179,12 @@ label {
     display: none;
 }
 .resumeInfo {
-    margin: 0;
+    margin: 1em;
     font-size: 1.2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
 }
 
 .flex-resume {
@@ -255,7 +259,7 @@ label {
     width: 100%;
 }
 #edu .div-flex {
-    text-align: center;
+    text-align: left;
 }
 
 /* Skills */
@@ -285,7 +289,7 @@ label {
 }
 #skills .skill-list div p {
     margin: 0;
-    font-size: 0.95em;
+    font-size: 0.75em;
 }
 #skills img {
     max-width: 35%;
