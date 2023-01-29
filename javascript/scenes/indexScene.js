@@ -106,10 +106,12 @@ function init() {
     if (window.innerWidth / window.innerHeight < 0.95)
     {
         renderer.setPixelRatio( window.devicePixelRatio * 0.65 );
+        camera.position.set(0, 3, 17);
     }
     else
     {
         renderer.setPixelRatio( window.devicePixelRatio );
+        camera.position.set(0, 3, 8);
     }
     
     renderer.setSize( window.innerWidth, window.innerHeight );
