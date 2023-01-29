@@ -19,8 +19,9 @@ const handleOnMove = e => {
         return;
     }
 
+    //Max delta handles the acceleration speed of dragging it
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-        maxDelta = window.innerWidth / 2;
+        maxDelta = 9 * (window.innerWidth / 10);
 
     const percentage = (mouseDelta / maxDelta) * -100;
     // console.log(`PERCENTAGE: ${percentage}`);
