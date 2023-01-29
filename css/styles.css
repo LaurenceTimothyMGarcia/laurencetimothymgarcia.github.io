@@ -180,7 +180,7 @@ label {
 }
 .resumeInfo {
     margin: 1em;
-    font-size: 1.2em;
+    font-size: 2.5vmin;
 
     display: flex;
     flex-direction: column;
@@ -325,7 +325,7 @@ label {
     display: none;
 }
 .coursesInfo {
-    font-size: 1.2em;
+    font-size: 2.2vmin;
 }
 
 .coursesInfo table {
