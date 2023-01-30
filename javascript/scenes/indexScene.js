@@ -436,7 +436,7 @@ function init() {
             });
             const nameMaterial = new THREE.MeshPhongMaterial();
             // 0x373F51 0x08BDBD
-            nameMaterial.color.set(0x373F51);
+            nameMaterial.color.set(0x08BDBD);
             const nameMesh = new THREE.Mesh(nameGeometry, nameMaterial);
             nameMesh.position.set(-6.25, 6.5, -1);
             scene.add(nameMesh);
@@ -448,7 +448,7 @@ function init() {
                 height: 0.25
             });
             const subTitleMaterial = new THREE.MeshPhongMaterial();
-            subTitleMaterial.color.set(0x373F51);
+            subTitleMaterial.color.set(0x08BDBD);
             const subTitleMesh = new THREE.Mesh(subTitle, subTitleMaterial);
             subTitleMesh.position.set(-5.5, 5.5, -1);
             scene.add(subTitleMesh);
