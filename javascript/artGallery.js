@@ -44,6 +44,7 @@ const handleOnMove = e => {
     // Direct update to the css, not as smooth
     // track.style.transform = `translate(${nextPercentage}%, -50%)`;
 
+    // Track movement
     // Using animation to translate, looks more smooth
     track.animate({
         transform: `translate(${nextPercentage}%, -50%)`
@@ -54,6 +55,7 @@ const handleOnMove = e => {
     // image.style.objectPosition = `${100 + nextPercentage}% center`;
 
     // Using animation to change object
+    // Updates image to slide at different rate inside
     for (const image of track.getElementsByClassName("image")) {
         image.animate({
             objectPosition: `${100 + nextPercentage}% center`
