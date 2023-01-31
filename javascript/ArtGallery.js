@@ -1,6 +1,12 @@
-const track = document.getElementById("image-track");
+// 
+// JS file for 2d art gallery, temporary until we create 3d one
+// 
 
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+const track = document.getElementsByClassName("image-track")[0];
+
+const handleOnDown = e => {
+    track.dataset.mouseDownAt = e.clientX;
+}
 
 const handleOnUp = () => {
     track.dataset.mouseDownAt = "0";
@@ -8,34 +14,52 @@ const handleOnUp = () => {
 }
 
 const handleOnMove = e => {
-    if (track.dataset.mouseDownAt === "0") return;
+    if (track.dataset.mouseDownAt === "0")
+    {
+        return;
+    }
 
+    //Max delta handles the acceleration speed of dragging it
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-        maxDelta = window.innerWidth/2;
+        maxDelta = 9 * (window.innerWidth / 10);
 
-    console.log("Max Delta:", maxDelta);
-    console.log("Mouse Delta:", mouseDelta);
+    const percentage = (mouseDelta / maxDelta) * -100;
+    // console.log(`PERCENTAGE: ${percentage}`);
 
-    const percentage = (mouseDelta / maxDelta) * -100,
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    //Solves edge case of mouse not initializing
+    if (track.dataset.prevPercentage == "undefined")
+    {
+        track.dataset.prevPercentage = 0;
+    }
 
-    console.log("Next Percentage Unconstrained:", track.dataset.prevPercentage);
+    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+    // console.log(`Track data prev percent: ${track.dataset.prevPercentage}`);
+    // console.log(`PERCENTAGE UNCONSTRAINED: ${nextPercentageUnconstrained}`);
 
-    console.log("Percentage:", track.dataset.percentage);
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -90);
+    // console.log(`NEXT PERCENTAGE: ${nextPercentage}`);
+
     track.dataset.percentage = nextPercentage;
 
-    console.log("NextPercentageEnd:", nextPercentage);
+    // Direct update to the css, not as smooth
+    // track.style.transform = `translate(${nextPercentage}%, -50%)`;
 
+    // Track movement
+    // Using animation to translate, looks more smooth
     track.animate({
         transform: `translate(${nextPercentage}%, -50%)`
-    }, { duration: 1200, fill: "forwards"});
+    }, {duration: 1200, fill: "forwards"});
 
-    for (const image of track.getElementsByClassName("art-image"))
-    {
+
+    // Direct update to the css, not as smooth
+    // image.style.objectPosition = `${100 + nextPercentage}% center`;
+
+    // Using animation to change object
+    // Updates image to slide at different rate inside
+    for (const image of track.getElementsByClassName("image")) {
         image.animate({
             objectPosition: `${100 + nextPercentage}% center`
-        }, { duration: 1200, fill: "forwards"});
+        }, {duration: 1200, fill: "forwards"});
     }
 }
 
