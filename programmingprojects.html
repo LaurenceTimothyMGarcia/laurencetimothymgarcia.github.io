@@ -1,160 +1,378 @@
+<!-- Shows off programming projects, links either lead to download, github, or playstore -->
+
 <!DOCTYPE html>
 <html lang = "en-US">
     <head>
         <!-- Initialize Title and Size of Screen -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Programming Projects | Laurence Timothy M. Garcia</title>
-        
+        <title>Laurence Timothy M. Garcia | Software Developer | Game Designer</title>
 
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="css/codeProjects.css">
+        <link rel="stylesheet" href="css/navMenu.css">
+
+        <script async src="./javascript/navMenu.js"></script>
     </head>
 
     <body>
+
+        <div id="top-nav">
+            <a class="icon" onclick="navToggle()">
+                <img src="./images/footer/hamburgerMenuWhite.png" draggable="false">
+            </a>
+            <div id="nav-links">
+                <div id="overlay"></div>
+                <a href="./index.html"><h3>Home</h3></a>
+                <a href="./programmingprojects.html"><h3>Programming Porfolio</h3></a>
+                <a href="./gameprojects.html"><h3>Game Dev Porfolio</h3></a>
+                <a href="./artprojects.html"><h3>Art Porfolio</h3></a>
+            </div>
+        </div>
+
+        <!----- Header ----->
+        <header>
+            <h1>Programming Portfolio</h1>
+            <h2>Laurence Garcia</h2>
+            <h2>Click on Icons for links to the projects!</h2>
+        </header>
+
+        <!-- Buttons for icons -->
+        <!-- <nav>
+            <a href="./index.html">
+                <img src="./images/programmingprojects/HomeIcon.png">
+                Home
+            </a>
+
+            <a href="./gameprojects.html">
+                <img src="./images/programmingprojects/GameIcon.png">
+                Game Portfolio
+            </a>
+
+            <a href="./artprojects.html">
+                <img src="./images/programmingprojects/ArtIcon.png">
+                Art Projects
+            </a>
+
+            <a href="https://github.com/LaurenceTimothyMGarcia">
+                <img src="./images/programmingprojects/GithubIcon.png">
+                GitHub
+            </a>
+        </nav> -->
+
         <main>
-            <!----- Title w/ Name and Subtitle ----->
-            <header>
-                <div class="content-wrap">
-                    <h1>Laurence Timothy M. Garcia</h1>
-                    <h2>Software Developer | Game Designer | 3D Artist</h2>
+
+            <!-- Projects to display -->
+
+            <!-- Prominent Colors -->
+            <div class="card">
+
+                <!-- Title -->
+                <div class="title">
+                    <h2>Prominent Colors</h2>
+                    <!-- <h2>PROMINENT COLORS</h2> -->
                 </div>
-            </header>
-            
-            <!----- Navigation Bar ----->
-            <section class="nav-bar-block">
-                <div class="content-wrap">
-                    <!-- List of items in nav bar-->
-                    <ul class="nav-bar">
-                        <li><a href="index.html">Home</a></li>
-                        <!--Just a thought, all projects can be condensed into "Portfolios" Tab, then either drop down or Portfolio site to select one of the 3"-->
-                        <li class="dropdown">
-                            <a href="portfolios.html" class="dropbtn">Portfolios</a>
-                            
-                            <div class="dropdown-content">
-                                <a href="programmingprojects.html">Programming Projects</a>
-                                <a href="gameprojects.html">Game Projects</a>
-                                <a href="artprojects.html">Art Projects</a>
-                            </div>
-                        </li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="coursetaken.html">Relevant Courses</a></li>
-                    </ul>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/KotlinLogo.png">
+                        <h4>Kotlin</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/AndroidStudioLogo_Full.png">
+                        <h4>Android Studio</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/GoogleAdMob.png">
+                        <h4>Google AdMob</h4>
+                    </div>
                 </div>
-            </section>
 
-            <!---Main section--->
-            <section class="content-wrap">
-                <h2 class="title">Programming Projects</h2>
-
-                <table>
-                    <tr>
-                        <th colspan="4"><a href="https://github.com/LaurenceTimothyMGarcia">Github</a></th>
-                    </tr>
-
-                    <!--Titles for Each Column-->
-                    <tr>
-                        <th>Project&nbsp;Name</th>
-                        <th>Programming&nbsp;Language</th>
-                        <th>Description</th>
-                        <th>Project&nbsp;Link</th>
-                    </tr>
-
-                    <tr>
-                        <th>Prominent Colors</th>
-                        <th>Kotlin</th>
-                        <td>
-                            Designed, programmed, and published an Android app that can take an image, 
-                            from photo gallery or the user's camera, and find the top 5 most used colors by pixel in the image. 
-
-                            Programmed an algorithm that uses a HashMap to keep track of the colors and its frequency, along 
-                            with a sorting algorithm that places the colors into Pairs on a LinkedList. 
-
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
+                            Designed, programmed, and published an Android app that can take an image, from photo gallery or the user's camera, and find the top 5 most used colors by pixel in the image. 
+                            Programmed an algorithm that uses a HashMap to keep track of the colors and its frequency, along with a sorting algorithm that places the colors into Pairs on a LinkedList. 
                             Published on the Play Store and added interstitial advertisements when the user wants to scan another image.
-                        </td>
-                        <th><a href="https://play.google.com/store/apps/details?id=com.cpp.android.prominentcolors"><button>Link</button></a></th>
-                    </tr>
+                        </p>
+                    </div>
 
-                    <tr>
-                        <th>DND Alignment Discord Bot</th>
-                        <th>Python</th>
-                        <td>
-                            Programmed a messaging bot that takes a user's last 100 messages and rates it on a morality system. 
-                            Used Discord.py API to develop and deploy the messaging bot.
-                        </td>
-                        <th><a href="https://github.com/LaurenceTimothyMGarcia/Allignment-Bot"><button>Link</button></a></th>
-                    </tr>
+                    <!-- Images -->
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.cpp.android.prominentcolors"  class="image">
+                            <img src="./images/programmingprojects/ProminentColorsIcon.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                    <tr>
-                        <th>Portfolio Website</th>
-                        <th>HTML, CSS</th>
-                        <td>
-                            Designed and programmed a personal website to present all of my projects in one place. Deployed the site on GitHub Pages
-                        </td>
-                        <th><a href="https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io"><button>Link</button></a></th>
-                    </tr>
+            <!-- Current porfolio website -->
+            <div class="card">
 
-                    <tr>
-                        <th>Raytracer</th>
-                        <th>Java</th>
-                        <td>
+                <!-- Title -->
+                <div class="title">
+                    <h2>Portfolio Website</h2>
+                    <!-- <h2>PROMINENT COLORS</h2> -->
+                </div>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/HTML5_logo.png">
+                        <h4>HTML</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/CSSLogo.png">
+                        <h4>CSS</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/Javascript_Logo.png">
+                        <h4>JavaScript</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/threejslogo.png">
+                        <h4>THREE.js</h4>
+                    </div>
+                </div>
+
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
+                            Designed and programmed a porfolio website to present all my projects in one place.
+                            Used a combination of HTML, CSS, JavaScript, and the THREE.js library to create a 
+                            dynamic website that features responsive 2D and 3D elements.
+                            Deployed the website through GitHub Pages.
+                        </p>
+                    </div>
+
+                    <!-- Images -->
+                    <div>
+                        <a href="https://laurencetimothymgarcia.github.io/"  class="image">
+                            <img src="./images/programmingprojects/GithubLogo.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raytracer -->
+            <div class="card">
+
+                <!-- Title -->
+                <div class="title">
+                    <h2>Raytracer</h2>
+                    <!-- <h2>PROMINENT COLORS</h2> -->
+                </div>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/JavaLogo.png">
+                        <h4>Java</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/ProcessingLogo.png">
+                        <h4>Processing</h4>
+                    </div>
+                </div>
+
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
                             Programmed a raytracer using the Java Processing library. 
                             Capable of producing images consisting of various geometric primitives and user generated models. 
                             Renders the primitives with a phong lighting model, reflections, and UV texture mapping.
-                        </td>
-                        <th><a href=""><button>N/A</button></a></th>
-                    </tr>
+                        </p>
+                    </div>
 
-                    <tr>
-                        <th>Shader - Morning Lilies</th>
-                        <th>GLSL</th>
-                        <td>
-                            Programmed a shader to emulate the look of a morning lily flower that interpolates between 2 shapes.
-                        </td>
-                        <th><a href="https://www.shadertoy.com/view/msBXWD"><button>Link</button></a></th>
-                    </tr>
-
-                    <tr>
-                        <th>Pathfinding and NavMesh Study</th>
-                        <th>Java</th>
-                        <td>
-                            Programmed a Java 2D AI agent to traverse a NavMesh in the shortest Path using the A* algorithm. 
-                            Programmed an algorithm to automatically develop a triangulated NavMesh based on the avaiable walls.
-                        </td>
-                        <th><a href="./projectDownloads/GameAIPathfindingNavmeshStudy.zip" download="GameAIPathfindingNavmeshStudy"><button>Download</button></a></th>
-                    </tr>
-
-                    <tr>
-                        <th>Maze Generation Study</th>
-                        <th>Java</th>
-                        <td>
-                            Programmed a modified version of Prim's algorithm to procedurally generate randomized mazes in Java. 
-                            Programmed in another option to remove more walls in order to create more open and "natural" feeling rooms.
-                        </td>
-                        <th><a href="./projectDownloads/PrimsMazeGenerationStudy.zip" download="PrimsMazeGenerationStudy"><button>Download</button></a></th>
-                    </tr>
-                </table>
-            </section>
-
-            <!----- Footer ----->
-            <footer>
-                <div class="content-wrap">
-                    <!-- List of links for the socials -->
-                    <p>Socials</p>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/laurencetimothymanalogarcia/"><img src="images/footer/LinkedinLogo.png"></a></li>
-                        <li><a href="https://github.com/LaurenceTimothyMGarcia"><img src="images/footer/GithubLogo.png"></a></li>
-                        <li><a href="https://emergencyplayer.itch.io/"><img src="images/footer/ItchIO.png"></a></li>
-                        <li><a href="https://www.artstation.com/emergencyartist"><img src="images/footer/Artstation.png"></a></li>
-                        <li><a href="https://www.instagram.com/emergencyartist/"><img src="images/footer/Instagram.png"></a></li>
-                        <li><a href="mailto: lg007@outlook.com"><img src="images/footer/Email.png"></a></li>
-                    </ul>
-
-                    <p><small>Copyright &copy; 2022, Laurence Timothy Garcia</small></p>
+                    <!-- Images -->
+                    <div class="image">
+                        <img src="./images/programmingprojects/Raytracer.png">
+                    </div>
                 </div>
-            </footer>
+            </div>
+
+            <!-- Game AI Movement Agent -->
+            <div class="card">
+
+                <!-- Title -->
+                <div class="title">
+                    <h2>Pathfinding and NavMesh Study</h2>
+                    <!-- <h2>PROMINENT COLORS</h2> -->
+                </div>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/JavaLogo.png">
+                        <h4>Java</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/ProcessingLogo.png">
+                        <h4>Processing</h4>
+                    </div>
+                </div>
+
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
+                            Programmed a Java 2D AI agent to traverse a NavMesh in the shortest Path using the A* algorithm. 
+                            Programmed an algorithm to automatically develop a triangulated NavMesh based on the avaiable walls. 
+                        </p>
+                    </div>
+
+                    <!-- Images -->
+                    <div class="image">
+                        <a href="./projectDownloads/GameAIPathfindingNavmeshStudy.zip" class="image">
+                            <img src="./images/programmingprojects/Pathfinding.PNG">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maze Generation -->
+            <div class="card">
+
+                <!-- Title -->
+                <div class="title">
+                    <h2>Maze Generation Study</h2>
+                </div>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/JavaLogo.png">
+                        <h4>Java</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/ProcessingLogo.png">
+                        <h4>Processing</h4>
+                    </div>
+                </div>
+
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
+                            Programmed a modified version of Prim's algorithm to procedurally generate randomized mazes in Java.
+                            Programmed in another option to remove more walls in order to create more open and "natural" feeling rooms.
+                        </p>
+                    </div>
+
+                    <!-- Images -->
+                    <div class="image">
+                        <a href="./projectDownloads/PrimsMazeGenerationStudy.zip" class="image">
+                            <img src="./images/programmingprojects/MazeGen.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Messaging Bot -->
+            <div class="card">
+
+                <!-- Title -->
+                <div class="title">
+                    <h2>DND Alignment Discord Bot</h2>
+                </div>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/Python_logo.png">
+                        <h4>Python</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/DiscordLogo.png">
+                        <h4>Discord.py</h4>
+                    </div>
+                </div>
+
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
+                            Programmed a messaging bot that takes a user's last 100 messages and rates it on a morality system.
+                            Used Discord.py API to develop and deploy the messaging bot.
+                        </p>
+                    </div>
+
+                    <!-- Images -->
+                    <div>
+                        <a href="https://github.com/LaurenceTimothyMGarcia/Allignment-Bot"  class="image">
+                            <img src="./images/programmingprojects/DiscordLogo.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GLSL Shader -->
+            <div class="card">
+
+                <!-- Title -->
+                <div class="title">
+                    <h2>Morning Lilies Shader</h2>
+                </div>
+
+                <!-- Languages and Frameworks -->
+                <div class="lang-tool">
+                    <!-- <h3>Languages/Tools</h3> -->
+                    <div>
+                        <img src="./images/programmingprojects/OpenglLogo.png">
+                        <h4>GLSL</h4>
+                    </div>
+
+                    <div>
+                        <img src="./images/programmingprojects/ShaderToyLogo.png">
+                        <h4>ShaderToy</h4>
+                    </div>
+                </div>
+
+                <div class="summary-img">
+                    <!-- Description -->
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p>
+                            Programmed a shader to emulate the look of a morning lily flower that interpolates between 2 shapes.
+                        </p>
+                    </div>
+
+                    <!-- Images -->
+                    <div>
+                        <iframe width="100%" height="100%" frameborder="0" src="https://www.shadertoy.com/embed/msBXWD?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Old Portfolio website -->
         </main>
+
+        <!----- Footer ----->
+        <footer>
+            
+        </footer>
     </body>
 </html>

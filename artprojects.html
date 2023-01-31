@@ -1,511 +1,327 @@
+<!-- displays images of art projects mostly blender related -->
+
 <!DOCTYPE html>
 <html lang = "en-US">
     <head>
         <!-- Initialize Title and Size of Screen -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Art Projects | Laurence Timothy M. Garcia</title>
-        
+        <title>Laurence Timothy M. Garcia | Software Developer | Game Designer</title>
 
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/artGall.css">
+        <link rel="stylesheet" href="css/navMenu.css">
+
+        <!-- Import icon for website -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <!-- <script type="module" src="./javascript/ArtGallery.js"></script> -->
+
+        <!-- Art Gallery JS Code -->
+        <script async src="./javascript/artGallery.js"></script>
+        <script async src="./javascript/artImageSelect.js"></script>
+
+        <!-- Nav Menu JS Code -->
+        <script async src="./javascript/navMenu.js"></script>
     </head>
 
     <body>
 
-        <!-- New image gallery format Doesnt Work-->
-        <!-- <div id="image-track" data-mouse-down-at="0" data-prev-precentage="0">
+        <!-- Background image holder with blur effect -->
+        <div id="background">
 
-            <img class="art-image" src="images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png" alt="Detective Incognito" draggable="false">
+        </div>
 
-            <img class="art-image" src="images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png" alt="Oras" draggable="false">
+        <div id="top-nav">
+            <a class="icon" onclick="navToggle()">
+                <img src="./images/footer/hamburgerMenuWhite.png" draggable="false">
+            </a>
+            <div id="nav-links">
+                <div id="overlay"></div>
+                <a href="./index.html"><h3>Home</h3></a>
+                <a href="./programmingprojects.html"><h3>Programming Porfolio</h3></a>
+                <a href="./gameprojects.html"><h3>Game Dev Porfolio</h3></a>
+                <a href="./artprojects.html"><h3>Art Porfolio</h3></a>
+            </div>
+        </div>
 
-            <img class="art-image" src="images/artprojects/OriginalCharacters/Pakabi/Pakabi Forest Fixed Purple Grass Purple Fog Green Crystals.png" alt="Pakabi" draggable="false">
-
-            <img class="art-image" src="images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png" alt="Phroglyt" draggable="false">
-
-
-        </div> -->
+        <!----- Header ----->
+        <header>
+            <h1>Art Projects</h1>
+            <h2>Laurence Garcia</h2>
+        </header>
 
         <main>
-            <!----- Title w/ Name and Subtitle ----->
-            <header>
-                <div class="content-wrap">
-                    <h1>Laurence Timothy M. Garcia</h1>
-                    <h2>Software Developer | Game Designer | 3D Artist</h2>
-                </div>
-            </header>
+            <!-- Overlay for image expand -->
+            <!-- <div id="image-expand">
+                
+            </div> -->
             
-            <!----- Navigation Bar ----->
-            <section class="nav-bar-block">
-                <div class="content-wrap">
-                    <!-- List of items in nav bar-->
-                    <ul class="nav-bar">
-                        <li><a href="index.html">Home</a></li>
-                        <!--Just a thought, all projects can be condensed into "Portfolios" Tab, then either drop down or Portfolio site to select one of the 3"-->
-                        <li class="dropdown">
-                            <a href="portfolios.html" class="dropbtn">Portfolios</a>
-                            
-                            <div class="dropdown-content">
-                                <a href="programmingprojects.html">Programming Projects</a>
-                                <a href="gameprojects.html">Game Projects</a>
-                                <a href="artprojects.html">Art Projects</a>
-                            </div>
-                        </li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="coursetaken.html">Relevant Courses</a></li>
-                    </ul>
-                </div>
-            </section>
+            <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
 
-            <section class="backgroundcolor">
-                <div class="content-wrap">
-                    <h2 class="title">Art Projects</h2>
-                    <h3 class="follow-me">Full Portfolios</h3>
-                    <ul class="portfolio-img-link">
-                        <li>
-                            <a href="https://www.artstation.com/emergencyartist">
-                                <img src="images/portfolios/artstationBlack.png">
-                            </a>
-                            <!--<h3>Artstation</h3>-->
-                        </li>
-
-                        <li>
-                            <a href="https://www.instagram.com/emergencyartist/">
-                                <img src="images/portfolios/instagramBlack.png">
-                            </a>
-                            <!--<h3>Instagram</h3>-->
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            
-            <!--Game Assets-->
-            <section class="art-background-2">
-                <h3 class="content-wrap subtitle">Game Assets</h3>
-
-                <section>
-                    <!--<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CO3XZpapiw_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CO3XZpapiw_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CO3XZpapiw_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Laurence Garcia (@emergencyartist)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>-->
-                </section>
-
-                <div class="flex-img-gallery">
-                    <!--Circle of Growth Assets-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/GameAssets/CircleOfGrowth/GrowthSceneUnMarkedNoBG.png" alt="Circle Of Growth Assets">
-                        
-                        <div class="image-card-text">
-                            <h4>Circle of Growth</h4>
-                            <p>Modeled assets for the 2.5D platformer "Circle of Growth".</p>
-                            <a href="https://www.instagram.com/p/CmekPsNppJH/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/rAVe4m"><img src="images/portfolios/artstationBlack.png"></a>-->
-                        </div>
-                    </section>
-
-                    <!--Chachi Assets-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/GameAssets/Chachi/ChachiMapIso.png" alt="Chachi Map">
-                        
-                        <div class="image-card-text">
-                            <h4>Chachi Map Design</h4>
-                            <p>Created a labyrinth for the player to explore in the horror survival game "Chachi".</p>
-                            <a href="https://www.instagram.com/p/Cj0pgu7p8hp/?igshid=YmMyMTA2M2Y="><img src="images/portfolios/instagramBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/rAVe4m"><img src="images/portfolios/artstationBlack.png"></a>-->
-                        </div>
-                    </section>
-
-                    <!--Containment Labyrinth Run Assets-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Models.png" alt="Character Models for Labyrinth Run Game">
-                        
-                        <div class="image-card-text">
-                            <h4>Containment Labyrinth Run Enemy Models</h4>
-                            <p>Created the enemy models, animations, and AI for a first person shooter experience.</p>
-                            <a href="https://www.instagram.com/p/CO3XZpapiw_/?utm_source=ig_web_button_share_sheet"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/rAVe4m"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <section class="image-card-art">
-                        <img src="images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Rooms.png" alt="Room Design for Labyrinth Run Game">
-                        <div class="image-card-text">
-                            <h4>Containment Labyrinth Run Room Design</h4>
-                            <p>Created 6 of the rooms for a first person shooter experience.</p>
-                            <a href="https://www.instagram.com/p/CO3XZpapiw_/?utm_source=ig_web_button_share_sheet"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/nYV8br"><img src="images/portfolios/artstationBlack.png"></a>
-                        </div>
-                    </section>
-                </div>
-            </section>
-
-            <!--Original Characters-->
-            <section class="art-background-1">
-                <h3 class="content-wrap subtitle">Original Characters</h3>
-
-                <!-- New image gallery format -->
-                <!-- <div id="image-track" data-mouse-down-at="0" data-prev-precentage="0">
-
-                    <img class="art-image" src="images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png" alt="Detective Incognito" draggable="false">
-
-                    <img class="art-image" src="images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png" alt="Oras" draggable="false">
-
-                    <img class="art-image" src="images/artprojects/OriginalCharacters/Pakabi/Pakabi Forest Fixed Purple Grass Purple Fog Green Crystals.png" alt="Pakabi" draggable="false">
-
-                    <img class="art-image" src="images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png" alt="Phroglyt" draggable="false">
-
-
+                <!-- Template, remove later -->
+                <!-- <div class="flex-holder" onclick="imageSelect(this)">
+                    
+                    <div class="image-info">
+                        <h2></h2>
+                    </div>
                 </div> -->
 
-                <div class="flex-img-gallery">
-                    <!--Detective Incognito-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png" alt="Detective Incognito">
-                        
-                        <div class="image-card-text">
-                            <h4>Detective Incognito</h4>
-                            <p>A person with no face here to ensure there is no history.</p>
-                            <a href="https://www.instagram.com/p/CMFZEMAlxVS/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/q9wYGN"><img src="images/portfolios/artstationBlack.png"></a>
-                        </div>
-                    </section>
-
-                    <!--Oras-->
-                    <section class="image-card-art">
-                        
-                        <video width=100% controls poster="images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png">
-                            <source src="images/artprojects/OriginalCharacters/Oras/Man of Time Full Clip.mp4" type="video/mp4">
-                            <img src="images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png" alt="Oras">
-                        </video>
-                        
-                        <div class="image-card-text">
-                            <h4>Oras</h4>
-                            <p>The Architect of Time</p>
-                            <a href="https://www.instagram.com/p/CP9j_QmpzIU/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/J9dEz0"><img src="images/portfolios/artstationBlack.png"></a>
-                        </div>
-                    </section>
-
-                    <!--Pakabi-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/OriginalCharacters/Pakabi/Pakabi Forest Fixed Purple Grass Purple Fog Green Crystals.png" alt="Pakabi">
-                        
-                        <div class="image-card-text">
-                            <h4>Pakabi</h4>
-                            <p>The Guardian of Gerald.</p>
-                            <a href="https://www.instagram.com/p/CUp79UBp52B/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/XnyYWw"><img src="images/portfolios/artstationBlack.png"></a>
-                        </div>
-                    </section>
-
-                    <!--Phroglyt-->
-                    <section class="image-card-art">
-                        <video width=100% controls poster="images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png">
-                            <source src="images/artprojects/OriginalCharacters/Phroglyt/PhroglytNewTextureWalk0001-0360.mp4" type="video/mp4">
-                            <img src="images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png" alt="Phroglyt">
-                        </video>
-                        
-                        <div class="image-card-text">
-                            <h4>Phroglyt</h4>
-                            <p>Floppy little creatures</p>
-                            <a href="https://www.instagram.com/p/ChIO1COpQy4/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/qQ5yb2"><img src="images/portfolios/artstationBlack.png"></a>
-                        </div>
-                    </section>
-
-                    <!--Rakukulam-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/OriginalCharacters/Rakukulam/Rakukulam_Freefalling_Glow.png" alt="Rakukulam">
-                        
-                        <div class="image-card-text">
-                            <h4>Rakukulam</h4>
-                            <p>The Exiled Hero</p>
-                            <a href="https://www.instagram.com/p/CnC9aagyQr3/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href=""><img src="images/portfolios/artstationBlack.png"></a>
-                        </div>
-                    </section>
+                <div class="image" id="socials">
+                    <a href="https://www.instagram.com/emergencyartist/"><img src="../../images/footer/Instagram.png" draggable="false"></a>
+                    <h3>@EmergencyArtist</h3>
+                    <a href="https://www.artstation.com/emergencyartist"><img src="../../images/footer/Artstation.png" draggable="false"></a>
                 </div>
-            </section>
 
-            <!--Fan Art-->
-            <section class="art-background-2">
-                <h3 class="content-wrap subtitle">Fan Art</h3>
-
-                <div class="flex-img-gallery">
-                    <!--Arcane Ekko-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/ArcaneEkko/HoverPose1LookingCamera.png" alt="The Firelight Leader">
-                        
-                        <div class="image-card-text">
-                            <h4>The Firelight Leader</h4>
-                            <p>Arcane/League of Legends Fanart</p>
-                            <a href="https://www.instagram.com/p/CX1eCiRv7nD/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/eJlKK3"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Cyndaquil-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/Cyndaquil/Cyndaquil Main.png" alt="Cyndaquil Plushie">
-                        
-                        <div class="image-card-text">
-                            <h4>Cyndaquil Plushie</h4>
-                            <p>Pokemon Fanart</p>
-                            <a href="https://www.instagram.com/p/CZSADR8pBIs/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Hades Chaos-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/HadesChaosBoon/Hades Chaos Boon w Glow.png" alt="Hades Chaos Boon">
-                        
-                        <div class="image-card-text">
-                            <h4>The Chaos Boon</h4>
-                            <p>Hades Fanart</p>
-                            <a href="https://www.instagram.com/p/CJXQS5aFTKP/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/OokXJK"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Among Us-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/AmongUs/Among Us You Know too much Final.png" alt="Among Us">
-                        
-                        <div class="image-card-text">
-                            <h4>Among Us</h4>
-                            <p>Among Us Fan Art</p>
-                            <a href="https://www.instagram.com/p/CFBryQ8pPnf/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/d8RVb1"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Sky Bison-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/SkyBison/Appa in the field.png" alt="Sky Bison">
-                        
-                        <div class="image-card-text">
-                            <h4>The Sky Bison</h4>
-                            <p>Avatar: The Last Airbender Fanart</p>
-                            <a href="https://www.instagram.com/p/CIrMf60lAtk/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Velvent Room (p5)-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/VelvetRoomP5/Mementos Official Final.png" alt="The Velvet Room (P5)">
-                        
-                        <div class="image-card-text">
-                            <h4>The Velvet Room (P5)</h4>
-                            <p>Persona 5 Fanart</p>
-                            <a href="https://www.instagram.com/p/CI67mTmle2D/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/8eEz96"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Hollow Knight Abyss-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/HollowKnight/abyss 3.png" alt="Hollow Knight Abyss">
-                        
-                        <div class="image-card-text">
-                            <h4>Hollow Knight Abyss</h4>
-                            <p>Hollow Knight Fanart</p>
-                            <a href="https://www.instagram.com/emergencyartist/"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Hollow Knight Hornet-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/FanArt/HollowKnight/Greenpath Hornet Glow Ver5.png" alt="Hornet (Hollow Knight)">
-                        
-                        <div class="image-card-text">
-                            <h4>Hornet</h4>
-                            <p>Hollow Knight Fanart</p>
-                            <a href="https://www.instagram.com/p/CKAZ8guFVpo/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
+                <!-- OC characters -->
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/DetectiveIncognito/Detective Incognito Bar Window Second Grain.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Detective Incognito</h2>
+                        <h3>Original Character</h3>
+                        <h3>May no history remain</h3>
+                        <p></p>
+                        <!-- <div class="info-socials">
+                            <a href="https://www.instagram.com/emergencyartist/"><img src="../../images/footer/Instagram.png" draggable="false"></a>
+                            <a href="https://www.artstation.com/emergencyartist"><img src="../../images/footer/Artstation.png" draggable="false"></a>
+                        </div> -->
+                    </div>
                 </div>
-            </section>
-
-            <!--Commissions-->
-            <section class="art-background-1">
-                <h3 class="content-wrap subtitle">Commissions</h3>
-
-                <div class="flex-img-gallery">
-                    <!--A City Too Bright-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Commissions/Abstract City Skyline1.png" alt="A City Too Bright">
-                        
-                        <div class="image-card-text">
-                            <h4>A City Too Bright</h4>
-                            <p>An abstract skyline that glows in the distance.</p>
-                            <a href="https://www.instagram.com/p/CSZcYb8nOZ8/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/eak1kw"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--All Eyes on You-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Commissions/All Eyes On You 2.0 Cycles.png" alt="All Eyes on You">
-                        
-                        <div class="image-card-text">
-                            <h4>All Eyes on You</h4>
-                            <p>
-                                A visual abstract for a UCSD student's research paper. "All Eyes on You" is meant to visualize the feeling
-                                of hiding mental illness in plain sight and not being allowed to show your mind is making you suffer.
-                            </p>
-                            <a href="https://www.instagram.com/p/CShkF9KJxif/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/L36N6R"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Oras/Man of Time God Pose Watermark.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Oras</h2>
+                        <h3>Original Character</h3>
+                        <h3>The Architect of Time</h3>
+                        <p></p>
+                    </div>
                 </div>
-            </section>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Pakabi/Pakabi Forest Fixed Purple Grass Purple Fog Green Crystals.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Pakabi</h2>
+                        <h3>Original Character</h3>
+                        <h3>The Guardian of Gerald</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Phroglyt/PhroglytStandard.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Phroglyt</h2>
+                        <h3>Original Character</h3>
+                        <h3>Floppy little creatures</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/OriginalCharacters/Rakukulam/Rakukulam_Freefalling_Glow.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Rakukulam</h2>
+                        <h3>Original Character</h3>
+                        <h3>The Exiled Hero</h3>
+                        <p></p>
+                    </div>
+                </div>
 
-            <!--Landscapes-->
-            <section class="art-background-2">
-                <h3 class="content-wrap subtitle">Landscapes</h3>
-
-                <div class="flex-img-gallery">
-                    <!--Sinkilum-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Landscapes/TriPrismPillarBeam3.png" alt="Sinkilum">
-                        
-                        <div class="image-card-text">
-                            <h4>Sinkilum</h4>
-                            <p>A Lost Gateway</p>
-                            <a href="https://www.instagram.com/p/Cgfjix_vMGt/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--The Apocolypse-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Landscapes/The Apocolypse Fixed.png" alt="The Apocolypse">
-                        
-                        <div class="image-card-text">
-                            <h4>The Apocolypse</h4>
-                            <p>What's left when nothing remains?</p>
-                            <a href="https://www.instagram.com/p/CJq42xxlTb9/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--Christmas-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Landscapes/Christmas Scene 2020 1920 Glow.png" alt="The Holidays">
-                        
-                        <div class="image-card-text">
-                            <h4>Happy Holidays</h4>
-                            <p>A design for the holiday seasons</p>
-                            <a href="https://www.instagram.com/p/CJOeWfUlRRX/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/lxK42G"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--The Monkey Altar-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Landscapes/Embrace Monke DeNoise w Glow.png" alt="The Monkey Altar">
-                        
-                        <div class="image-card-text">
-                            <h4>The Monkey Altar</h4>
-                            <p>Embrace the altar</p>
-                            <a href="https://www.instagram.com/p/CKnG7XnlDt7/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/emergencyartist"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--House in the Fog-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Landscapes/House in the fog Eevee White Glow.png" alt="House in the Fog">
-                        
-                        <div class="image-card-text">
-                            <h4>A Winter Home in the Woods</h4>
-                            <p>A house in the forest and snow</p>
-                            <a href="https://www.instagram.com/p/CHnxQAwpusr/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/q9K9JN"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
-
-                    <!--When The Lightning Strikes-->
-                    <section class="image-card-art">
-                        <img src="images/artprojects/Landscapes/When the Lightning Strikes the Night.png" alt="Fangs of the Heavens">
-                        
-                        <div class="image-card-text">
-                            <h4>Fangs of the Heavens</h4>
-                            <p>Every year, lightning strikes 4 pillars who harvest its energy.</p>
-                            <a href="https://www.instagram.com/p/CGg8Q5OJJ4R/?utm_source=ig_web_copy_link"><img src="images/portfolios/instagramBlack.png"></a>
-                            <a href="https://www.artstation.com/artwork/g23bVG"><img src="images/portfolios/artstationBlack.png"></a>
-                            <!--<a href="https://www.artstation.com/artwork/v2VxQD">Elongated Animations</a>
-                            <a href="https://www.artstation.com/artwork/182WWL">Frog Monster Animations</a>-->
-                        </div>
-                    </section>
+                <!-- Game Assets -->
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/GameAssets/Chachi/ChachiMapIso.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Chachi Map</h2>
+                        <h3>Game Asset</h3>
+                        <h3>Map layout for the survival horror game "Chachi"</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/GameAssets/CircleOfGrowth/GrowthSceneUnMarkedNoBG.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Circle of Growth Assets</h2>
+                        <h3>Game Asset</h3>
+                        <h3>Assets for the 2.5D platformer "Circle of Growth"</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Models.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Labyrinth Run Game Models</h2>
+                        <h3>Game Asset</h3>
+                        <h3>Enemy Models, animations, and AI for a first-person shooter</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/GameAssets/LabyrinthRun/Labyrinth Run Game Rooms.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Labyrinth Run Game Rooms</h2>
+                        <h3>Game Asset</h3>
+                        <h3>6 maps for a first-person shooter</h3>
+                        <p></p>
+                    </div>
                 </div>
                 
-            </section>
-
-            <!--Miscellaneous
-            <section class="art-background-1">
-                <h3 class="content-wrap subtitle">Miscellaneous</h3>
-            </section>-->
-
-            <!--The Emergency Compendium-->
-            <section class="art-background-1">
-                <h3 class="content-wrap subtitle">The Emergency Compendium</h3>
-                <h4 class="content-wrap subtitle">Coming Soon...</h4>
-            </section>
-
-            <!----- Footer ----->
-            <footer>
-                <div class="content-wrap">
-                    <!-- List of links for the socials -->
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/laurencetimothymanalogarcia/"><img src="images/footer/LinkedinLogo.png"></a></li>
-                        <li><a href="https://github.com/LaurenceTimothyMGarcia"><img src="images/footer/GithubLogo.png"></a></li>
-                        <li><a href="https://emergencyplayer.itch.io/"><img src="images/footer/ItchIO.png"></a></li>
-                        <li><a href="https://www.artstation.com/emergencyartist"><img src="images/footer/Artstation.png"></a></li>
-                        <li><a href="https://www.instagram.com/emergencyartist/"><img src="images/footer/Instagram.png"></a></li>
-                        <li><a href="mailto: lg007@outlook.com"><img src="images/footer/Email.png"></a></li>
-                    </ul>
-
-                    <p><small>Copyright &copy; 2022, Laurence Timothy Garcia</small></p>
+                
+                <!-- Fan Art -->
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/ArcaneEkko/HoverPose1LookingCamera.png" draggable="false">
+                    <div class="image-info">
+                        <h2>The Firelight Leader</h2>
+                        <h3>Arcane/League of Legends Fan Art</h3>
+                        <p></p>
+                    </div>
                 </div>
-            </footer>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/Pokemon/Cyndaquil/Cyndaquil Main.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Cyndaquil Plushie</h2>
+                        <h3>Pokemon Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/Pokemon/Oshawott/Oshawott_Base.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Oshawott Plushie</h2>
+                        <h3>Pokemon Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/HadesChaosBoon/Hades Chaos Boon w Glow.png" draggable="false">
+                    <div class="image-info">
+                        <h2>The Chaos Boon</h2>
+                        <h3>Hades Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/AmongUs/Among Us You Know too much Final.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Among Us</h2>
+                        <h3>Among Us Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/SkyBison/Appa in the field.png" draggable="false">
+                    <div class="image-info">
+                        <h2>The Sky Bison</h2>
+                        <h3>Avatar: The Last Airbender Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/VelvetRoomP5/Mementos Official Final.png" draggable="false">
+                    <div class="image-info">
+                        <h2>The Velvet Room (P5)</h2>
+                        <h3>Persona 5 Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/HollowKnight/abyss 3.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Hollow Knight Abyss</h2>
+                        <h3>Hollow Knight Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/FanArt/HollowKnight/Greenpath Hornet Glow Ver5.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Hornet</h2>
+                        <h3>Hollow Knight Fan Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Landscapes -->
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Landscapes/TriPrismPillarBeam3.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Sinkilum</h2>
+                        <h3>Landscape</h3>
+                        <h3>A Lost Gateway</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Landscapes/The Apocolypse Fixed.png" draggable="false">
+                    <div class="image-info">
+                        <h2>The Apocolypse</h2>
+                        <h3>Landscape</h3>
+                        <h3>What's left when nothing remains?</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Landscapes/Christmas Scene 2020 1920 Glow.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Happy Holidays</h2>
+                        <h3>Landscape</h3>
+                        <h3>A design for the holiday seasons</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Landscapes/Embrace Monke DeNoise w Glow.png" draggable="false">
+                    <div class="image-info">
+                        <h2>The Monkey Altar</h2>
+                        <h3>Landscape</h3>
+                        <h3>Embrace the altar</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Landscapes/House in the fog Eevee White Glow.png" draggable="false">
+                    <div class="image-info">
+                        <h2>A Winter Home in the Woods</h2>
+                        <h3>Landscape</h3>
+                        <h3>A house in the forst and snow</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Landscapes/When the Lightning Strikes the Night.png" draggable="false">
+                    <div class="image-info">
+                        <h2>Fangs of the Heavens</h2>
+                        <h3>Landscape</h3>
+                        <h3>Every year, lightning strikes 4 pillars who harvest its energy</h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Commissions -->
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Commissions/Abstract City Skyline1.png" draggable="false">
+                    <div class="image-info">
+                        <h2>A City Too Bright</h2>
+                        <h3>Commission</h3>
+                        <h3>An abstract skyline glows in the distance</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="flex-holder" onclick="imageSelect(this)">
+                    <img class="image" src="../../images/artprojects/Commissions/All Eyes On You 2.0 Cycles.png" draggable="false">
+                    <div class="image-info">
+                        <h2>All Eyes on You</h2>
+                        <h3>Commission</h3>
+                        <h3>Visual Abstract for a UCSD Research Paper</h3>
+                        <p>A visual abstract for a UCSD student's research paper. 
+                            "All Eyes on You" is meant to visualize the feeling of hiding mental illness in plain sight and not being allowed to show your mind is making you suffer.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            
         </main>
+
+        <!----- Footer ----->
+        <footer>
+            <h3><- Click and Drag Mouse to Scroll -></h3>
+        </footer>
     </body>
 </html>

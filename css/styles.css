@@ -1,87 +1,48 @@
+/* Color pallets */
+/* 
+
+    Set 1
+    --primary_color: #c23846;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #BFB48F;
+    --secondary_variant_color: #F2EFE9;
+    --overlay_color: rgba(37, 38, 39, 0.99);
+
+    Set 2
+    --primary_color: #488286;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #77878B;
+    --secondary_variant_color: #B7D5D4;
+    --overlay_color: rgba(37, 38, 39, 0.99);
+
+    --header-row: #b7d5d4;
+    --odd-rows: rgba(48, 82, 82, 0.99);
+    --even-rows: ;
+
+    Set 3
+    --primary_color: #8A95A5;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #757083;
+    --secondary_variant_color: #B9C6AE;
+    --overlay_color: rgba(9, 8, 12, 0.99);
+
+    --header-row: #8A95A5;
+    --odd-rows: rgba(71, 64, 86, 0.99);
+    --even-rows: ;
+
+    Set 4
+    --primary_color: #5F5AA2;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #355691;
+    --secondary_variant_color: #FFFFFF;
+    --overlay_color: rgba(48, 41, 47, 0.99);
+
+    --header-row: #413F54;
+    --odd-rows: rgba(63, 64, 69, 0.5);
+    --even-rows: ;
+*/
+
 /*** Universal Style ***/
-
-/*
-Color Palette
-    First Set
-        #D1C6AD - Bone
-        #BBADA0 - Pale Silver
-        #A1869E - Mountbatten Pink
-        #797596 - Rhythm
-        #0B1D51 - Royal Blue Dark
-
-    Second Set
-        #7BE0AD - Medium Aquamarine
-        #AEE5D8 - Middle Blue Green
-        #E7E5E5 - Platinum
-        #E5D0E3 - Languid Lavender
-        #E0B0D5 - Pink Lavender
-
-    Third Set
-        #D7CDCC - Pale Silver
-        #FFFFFF - White
-        #59656F - Black Coral - #5E5E7D Replacement
-        #9C528B - Razzmic Berry
-        #1D1E2C - Raisin Black
-    
-    Fourth Set
-        #020202 - Black
-        #0D324D - Prussian Blue
-        #7F5A83 - Chinese Violet
-        #A188A6 - Glossy Grape
-        #9DA2AB - Silver Metallic
-*/
-
-/*
-Color Set Variables
-
-Color Set 1
-    --light_background: #D7CDCC;
-    --white: #FFFFFF;
-    --light_dark_contrast: #5E5E7D;
-    --primary_color_contrast: #9C528B;
-    --secondary_color_contrast: #335C81;
-    --dark_contrast: #1D1E2C;
-
-Color Set 2
-    --light_background: #D4D1CC;
-    --white: #FFFFFF;
-    --light_dark_contrast: #303030;
-    --primary_color_contrast: #504DD6;
-    --secondary_color_contrast: #E2C62E;
-    --dark_contrast: #000000;
-
-Color Set 3
-    --light_background: #d4daf3;
-    --white: #FFFFFF;
-    --light_dark_contrast: #5E5E5E;
-    --primary_color_contrast: #48E5C2;
-    --secondary_color_contrast: #F3D3BD;
-    --dark_contrast: #333333;
-
-Color Set 4
-    --light_background: #f4eded;
-    --white: #FFFFFF;
-    --light_dark_contrast: #877666;
-    --primary_color_contrast: #464d77;
-    --secondary_color_contrast: #36827f;
-    --dark_contrast: #4a433c;
-
-Color Set 5
-    --light_background: #e0e0ce;
-    --white: #FFFFFF;
-    --light_dark_contrast: #3b5249;
-    --primary_color_contrast: #461a8e;      5b46a7
-    --secondary_color_contrast: #ad343e;    DBB53D yellow also an option    F2CF7E  d9866d
-    --dark_contrast: #181414;
-
-Color Set 5.1 - less vibrant 5
-    --light_background: #e0e0ce;
-    --white: #FFFFFF;
-    --light_dark_contrast: #373c2e;
-    --primary_color_contrast: #5b46a7;
-    --secondary_color_contrast: #d9866d;
-    --dark_contrast: #181414;
-*/
 
 /* border box fix */
 html    {
@@ -94,12 +55,18 @@ html    {
 /* Variables for color pallete
 ---------------------------*/
 :root   {
-    --light_background: #e0e0ce;
+    --primary_color: #8A95A5;
+    --primary_variant_color: #DE639A;
+    --secondary_color: #757083;
+    --secondary_variant_color: #B9C6AE;
+    --overlay_color: rgba(9, 8, 12, 0.99);
+
+    --header-row: #8A95A5;
+    --odd-rows: rgba(71, 64, 86, 0.99);
+    --even-rows: ;
+
+    --black: #000000;
     --white: #FFFFFF;
-    --light_dark_contrast: #2f2b47;
-    --primary_color_contrast: #5b46a7;
-    --secondary_color_contrast: #d9866d;
-    --dark_contrast: #181414;
 }
 
 /* Global Styles
@@ -109,731 +76,353 @@ html    {
     src: url(../fonts/Lato-Regular.woff2) format('woff2'),
         url(../fonts/Lato-Regular.woff) format('woff'),
         url(../fonts/Lato-Regular.ttf) format('truetype');
+
+    font-family: "comfortaa";
+    src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
+        url(../fonts/Comfortaa-Regular.woff) format('woff'),
+        url(../fonts/Comfortaa-Regular.ttf) format('truetype');
 }
 
-body   {
-    /*Font Details*/
+body 
+{
+    /* Font Details */
     font-family: "lato", sans-serif;
-    font-size: 15px;
+    font-size: 100%;
     line-height: 1.5;
-    color: var(--dark_contrast);
+    color: var(--secondary_variant_color);
 
     /*Removing Space between elements*/
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-.content-wrap   {
-    max-width: 100%;
-    width: 85%;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.backgroundcolor    {
-    background-color: var(--light_background);
-}
-
-.title {
-    background-color: var(--secondary_color_contrast);
-    color: var(--white);
-    font-size: 225%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-.title-background-image {
-    background-image: url(../images/portfolios/ProgrammingIcon.png);
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 0.5;
-}
-
-
-/* Header and Nav Bar
----------------------------*/
-header  {
-    background: var(--primary_color_contrast);
-    color: var(--white);
-}
-
-/*Marks text location*/
-header h1 {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0 0;
-
-    font-size: 250%;
-}
-header h2    {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 0 20px;
-}
-
-/*Navigation Bar*/
-.nav-bar-block  {
-    background-color: var(--dark_contrast);
-    font-size: 150%;
-}
-
-.nav-bar    {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/*Navigation Bar Links*/
-.nav-bar li a    {
-    color: var(--light_background);
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 40px;
-}
-.nav-bar li a:hover  {
-    color: var(--primary_color_contrast);
-}
-.nav-bar li a:active  {
-    color: var(--white);
-}
-.nav-bar li div a {
-    color: var(--primary_color_contrast);
-}
-.nav-bar li div a:hover {
-    color: var(--light_background);
-}
-
-/*Portfolio Drop*/
-li a, .dropbtn {
-    display: inline-block;
-    color: var(--white);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 10px;
-}
-
-.dropdown-content a {
-    color: var(--dark_contrast);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover   {
-    color: var(--light_dark_contrast);
-}
-.dropdown:hover .dropdown-content   {
-    display: block;
-}
-
-/* Home Page
----------------------------*/
-.about-me   {
-    background-color: var(--light_background);
-    margin: 0;
-    color: var(--dark_contrast);
-}
-
-section h2 {
-    margin: 0;
-    padding-top: 20px;
-}
-
-.subtitle  {
-    font-size: 210%;
-    text-align: center;
-}
-
-dl  {
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0.5fr);
-}
-
-.about-me-3d  {
-    color: var(--white);
-    font-size: 250%;
-    font-weight: 700;
-
-    background-image: url(../images/index/3DModelRender.png);
-    background-position: left;
-    background-attachment: fixed;
-    background-color: var(--light_dark_contrast);
-    background-blend-mode: soft-light;
-    display: flex;
-    justify-content: center;
-    padding-top: 25%;
-    padding-bottom: 25%;
-}
-.hide-3d    {
-    display: none;
-}
-.about-me-3d:hover + .hide-3d   {
-    display: grid;
-    grid-area: 2 / 1 / 3 / 4;
-    padding: 1% 5%;
-    margin: 0;
-
-    background-color: var(--primary_color_contrast);
-    color: var(--white);
-    text-align: center;
-}
-
-.about-me-vidgame  {
-    color: var(--white);
-    font-size: 250%;
-    font-weight: 700;
-
-    background-image: url(../images/index/Gaming.png);
-    background-position: left;
-    background-attachment: fixed;
-    background-color: var(--light_dark_contrast);
-    background-blend-mode: soft-light;
-    display: flex;
-    justify-content: center;
-    padding-top: 25%;
-    padding-bottom: 25%;
-}
-.hide-vidgame    {
-    display: none;
-}
-.about-me-vidgame:hover + .hide-vidgame   {
-    display: grid;
-    grid-area: 2 / 1 / 3 / 4;
-    padding: 1% 5%;
-    margin: 0;
-
-    background-color: var(--primary_color_contrast);
-    color: var(--white);
-    text-align: center;
-}
-
-.about-me-videdit  {
-    color: var(--white);
-    font-size: 250%;
-    font-weight: 700;
-
-    background-image: url(../images/index/VideoEditing.png);
-    background-position: right;
-    background-attachment: fixed;
-    background-color: var(--light_dark_contrast);
-    background-blend-mode: soft-light;
-    display: flex;
-    justify-content: center;
-    padding-top: 25%;
-    padding-bottom: 25%;
-}
-.hide-videdit    {
-    display: none;
-}
-.about-me-videdit:hover + .hide-videdit   {
-    display: grid;
-    grid-area: 2 / 1 / 3 / 4;
-    padding: 1% 5%;
-    margin: 0;
-
-    background-color: var(--primary_color_contrast);
-    color: var(--white);
-    text-align: center;
-}
-
-dd:last-of-type {
-    padding-bottom: 20px;
-}
-
-.about-me-subtext {
-    text-align: center;
-    font-size: 150%;
-    padding-bottom: 2.5%;
-}
-
-.about-me-subtext p {
-    padding: 1% 0;
-}
-
-.btn-main-dark button {
-    background-color: var(--primary_color_contrast);
-    font-family: inherit;
-    font-size: 125%;
-    color: var(--white);
-    padding: 1%;
-    margin-top: 1%;
-    border: none;
-    text-decoration: none;
-}
-.btn-main-dark button:hover    {
-    background-color: var(--light_background);
-    cursor: pointer;
-}
-
-.btn-main-light button {
-    background-color: var(--dark_contrast);
-    font-family: inherit;
-    font-size: 125%;
-    color: var(--white);
-    padding: 1%;
-    margin-top: 1%;
-    border: none;
-    text-decoration: none;
-}
-.btn-main-light button:hover    {
-    background-color: var(--light_dark_contrast);
-    cursor: pointer;
-}
-
-/*Home Porfolio select*/
-.home-portfolio {
-    background-image: url(../images/index/portfolios.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: var(--dark_contrast);
-    background-blend-mode: soft-light;
-
-    color: var(--white);
-}
-.home-portfolio p {
-    margin: 0;
-}
-
-.home-resume {
-    background-image: url(../images/index/resume.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: var(--dark_contrast);
-    background-blend-mode: soft-light;
-    color: var(--white);
-}
-.home-resume p {
-    margin: 0;
-    font-weight: 700;
-}
-
-/* Portfolios Page
----------------------------*/
-.portfolio-background   {
-    background-color: var(--light_background);
-}
-
-.portfolio  {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding-top: 1%;
-    padding-left: 0;
-}
-
-.portfolio li {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1%;
-}
-
-.portfolio a {
-    padding: 0;
-    flex: 1 1 auto;
-    max-width: 80%;
-    position: relative;
-}
-
-.portfolio img  {
-    max-width: 100%;
-    background-color: var(--primary_color_contrast);
-    padding: 3%;
-    border-radius: 5%;
-    flex: 1 1 auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
-}
-
-.fade   {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-}
-
-.image  {
-    opacity: 1;
-    display: block;
     width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-
-.portfolio a:hover .image{
-    opacity: 0.3;
-}
-
-.portfolio a:hover .fade{
-    opacity: 1;
-}
-
-.portfolio-txt  {
-    color: var(--dark_contrast);
-    font-size: 200%;
-}
-
-.portfolio-txt-main  {
-    color: var(--white);
-    font-size: 200%;
-}
-
-.portfolio-img-link{
-    display: flex;
-    justify-content: center;
-    list-style: none;
+    height: 100%;
     margin: 0;
     padding: 0;
+
+    /* Hides scroll bar */
+    display:block;
+    position: fixed;
+    inset: 0;
+    /* overflow: hidden; */
 }
 
-.follow-me  {
-    text-align: center;
-    font-size: 200%;
-    padding: 1% 0 0 0;
+/* Canvas for THREE JS */
+canvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main
+{
+    position: absolute;
+}
+
+
+/*** Specific Elements ***/
+header
+{
+    color: #000000;
+}
+
+/*** Heading Text elements ***/
+h1 {
+    font-size: 10vmin;
     margin: 0;
 }
-.portfolio-img-link li{
-    display: flex;
-    justify-content: center;
+h2 {
+    font-size: 5vmin;
+    text-align: center;
+    margin: 0;
 }
-.portfolio-img-link li h3{
-    font-size: 210%;
+h3 {
+    font-size: 2em;
     text-align: center;
 }
-.portfolio-img-link li a{
-    max-width: 25%;
+
+/* Loading Bar */
+#progress-bar-container {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    /* transform: translate(-50%, 50%); */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.portfolio-img-link img {
-    max-width: 100%;
+#progress-bar {
+    width: 30%;
+    margin-top: 0.5%;
+    height: 2%;
 }
-.portfolio-img-link img:hover {
+label {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay_color); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: default; /*Add a pointer on hover*/
+
+    overflow-y: scroll;
+}
+
+/* Resume Overlay */
+#resume {
+    display: none;
+}
+.resumeInfo {
+    margin: 1em;
+    font-size: 2.5vmin;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.flex-resume {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+/* Setting up header and fonts for resume info */
+.resumeInfo h2 {
+    color: var(--primary_color);
+
+    font-size: 4em;
+    margin: 0;
+}
+.resumeInfo h3 {
+    color: var(--primary_color);
+
+    font-size: 2.5em;
+    margin: 0;
+}
+.resumeInfo h4 {
+    color: var(--secondary_color);
+
+    font-size: 1.75em;
+    margin: 0;
+}
+.resumeInfo h5 {
+    color: var(--secondary_color);
+
+    font-size: 1.25em;
+    margin: 0;
+}
+
+/* CSS Resume Button */
+.resumeButton {
+    text-align: center;
+}
+.resumeButton a img {
+    max-width: 5%;
+    max-height: 5%;
+}
+.resumeButton a img:hover {
+    cursor: pointer;
     opacity: 50%;
 }
 
-/* Art Projects Page
----------------------------*/
-.art-background-1   {
-    background-color: var(--light_background);
-}
+/* 4 main resume sections */
 
-.art-background-2   {
-    background-color: var(--light_dark_contrast);
-    color: var(--light_background);
-}
-
-.image-card-art {
-    max-width: 25%;
-    background-color: var(--primary_color_contrast);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 0;
-}
-
-.image-card-art h4  {
-    font-size: 150%;
-    margin: 1%;
-}
-
-/*.image-card-art:hover   {
-    max-width: 50%;
-}*/
-
-.image-card-art img, .image-card-art iframe {
-    max-width: 100%;
-}
-
-/* Image Gallery that doesnt work */
-/* #image-track {
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(0%, -50%);
-    user-select: none;
-}
-
-#image-track > .art-image {
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: 100% center;
-} */
-
-/* Game Projects Page
----------------------------*/
-.game-pitch-background  {
-    background-color: var(--light_dark_contrast);
-    color:var(--light_background);
-}
-.game-jam-background    {
-    background-color: var(--light_background);
-}
-.workshop-background   {
-    background-color: var(--secondary_color_contrast);
-    color:var(--light_background);
-}
-.in-dev-background    {
-    background-color: var(--light_background);
-}
-
-.flex-img-gallery   {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 1% 1%;
-    justify-content: center;
-}
-
-.flex-img-gallery section {
-    padding: 1% 1% 0;
-    margin: 0 1% 1%
-}
-
-.image-card-game {
-    max-width: 25%;
-    background-color: var(--primary_color_contrast);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 0;
-}
-
-.image-card-game img, .image-card-game iframe {
-    max-width: 100%;
-}
-
-.image-card-text    {
-    text-align: center;
-    color: var(--light_background);
-    padding: 1% 2%;
-    margin: 0;
-}
-
-.image-card-text img{
-    max-width: 20%;
-}
-
-.image-card-text p, .image-card-text h3 {
-    padding: 0;
-    margin: 0;
-}
-
-.image-card-text button {
-    background-color: var(--dark_contrast);
-    font-family: inherit;
-    color: var(--white);
-    padding: 5%;
-    border: none;
-    text-decoration: none;
-}
-
-.image-card-text button:hover    {
-    background-color: var(--light_dark_contrast);
-    cursor: pointer;
-}
-
-
-/* Programming Projects Page
----------------------------*/
-th button {
-    background-color: var(--dark_contrast);
-    font-family: inherit;
-    color: var(--white);
-    padding: 20%;
-    border: none;
-    text-decoration: none;
-}
-th button:hover    {
-    background-color: var(--light_dark_contrast);
-    cursor: pointer;
-}
-
-/* Resume Page
----------------------------*/
-.resume-title {
-    color: var(--white);
-    font-size: 300%;
-    padding-bottom: 2%;
-    text-align: center;
-    position: fixed;
-}
-.resume-title-button {
-    color: var(--white);
-    font-size: 250%;
-    padding-bottom: 1%;
-    text-align: center;
-    position: fixed;
-    margin-top: 5%;
-}
-
-.resume-sidebar-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: repeat(4, 1fr);
-}
-
-.resume-sidebar {
-    grid-area: 1 / 1 / 5 / 2;
-    background-image: url(../images/portfolios/ProgrammingIcon.png);
-    background-attachment: fixed;
-    background-color: var(--secondary_color_contrast);
-    background-blend-mode: soft-light;
+.edu-skill {
     display: flex;
     justify-content: center;
 }
-
-.resume-button  button  {
-    background-color: var(--dark_contrast);
-    font-family: inherit;
-    font-size: 75%;
-    font-weight: 700;
-    color: var(--white);
-    padding: 1%;
-    border: none;
-    text-decoration: none;
+/* Education */
+#edu {
+    min-width: 50%;
 }
-.resume-button button:hover    {
-    background-color: var(--light_dark_contrast);
-    cursor: pointer;
+#edu h3 {
+    text-align: center;
 }
-
-.resume-education   {
-    background-color: var(--light_dark_contrast);
-    color: var(--light_background);
-    grid-area: 1 / 2 / 2 / 3;
-    padding-left: 5%;
+.div-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:baseline;
+    gap: 0.5em;
 }
-.resume-education ul    {
-    margin: 0;
-}
-
-.resume-skills  {
-    background-color: var(--light_background);
-    grid-area: 2 / 2 / 3 / 3;
-    padding-left: 5%;
-}
-
-.resume-skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-}
-
-.resume-leadership  {
-    background-color: var(--light_dark_contrast);
-    color: var(--light_background);
-    grid-area: 3 / 2 / 4 / 3;
-    padding-left: 5%;
-    padding-bottom: 2%;
-}
-
-.resume-work    {
-    background-color: var(--light_background);
-    grid-area: 4 / 2 / 5 / 3;
-    padding-left: 5%;
-}
-
-.end-margin{
-    margin: 0;
-}
-
-
-/* Relevant Courses Page
----------------------------*/
-table   {
+.div-flex div {
     width: 100%;
-    border-spacing: 0;
 }
-tr  {
-    
-}
-
-tr:first-child  {
-    background-color: var(--primary_color_contrast);
-    color: var(--white);
-    font-size: 150%;
+#edu .div-flex {
+    text-align: center;
 }
 
-tr:first-child a:link {
-    color: var(--white);
-    text-decoration: none;
+/* Skills */
+#skills {
+    text-align: center;
 }
 
-tr:first-child a:visited {
-    color: var(--white);
-    text-decoration: none;
+.skill-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:baseline;
+
+    width: 100%;
+}
+#skills .skill-list div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: left;
+
+    /* padding-top: 1em; */
+
+    width: 10%;
+}
+#skills .skill-list div p {
+    margin: 0;
+    font-size: 0.75em;
+}
+#skills img {
+    max-width: 35%;
+    object-fit: contain;
 }
 
-tr:first-child a:hover {
-    color: var(--dark_contrast);
-    text-decoration: none;
+/* Leadership */
+#leadership {
+    text-align: center;
+}
+#leadership ul,
+#work-exp ul,
+#edu ul {
+    text-align: left;
 }
 
-tr:first-child a:active {
-    color: var(--primary_color_contrast);
-    text-decoration: none;
+/* Work Exp */
+#work-exp {
+    text-align: center;
 }
 
-tr:nth-child(even){
-    background-color: var(--light_background);
-}
-
-th  {
-    font-size: 110%;
-}
-
-td, th {
-    padding: 10px;
-}
-
-
-/* Footer
----------------------------*/
-footer   {
-    background-color: var(--light_dark_contrast);
-    color: var(--light_background);
-}
-footer p {
-    margin: 0 auto;
-}
-footer li a {
-    color: var(--light_background);
-    max-width: 60%;
-}
-
-footer ul   {
+/* Game Dev Club Instagram display */
+.club-insta {
     display: flex;
     justify-content: center;
-    list-style: none;
+    gap: 2%;
 }
 
-footer img  {
-    max-width: 100%;
+
+
+/* Courses Overlay */
+#course {
+    display: none;
+}
+.coursesInfo {
+    font-size: 2.2vmin;
 }
 
-footer img:hover    {
+.coursesInfo table {
+    border-collapse: collapse;
+    color: var(--white);
+}
+.coursesInfo tr:nth-child(even) {
+    background-color: var(--even-rows);
+    /* color: var(--black); */
+}
+.coursesInfo tr:nth-child(odd) {
+    background-color: var(--odd-rows);
+    /* color: var(--black); */
+}
+.coursesInfo tr td:last-child {
+    font-size: 1em;
+}
+.coursesInfo tr:first-child {
+    background-color: var(--header-row);
+    color: var(--white);
+
+    font-size: 1.5em;
+}
+.coursesInfo tr:hover {
+    background-color: var(--secondary_variant_color);
+    color: var(--black);
+}
+.coursesInfo tr>th {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.coursesInfo tr>td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+
+/* Socials Overlay */
+#socials {
+    display: none;
+}
+/* Initialize Grid */
+.socialsLinks {
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+/* Setting up Grid */
+.socialLinkedInImg { grid-area: 1 / 1 / 2 / 2; }
+.socialLinkedInUser { grid-area: 2 / 1 / 3 / 2; }
+.socialGithubImg { grid-area: 1 / 2 / 2 / 3; }
+.socialGithubUser { grid-area: 2 / 2 / 3 / 3; }
+.socialItchImg { grid-area: 1 / 3 / 2 / 4; }
+.socialItchUser { grid-area: 2 / 3 / 3 / 4; }
+.socialArtImg { grid-area: 3 / 1 / 4 / 2; }
+.socialArtUser { grid-area: 4 / 1 / 5 / 2; }
+.socialInstaImg { grid-area: 3 / 2 / 4 / 3; }
+.socialInstaUser { grid-area: 4 / 2 / 5 / 3; }
+.socialEmailImg { grid-area: 3 / 3 / 4 / 4; }
+.socialEmailUser { grid-area: 4 / 3 / 5 / 4; }
+
+.socialsLinks img {
+    width: 20%;
+    height: auto;
+}
+.socialsLinks a:hover {
+    opacity: 50%;
+}
+
+/* Exit button */
+#exitbutton {
+    display: none;
+}
+.exitImage {
+    position: fixed;
+
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.exitImage img {
+    color: #FFFFFF;
+    cursor: pointer;
+    width: 7.5%;
+    height: auto;
+}
+.exitImage img:hover {
+    cursor: pointer;
     opacity: 0.5;
 }
+

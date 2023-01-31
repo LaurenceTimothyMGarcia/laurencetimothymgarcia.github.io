@@ -1,0 +1,398 @@
+/* Switch UI for the game Projects */
+
+/* Global */
+:root   {
+    --primary_color: #3a3a3a;
+    --background_col: #ffffff;
+    --secondary_color: #8f8f8f;
+    --shadow: 0 0 0.5vmin rgba(0, 0, 0, .05);
+
+    --black: #000000;
+    --white: #FFFFFF;
+
+    /* Select Colors */
+    --select-light: #3FE9D3;
+    --select-dark: #04B9C3;
+}
+
+@font-face  {
+    font-family: "comfortaa";
+    src: url(../fonts/Comfortaa-Regular.woff2) format('woff2'),
+        url(../fonts/Comfortaa-Regular.woff) format('woff'),
+        url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+
+    font-family: "lato";
+        src: url(../fonts/Lato-Regular.woff2) format('woff2'),
+            url(../fonts/Lato-Regular.woff) format('woff'),
+            url(../fonts/Lato-Regular.ttf) format('truetype');
+}
+
+/* Flex Settings */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+body.flex-col {
+    justify-content: left;
+    gap: 1vmin;
+}
+
+.v-center {
+    align-items: center;
+}
+
+/* Global */
+:focus {
+    outline: 0;
+}
+
+/* Get name */
+a::after {
+    display: none;
+    content:attr(data-name);
+
+    font-size: 3vmin;
+    font-weight: 300;
+    white-space: pre;
+    color: var(--select-dark);
+}
+
+/* Blue highlight animation */
+@keyframes select {
+    0% {
+        box-shadow: var(--shadow), 0 0 0 0.5vmin var(--select-light);
+    }
+
+    50% {
+        box-shadow: var(--shadow), 0 0 0 0.5vmin var(--select-dark);
+    }
+
+    100% {
+        box-shadow: var(--shadow), 0 0 0 0.5vmin var(--select-light);
+    }
+}
+
+a:hover,
+a:focus {
+    animation: select 1s infinite;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+body {
+    /* Font Details */
+    font-family: "lato", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: var(--white);
+    background: var(--primary_color);
+
+    min-width: 100%;
+    min-height: 100%;
+
+    margin:0;
+}
+main {
+    min-width: 100%;
+    min-height: 100%;
+
+    gap: 5vmin;
+}
+
+a img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Profiles */
+header {
+    gap: 1vmin;
+}
+a.profile {
+    width: 7vmin;
+    height: 7vmin;
+
+    margin-top: 3vmin;
+    margin-left: 3vmin;
+
+    border: 0.5vmin solid var(--secondary_color);
+    background: var(--background_col);
+    box-shadow: var(--shadow);
+    border-radius: 100%;
+}
+
+/* Games */
+h1 {
+    text-align: center;
+    font-size: 10vmin;
+    margin: 0;
+
+    user-select: none;
+}
+h2 {
+    text-align: center;
+    font-size: 4vmin;
+    margin: 0;
+
+    user-select: none;
+}
+.games {
+    gap: 1vmin;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    white-space: nowrap;
+
+    user-select: none;
+}
+a.item {
+    display: inline-block;
+    margin: 2vmin;
+    margin-top: 4.75vmin;
+
+    width: 40vmin;
+    height: 40vmin;
+
+    flex-shrink: 0;
+
+    /* Creates the box */
+    background: var(--primary_color);
+    border: 0.5vmin solid var(--secondary_color);
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
+}
+
+/* Nav Bar */
+nav a {
+    width: 10vmin;
+    height: 10vmin;
+
+    border: 0.5vmin solid var(--secondary_color);
+    background: var(--background_col);
+    box-shadow: var(--shadow);
+    border-radius: 100%;
+
+    margin-top: 1em;
+}
+nav.flex {
+    justify-content: center;
+    gap: 10vmin;
+}
+
+/* Get data name to show after hover */
+a.profile:hover::after,
+a.profile:focus::after {
+    display:inline-block;
+    
+    transform: translate(-10%, 0%);
+}
+
+a.item:hover::after,
+a.item:focus::after {
+    display:inline-block;
+    font-size: 4vmin;
+}
+a#chachi:hover::after,
+a#chachi:focus::after {
+    transform: translate(-217%, -700%);
+}
+a#tank:hover::after,
+a#tank:focus::after {
+    transform: translate(-100%, -700%);
+}
+a#lockedloadeddie:hover::after,
+a#lockedloadeddie:focus::after {
+    transform: translate(-100%, -700%);
+}
+a#mazerun:hover::after,
+a#mazerun:focus::after {
+    transform: translate(-130%, -700%);
+}
+a#sticktoit:hover::after,
+a#sticktoit:focus::after {
+    transform: translate(-165%, -700%);
+}
+a#box:hover::after,
+a#box:focus::after {
+    transform: translate(-195%, -700%);
+}
+a#cowboyzelda:hover::after,
+a#cowboyzelda:focus::after {
+    transform: translate(-130%, -700%);
+}
+
+a#Home:hover::after,
+a#Home:focus::after {
+    display:inline-block;
+
+    transform: translate(15%, 0%);
+}
+a#Code:hover::after,
+a#Code:focus::after {
+    display:inline-block;
+
+    transform: translate(-22%, 0%);
+}
+a#Art:hover::after,
+a#Art:focus::after {
+    display:inline-block;
+
+    transform: translate(60%, 0%);
+}
+a#GitHub:hover::after,
+a#GitHub:focus::after {
+    display:inline-block;
+
+    transform: translate(5%, 0%);
+}
+a#Itch-io:hover::after,
+a#Itch-io:focus::after {
+    display:inline-block;
+
+    transform: translate(10%, 0%);
+}
+
+/* Overlay */
+.overlay-detail {
+    display: none;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of page content */
+    display: none; /* Hidden by default */
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--black);
+    z-index: 2;
+    cursor: default;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* Exit button */
+#exitbutton {
+    display: none;
+}
+#exitButt img {
+    color: #FFFFFF;
+    cursor: pointer;
+    width: 2%;
+    height: auto;
+
+    margin-left: 1%;
+    margin-top: 1%;
+}
+#exitButt img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* game detail plug-ins */
+.game-overlay {
+    display: flex;
+    gap: 3vmin;
+
+    margin: 2vmin 2vmin;
+    margin-top: 0;
+    /* display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 5%;  */
+}
+
+.game-col1 {
+    min-width: 40%;
+}
+
+.game-col2 {
+    min-width: 60%;
+}
+
+/* Title of game */
+h2 {
+    /* font-size: 6vmin; */
+    margin: 0;
+}
+
+/* Game project type and genre */
+h3 {
+    font-size: 3vmin;
+    margin: 0;
+}
+
+/* Date of game */
+h4 {
+    font-size: 2vmin;
+    margin: 0;
+}
+
+p {
+    font-size: 2.5vmin;
+}
+
+.game-title {
+    /* grid-area: 1 / 1 / 2 / 2; */
+
+    text-align: center;
+
+    /* Debugging colors */
+    /* background-color: purple; */
+}
+
+.game-display {
+    /* grid-area: 2 / 1 / 3 / 2; */
+
+    aspect-ratio: 16/9;
+
+    /* Debugging colors */
+    /* background-color: red; */
+}
+
+.game-screenshot {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow-x:scroll;
+
+    gap: 1vmin;
+
+    max-width: 100%;
+
+    /* background-color: teal; */
+}
+.game-screenshot img {
+    max-width: 100%;
+}
+
+.game-summary {
+    /* grid-area: 1 / 2 / 2 / 3; */
+
+    text-align: center;
+
+    /* background-color: green; */
+}
+
+.game-role {
+    /* grid-area: 2 / 2 / 3 / 3; */
+
+    text-align: left;
+
+    /* background-color: orchid; */
+}
