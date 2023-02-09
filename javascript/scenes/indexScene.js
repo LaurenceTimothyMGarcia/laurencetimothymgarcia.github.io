@@ -75,13 +75,13 @@ function init() {
     const loadingManager = new THREE.LoadingManager();
 
     const progressBarContainer = document.getElementById('progress-bar-container');
-    const progressBar = document.getElementById('progress-bar');
+    // const progressBar = document.getElementById('progress-bar');
 
     loadingManager.onProgress = function(url, loaded, total)
     {
-        progressBar.value = (loaded/total) * 100;
         console.log("Loaded " + loaded);
         console.log("Total " + total);
+        // progressBar.value = (loaded/total) * 100;
     }
 
     //Loaders
