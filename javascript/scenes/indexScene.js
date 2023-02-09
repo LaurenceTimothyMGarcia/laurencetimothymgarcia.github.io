@@ -80,8 +80,8 @@ function init() {
     loadingManager.onProgress = function(url, loaded, total)
     {
         progressBar.value = (loaded/total) * 100;
-        // console.log("Loaded " + loaded);
-        // console.log("Total " + total);
+        console.log("Loaded " + loaded);
+        console.log("Total " + total);
     }
 
     //Loaders
@@ -704,6 +704,7 @@ function init() {
     loadingManager.onLoad = function()
     {
         progressBarContainer.style.display = 'none';
+        console.log("Loaded");
     }
 
 }
