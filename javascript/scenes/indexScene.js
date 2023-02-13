@@ -132,7 +132,7 @@ function init() {
     //
 
     //Ambient Light
-    const ambiLight = new THREE.AmbientLight(0xF5D9C8, 0.25);
+    const ambiLight = new THREE.AmbientLight(0xF5D9C8, 0.75);
     scene.add(ambiLight);
 
     //Directional Light 1
@@ -142,13 +142,13 @@ function init() {
     // scene.add(dirLight1);
 
     //Spot Light 1
-    const spotLight1 = new THREE.SpotLight(0xf5e7d5, 850, 0, Math.PI/3, 1);
+    const spotLight1 = new THREE.SpotLight(0xf5e7d5, 500, 0, Math.PI/3, 1);
     spotLight1.position.set(-5, 20, 7.5);
     spotLight1.castShadow = true;
     scene.add(spotLight1);
 
     //Spot Light 2
-    const spotLight2 = new THREE.SpotLight(0xFFF4E5, 500, 0, Math.PI/3, 1);
+    const spotLight2 = new THREE.SpotLight(0xFFF4E5, 400, 0, Math.PI/3, 1);
     spotLight2.position.set(2, 8, 20);
     spotLight2.castShadow = true;
     scene.add(spotLight2);
