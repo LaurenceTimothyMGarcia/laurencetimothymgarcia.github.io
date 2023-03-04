@@ -320,9 +320,10 @@ label {
 .club-insta {
     display: flex;
     justify-content: center;
-    gap: 2%;
-}
+    gap: 1%;
 
+    overflow-x: scroll;
+}
 
 
 /* Courses Overlay */
