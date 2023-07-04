@@ -205,6 +205,10 @@ a.item:focus::after {
     display:inline-block;
     font-size: 4vmin;
 }
+a#vrdrone:hover::after,
+a#vrdrone:focus::after {
+    transform: translate(-95%, -700%);
+}
 a#chachi:hover::after,
 a#chachi:focus::after {
     transform: translate(-217%, -700%);
