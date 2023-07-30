@@ -259,19 +259,22 @@ function init() {
         // monitorL.children[0].castShadow = true;
 
         //Video texture for testing
-        const progVid = document.getElementById("programVid");
-        const vidTexture = new THREE.VideoTexture(progVid);
-        vidTexture.minFilter = THREE.LinearFilter;
-        vidTexture.magFilter = THREE.LinearFilter;
+        // const progVid = document.getElementById("programVid");
+        // const vidTexture = new THREE.VideoTexture(progVid);
+        // vidTexture.minFilter = THREE.LinearFilter;
+        // vidTexture.magFilter = THREE.LinearFilter;
 
-        const videoMat = new THREE.MeshBasicMaterial({
-            map: vidTexture,
-            side: THREE.FrontSide,
-            toneMapped: false
-        });
+        // const videoMat = new THREE.MeshBasicMaterial({
+        //     map: vidTexture,
+        //     side: THREE.FrontSide,
+        //     toneMapped: false
+        // });
+
+        const progImg = new THREE.TextureLoader().load("../../images/index/programmingFrame.png");
+        const progMat = new THREE.MeshLambertMaterial( {map: progImg} );
 
         //Monitor CHILD 1 on array is the material for the screen
-        monitorL.children[1].material = videoMat;
+        monitorL.children[1].material = progMat;
 
         scene.add(monitorL);
 
