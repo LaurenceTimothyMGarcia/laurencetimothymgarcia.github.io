@@ -1,0 +1,53 @@
+Laurence Garcia & Melvin Gitbumrungsin
+Star Crossed Lovers
+CS 2990
+Dr. Markus Eger
+Design Analysis of DPS Idle
+Introduction
+Intro
+Core Gameplay Loop
+Notes
+Defeat monster, gain income, Use income to buy more cards or upgrades, repeat
+Outer Loop
+Get Income or deal damage
+Join Guild
+Multiplier for income/damage depending on guild
+Leave Guild to start fresh with new multiplier on damage and income
+Repeat
+Space, Objects w/ Attributes, Actions
+Notes
+Space
+The monster on the screen with health and worth
+The cards or spheres of magic
+Upgrade screens, Guilds, Heroes, etc.
+Objects (Attributes)
+Player: Gold, Leafs, Cards, Silver Blue Coins, Skulls, Total DPS
+Cards: Type, Color, Function
+Enemies: Gold Worth, Hit Points
+Chest: Color, Cost
+Guilds: Multiplier and upgrades
+Heroes: Upgrades
+Achievements: Unlocked
+Quests: Completed
+Actions
+Click Monster: Deals damage to monster
+Open Chest: Uses player gold to give a random card, price increases after every few purchases.
+Spheres of Magic: click on spheres to add a damage multiplier to the player
+Enhance Random Card: Use a leaf or a silver blue coin to upgrade a card
+Shop: Use real money to buy gems for more powerful upgrades
+Join Guild: Join a guild to have a multiplier on damage or income
+Leave Guild: Restart game but with the multiplier gained from time invested from Guild
+Choose Hero: Choose a hero after meeting a specific criteria then select upgrades
+Goal of the game, and how player decisions affect reaching the goal
+Notes
+To defeat each enemy and move on to the next one to clear the dungeon
+Player can choose
+What to spend their leafs and silver blue coins on
+What deck of cards to spend their gold on
+What cards to upgrade
+When to leave the guild for a new run
+Which hero to unlock
+Effect of luck and skill on the game
+Notes
+Cards are selected randomly
+At some point the player hits a roadblock and thats when they should leave the guild to restart the game.
