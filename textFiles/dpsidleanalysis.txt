@@ -2,9 +2,13 @@ Laurence Garcia & Melvin Gitbumrungsin
 Star Crossed Lovers
 CS 2990
 Dr. Markus Eger
+
 Design Analysis of DPS Idle
+
 Introduction
-Intro
+    DPS Idle is a free to play idle game where your character explores a dungeon, defeating enemies, and unlocks cards to defeat stronger enemies. While 
+being a very simple game on the surface, there are multiple components to this game that makes it an addicting time for players to enjoy.
+
 Core Gameplay Loop
 Notes
 Defeat monster, gain income, Use income to buy more cards or upgrades, repeat
@@ -14,6 +18,7 @@ Join Guild
 Multiplier for income/damage depending on guild
 Leave Guild to start fresh with new multiplier on damage and income
 Repeat
+
 Space, Objects w/ Attributes, Actions
 Notes
 Space
@@ -38,6 +43,7 @@ Shop: Use real money to buy gems for more powerful upgrades
 Join Guild: Join a guild to have a multiplier on damage or income
 Leave Guild: Restart game but with the multiplier gained from time invested from Guild
 Choose Hero: Choose a hero after meeting a specific criteria then select upgrades
+
 Goal of the game, and how player decisions affect reaching the goal
 Notes
 To defeat each enemy and move on to the next one to clear the dungeon
@@ -47,6 +53,7 @@ What deck of cards to spend their gold on
 What cards to upgrade
 When to leave the guild for a new run
 Which hero to unlock
+
 Effect of luck and skill on the game
 Notes
 Cards are selected randomly
