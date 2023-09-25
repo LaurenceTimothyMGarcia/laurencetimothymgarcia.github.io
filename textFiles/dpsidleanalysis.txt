@@ -9,22 +9,41 @@ Introduction
     DPS Idle is a free to play idle game where your character explores a dungeon, defeating enemies, and unlocks cards to defeat stronger enemies. While 
 being a very simple game on the surface, there are multiple components to this game that makes it an addicting time for players to enjoy.
 
-Core Gameplay Loop
-Notes
-Defeat monster, gain income, Use income to buy more cards or upgrades, repeat
-Outer Loop
-Get Income or deal damage
-Join Guild
-Multiplier for income/damage depending on guild
-Leave Guild to start fresh with new multiplier on damage and income
-Repeat
+Gameplay Loop
+    DPS Idle features both a core gameplay loop with its monsters, cards, and dungeon system, and an outer gameplay loop with its guild and hero systems. 
+With its core gameplay loop, the player starts off with defeating the first monster, from there they receive gold to buy a random card. The random card 
+has a property that will deal damage to the monster, help boost damage of other cards, or earn more gold. From here the player defeats more monsters, with 
+each type of monster being worth more gold and more hit points, which earns the player more gold to buy more cards and the gameplay loops itself. When a 
+player unlocks all the cards in a deck, they have the option to upgrade one of those cards to a silver card, which will unlock that card for the rest of 
+the round and increase the effects of that card, but it will place all the other cards back into the deck. 
+    The outer gameplay loop of DPS Idle occurs when the player has enough gold to join a guild. Joining a guild provides a multiplier for a specific stat 
+that grows as the current run goes on. Within the time played, only 2 guilds were able to be joined, the merchant guild and the mercenary guild, which 
+multiplies the gold income and damage per second respectively. The player has the option to stay in the guild for more benefits for their current run, such 
+as free unlocks for their cards and instant kills on specific monsters. However, the player also has the option to leave the guild. Upon leaving the guild, 
+they can start a new run, but with the benefit of the multiplier they received and grew from the previous run. This allows the player to start fresh but get 
+further into the dungeon at a faster pace, creating the outer gameplay loop.
 
 Space, Objects w/ Attributes, Actions
-Notes
-Space
-The monster on the screen with health and worth
-The cards or spheres of magic
-Upgrade screens, Guilds, Heroes, etc.
+    Being an idle game, the space is primarily focused on the game screen and the UI elements for the different menus. The center of the screen has the monster 
+with its hit points, amount of gold it was worth, and depending on the monster another currency with the percentage of obtaining that currency on defeat. 
+The other parts of the screen are taken up by UI elements showing either the cards the player has unlocked or the spheres of magic, where if the player clicks 
+on them a specific amount of times, a damage multiplier will be applied to the cards. There are also other screens that allow for more upgrades such as the Guild 
+and Heroes System.
+    There are various objects in the game that impact the gameplay systems. The main object, the player, has gold, leafs, cards, silver blue coins, skulls, and 
+total DPS which correlates to the cards. The cards themselves have a deck they belong to, a color indicating their “level”, and a function, whether they deal 
+damage, give more gold, or boost other cards. The monsters have hit points and the gold they are worth upon defeating them, and some monsters also have another 
+currency they drop by chance. Chests by cards of a specific deck and have a cost that increases with each purchase. Guilds have a multiplier that grows as the 
+run continues, and upgrades and bonuses that apply to the current run. Heroes feature upgrades that also apply to the current run and to future runs. Finally 
+there are achievements and quests that can unlock gems, which are the premium currency of the game.
+    With the space and objects, the player has multiple actions they can take. The most basic action is clicking on the monster to deal damage, but this quickly 
+becomes irrelevant as the click (until the hero upgrades) just stays at 1 damage per click. The player can use the gold to open chests to obtain a random card in 
+the deck, with the chest price increasing after each purchase. They can also click on the spheres of magic to add a damage multiplier to the player. Additionally 
+they can use a leaf or silver blue coin to enhance a random card. They can join a guild to have a multiplier build up overtime and leave that guild to restart the 
+game but with the multiplier applied to their next run. They can also choose a hero after meeting a certain criteria such as having 8 silver cards. It should be 
+noted that they can also go to the shop to use real money to buy gems for effects that last between runs.
+
+
+
 Objects (Attributes)
 Player: Gold, Leafs, Cards, Silver Blue Coins, Skulls, Total DPS
 Cards: Type, Color, Function
