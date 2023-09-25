@@ -1,5 +1,4 @@
 Laurence Garcia & Melvin Gitbumrungsin
-Star Crossed Lovers
 CS 2990
 Dr. Markus Eger
 
@@ -17,7 +16,7 @@ each type of monster being worth more gold and more hit points, which earns the 
 player unlocks all the cards in a deck, they have the option to upgrade one of those cards to a silver card, which will unlock that card for the rest of 
 the round and increase the effects of that card, but it will place all the other cards back into the deck. 
     The outer gameplay loop of DPS Idle occurs when the player has enough gold to join a guild. Joining a guild provides a multiplier for a specific stat 
-that grows as the current run goes on. Within the time played, only 2 guilds were able to be joined, the merchant guild and the mercenary guild, which 
+that grows as the current run goes on. Within the time played, only 2 guilds were able to be joined, the merchant guild and the warriors guild, which 
 multiplies the gold income and damage per second respectively. The player has the option to stay in the guild for more benefits for their current run, such 
 as free unlocks for their cards and instant kills on specific monsters. However, the player also has the option to leave the guild. Upon leaving the guild, 
 they can start a new run, but with the benefit of the multiplier they received and grew from the previous run. This allows the player to start fresh but get 
@@ -42,38 +41,37 @@ they can use a leaf or silver blue coin to enhance a random card. They can join 
 game but with the multiplier applied to their next run. They can also choose a hero after meeting a certain criteria such as having 8 silver cards. It should be 
 noted that they can also go to the shop to use real money to buy gems for effects that last between runs.
 
-
-
-Objects (Attributes)
-Player: Gold, Leafs, Cards, Silver Blue Coins, Skulls, Total DPS
-Cards: Type, Color, Function
-Enemies: Gold Worth, Hit Points
-Chest: Color, Cost
-Guilds: Multiplier and upgrades
-Heroes: Upgrades
-Achievements: Unlocked
-Quests: Completed
-Actions
-Click Monster: Deals damage to monster
-Open Chest: Uses player gold to give a random card, price increases after every few purchases.
-Spheres of Magic: click on spheres to add a damage multiplier to the player
-Enhance Random Card: Use a leaf or a silver blue coin to upgrade a card
-Shop: Use real money to buy gems for more powerful upgrades
-Join Guild: Join a guild to have a multiplier on damage or income
-Leave Guild: Restart game but with the multiplier gained from time invested from Guild
-Choose Hero: Choose a hero after meeting a specific criteria then select upgrades
-
 Goal of the game, and how player decisions affect reaching the goal
-Notes
-To defeat each enemy and move on to the next one to clear the dungeon
-Player can choose
-What to spend their leafs and silver blue coins on
-What deck of cards to spend their gold on
-What cards to upgrade
-When to leave the guild for a new run
-Which hero to unlock
+    The overarching goal of the game is to clear the dungeon by defeating each enemy at least once. The player cannot move on to the next monster without first 
+defeating the previous one. While this is the primary goal of the game, there are a few other sub-goals that the player may strive for such as collecting/upgrading 
+all the cards, getting as much DPS as possible, and upgrading the hero as much as possible. There are a few decisions that can be made by the player, with some 
+affecting their progress more than others. Three of the most impactful decisions that the player can make are: which chest to spend their gold on, which card to 
+upgrade, and when to leave the guild for a new run. 
+    Choosing which chest to spend their gold on can greatly affect a player’s progress since there are times where one chest may be more advantageous than others. 
+In general, the later game decks are more powerful than the previous ones, but there is a point where sticking to the same chest leads to diminishing returns. This 
+is when it would become more beneficial for the player to choose a different chest to purchase, since it would offset the diminishing returns. Another impactful 
+choice the player must make is choosing which card to upgrade. Some cards may lead to a huge short term gain in resources, but end up losing value as time passes. 
+Other cards may provide the opposite effect. If the player chooses a non-optimal card, they may find themself feeling stuck. They may not be able to collect and 
+upgrade cards at a fast rate, and their DPS may also suffer as a result of choosing to upgrade a card at the wrong time. Finally, choosing when to leave a guild 
+to restart their progress can also impact a player’s ability to achieve their goals. There comes a point where progress will inevitably slow down so much to the 
+point where a player may feel completely stuck. To escape this situation, the player has the choice of leaving their guild and restarting all of their progress, 
+but this time they have a substantial multiplier to either their income or damage per second to ensure that they get farther than they did in their previous run.
+    All three of these decisions mentioned share a common goal: to offset diminishing returns as much as possible. The player’s job is to keep progress flowing at 
+all times and avoid reaching a point where they are unable to progress any further. In doing so, this will help the player clear the dungeon at a faster rate, gain 
+resources at a faster rate, and it keeps the game’s sense of gratification flowing. 
 
 Effect of luck and skill on the game
-Notes
-Cards are selected randomly
-At some point the player hits a roadblock and thats when they should leave the guild to restart the game.
+    It should be noted that all of the player’s decisions will result in a gain of resources in one way or another; however, there are certainly some decisions that 
+will lead to a much greater gain than others. Knowing which decisions to make is the “skill” aspect of the game. If a player is able to properly assess which decision 
+would result in a larger increase in progress, they would be able to achieve their goals much faster than someone who makes random decisions. For example, if someone 
+is able to do the math and calculate which upgraded card would result in the biggest increase in DPS, this would greatly influence how quickly they progress. However, 
+there are still a few “luck” aspects of the game that must be considered. 
+    It is completely random which card gets drawn when a player purchases a chest. They are able to draw a new card, but oftentimes players find themselves continuously
+ drawing cards that they’ve already drawn, which slows down their ability to upgrade cards. This can cause players to get stuck at certain times since they are unable 
+ to draw the card that they need to keep upgrading. Another instance of luck in the game is when a player chooses to boost their cards. The card that is chosen to get 
+ boosted is completely random, and it is possible for unimportant cards to get boosted instead of a more valuable card. While this isn’t as impactful as the randomness 
+ of drawing cards from chests, it can still affect a player’s progress in the long run. 
+    Even though the majority of a player’s run is determined by their skill, these instances of luck are still capable of greatly impacting their gameplay. They may get 
+stuck trying to draw the card they need, or they may get everything they need and make great progress. This is entirely determined by how lucky the player gets. The 
+percentage of how much “skill” determines the course of action in the game is most likely around 90%, while luck contributes to approximately 10% of the gameplay.
+
