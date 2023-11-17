@@ -209,9 +209,17 @@ a#vrdrone:hover::after,
 a#vrdrone:focus::after {
     transform: translate(-95%, -700%);
 }
+a#procgen:hover::after,
+a#procgen:focus::after {
+    transform: translate(-90%, -700%);
+}
 a#chachi:hover::after,
 a#chachi:focus::after {
     transform: translate(-217%, -700%);
+}
+a#inkage:hover::after,
+a#inkage:focus::after {
+    transform: translate(-225%, -700%);
 }
 a#tank:hover::after,
 a#tank:focus::after {
