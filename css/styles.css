@@ -305,6 +305,12 @@ label {
 #leadership {
     text-align: center;
 }
+
+#leadership img {
+    max-width: 10%;
+    object-fit: contain;
+}
+
 #leadership ul,
 #work-exp ul,
 #edu ul {
@@ -314,6 +320,11 @@ label {
 /* Work Exp */
 #work-exp {
     text-align: center;
+}
+
+#work-exp img {
+    max-width: 10%;
+    object-fit: contain;
 }
 
 /* Game Dev Club Instagram display */
