@@ -119,11 +119,12 @@ Melvin Gitbumrungsin
     &lt;th&gt;(if: $ca800 is true)[[$800-&gt;CA $800]]&lt;/th&gt;
     &lt;th&gt;(if: $ca1000 is true)[[$1000-&gt;CA $1000]]&lt;/th&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</tw-passagedata><tw-passagedata pid="10" name="Dead" tags="" position="1200,375" size="100,100">&lt;img src = &quot;https://i.kym-cdn.com/entries/icons/facebook/000/029/198/Dark_Souls_You_Died_Screen_-_Completely_Black_Screen_0-2_screenshot.jpg&quot;
+&lt;/table&gt;
+(if:not $ca200 and not $ca400 and not $ca600 and not $ca800 and not $ca1000)[ [[Back -&gt;Category Select]] ]</tw-passagedata><tw-passagedata pid="10" name="Dead" tags="" position="1200,375" size="100,100">&lt;img src = &quot;https://i.kym-cdn.com/entries/icons/facebook/000/029/198/Dark_Souls_You_Died_Screen_-_Completely_Black_Screen_0-2_screenshot.jpg&quot;
 	width = &quot;1000&quot;
     height = &quot;400&quot;
     /&gt;
-    [[Credits]]</tw-passagedata><tw-passagedata pid="11" name="Footer" tags="footer" position="800,200" size="100,100">&lt;br&gt;
+    [[Credits]]</tw-passagedata><tw-passagedata pid="11" name="Footer" tags="footer" position="800,100" size="100,100">&lt;br&gt;
 money: $money
 lives: $lives</tw-passagedata><tw-passagedata pid="12" name="Incorrect" tags="" position="1000,375" size="100,100">Your time is ticking...
 (set: $lives to it - 1)
@@ -174,9 +175,14 @@ This animal&#39;s entire species is known to be bisexual.
     &lt;th&gt;(if: $lg800 is true)[[$800-&gt;LG $800]]&lt;/th&gt;
     &lt;th&gt;(if: $lg1000 is true)[[$1000-&gt;LG $1000]]&lt;/th&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</tw-passagedata><tw-passagedata pid="19" name="Opening " tags="" position="600,200" size="100,100">&lt;h2&gt;Welcome to Not Jeopardy&lt;/h2&gt;
+&lt;/table&gt;
+(if:not $lg200 and not $lg400 and not $lg600 and not $lg800 and not $lg1000)[ [[Back -&gt;Category Select]] ]</tw-passagedata><tw-passagedata pid="19" name="Opening " tags="" position="600,100" size="100,100">&quot;Welcome to Not Jeopardy! I&#39;m your host, Justin Trudeau. Play the game or die.&quot;
 
 &lt;img src=&quot;https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2023/11/20231114171156-6553fb3e30a4a83dd3d5dfd4jpeg.jpg?&quot;/&gt;
+
+[[Next -&gt;Prescreen]]</tw-passagedata><tw-passagedata pid="20" name="Prescreen" tags="" position="600,200" size="100,100">Justin Trudeau: &quot;Thank you all for coming today! Let me introduce to you the categories.&quot;
+
+&lt;img src=&quot;https://smartcdn.gprod.postmedia.digital/torontosun/wp-content/uploads/2023/11/Justin_trudeau_carbon_tax_environment_green_4x3.jpg?quality=90&amp;strip=all&amp;w=564&amp;h=423&amp;type=webp&amp;sig=YQ5GUd3zmLwpb1qV40xupg&quot; /&gt;
 
 [[Category Select]]
 (if:$gameover is True)[
@@ -208,37 +214,37 @@ This animal&#39;s entire species is known to be bisexual.
 (set: $rc600 to true)
 (set: $rc800 to true)
 (set: $rc1000 to true)
-(set: $gameover to False)]</tw-passagedata><tw-passagedata pid="20" name="RC $1000" tags="" position="1100,1000" size="100,100">$1000
+(set: $gameover to False)]</tw-passagedata><tw-passagedata pid="21" name="RC $1000" tags="" position="1100,1000" size="100,100">$1000
 This amendment to the U.S. Constitution eventually granted equal protection under the law regardless of race.
 [[What is the 19th Amendment? -&gt;Incorrect]]
 [[What is the 13th Amendment? -&gt;Incorrect]]
 [[What is the 14th Amendment? -&gt;Correct]]
 (set: $questionvalue to 1000)
-(set: $rc1000 to false)</tw-passagedata><tw-passagedata pid="21" name="RC $200" tags="" position="1100,600" size="100,100">$200
+(set: $rc1000 to false)</tw-passagedata><tw-passagedata pid="22" name="RC $200" tags="" position="1100,600" size="100,100">$200
 This race is commonly stereotyped as being good at math:
 [[What is White? -&gt;Incorrect]]
 [[What is Asian? -&gt;Correct]]
 [[What is Black? -&gt;Incorrect]]
 (set: $questionvalue to 200)
-(set: $rc200 to false)</tw-passagedata><tw-passagedata pid="22" name="RC $400" tags="" position="1100,700" size="100,100">$400
+(set: $rc200 to false)</tw-passagedata><tw-passagedata pid="23" name="RC $400" tags="" position="1100,700" size="100,100">$400
 This word means to have an unreasonable dislike or preference over a particular group.
 [[What is Impiety? -&gt;Incorrect]]
 [[What is racial prejudice? -&gt;Correct]]
 [[What is Xenophobia? -&gt;Incorrect]]
 (set: $questionvalue to 400)
-(set: $rc400 to false)</tw-passagedata><tw-passagedata pid="23" name="RC $600" tags="" position="1100,800" size="100,100">$600
+(set: $rc400 to false)</tw-passagedata><tw-passagedata pid="24" name="RC $600" tags="" position="1100,800" size="100,100">$600
 This generation is oftern viewed as being &quot;hypersensitive&quot; or too &quot;politically correct&quot; as they question existing racial biases and stereotypes.
 [[Who is Generation Z? -&gt;Correct]]
 [[Who are Baby Boomers? -&gt;Incorrect]]
 [[Who are Millennials? -&gt;Incorrect]] 
 (set: $questionvalue to 600)
-(set: $rc600 to false)</tw-passagedata><tw-passagedata pid="24" name="RC $800" tags="" position="1100,900" size="100,100">$800
+(set: $rc600 to false)</tw-passagedata><tw-passagedata pid="25" name="RC $800" tags="" position="1100,900" size="100,100">$800
 This phrase refers to anxiety over confirming existing stereotypes:
 [[What is Confimation Bias? -&gt;Incorrect]]
 [[What is the Thought Discrepancy? -&gt;Incorrect]]
 [[What is the Stereotype Threat? -&gt;Correct]]
 (set: $questionvalue to 800)
-(set: $rc800 to false)</tw-passagedata><tw-passagedata pid="25" name="Startup" tags="startup" position="700,200" size="100,100">(set: $money to 0)
+(set: $rc800 to false)</tw-passagedata><tw-passagedata pid="26" name="Startup" tags="startup" position="700,100" size="100,100">(set: $money to 0)
 (set: $questionvalue to 0)
 (set: $lives to 5)
 (set: $ca200 to true)
@@ -266,37 +272,37 @@ This phrase refers to anxiety over confirming existing stereotypes:
 (set: $rc600 to true)
 (set: $rc800 to true)
 (set: $rc1000 to true)
-(set: $gameover to False)</tw-passagedata><tw-passagedata pid="26" name="TS $1000" tags="" position="900,1000" size="100,100">$1000
+(set: $gameover to False)</tw-passagedata><tw-passagedata pid="27" name="TS $1000" tags="" position="900,1000" size="100,100">$1000
 The group of young adults who advocated for employment for people with disabilities in the 1930s.
 [[Who are the We are not Alone group? -&gt;Incorrect]]
 [[Who are the League of the Physically Handicapped group? -&gt;Correct]]
 [[Who are the American Association of People with Disabilities Group? -&gt;Incorrect]]
 (set: $questionvalue to 1000)
-(set: $ts1000 to false)</tw-passagedata><tw-passagedata pid="27" name="TS $200" tags="" position="900,600" size="100,100">$200
+(set: $ts1000 to false)</tw-passagedata><tw-passagedata pid="28" name="TS $200" tags="" position="900,600" size="100,100">$200
 The first tribe that Christopher Columbus encountered when he arrived to the Americas in 1492.   
 [[What is Ciguayos? -&gt;Incorrect]]
 [[What is Macuriges? -&gt;Incorrect]]
 [[What is Taino? -&gt;Correct]]
 (set: $questionvalue to 200)
-(set: $ts200 to false)</tw-passagedata><tw-passagedata pid="28" name="TS $400" tags="" position="900,700" size="100,100">$400
+(set: $ts200 to false)</tw-passagedata><tw-passagedata pid="29" name="TS $400" tags="" position="900,700" size="100,100">$400
 In 1925, this country becomes the Soviet&#39;s first satellite state.
 [[What is China? -&gt;Incorrect]]
 [[What is Ukraine? -&gt;Incorrect]]
 [[What is Mongolia? -&gt;Correct]]
 (set: $questionvalue to 400)
-(set: $ts400 to false)</tw-passagedata><tw-passagedata pid="29" name="TS $600" tags="" position="900,800" size="100,100">$600
+(set: $ts400 to false)</tw-passagedata><tw-passagedata pid="30" name="TS $600" tags="" position="900,800" size="100,100">$600
 The scientist(s) who discovered the helical structure of DNA.
 [[Who is Rosalind Franklin? -&gt;Correct]]
 [[Who are James Watson and Francis Crick? -&gt;Incorrect]]
 [[Who is Maurice Wilkins? -&gt;Incorrect]]
 (set: $questionvalue to 600)
-(set: $ts600 to false)</tw-passagedata><tw-passagedata pid="30" name="TS $800" tags="" position="900,900" size="100,100">$800
+(set: $ts600 to false)</tw-passagedata><tw-passagedata pid="31" name="TS $800" tags="" position="900,900" size="100,100">$800
 The group of young adults who advocated for employment for people with disabilities in the 1930s.
 [[Who are the We are not Alone group? -&gt;Incorrect]]
 [[Who are the League of the Physically Handicapped group? -&gt;Correct]]
 [[Who are the American Association of People with Disabilities Group? -&gt;Incorrect]]
 (set: $questionvalue to 800)
-(set: $ts800 to false)</tw-passagedata><tw-passagedata pid="31" name="Try not to be racist" tags="" position="1100,500" size="100,100">&lt;h1&gt;Try not to be racist&lt;/h1&gt;
+(set: $ts800 to false)</tw-passagedata><tw-passagedata pid="32" name="Try not to be racist" tags="" position="1100,500" size="100,100">&lt;h1&gt;Try not to be racist&lt;/h1&gt;
 
 &lt;table style=&quot;width:100%&quot;&gt;
   &lt;tr&gt;
@@ -306,37 +312,38 @@ The group of young adults who advocated for employment for people with disabilit
     &lt;th&gt;(if: $rc800 is true)[[$800-&gt;RC $800]]&lt;/th&gt;
     &lt;th&gt;(if: $rc1000 is true)[[$1000-&gt;RC $1000]]&lt;/th&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</tw-passagedata><tw-passagedata pid="32" name="WS $1000" tags="" position="500,1000" size="100,100">$1000
+&lt;/table&gt;
+(if:not $rc200 and not $rc400 and not $rc600 and not $rc800 and not $rc1000)[ [[Back -&gt;Category Select]] ]</tw-passagedata><tw-passagedata pid="33" name="WS $1000" tags="" position="500,1000" size="100,100">$1000
 She was first woman to run for president
 [[Who is Margaret Sanger? -&gt;Incorrect]]
 [[Who is Victoria Woodhull? -&gt;Correct]]
 [[Who is Rachel Williams? -&gt;Incorrect]]
 (set: $questionvalue to 1000)
-(set: $ws1000 to false)</tw-passagedata><tw-passagedata pid="33" name="WS $200" tags="" position="500,600" size="100,100">$200
+(set: $ws1000 to false)</tw-passagedata><tw-passagedata pid="34" name="WS $200" tags="" position="500,600" size="100,100">$200
 This right was stripped from women in America in 1977:
 [[What is the right to vote? -&gt;Correct]]
 [[What is the right to education? -&gt;Incorrect]]
 [[What is the right to freedom of speech? -&gt;Incorrect]]
 (set: $questionvalue to 200)
-(set: $ws200 to false)</tw-passagedata><tw-passagedata pid="34" name="WS $400" tags="" position="500,700" size="100,100">$400
+(set: $ws200 to false)</tw-passagedata><tw-passagedata pid="35" name="WS $400" tags="" position="500,700" size="100,100">$400
 This amendment was ratified in 1920, giving women the right to vote.
 [[What is the 23rd Amendment?-&gt;Correct]]
 [[What is the 17th Amendment?-&gt;Incorrect]]
 [[What is the 19th Amendment?-&gt;Correct]]
 (set: $questionvalue to 400)
-(set: $ws400 to false)</tw-passagedata><tw-passagedata pid="35" name="WS $600" tags="" position="500,800" size="100,100">$600
+(set: $ws400 to false)</tw-passagedata><tw-passagedata pid="36" name="WS $600" tags="" position="500,800" size="100,100">$600
 The month that is designated as Women&#39;s History Month
 [[What is April? -&gt;Incorrect]]
 [[What is March? -&gt;Correct]]
 [[What is May? -&gt;Incorrect]] 
 (set: $questionvalue to 600)
-(set: $ws600 to false)</tw-passagedata><tw-passagedata pid="36" name="WS $800" tags="" position="500,900" size="100,100">$800
+(set: $ws600 to false)</tw-passagedata><tw-passagedata pid="37" name="WS $800" tags="" position="500,900" size="100,100">$800
 The year in which Asian women were granted the right to vote.
 [[What is 1950? -&gt;Correct]]
 [[What is 1929? -&gt;Incorrect]]
 [[What is 1924? -&gt;Incorrect]]
 (set: $questionvalue to 800)
-(set: $ws800 to false)</tw-passagedata><tw-passagedata pid="37" name="Win" tags="" position="1375,375" size="100,100">CONGRATS YOU&#39;VE WON $$money
+(set: $ws800 to false)</tw-passagedata><tw-passagedata pid="38" name="Win" tags="" position="1375,375" size="100,100">CONGRATS YOU&#39;VE WON $$money
 &lt;img class = &quot;awake&quot; src = &quot;https://pyxis.nymag.com/v1/imgs/fe1/87f/ec1cb4c8368f601f3bf9b34d52dcd33967-10-skyrim-opening-screenshot.jpg&quot; 
 	width = &quot;1000&quot;
     height = &quot;500&quot;
@@ -345,7 +352,7 @@ The year in which Asian women were granted the right to vote.
 	width = &quot;200&quot;
     height = &quot;150&quot;/&gt;
 
-[[Credits]]</tw-passagedata><tw-passagedata pid="38" name="Womans suffering" tags="" position="500,500" size="100,100">&lt;h1&gt;Womans suffering&lt;/h1&gt;
+[[Credits]]</tw-passagedata><tw-passagedata pid="39" name="Womans suffering" tags="" position="500,500" size="100,100">&lt;h1&gt;Womans suffering&lt;/h1&gt;
 
 &lt;table style=&quot;width:100%&quot;&gt;
   &lt;tr&gt;
@@ -355,7 +362,8 @@ The year in which Asian women were granted the right to vote.
     &lt;th&gt;(if: $ws800 is true)[[$800-&gt;WS $800]]&lt;/th&gt;
     &lt;th&gt;(if: $ws1000 is true)[[$1000-&gt;WS $1000]]&lt;/th&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</tw-passagedata><tw-passagedata pid="39" name="tHereStory" tags="" position="900,500" size="100,100">&lt;h1&gt;tHereStory&lt;/h1&gt;
+&lt;/table&gt;
+(if:not $ws200 and not $ws400 and not $ws600 and not $ws800 and not $ws1000)[ [[Back -&gt;Category Select]] ]</tw-passagedata><tw-passagedata pid="40" name="tHereStory" tags="" position="900,500" size="100,100">&lt;h1&gt;tHereStory&lt;/h1&gt;
 
 &lt;table style=&quot;width:100%&quot;&gt;
   &lt;tr&gt;
@@ -365,7 +373,8 @@ The year in which Asian women were granted the right to vote.
     &lt;th&gt;(if: $ts800 is true)[[$800-&gt;TS $800]]&lt;/th&gt;
     &lt;th&gt;(if: $ts1000 is true)[[$1000-&gt;TS $1000]]&lt;/th&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</tw-passagedata></tw-storydata>
+&lt;/table&gt;
+(if:not $ts200 and not $ts400 and not $ts600 and not $ts800 and not $ts1000)[ [[Back -&gt;Category Select]] ]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
