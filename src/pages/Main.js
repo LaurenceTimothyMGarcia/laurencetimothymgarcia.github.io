@@ -5,6 +5,7 @@ function Main() {
   return(
     <Box>
       <AboutMeSection/>
+      <PortfolioSection/>
     </Box>
   )
 }
@@ -22,9 +23,6 @@ function AboutMeSection() {
       gridTemplateRows={'1fr 2fr repeat(2, 1fr)'}
       gridTemplateColumns={'1fr 2fr 1fr'}
       
-      
-      // templateRows='1fr 2fr repeat(2, 1fr)'
-      // templateColumns='1fr 2fr 1fr'
       gap={"0.5rem"}
     >
       <GridItem 
@@ -74,7 +72,50 @@ function AboutMeSection() {
       >
         Skills
       </GridItem>
-      
+
+    </Grid>
+  )
+}
+
+function PortfolioSection() {
+  return (
+    <Grid
+      h={'85vh'}
+
+      templateAreas={`"secTitle secTitle secTitle"
+                      "swe canvas gamedev"`}
+      gridTemplateRows={'1fr 4fr'}
+      gridTemplateColumns={'1fr 2fr 1fr'}
+
+      gap={"0.5rem"}
+    >
+      <GridItem
+        area={'secTitle'}
+        bg={'green'}
+      >
+        Project Porfolios
+      </GridItem>
+
+      <GridItem
+        area={'swe'}
+        bg={'green'}
+      >
+        SWE Projects
+      </GridItem>
+
+      <GridItem
+        area={'canvas'}
+        bg={'green'}
+      >
+        Canvas
+      </GridItem>
+
+      <GridItem
+        area={'gamedev'}
+        bg={'green'}
+      >
+        Game Dev Projects
+      </GridItem>
     </Grid>
   )
 }
