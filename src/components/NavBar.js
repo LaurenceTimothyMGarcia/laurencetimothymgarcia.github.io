@@ -6,6 +6,7 @@ function NavBar() {
     <Box>
       <Flex
         minWidth='max-content'
+        minHeight='10vh'
         alignItems='center'>
 
         <Box>
