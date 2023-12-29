@@ -13,33 +13,68 @@ function AboutMeSection() {
   return(
     <Grid
       h={"85vh"}
-      templateRows='1fr repeat(2, 2fr)'
-      templateColumns='repeat(3, 1fr)'
+
+      templateAreas={`"secTitle secTitle secTitle"
+                      "intro canvas workExp"
+                      "edu canvas skills"
+                      "edu cont skills"`}
+      
+      gridTemplateRows={'1fr 2fr repeat(2, 1fr)'}
+      gridTemplateColumns={'1fr 2fr 1fr'}
+      
+      
+      // templateRows='1fr 2fr repeat(2, 1fr)'
+      // templateColumns='1fr 2fr 1fr'
       gap={"0.5rem"}
     >
-      <GridItem colSpan={3} bg='tomato'>
+      <GridItem 
+        area={'secTitle'}
+        bg='tomato'>
         About Me
       </GridItem>
 
-      <GridItem bg={'tomato'}>
+      <GridItem 
+        area={'intro'}
+        bg={'tomato'}
+      >
         Introduction
       </GridItem>
-      <GridItem bg={'tomato'}>
+
+      <GridItem 
+        area={'canvas'}
+        bg={'tomato'}
+      >
         Canvas
       </GridItem>
-      <GridItem bg={'tomato'}>
+
+      <GridItem 
+        area={'workExp'}
+        bg={'tomato'}
+      >
         Work Experience
       </GridItem>
 
-      <GridItem bg={'tomato'}>
+      <GridItem 
+        area={'edu'}
+        bg={'tomato'}
+      >
         Education
       </GridItem>
-      <GridItem bg={'tomato'}>
+
+      <GridItem 
+        area={'cont'}
+        bg={'tomato'}
+      >
         Next/Prev
       </GridItem>
-      <GridItem bg={'tomato'}>
+
+      <GridItem 
+        area={'skills'}
+        bg={'tomato'}
+      >
         Skills
       </GridItem>
+      
     </Grid>
   )
 }
