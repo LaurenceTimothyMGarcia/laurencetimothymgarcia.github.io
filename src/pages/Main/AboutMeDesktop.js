@@ -8,11 +8,10 @@ function AboutMeDesktop() {
       h={"85vh"}
 
       templateAreas={`"secTitle secTitle secTitle"
-                      "intro canvas workExp"
-                      "edu canvas workExp"
-                      "skills skills skills"`}
+                      "intro canvas skills"
+                      "edu canvas skills"`}
       
-      gridTemplateRows={'0.25fr 2fr 1.75fr 1fr'}
+      gridTemplateRows={'0.25fr 2fr 1.75fr'}
       gridTemplateColumns={'1fr 2fr 1fr'}
       
       gap={"0.5rem"}
@@ -36,13 +35,6 @@ function AboutMeDesktop() {
         bg={'tomato'}
       >
         <AboutMeCanvas/>
-      </GridItem>
-
-      <GridItem 
-        area={'workExp'}
-        // bg={'tomato'}
-      >
-        <Center><Heading>Work Experience</Heading></Center>
       </GridItem>
 
       <GridItem 
@@ -73,13 +65,6 @@ function AboutMeDesktop() {
       >
         <Center><Heading size={'lg'}>Skills</Heading></Center>
       </GridItem>
-
-      {/* <GridItem 
-          area={'skills'}
-          // bg={'tomato'}
-      >
-        <Center><Heading>Skills</Heading></Center>
-      </GridItem> */}
 
     </Grid>
   )
