@@ -1,10 +1,15 @@
 import React from "react"
 import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { useGLTF } from '@react-three/drei'
 import { useRef, useState } from 'react'
+import { OrbitControls } from "@react-three/drei"
 
 function AboutMeCanvas() {
-  // const isoRoom = useLoader(GLTFLoader, BaseIsoRoom);
+  console.log("ABOUT ME CANVSS")
+  // const isoRoom = useLoader(GLTFLoader, "./BaseIsoRoom.gltf");
+  // const room = useGLTF('../../models/BaseIsoRoom.gltf');
+  console.log("ABOUT ME WE LOADED")
 
   return (
     <Canvas>
@@ -16,6 +21,7 @@ function AboutMeCanvas() {
       <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
+      <OrbitControls/>
     </Canvas>
   )
 }
