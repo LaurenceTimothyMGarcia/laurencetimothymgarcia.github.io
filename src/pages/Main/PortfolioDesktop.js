@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Center, Grid, GridItem, Heading } from '@chakra-ui/react'
 
 function PortfolioDesktop() {
   return (
@@ -15,9 +15,9 @@ function PortfolioDesktop() {
     >
       <GridItem
         area={'secTitle'}
-        bg={'green'}
+        // bg={'green'}
       >
-        Project Porfolios
+        <Center><Heading>Project Porfolios</Heading></Center>
       </GridItem>
 
       <GridItem

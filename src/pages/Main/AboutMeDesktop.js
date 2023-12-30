@@ -1,10 +1,10 @@
 import React from 'react';
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem, Heading, Center } from '@chakra-ui/react'
 import AboutMeCanvas from './AboutMeCanvas';
 
 function AboutMeDesktop() {
   return(
-      <Grid
+    <Grid
       h={"85vh"}
 
       templateAreas={`"secTitle secTitle secTitle"
@@ -12,60 +12,61 @@ function AboutMeDesktop() {
                       "edu canvas skills"
                       "edu cont skills"`}
       
-      gridTemplateRows={'1fr 2fr repeat(2, 1fr)'}
+      gridTemplateRows={'0.25fr 2.25fr repeat(2, 1.25fr)'}
       gridTemplateColumns={'1fr 2fr 1fr'}
       
       gap={"0.5rem"}
-      >
+    >
       <GridItem 
-          area={'secTitle'}
-          bg='tomato'>
-          About Me
+        area={'secTitle'}
+        // bg='tomato'
+      >
+        <Center><Heading>About Me</Heading></Center>
       </GridItem>
 
       <GridItem 
-          area={'intro'}
-          bg={'tomato'}
+        area={'intro'}
+        // bg={'tomato'}
       >
-          Introduction
+        <Center><Heading>Introduction</Heading></Center>
       </GridItem>
 
       <GridItem 
-          area={'canvas'}
-          bg={'tomato'}
+        area={'canvas'}
+        // bg={'tomato'}
       >
-          <AboutMeCanvas/>
+        <AboutMeCanvas/>
       </GridItem>
 
       <GridItem 
-          area={'workExp'}
-          bg={'tomato'}
+        area={'workExp'}
+        // bg={'tomato'}
       >
-          Work Experience
+        <Center><Heading>Work Experience</Heading></Center>
       </GridItem>
 
       <GridItem 
-          area={'edu'}
-          bg={'tomato'}
+        area={'edu'}
+        // bg={'tomato'}
       >
-          Education
+        <Center><Heading>Education</Heading></Center>
       </GridItem>
 
       <GridItem 
-          area={'cont'}
-          bg={'tomato'}
+        area={'cont'}
+        // bg={'tomato'}
       >
-          Next/Prev
+        Next/Prev
       </GridItem>
 
       <GridItem 
           area={'skills'}
-          bg={'tomato'}
+          // bg={'tomato'}
       >
-          Skills
+        <Center><Heading>Skills</Heading></Center>
       </GridItem>
 
-      </Grid>
+    </Grid>
   )
 }
 
