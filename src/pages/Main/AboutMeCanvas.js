@@ -1,10 +1,16 @@
 import React from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
+import { Canvas, useFrame, useLoader } from "@react-three/fiber"
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useRef, useState } from 'react'
 
 function AboutMeCanvas() {
+  // const isoRoom = useLoader(GLTFLoader, BaseIsoRoom);
+
   return (
     <Canvas>
+
+      {/* <primitive object={isoRoom.scene}/> */}
+
       <ambientLight intensity={Math.PI / 2} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
       <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
@@ -13,6 +19,7 @@ function AboutMeCanvas() {
     </Canvas>
   )
 }
+
 
 function Box(props) {
   // This reference gives us direct access to the THREE.Mesh object
