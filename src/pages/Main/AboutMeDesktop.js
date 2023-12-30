@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, GridItem, Heading, Center } from '@chakra-ui/react'
+import { Grid, GridItem, Heading, Center, Text, UnorderedList, ListItem } from '@chakra-ui/react'
 import AboutMeCanvas from './AboutMeCanvas';
 
 function AboutMeDesktop() {
@@ -9,10 +9,10 @@ function AboutMeDesktop() {
 
       templateAreas={`"secTitle secTitle secTitle"
                       "intro canvas workExp"
-                      "edu canvas skills"
-                      "edu cont skills"`}
+                      "edu canvas workExp"
+                      "skills skills skills"`}
       
-      gridTemplateRows={'0.25fr 2.25fr repeat(2, 1.25fr)'}
+      gridTemplateRows={'0.25fr 2fr 1.75fr 1fr'}
       gridTemplateColumns={'1fr 2fr 1fr'}
       
       gap={"0.5rem"}
@@ -33,7 +33,7 @@ function AboutMeDesktop() {
 
       <GridItem 
         area={'canvas'}
-        // bg={'tomato'}
+        bg={'tomato'}
       >
         <AboutMeCanvas/>
       </GridItem>
@@ -50,21 +50,36 @@ function AboutMeDesktop() {
         // bg={'tomato'}
       >
         <Center><Heading>Education</Heading></Center>
+        <Center><Heading size={'md'}>Computer Science B.S</Heading></Center>
+        <Center><Heading size={'md'}>Cal Poly Pomona</Heading></Center>
+
+        <Center>
+          <UnorderedList>
+            <ListItem>GPA: 3.82</ListItem>
+            <ListItem>Summa Cum Laude</ListItem>
+            <ListItem>Dean's & President's List: All Semesters</ListItem>
+            <ListItem>CPP Game Development Club</ListItem>
+            <UnorderedList>
+              <ListItem>Secretary (2021-2022)</ListItem>
+              <ListItem>President (2022-2023)</ListItem>
+            </UnorderedList>
+          </UnorderedList>
+        </Center>
       </GridItem>
 
       <GridItem 
-        area={'cont'}
-        // bg={'tomato'}
+        area={'skills'}
+        bg={'tomato'}
       >
-        Next/Prev
+        <Center><Heading size={'lg'}>Skills</Heading></Center>
       </GridItem>
 
-      <GridItem 
+      {/* <GridItem 
           area={'skills'}
           // bg={'tomato'}
       >
         <Center><Heading>Skills</Heading></Center>
-      </GridItem>
+      </GridItem> */}
 
     </Grid>
   )

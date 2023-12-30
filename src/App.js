@@ -5,11 +5,12 @@ import { ChakraProvider, Box } from '@chakra-ui/react';
 import Main from './pages/Main';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import colors from './theme/Color';
 
 function App() {
   return (
     <ChakraProvider>
-      <Box bg={'#010A25'} textColor={'#D2E0FD'}>
+      <Box bg={colors.bg} textColor={colors.text}>
         <NavBar/>
         <Main></Main>
         <Footer/>
