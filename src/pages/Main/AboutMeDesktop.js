@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, GridItem } from '@chakra-ui/react'
+import AboutMeCanvas from './AboutMeCanvas';
 
 function AboutMeDesktop() {
   return(
@@ -33,7 +34,7 @@ function AboutMeDesktop() {
           area={'canvas'}
           bg={'tomato'}
       >
-          Canvas
+          <AboutMeCanvas/>
       </GridItem>
 
       <GridItem 

@@ -7,7 +7,7 @@ function Main() {
   return(
     <Box>
       <AboutMeDesktop/>
-      {/* <PortfolioDesktop/> */}
+      <PortfolioDesktop/>
     </Box>
   )
 }

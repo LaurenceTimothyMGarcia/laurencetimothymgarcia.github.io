@@ -6,11 +6,11 @@ function Footer() {
     <Box>
       <Flex
         minWidth='max-content'
-        minHeight='5vh'
+        minHeight='4vh'
         alignItems='center'>
 
         <Box>
-          <Heading>Laurence Timothy M. Garcia</Heading>
+          Laurence Timothy M. Garcia
         </Box>
 
       </Flex>
