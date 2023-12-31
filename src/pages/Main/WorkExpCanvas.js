@@ -2,14 +2,14 @@ import React from "react"
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from 'react'
 import { OrbitControls } from "@react-three/drei"
-import BaseIsoRoom from '../../models/BaseIsoRoom'
+import NickIsoRoom from '../../models/Nick_IsoRoom'
 
-function AboutMeCanvas() {
+function WorkExpCanvas() {
 
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <BaseIsoRoom/>
+        <NickIsoRoom/>
       </Suspense>
 
       <ambientLight intensity={Math.PI / 2} />
@@ -20,4 +20,4 @@ function AboutMeCanvas() {
   )
 }
 
-export default AboutMeCanvas;
+export default WorkExpCanvas;
