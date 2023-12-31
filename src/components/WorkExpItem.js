@@ -9,14 +9,14 @@ const WorkExpItem = ({ alt=false, workTitle, scene }) => {
         gap={"1rem"}
       >
         <Box
-          bg='red'
+          // bg='red'
           flex={'3'}
         >
           <Heading>{workTitle}</Heading>
         </Box>
 
         <Box
-          bg='red'
+          // bg='red'
           flex={'2'}
           aspectRatio={1}
         >
@@ -31,7 +31,7 @@ const WorkExpItem = ({ alt=false, workTitle, scene }) => {
         gap={"1rem"}
       >
         <Box
-          bg='red'
+          // bg='red'
           flex={'2'}
           aspectRatio={1}
         >
@@ -39,7 +39,7 @@ const WorkExpItem = ({ alt=false, workTitle, scene }) => {
         </Box>
   
         <Box
-          bg='red'
+          // bg='red'
           flex={'3'}
         >
           <Heading>{workTitle}</Heading>

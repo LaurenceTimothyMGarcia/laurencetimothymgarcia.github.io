@@ -32,7 +32,7 @@ function AboutMeDesktop() {
 
       <GridItem 
         area={'canvas'}
-        bg={'tomato'}
+        // bg={'tomato'}
       >
         <AboutMeCanvas/>
       </GridItem>
@@ -61,7 +61,7 @@ function AboutMeDesktop() {
 
       <GridItem 
         area={'skills'}
-        bg={'tomato'}
+        // bg={'tomato'}
       >
         <Center><Heading size={'lg'}>Skills</Heading></Center>
       </GridItem>
