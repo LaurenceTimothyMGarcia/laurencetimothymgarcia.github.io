@@ -1,20 +1,12 @@
 import React from "react"
-import { Canvas, useFrame, useLoader } from "@react-three/fiber"
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useGLTF } from '@react-three/drei'
+import { Canvas, useFrame } from "@react-three/fiber"
 import { useRef, useState } from 'react'
 import { OrbitControls } from "@react-three/drei"
 
 function AboutMeCanvas() {
-  console.log("ABOUT ME CANVSS")
-  // const isoRoom = useLoader(GLTFLoader, "./BaseIsoRoom.gltf");
-  // const room = useGLTF('../../models/BaseIsoRoom.gltf');
-  console.log("ABOUT ME WE LOADED")
 
   return (
     <Canvas>
-
-      {/* <primitive object={isoRoom.scene}/> */}
 
       <ambientLight intensity={Math.PI / 2} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
