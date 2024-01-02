@@ -5,11 +5,29 @@ Command: npx gltfjsx@6.2.16 Nick_IsoRoom.gltf
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/models/Nick_Room/Nick_IsoRoom.gltf')
+  const groupRef = useRef()
+
+  // Rotate based on scroll
+  // useFrame(() => {
+  //   // Get Scroll position
+  //   const scrollTop = window.scrollY;
+
+  //   // Calc rotation based on scroll pos
+  //   const rotationSpeed = 0.002;
+  //   const rotationY = scrollTop * rotationSpeed;
+
+  //   if (groupRef.current) {
+  //     groupRef.current.rotation.y = rotationY;
+  //   }
+  // })
+
   return (
-    <group {...props} dispose={null}>
+    // Remove groupRef if not used
+    <group {...props} dispose={null} ref={groupRef}>
       <group scale={[7, 0.25, 10]}>
         <mesh geometry={nodes.Cube.geometry} material={materials.BaseFloor} />
         <mesh geometry={nodes.Cube_1.geometry} material={materials['Nick Orange']} />
