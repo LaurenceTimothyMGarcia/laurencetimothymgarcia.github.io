@@ -20,7 +20,9 @@ export default function Model(props) {
       <group position={[-4.923, 0.454, 9.766]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={7}>
         <mesh geometry={nodes.Text001.geometry} material={materials['Nick Orange']} />
         <mesh geometry={nodes.Text001_1.geometry} material={materials['Text InnerBackdrop']} />
+        <mesh geometry={nodes.Text001_2.geometry} material={materials.Light} />
       </group>
+      <mesh geometry={nodes.Rug.geometry} material={materials.Rug} position={[1.551, 0.468, 1.885]} scale={[3.694, 0.1, 7.951]} />
     </group>
   )
 }
