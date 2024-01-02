@@ -1,21 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
-import { ChakraProvider, Box } from '@chakra-ui/react';
-import Main from './pages/Main';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import colors from './theme/Color';
+import React from 'react';
+import AppRoutes from './AppRoutes';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout';
 
 function App() {
   return (
-    <ChakraProvider>
-      <Box bg={colors.bg} textColor={colors.text}>
-        <NavBar/>
-        <Main></Main>
-        <Footer/>
-      </Box>
-    </ChakraProvider>
+    <Router>
+      <Layout>
+        <Routes>
+          {AppRoutes.map((route, index) => {
+            const { element, ...rest } = route;
+            return <Route key={index} {...rest} element={element} />;
+          })}
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
