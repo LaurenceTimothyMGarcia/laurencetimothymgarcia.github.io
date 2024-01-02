@@ -11,13 +11,20 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/models/Nick_Room/Nick_IsoRoom.gltf')
   const groupRef = useRef()
 
+  // Looks at mouse
+  // useFrame(({ mouse, viewport }) => {
+  //   const x = (mouse.x * viewport.width) / 2.5
+  //   const y = (mouse.y * viewport.height) / 2.5
+  //   groupRef.current.lookAt(x, y, 1)
+  // })
+
   // Rotate based on scroll
   // useFrame(() => {
   //   // Get Scroll position
   //   const scrollTop = window.scrollY;
 
   //   // Calc rotation based on scroll pos
-  //   const rotationSpeed = 0.002;
+  //   const rotationSpeed = 0.0005;
   //   const rotationY = scrollTop * rotationSpeed;
 
   //   if (groupRef.current) {
