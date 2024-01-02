@@ -8,7 +8,7 @@ const AppRoutes = [
     element: <Main />
   },
   {
-    path: '/swe-portfolio',
+    path: 'swe-portfolio',
     element: <SWEPorfolio />
   },
 ]
