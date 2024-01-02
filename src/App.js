@@ -6,12 +6,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout';
 
 function App() {
+  // console.log(AppRoutes);
+
   return (
     <Router>
       <Layout>
         <Routes>
           {AppRoutes.map((route, index) => {
             const { element, ...rest } = route;
+            // console.log(<Route key={index} {...rest} element={element} />);
             return <Route key={index} {...rest} element={element} />;
           })}
         </Routes>

@@ -10,7 +10,7 @@ const AppRoutes = [
   {
     path: '/swe-portfolio',
     element: <SWEPorfolio />
-  }
+  },
 ]
 
 export default AppRoutes;
