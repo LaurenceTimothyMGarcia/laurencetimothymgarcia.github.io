@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Center, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Box, Center, Heading, SimpleGrid, Wrap } from '@chakra-ui/react';
 import SkillItemCard from './SkillItemCard';
 
 function SkillDisplay({ sectionTitle, skillSet }) {
   return (
     <Box>
-      <Center><Heading size={'md'} margin={'0.5rem'}>{sectionTitle}</Heading></Center>
+      <Center><Heading size={'md'} margin={'1rem'}>{sectionTitle}</Heading></Center>
 
       <SimpleGrid columns={4} spacing={'0.5rem'} justifyContent={'center'}>
         {skillSet.map((skill, index) => (

@@ -39,7 +39,7 @@ const SkillTools = [
   },
   {
     title: 'Unreal',
-    img: '/logos/CodingLogos/UnrealEngineLogo.png'
+    img: '/logos/CodingLogos/UnrealEngineLogoWhite.png'
   },
   {
     title: 'THREE.js',
