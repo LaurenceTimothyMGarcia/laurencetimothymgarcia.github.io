@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Heading } from '@chakra-ui/react';
 import SWEProjectCard from './SWEProjectCard';
+import SWEProjects from '../../data/SWEProjects';
 
 function SWEProjectDisplay() {
 
@@ -17,14 +18,17 @@ function SWEProjectDisplay() {
 
   return(
     <Box>
-      <SWEProjectCard 
-        title={'VGBacklogs.com'} 
-        icon={'/logos/ProjectIcons/vgbl_logo.png'}
-        summary={'Full Stack Web Social Platform'} 
-        description={'A full stack social platform that allows gamers to build and share their video game catalogs across multiple platforms with other users. Leverages React.js and MUI components for a responsive front-end, with a C# DotNET backend connected to a MongoDB database, deployed through AWS servers. Implemented the user profile system, including account authentication, following users, & saving games to profiles. The system stays up to date with the latest games across all platforms utilizing RAWG.io API. '} 
-        link={'http://www.vgbacklogs.com/'} 
-        skills={tempDict}
-      />
+      {SWEProjects.map((project, index) => (
+        <SWEProjectCard
+          key={index}
+          title={project.title} 
+          icon={project.icon}
+          summary={project.summary} 
+          description={project.description} 
+          link={project.link} 
+          skills={project.skills}
+        />
+      ))}
     </Box>
   )
 }
