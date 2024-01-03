@@ -9,7 +9,7 @@ function Layout({ children }) {
     <ChakraProvider>
       <Box bg={colors.bg} textColor={colors.text}>
         <NavBar />
-        <Container maxW='container.xl'>
+        <Container maxW='90vw'>
           {children}
         </Container>
         <Footer />
