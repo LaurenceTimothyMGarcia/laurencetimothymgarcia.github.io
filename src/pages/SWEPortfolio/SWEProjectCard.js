@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Heading, Image, Text, Flex } from '@chakra-ui/react';
+import { Box, Heading, Image, Text, Flex, IconButton, Link } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import SkillItemCard from '../../components/SkillItemCard';
 
 function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
@@ -17,6 +18,10 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
       <Heading>{title}</Heading>
 
       <Image src={icon} boxSize={'20rem'} />
+
+      <Link href={link} isExternal>
+        <ExternalLinkIcon />
+      </Link>
       
       <Text>{summary}</Text>
       <Text>{description}</Text>
