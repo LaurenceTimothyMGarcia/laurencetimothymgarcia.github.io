@@ -1,11 +1,14 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import SkillItemCard from './SkillItemCard';
 
-function SkillDisplay() {
+function SkillDisplay({ skillSet }) {
   return (
     <Box>
-      <SkillItemCard title={'C#'} img={'/logos/CodingLogos/CSharpLogo.png'}/>
+      <Heading size={'md'}>Programming Languages</Heading>
+      {skillSet.map((skill, index) => (
+        <SkillItemCard key={index} title={skill.title} img={skill.img} />
+      ))}
     </Box>
   )
 }

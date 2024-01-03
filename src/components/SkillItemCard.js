@@ -8,7 +8,7 @@ function SkillItemCard( { img, title }) {
         src={img}
         boxSize={'2rem'}
       />
-      <Heading size={'md'}>{title}</Heading>
+      <Heading size={'sm'}>{title}</Heading>
     </Box>
   )
 }
