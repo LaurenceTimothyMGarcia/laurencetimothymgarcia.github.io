@@ -19,7 +19,7 @@ function SWEProjectDisplay() {
     <Box>
       <SWEProjectCard 
         title={'VGBacklogs.com'} 
-        icon={'/logos/CodingLogos/vgbl_logo.png'}
+        icon={'/logos/ProjectIcons/vgbl_logo.png'}
         summary={'Full Stack Web Social Platform'} 
         description={'A full stack social platform that allows gamers to build and share their video game catalogs across multiple platforms with other users. Leverages React.js and MUI components for a responsive front-end, with a C# DotNET backend connected to a MongoDB database, deployed through AWS servers. Implemented the user profile system, including account authentication, following users, & saving games to profiles. The system stays up to date with the latest games across all platforms utilizing RAWG.io API. '} 
         link={'http://www.vgbacklogs.com/'} 
