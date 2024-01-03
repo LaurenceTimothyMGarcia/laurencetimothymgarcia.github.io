@@ -1,15 +1,15 @@
 import React from 'react';
-import { Box, Heading, Image } from '@chakra-ui/react';
+import { Heading, Image, VStack } from '@chakra-ui/react';
 
 function SkillItemCard( { img, title }) {
   return (
-    <Box >
+    <VStack >
       <Image 
         src={img}
         boxSize={'2rem'}
       />
-      <Heading size={'sm'}>{title}</Heading>
-    </Box>
+      <Heading size={'sm'} textAlign={'center'}>{title}</Heading>
+    </VStack>
   )
 }
 

@@ -3,6 +3,7 @@ import { Grid, GridItem, Heading, Center, Text, UnorderedList, ListItem } from '
 import AboutMeCanvas from './AboutMeCanvas';
 import SkillDisplay from '../../components/SkillDisplay';
 import SkillLanguages from '../../data/SkillLanguages';
+import SkillTools from '../../data/SkillTools';
 
 function AboutMeDesktop() {
   return(
@@ -66,7 +67,8 @@ function AboutMeDesktop() {
         // bg={'tomato'}
       >
         <Center><Heading size={'lg'}>Skills</Heading></Center>
-        <SkillDisplay skillSet={SkillLanguages}/>
+        <SkillDisplay sectionTitle={'Programming Languages'} skillSet={SkillLanguages}/>
+        <SkillDisplay sectionTitle={'Tools'} skillSet={SkillTools}/>
       </GridItem>
 
     </Grid>

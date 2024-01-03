@@ -12,7 +12,31 @@ const SkillLanguages = [
   {
     title: 'JavaScript',
     img: '/logos/CodingLogos/Javascript_Logo.png'
-  }
+  },
+  {
+    title: 'Java',
+    img: '/logos/CodingLogos/JavaLogo.png'
+  },
+  {
+    title: 'Kotlin',
+    img: '/logos/CodingLogos/KotlinLogo.png'
+  },
+  {
+    title: 'HTML',
+    img: '/logos/CodingLogos/HTML5_Logo.png'
+  },
+  {
+    title: 'CSS',
+    img: '/logos/CodingLogos/CSSLogo.png'
+  },
+  {
+    title: 'C++',
+    img: '/logos/CodingLogos/CPPLogo.png'
+  },
+  {
+    title: 'GDScript',
+    img: '/logos/CodingLogos/GodotLogo.png'
+  },
 ]
 
 export default SkillLanguages
