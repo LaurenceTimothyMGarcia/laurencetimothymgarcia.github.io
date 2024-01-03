@@ -35,7 +35,7 @@ function CamSettings() {
 function WorkExpCanvas() {
 
   return (
-    <Canvas orthographic={true}>
+    <Canvas orthographic={false}>
       <Suspense fallback={null}>
         <CamSettings/>
         <NickIsoRoom/>
@@ -45,6 +45,8 @@ function WorkExpCanvas() {
       <ambientLight intensity={Math.PI / 2} />
       <spotLight position={[25, 25, 25]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
       <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
+
+      <OrbitControls/>
     </Canvas>
   )
 }
