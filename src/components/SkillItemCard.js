@@ -1,11 +1,14 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/react';
+import { Box, Heading, Image } from '@chakra-ui/react';
 
-function SkillItemCard() {
+function SkillItemCard( { img, title }) {
   return (
-    <Box boxSize={'xs'}>
-      <Image src='/logos/CodingLogos/aws.png'/>
-      AWS
+    <Box >
+      <Image 
+        src={img}
+        boxSize={'2rem'}
+      />
+      <Heading size={'md'}>{title}</Heading>
     </Box>
   )
 }

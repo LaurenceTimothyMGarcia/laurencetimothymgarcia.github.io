@@ -5,7 +5,7 @@ import SkillItemCard from './SkillItemCard';
 function SkillDisplay() {
   return (
     <Box>
-      <SkillItemCard/>
+      <SkillItemCard title={'C#'} img={'/logos/CodingLogos/CSharpLogo.png'}/>
     </Box>
   )
 }
