@@ -5,7 +5,7 @@ import SkillItemCard from './SkillItemCard';
 function SkillDisplay({ sectionTitle, skillSet }) {
   return (
     <Box>
-      <Center><Heading size={'md'}>{sectionTitle}</Heading></Center>
+      <Center><Heading size={'md'} margin={'0.5rem'}>{sectionTitle}</Heading></Center>
 
       <SimpleGrid columns={4} spacing={'0.5rem'} justifyContent={'center'}>
         {skillSet.map((skill, index) => (
