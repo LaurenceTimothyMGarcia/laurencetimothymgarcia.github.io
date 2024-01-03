@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, GridItem, Heading, Center, Text, UnorderedList, ListItem } from '@chakra-ui/react'
 import AboutMeCanvas from './AboutMeCanvas';
+import SkillDisplay from '../../components/SkillDisplay';
 
 function AboutMeDesktop() {
   return(
@@ -64,6 +65,7 @@ function AboutMeDesktop() {
         // bg={'tomato'}
       >
         <Center><Heading size={'lg'}>Skills</Heading></Center>
+        <SkillDisplay/>
       </GridItem>
 
     </Grid>
