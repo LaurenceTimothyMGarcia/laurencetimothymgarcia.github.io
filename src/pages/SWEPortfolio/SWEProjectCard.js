@@ -1,13 +1,31 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, Image, Text, Flex } from '@chakra-ui/react';
 import SkillItemCard from '../../components/SkillItemCard';
 
-function SWEProjectCard() {
+function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
+
+  // Title of project
+  // Icon for project
+  // Requires Summary of project
+  // Description of project
+  // tech used for project
+  // Direct link to project
+  // Screenshots / video
+
   return(
     <Box>
-      
+      <Heading>{title}</Heading>
 
-      <SkillItemCard />
+      <Image src={icon} boxSize={'20rem'} />
+      
+      <Text>{summary}</Text>
+      <Text>{description}</Text>
+
+      <Flex>
+        {skills.map((skill, index) => (
+          <SkillItemCard key={index} title={skill.title} img={skill.img} />
+        ))}
+      </Flex>
     </Box>
   )
 }
