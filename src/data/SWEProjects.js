@@ -111,7 +111,7 @@ const SWEProjects = [
     icon: '/logos/ProjectIcons/Raytracer.png',
     summary: 'Java Raytracing Study',
     description: "Programmed a raytracer using the Java Processing library. Capable of producing images consisting of various geometric primitives and user generated models. Renders the primitives with a phong lighting model, reflections, and UV texture mapping.",
-    link: '',
+    link: 'https://www.instagram.com/p/CmPT19vvkCl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
     skills: [
       {
         title: 'Java',

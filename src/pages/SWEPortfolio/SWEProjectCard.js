@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, Heading, Image, Text, Flex, Link, Card, CardHeader, CardBody, CardFooter, Accordion, AccordionItem, AccordionButton, AccordionPanel } from '@chakra-ui/react';
+import { Center, Heading, Image, Text, Flex, Link, Card, CardHeader, CardBody, CardFooter, Accordion, AccordionItem, AccordionButton, AccordionPanel, Spacer } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import SkillItemCard from '../../components/SkillItemCard';
 
@@ -23,6 +23,8 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
         </Link>
         
       </CardHeader>
+
+      {/* <Spacer/> */}
       
       <Image src={icon} boxSize={'10rem'} />
 
