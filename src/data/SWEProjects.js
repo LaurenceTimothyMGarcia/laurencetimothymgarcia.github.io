@@ -123,6 +123,23 @@ const SWEProjects = [
       },
     ]
   },
+  {
+    title: 'DND Alignment Discord Bot',
+    icon: '/logos/ProjectIcons/DiscordLogo.png',
+    summary: 'Python Messaging Bot',
+    description: "Programmed a messaging bot that takes a user's last 100 messages and rates it on a morality system. Used Discord.py API to develop and deploy the messaging bot. ",
+    link: 'https://github.com/LaurenceTimothyMGarcia/Allignment-Bot',
+    skills: [
+      {
+        title: 'Python',
+        img: '/logos/CodingLogos/Python_logo.png'
+      },
+      {
+        title: 'Discord.py',
+        img: '/logos/ProjectIcons/DiscordLogo.png'
+      },
+    ]
+  },
 ]
 
 export default SWEProjects
