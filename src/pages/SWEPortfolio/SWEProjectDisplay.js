@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import SWEProjectCard from './SWEProjectCard';
 import SWEProjects from '../../data/SWEProjects';
 
@@ -18,17 +18,20 @@ function SWEProjectDisplay() {
 
   return(
     <Box>
-      {SWEProjects.map((project, index) => (
-        <SWEProjectCard
-          key={index}
-          title={project.title} 
-          icon={project.icon}
-          summary={project.summary} 
-          description={project.description} 
-          link={project.link} 
-          skills={project.skills}
-        />
-      ))}
+      <SimpleGrid columns={3} spacing={'0.5rem'} justifyContent={'center'}>
+        {SWEProjects.map((project, index) => (
+          <SWEProjectCard
+            key={index}
+            title={project.title} 
+            icon={project.icon}
+            summary={project.summary} 
+            description={project.description} 
+            link={project.link} 
+            skills={project.skills}
+          />
+        ))}
+      </SimpleGrid>
+      
     </Box>
   )
 }
