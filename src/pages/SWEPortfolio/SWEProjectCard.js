@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, Heading, Image, Text, Flex, Link, Card, CardHeader, CardBody, CardFooter, Accordion, AccordionItem, AccordionButton, AccordionPanel, Box, Spacer, SimpleGrid } from '@chakra-ui/react';
+import { Center, Heading, Image, Text, Flex, Link, Card, CardHeader, CardBody, CardFooter, Accordion, AccordionItem, AccordionButton, AccordionPanel } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import SkillItemCard from '../../components/SkillItemCard';
 
@@ -39,12 +39,13 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
         </Accordion>
       </CardBody>
 
+      {/* Do not use simple grid, find something else to center */}
       <CardFooter minW={'100%'}>
-        <SimpleGrid columns={skills.length} spacing={'0.5rem'} justifyContent={'center'}>
+        <Flex minW={'100%'} spacing={'0.5rem'} justifyContent={'space-evenly'}>
           {skills.map((skill, index) => (
             <SkillItemCard key={index} title={skill.title} img={skill.img} />
           ))}
-        </SimpleGrid>
+        </Flex>
       </CardFooter>
       
     </Card>
