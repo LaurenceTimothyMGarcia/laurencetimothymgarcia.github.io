@@ -3,7 +3,7 @@ import React from 'react';
 
 // Look like a ds card
 
-function GameDevProjectCard( { title, img } ) {
+function GameDevProjectCard( { title, img, onSelect } ) {
 
   const cardColor = '#606060';
 
@@ -17,6 +17,7 @@ function GameDevProjectCard( { title, img } ) {
       p="10px" // Padding
       position="relative" // Positioning for inner elements
       overflow="hidden" // Hide overflow content
+      onClick={onSelect}
     >
       <Box
         bg="#FFFFFF" // White background for title
