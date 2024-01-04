@@ -12,7 +12,8 @@ function GameDevProjectCard() {
       bg={cardColor} // DS cartridge color
       borderRadius="10px" // Rounded corners
       boxShadow="0px 0px 10px rgba(0, 0, 0, 0.5)" // Shadow effect
-      width="300px" // Set width
+      width="80%" // Set width
+      maxWidth="250px" // Set width
       p="10px" // Padding
       position="relative" // Positioning for inner elements
       overflow="hidden" // Hide overflow content
@@ -43,32 +44,9 @@ function GameDevProjectCard() {
           height="50px" // Height of the sticker
           transform="rotate(45deg)" // Rotate the sticker
           zIndex="1" // Ensure it's above the image
-          // boxShadow="0px 0px 5px rgba(0, 0, 0, 0.5)" // Shadow effect
         />
       </Box>
     </Box>
-    // <Box 
-    //   bg={'green'} 
-    //   align={'center'}
-    //   pt={'1%'}
-    //   pb={'1%'}
-    // >
-    //   <Heading
-    //     bg={'white'}
-    //     maxW={'90%'}
-    //     pt={'1%'}
-    //     pb={'1%'}
-    //     textColor={'black'}
-    //   >
-    //     Gunslinger Hilda
-    //   </Heading>
-      
-    //   <Image 
-    //     src='/logos/ProjectIcons/GunslingerHilda.png'
-    //     minW={'90%'}
-    //     maxW={'90%'}
-    //   />
-    // </Box>
   )
 }
 
