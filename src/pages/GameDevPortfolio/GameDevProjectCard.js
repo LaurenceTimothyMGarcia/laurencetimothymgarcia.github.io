@@ -3,7 +3,7 @@ import React from 'react';
 
 // Look like a ds card
 
-function GameDevProjectCard() {
+function GameDevProjectCard( { title, img } ) {
 
   const cardColor = '#606060';
 
@@ -24,7 +24,7 @@ function GameDevProjectCard() {
         py="8px" // Padding for title
         borderBottom="2px solid black" // Border for top section
       >
-        <Heading size="md" color="black">Gunslinger Hilda</Heading>
+        <Heading size="md" color="black">{title}</Heading>
       </Box>
       
       <Box
@@ -32,7 +32,7 @@ function GameDevProjectCard() {
         mt="10px" // Margin top for the image
       >
         <Image
-          src="/logos/ProjectIcons/GunslingerHilda.png"
+          src={img}
           width="100%" // Set image width to fill container
         />
         <Box

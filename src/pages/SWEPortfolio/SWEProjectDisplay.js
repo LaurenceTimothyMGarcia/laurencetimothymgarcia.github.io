@@ -4,18 +4,6 @@ import SWEProjectCard from './SWEProjectCard';
 import SWEProjects from '../../data/SWEProjects';
 
 function SWEProjectDisplay() {
-
-  const tempDict = [
-    {
-      title: 'C#',
-      img: '/logos/CodingLogos/CSharpLogo.png'
-    },
-    {
-      title: 'Python',
-      img: '/logos/CodingLogos/Python_logo.png'
-    },
-  ]
-
   return(
     <Box>
       <Wrap justify={'center'}>
