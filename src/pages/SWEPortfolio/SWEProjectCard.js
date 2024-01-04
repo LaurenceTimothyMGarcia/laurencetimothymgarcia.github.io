@@ -14,7 +14,8 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
   // Screenshots / video
 
   return(
-    <Card align={'center'} size={'sm'} maxW={'30vw'}>
+    // <Card align={'center'} size={'sm'} maxW={'30vw'}>
+    <Card align={'center'} size={'sm'} maxW={'22rem'} minW={'22rem'}>
       <CardHeader align={'center'}>
         <Heading size={'lg'}>{title}</Heading>
         <Link href={link} isExternal>
