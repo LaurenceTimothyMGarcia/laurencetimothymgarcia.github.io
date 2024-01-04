@@ -38,6 +38,10 @@ const SkillTools = [
     img: '/logos/CodingLogos/UnityLogo.png'
   },
   {
+    title: 'Figma',
+    img: '/logos/CodingLogos/FigmaLogo.png'
+  },
+  {
     title: 'Unreal',
     img: '/logos/CodingLogos/UnrealEngineLogoWhite.png'
   },
