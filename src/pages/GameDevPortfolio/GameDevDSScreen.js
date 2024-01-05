@@ -1,5 +1,5 @@
-import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import { Box, Heading, Image, Flex, VStack, Center, Button, Grid, IconButton } from '@chakra-ui/react';
+import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, ExternalLinkIcon } from '@chakra-ui/icons';
+import { Box, Heading, Image, Flex, Center, Button, Grid, IconButton, Link } from '@chakra-ui/react';
 import React from 'react';
 
 function GameDevDSScreen( { selectedGame }) {
@@ -11,6 +11,7 @@ function GameDevDSScreen( { selectedGame }) {
   let icon = ''
   let summary = ''
   let genre = ''
+  let link = ''
   let topScreen = <Box>Select a game to learn more!</Box>;
 
   if (selectedGame) {
@@ -18,6 +19,7 @@ function GameDevDSScreen( { selectedGame }) {
     icon = selectedGame.icon
     summary = selectedGame.summary
     genre = selectedGame.genre
+    link = selectedGame.link
     topScreen = TopDisplay(selectedGame.topScreen);
   }
 
@@ -144,6 +146,9 @@ function GameDevDSScreen( { selectedGame }) {
                   overflowY={'scroll'}
                 >
                   <Heading size="md">{title}</Heading>
+                  <Link href={link} isExternal>
+                    <Heading size={'md'}>{title} <ExternalLinkIcon /></Heading>
+                  </Link>
                   <Box>{genre}</Box>
                   <Image src={icon} boxSize="100px" objectFit="contain" />
                   <Box>{summary}</Box>
