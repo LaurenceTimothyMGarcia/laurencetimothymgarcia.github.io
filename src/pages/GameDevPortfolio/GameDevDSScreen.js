@@ -36,7 +36,7 @@ function GameDevDSScreen( { selectedGame }) {
       w={'48vw'}
 
       // Transition stuff
-      cursor={'pointer'}
+      // cursor={'pointer'}
       transition={'transform 0.6s, box-shadow 0.6s'}
       transform={'rotateX(15deg) translateY(-50px) translateZ(-100px)'}
       _hover={hoverStyles}
