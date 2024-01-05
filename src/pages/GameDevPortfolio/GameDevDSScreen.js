@@ -7,8 +7,18 @@ function GameDevDSScreen( { selectedGame }) {
   const dsBaseColor = '#3A3A3A'
   const dsButtonColor = '#53E6E3'
 
-  if (!selectedGame) {
-    return <Box>Select a project to see details.</Box>;
+  let title = 'Select a game to learn more!'
+  let icon = ''
+  let summary = ''
+  let genre = ''
+  let topScreen = <Box>Select a game to learn more!</Box>;
+
+  if (selectedGame) {
+    title = selectedGame.title
+    icon = selectedGame.icon
+    summary = selectedGame.summary
+    genre = selectedGame.genre
+    topScreen = TopDisplay(selectedGame.topScreen);
   }
 
   return (
@@ -33,11 +43,7 @@ function GameDevDSScreen( { selectedGame }) {
               w={'80%'}
               h={'90%'}
             >
-              <Box 
-                h={'100%'}
-                w={'100%'}
-                dangerouslySetInnerHTML={{__html: selectedGame.video}} 
-              />
+              {topScreen}
             </Box>
           </Center>
           
@@ -56,12 +62,12 @@ function GameDevDSScreen( { selectedGame }) {
 
         {/* Bottom Screen */}
         <Box 
-          // bg={'green'}
           h={'47.5%'}
           borderWidth={2}
           borderColor={'black'}
         >
           <Flex justify={'center'} w={'100%'} h={'100%'}>
+
             {/* DPad */}
             <Center
               bg={dsBaseColor}
@@ -78,6 +84,7 @@ function GameDevDSScreen( { selectedGame }) {
                   bg={dsButtonColor}
                   icon={<ChevronUpIcon />}
                   borderRadius={0}
+                  borderTopRadius={'10%'}
                   gridColumn={'2'}
                   gridRow={'1'}
                 />
@@ -86,6 +93,7 @@ function GameDevDSScreen( { selectedGame }) {
                   bg={dsButtonColor}
                   icon={<ChevronLeftIcon />}
                   borderRadius={0}
+                  borderLeftRadius={'10%'}
                   gridColumn={'1'}
                   gridRow={'2'}
                 />
@@ -101,6 +109,7 @@ function GameDevDSScreen( { selectedGame }) {
                   bg={dsButtonColor}
                   icon={<ChevronRightIcon />}
                   borderRadius={0}
+                  borderRightRadius={'10%'}
                   gridColumn={'3'}
                   gridRow={'2'}
                 />
@@ -109,6 +118,7 @@ function GameDevDSScreen( { selectedGame }) {
                   bg={dsButtonColor}
                   icon={<ChevronDownIcon />}
                   borderRadius={0}
+                  borderBottomRadius={'10%'}
                   gridColumn={'2'}
                   gridRow={'3'}
                 />
@@ -133,10 +143,10 @@ function GameDevDSScreen( { selectedGame }) {
                   h={'95%'}
                   overflowY={'scroll'}
                 >
-                  <Heading size="md">{selectedGame.title}</Heading>
-                  <Box>{selectedGame.genre}</Box>
-                  <Image src={selectedGame.icon} boxSize="100px" objectFit="contain" />
-                  <Box>{selectedGame.summary}</Box>
+                  <Heading size="md">{title}</Heading>
+                  <Box>{genre}</Box>
+                  <Image src={icon} boxSize="100px" objectFit="contain" />
+                  <Box>{summary}</Box>
                 </Box>
               </Center>
               
@@ -197,24 +207,17 @@ function GameDevDSScreen( { selectedGame }) {
       </Flex>
     </Box>
 
-    // <Box align="center" justify="center" width={'600px'}>
-    //   <Box borderWidth="2px" borderRadius="md" overflow="hidden" boxShadow="lg">
-    //     {/* Top Screen (YouTube Video) */}
-    //     <Box height="315px" width="560px" m={5}>
-    //       <Box dangerouslySetInnerHTML={{__html: selectedGame.video}} />
-    //     </Box>
-        
-    //     {/* Bottom Screen (Other Information) */}
-    //     <VStack m="10" p={'4'} spacing="4" align="flex-start" overflowY={'scroll'} maxHeight="275px" maxW={'100%'}>
-    //       <Heading size="md">{selectedGame.title}</Heading>
-    //       <Box>{selectedGame.genre}</Box>
-    //       <Image src={selectedGame.icon} boxSize="100px" objectFit="contain" />
-    //       <Box>{selectedGame.summary}</Box>
-    //     </VStack>
-    //   </Box>
-    // </Box>
-
   )
+}
+
+function TopDisplay(topScreen) {
+  // Depending on if the top display is a video or img changes the code
+
+  if (topScreen.includes('youtube')) {
+    return <Box h={'100%'} w={'100%'} dangerouslySetInnerHTML={{__html: topScreen}} />;
+  } else {
+    return <Image src={topScreen} w={'100%'} h={'100%'} objectFit={'cover'}/>;
+  }
 }
 
 export default GameDevDSScreen;
