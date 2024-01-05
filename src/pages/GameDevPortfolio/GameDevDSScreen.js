@@ -1,5 +1,5 @@
 import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, ExternalLinkIcon } from '@chakra-ui/icons';
-import { Box, Heading, Image, Flex, Center, Button, Grid, IconButton, Link } from '@chakra-ui/react';
+import { Box, Heading, Image, Flex, Center, Button, Grid, IconButton, Link, VStack, Spacer } from '@chakra-ui/react';
 import React from 'react';
 import SocialIcon from '../../components/SocialIcon';
 
@@ -173,13 +173,14 @@ function GameDevDSScreen( { selectedGame }) {
             </Box>
 
             {/* ABXY Buttons */}
-            <Center
+            <VStack
               bg={dsBaseColor}
               borderRightRadius={'15%'}
               w={'100%'}
               h={'100%'}
               pr={1}
               flex={1}
+              justifyContent={'space-evenly'}
             >
               <Grid
                 templateColumns={'repeat(3, 1fr)'}
@@ -221,7 +222,18 @@ function GameDevDSScreen( { selectedGame }) {
                 </Button>
 
               </Grid>
-            </Center>
+
+              <SocialIcon 
+                link={'https://emergencyplayer.itch.io/'} 
+                img={'/logos/SocialLogos/ItchIORed.png'} 
+
+              />
+
+              <SocialIcon 
+                link={'https://github.com/LaurenceTimothyMGarcia'} 
+                img={'/logos/SocialLogos/GithubLogoPurple.png'} 
+              />
+            </VStack>
           </Flex>
         </Box>
       </Flex>

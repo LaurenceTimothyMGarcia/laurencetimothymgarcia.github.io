@@ -12,16 +12,6 @@ function GameDevPortfolio() {
         <Heading>Game Development Portfolio</Heading>
       </Center>
 
-      <SocialIcon 
-        link={'https://emergencyplayer.itch.io/'} 
-        img={'/logos/SocialLogos/ItchIORed.png'} 
-      />
-      
-      <SocialIcon 
-        link={'https://github.com/LaurenceTimothyMGarcia'} 
-        img={'/logos/SocialLogos/GithubLogoPurple.png'} 
-      />
-
       <GameDevProjectDisplay />
     </Box>
   )
