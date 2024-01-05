@@ -14,7 +14,6 @@ function GameDevDSScreen( { selectedGame }) {
   return (
 
     <Box 
-      // bg={'white'} 
       h={'48vw'}
       w={'48vw'}
     >
@@ -24,6 +23,9 @@ function GameDevDSScreen( { selectedGame }) {
           bg={dsBaseColor}
           borderRadius={'5%'}
           h={'47.5%'}
+
+          borderWidth={2}
+          borderColor={'black'}
         >
           <Center w={'100%'} h={'100%'}>
             <Box
@@ -56,6 +58,8 @@ function GameDevDSScreen( { selectedGame }) {
         <Box 
           // bg={'green'}
           h={'47.5%'}
+          borderWidth={2}
+          borderColor={'black'}
         >
           <Flex justify={'center'} w={'100%'} h={'100%'}>
             {/* DPad */}
