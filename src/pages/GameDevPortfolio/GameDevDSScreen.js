@@ -1,6 +1,7 @@
 import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { Box, Heading, Image, Flex, Center, Button, Grid, IconButton, Link } from '@chakra-ui/react';
 import React from 'react';
+import SocialIcon from '../../components/SocialIcon';
 
 function GameDevDSScreen( { selectedGame }) {
 
@@ -158,14 +159,7 @@ function GameDevDSScreen( { selectedGame }) {
                 >
                   <Heading size="md">{title}</Heading>
 
-                  <Link href={link} isExternal>
-                    <IconButton 
-                      borderRadius={'50%'}
-                      w={'10%'} 
-                      variant={'outline'} 
-                      icon={<Image src='/logos/SocialLogos/ItchIORed.png' w={'100%'}/>}  
-                    />
-                  </Link>
+                  <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />
 
                   <Box>{genre}</Box>
 
