@@ -33,7 +33,6 @@ export default function Model(props) {
   // })
 
   return (
-    // Remove groupRef if not used
     <group {...props} dispose={null} ref={groupRef}>
       <group scale={[7, 0.25, 10]}>
         <mesh geometry={nodes.Cube.geometry} material={materials.BaseFloor} />
@@ -41,6 +40,7 @@ export default function Model(props) {
         <mesh geometry={nodes.Cube_2.geometry} material={materials.Wall} />
         <mesh geometry={nodes.Cube_3.geometry} material={materials.Ceiling} />
         <mesh geometry={nodes.Cube_4.geometry} material={materials.MossWall} />
+        <mesh geometry={nodes.Cube_5.geometry} material={materials.OuterWall} />
       </group>
       <group position={[-4.923, 0.454, 9.766]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={7}>
         <mesh geometry={nodes.Text001.geometry} material={materials['Nick Orange']} />
@@ -48,6 +48,59 @@ export default function Model(props) {
         <mesh geometry={nodes.Text001_2.geometry} material={materials.Light} />
       </group>
       <mesh geometry={nodes.Rug.geometry} material={materials.Rug} position={[1.551, 0.468, 1.885]} scale={[3.694, 0.1, 7.951]} />
+      <mesh geometry={nodes.Black_Entrance.geometry} material={materials.Door} position={[-5.136, 1.677, 7.977]} rotation={[0, 0, -Math.PI / 2]} scale={1.248} />
+      <group position={[1.953, 1.664, 8.952]} scale={[1, 0.069, 0.701]}>
+        <mesh geometry={nodes.Cube003.geometry} material={materials.BarTableBase} />
+        <mesh geometry={nodes.Cube003_1.geometry} material={materials.BarTableDiv} />
+      </group>
+      <group position={[-0.386, 1.314, 8.131]} rotation={[0, -0.164, 0]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube004.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube004_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[0.654, 1.314, 7.874]} rotation={[0, 0.285, 0]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube005.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube005_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[1.508, 1.314, 8.262]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube006.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube006_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[2.481, 1.314, 8.138]} rotation={[0, 0.259, 0]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube007.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube007_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[3.507, 1.314, 8.049]} rotation={[0, -0.207, 0]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube008.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube008_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[4.276, 1.314, 7.988]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube009.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube009_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[-0.386, 1.314, 9.532]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube010.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube010_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[0.654, 1.314, 9.491]} rotation={[0, -0.148, 0]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube011.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube011_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[1.508, 1.314, 9.532]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube012.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube012_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[2.481, 1.314, 9.512]} rotation={[0, 0.156, 0]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube013.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube013_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[3.507, 1.314, 9.532]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube014.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube014_1.geometry} material={materials.StoolTop} />
+      </group>
+      <group position={[4.276, 1.314, 9.532]} scale={[0.222, 0.028, 0.222]}>
+        <mesh geometry={nodes.Cube015.geometry} material={materials.BaseStool} />
+        <mesh geometry={nodes.Cube015_1.geometry} material={materials.StoolTop} />
+      </group>
     </group>
   )
 }
