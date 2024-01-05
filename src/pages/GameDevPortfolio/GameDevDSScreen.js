@@ -23,11 +23,22 @@ function GameDevDSScreen( { selectedGame }) {
     topScreen = TopDisplay(selectedGame.topScreen);
   }
 
+  const hoverStyles = {
+    transform: 'rotateX(0deg)',
+    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.3)',
+  }
+
   return (
 
     <Box 
       h={'48vw'}
       w={'48vw'}
+
+      // Transition stuff
+      cursor={'pointer'}
+      transition={'transform 0.6s, box-shadow 0.6s'}
+      transform={'rotateX(15deg) translateY(-50px) translateZ(-100px)'}
+      _hover={hoverStyles}
     >
       <Flex direction={'column'} h={'100%'}>
         {/* Top Screen */}
@@ -146,12 +157,22 @@ function GameDevDSScreen( { selectedGame }) {
                   overflowY={'scroll'}
                 >
                   <Heading size="md">{title}</Heading>
+
                   <Link href={link} isExternal>
-                    <Heading size={'md'}>{title} <ExternalLinkIcon /></Heading>
+                    <IconButton 
+                      borderRadius={'50%'}
+                      w={'10%'} 
+                      variant={'outline'} 
+                      icon={<Image src='/logos/SocialLogos/ItchIORed.png' w={'100%'}/>}  
+                    />
                   </Link>
+
                   <Box>{genre}</Box>
+
                   <Image src={icon} boxSize="100px" objectFit="contain" />
+
                   <Box>{summary}</Box>
+
                 </Box>
               </Center>
               
