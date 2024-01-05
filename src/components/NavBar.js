@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return(
-    <Box>
+    <Box
+      pr={'2%'}
+      pl={'2%'}
+    >
       <Flex
         minWidth='max-content'
         minHeight='10vh'
