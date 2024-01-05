@@ -15,6 +15,55 @@ const GameDevProjects = [
     genre: 'First Person Simulator',
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
   },
+  {
+    title: 'Procedural Terrain Generator',
+    icon: '/logos/ProjectIcons/TerrainGenerator.png',
+    summary: 'Summary of Terrain Generator',
+    genre: 'Unity Tool',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    title: 'Chachi',
+    icon: '/logos/ProjectIcons/ChachiLogo.png',
+    summary: 'Summary of Chachi',
+    genre: 'Survival Horror',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    title: 'Inkage',
+    icon: '/logos/ProjectIcons/InkageGame.png',
+    summary: 'Summary of Inkage',
+    genre: 'Board Game',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    title: 'We Play Tanks! Tanks!',
+    icon: '/logos/ProjectIcons/TankLogo.png',
+    summary: 'Summary of We Play Tanks! Tanks!',
+    genre: 'Third Person Shooter',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    title: 'Stick To It',
+    icon: '/logos/ProjectIcons/StickToItLogo.png',
+    summary: 'Summary of Stick to it',
+    genre: 'Puzzle Platformer',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    title: 'Locked and Loaded Die',
+    icon: '/logos/ProjectIcons/LockedLoadedDieLogo.jpg',
+    summary: 'Summary of Locked and Loaded Die',
+    genre: '2D Action Platformer',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    title: 'The Labryinth Run',
+    icon: '/logos/ProjectIcons/LabyrinthRunLogo.png',
+    summary: 'Summary of The Labryinth Run',
+    genre: 'First Person Shooter',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
 ]
 
 export default GameDevProjects;

@@ -9,15 +9,15 @@ function GameDevDSScreen( { selectedGame }) {
 
   return (
 
-    <Box align="center" justify="center" height="100vh" width={'600px'}>
+    <Box align="center" justify="center" width={'600px'}>
       <Box borderWidth="2px" borderRadius="md" overflow="hidden" boxShadow="lg">
         {/* Top Screen (YouTube Video) */}
-        <Box height="315px" width="560px">
+        <Box height="315px" width="560px" m={5}>
           <Box dangerouslySetInnerHTML={{__html: selectedGame.video}} />
         </Box>
         
         {/* Bottom Screen (Other Information) */}
-        <VStack p="4" spacing="4" align="flex-start" overflowY={'scroll'} maxHeight="275px" maxW={'100%'}>
+        <VStack m="10" p={'4'} spacing="4" align="flex-start" overflowY={'scroll'} maxHeight="275px" maxW={'100%'}>
           <Heading size="md">{selectedGame.title}</Heading>
           <Box>{selectedGame.genre}</Box>
           <Image src={selectedGame.icon} boxSize="100px" objectFit="contain" />

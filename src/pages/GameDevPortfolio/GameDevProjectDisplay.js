@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid } from '@chakra-ui/react';
+import { Box, Wrap, SimpleGrid } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import GameDevProjectCard from './GameDevProjectCard';
 import GameDevProjects from '../../data/GameDevProjects';
@@ -14,8 +14,8 @@ function GameDevProjectDisplay() {
 
   return (
     <Box>
-      <SimpleGrid columns={2}>
-        <Flex minW={'100%'}>
+      <SimpleGrid columns={2} alignItems={'center'}>
+        <Wrap minW={'100%'}>
           {GameDevProjects.map((game, index) => (
             <GameDevProjectCard 
               key={index}
@@ -24,7 +24,7 @@ function GameDevProjectDisplay() {
               onSelect={() => handleSelectGame(index)}
             />
           ))}
-        </Flex>
+        </Wrap>
 
         <GameDevDSScreen selectedGame={selectedGame}/>
 
