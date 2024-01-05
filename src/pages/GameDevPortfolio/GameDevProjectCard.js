@@ -5,13 +5,18 @@ import React from 'react';
 
 function GameDevProjectCard( { title, img, onSelect } ) {
 
-  const cardColor = '#606060';
+  const cardColor = '#303030';
+
+  const hoverStyles = {
+    transform: 'rotateX(0deg)',
+    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.3)',
+  }
 
   return (
     <Box
       bg={cardColor} // DS cartridge color
       borderRadius="10px" // Rounded corners
-      boxShadow="0px 0px 10px rgba(0, 0, 0, 0.5)" // Shadow effect
+      boxShadow="0px 20px 60px rgba(0, 0, 0, 0.5)" // Shadow effect
       width="80%" // Set width
       maxWidth="250px" // Set width
       height={''}
@@ -20,6 +25,12 @@ function GameDevProjectCard( { title, img, onSelect } ) {
       position="relative" // Positioning for inner elements
       overflow="hidden" // Hide overflow content
       onClick={onSelect}
+
+      // Transition stuff
+      cursor={'pointer'}
+      transition={'transform 0.6s, box-shadow 0.6s'}
+      transform={'rotateX(30deg) translateY(-50px) translateZ(-100px)'}
+      _hover={hoverStyles}
     >
       <Box
         bg="#FFFFFF" // White background for title
