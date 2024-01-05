@@ -14,6 +14,8 @@ function GameDevProjectCard( { title, img, onSelect } ) {
       boxShadow="0px 0px 10px rgba(0, 0, 0, 0.5)" // Shadow effect
       width="80%" // Set width
       maxWidth="250px" // Set width
+      height={''}
+      maxHeight={'325px'}
       p="10px" // Padding
       position="relative" // Positioning for inner elements
       overflow="hidden" // Hide overflow content

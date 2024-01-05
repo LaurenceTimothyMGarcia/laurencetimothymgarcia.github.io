@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex, SimpleGrid } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import GameDevProjectCard from './GameDevProjectCard';
 import GameDevProjects from '../../data/GameDevProjects';
@@ -14,16 +14,23 @@ function GameDevProjectDisplay() {
 
   return (
     <Box>
-      <GameDevDSScreen selectedGame={selectedGame}/>
+      <SimpleGrid columns={2}>
+        <Flex minW={'100%'}>
+          {GameDevProjects.map((game, index) => (
+            <GameDevProjectCard 
+              key={index}
+              title={game.title}
+              img={game.icon}
+              onSelect={() => handleSelectGame(index)}
+            />
+          ))}
+        </Flex>
 
-      {GameDevProjects.map((game, index) => (
-        <GameDevProjectCard 
-          key={index}
-          title={game.title}
-          img={game.icon}
-          onSelect={() => handleSelectGame(index)}
-        />
-      ))}
+        <GameDevDSScreen selectedGame={selectedGame}/>
+
+        
+      </SimpleGrid>
+      
     </Box>
   )
 }
