@@ -1022,12 +1022,9 @@
 			"doubleSided":true,
 			"name":"Monke3",
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.18069308996200562,
-					0.18378299474716187,
-					0.0036088419146835804,
-					1
-				],
+				"baseColorTexture":{
+					"index":26
+				},
 				"metallicFactor":0,
 				"roughnessFactor":0.14566928148269653
 			}
@@ -1037,7 +1034,7 @@
 			"name":"Monke4",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":26
+					"index":27
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.14566928148269653
@@ -1048,7 +1045,7 @@
 			"name":"Beanbag",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":27
+					"index":28
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.8318182229995728
@@ -1059,7 +1056,7 @@
 			"name":"Bed",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":28
+					"index":29
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.6454545259475708
@@ -1070,7 +1067,7 @@
 			"name":"Bedframe",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":29
+					"index":30
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1081,7 +1078,7 @@
 			"name":"Pillow",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":30
+					"index":31
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1092,7 +1089,7 @@
 			"name":"OverheadShelf",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":31
+					"index":32
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1103,7 +1100,7 @@
 			"name":"Switch",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":32
+					"index":33
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1114,7 +1111,7 @@
 			"name":"SwitchInner",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":33
+					"index":34
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1125,7 +1122,7 @@
 			"name":"SwitchFrontCover",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":34
+					"index":35
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1136,7 +1133,7 @@
 			"name":"SwitchBackCover",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":35
+					"index":36
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -1147,7 +1144,7 @@
 			"name":"PHFlag",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":36
+					"index":37
 				},
 				"metallicFactor":0,
 				"roughnessFactor":0.5
@@ -2614,6 +2611,10 @@
 		{
 			"sampler":0,
 			"source":9
+		},
+		{
+			"sampler":0,
+			"source":8
 		},
 		{
 			"sampler":0,
