@@ -11,50 +11,71 @@ const WorkExpItem = ({ alt=false, workExp, scene }) => {
   const skills = workExp.skills
   const jobDesc = workExp.jobDesc
 
-  if (alt) {
-    return(
-      <Flex
-        gap={"1rem"}
+  return(
+    <Flex
+      gap={"1rem"}
+    >
+      <Box
+        // bg='red'
+        flex={'2'}
+        aspectRatio={1}
       >
-        <Box
-          // bg='red'
-          flex={'3'}
-        >
-          <Heading>{title}</Heading>
-        </Box>
+        {scene}
+      </Box>
 
-        <Box
-          // bg='red'
-          flex={'2'}
-          aspectRatio={1}
-        >
-          {scene}
-        </Box>
-  
-      </Flex>
-    )
-  } else {
-    return(
-      <Flex
-        gap={"1rem"}
+      <Box
+        // bg='red'
+        flex={'3'}
       >
-        <Box
-          // bg='red'
-          flex={'2'}
-          aspectRatio={1}
-        >
-          {scene}
-        </Box>
+        <Heading>{title}</Heading>
+      </Box>
+    </Flex>
+  )
+
+  // if (alt) {
+  //   return(
+  //     <Flex
+  //       gap={"1rem"}
+  //     >
+  //       <Box
+  //         // bg='red'
+  //         flex={'3'}
+  //       >
+  //         <Heading>{title}</Heading>
+  //       </Box>
+
+  //       <Box
+  //         // bg='red'
+  //         flex={'2'}
+  //         aspectRatio={1}
+  //       >
+  //         {scene}
+  //       </Box>
   
-        <Box
-          // bg='red'
-          flex={'3'}
-        >
-          <Heading>{title}</Heading>
-        </Box>
-      </Flex>
-    )
-  }
+  //     </Flex>
+  //   )
+  // } else {
+  //   return(
+  //     <Flex
+  //       gap={"1rem"}
+  //     >
+  //       <Box
+  //         // bg='red'
+  //         flex={'2'}
+  //         aspectRatio={1}
+  //       >
+  //         {scene}
+  //       </Box>
+  
+  //       <Box
+  //         // bg='red'
+  //         flex={'3'}
+  //       >
+  //         <Heading>{title}</Heading>
+  //       </Box>
+  //     </Flex>
+  //   )
+  // }
 
   
 }
