@@ -11,7 +11,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/models/Nick_Room/Nick_IsoRoom.gltf')
   const groupRef = useRef()
 
-  const [rotateForward, setRotateForward] = useState(true);
+  const [rotateForward, setRotateForward] = useState(false);
 
   // Rotates back and forth showing only the front side
   useFrame(() => {

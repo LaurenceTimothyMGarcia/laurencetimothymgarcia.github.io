@@ -4,6 +4,7 @@ import AboutMeCanvas from './AboutMeCanvas';
 import SkillDisplay from '../../components/SkillDisplay';
 import SkillLanguages from '../../data/SkillLanguages';
 import SkillTools from '../../data/SkillTools';
+import Intro from '../../data/Introduction';
 
 function AboutMeDesktop() {
   return(
@@ -29,8 +30,10 @@ function AboutMeDesktop() {
       <GridItem 
         area={'intro'}
         // bg={'tomato'}
+        overflowY={'scroll'}
       >
         <Center><Heading>Introduction</Heading></Center>
+        <Text>{Intro}</Text>
       </GridItem>
 
       <GridItem 

@@ -1,7 +1,15 @@
 import { Flex, Box, Heading, Spacer } from "@chakra-ui/react";
 import React from "react";
 
-const WorkExpItem = ({ alt=false, workTitle, scene }) => {
+const WorkExpItem = ({ alt=false, workExp, scene }) => {
+
+  const title = workExp.title
+  const company = workExp.company
+  const location = workExp.location
+  const startDate = workExp.startDate
+  const endDate = workExp.endDate
+  const skills = workExp.skills
+  const jobDesc = workExp.jobDesc
 
   if (alt) {
     return(
@@ -12,7 +20,7 @@ const WorkExpItem = ({ alt=false, workTitle, scene }) => {
           // bg='red'
           flex={'3'}
         >
-          <Heading>{workTitle}</Heading>
+          <Heading>{title}</Heading>
         </Box>
 
         <Box
@@ -42,7 +50,7 @@ const WorkExpItem = ({ alt=false, workTitle, scene }) => {
           // bg='red'
           flex={'3'}
         >
-          <Heading>{workTitle}</Heading>
+          <Heading>{title}</Heading>
         </Box>
       </Flex>
     )
