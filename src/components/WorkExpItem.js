@@ -28,6 +28,11 @@ const WorkExpItem = ({ alt=false, workExp, scene }) => {
         flex={'3'}
       >
         <Heading>{title}</Heading>
+        <Heading>{company}</Heading>
+      </Box>
+
+      <Box>
+        
       </Box>
     </Flex>
   )
