@@ -1,15 +1,31 @@
 import React from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
+import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { Suspense } from 'react'
 import { OrbitControls } from "@react-three/drei"
-import BaseIsoRoom from '../../models/BaseIsoRoom'
+import AboutMeRoom from '../../models/AboutMeRoom'
+
+function CamSettings() {
+  const { camera } = useThree();
+
+  camera.near = 0.1;
+  camera.far = 1000;
+
+  // Set camera position, rotation, and scale
+  camera.position.set(19, 25, 19)
+  camera.rotation.set(-45 * Math.PI / 180, 45 * Math.PI / 180, 35 * Math.PI / 180)
+
+  camera.updateProjectionMatrix()
+
+  return null;
+}
 
 function AboutMeCanvas() {
 
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <BaseIsoRoom/>
+        <AboutMeRoom/>
+        <CamSettings />
       </Suspense>
 
       <ambientLight intensity={Math.PI / 2} />

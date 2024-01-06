@@ -9,23 +9,12 @@ function CamSettings() {
 
   const { camera } = useThree();
 
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  const aspect = width / height;
-  // Change this value to adjust the view size 
-  const frustumSize = 17;
-
-  camera.left = -frustumSize * aspect / 2
-  camera.right = frustumSize * aspect / 2
-  camera.top = frustumSize / 2
-  camera.bottom = -frustumSize / 2
   camera.near = 0.1
   camera.far = 1000
 
   // Set camera position, rotation, and scale
-  camera.position.set(17, 16, 12)
+  camera.position.set(13, 12, 9)
   camera.rotation.set(-45 * Math.PI / 180, 45 * Math.PI / 180, 35 * Math.PI / 180)
-  camera.scale.set(1, 1, 1)
 
   camera.updateProjectionMatrix()
 
