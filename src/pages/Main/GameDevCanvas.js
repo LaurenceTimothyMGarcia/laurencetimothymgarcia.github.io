@@ -1,8 +1,9 @@
 import React from "react"
-import { Canvas, useThree } from "@react-three/fiber"
+import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { Suspense } from 'react'
 import { OrbitControls } from "@react-three/drei"
-import AboutMeRoom from '../../models/AboutMeRoomTextured'
+
+import AboutMeRoom from '../../models/AboutMeRoom'
 
 function CamSettings() {
   const { camera } = useThree();
@@ -19,12 +20,12 @@ function CamSettings() {
   return null;
 }
 
-function AboutMeCanvas() {
+function GameDevCanvas() {
 
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <AboutMeRoom/>
+        <AboutMeRoom />
         <CamSettings />
       </Suspense>
 
@@ -36,4 +37,4 @@ function AboutMeCanvas() {
   )
 }
 
-export default AboutMeCanvas;
+export default GameDevCanvas;

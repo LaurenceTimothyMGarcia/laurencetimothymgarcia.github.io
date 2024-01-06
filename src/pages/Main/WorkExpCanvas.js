@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Canvas, useThree } from "@react-three/fiber"
 import { Suspense } from 'react'
 import { OrbitControls } from "@react-three/drei"
