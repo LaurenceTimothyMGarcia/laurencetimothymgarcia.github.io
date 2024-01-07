@@ -1,6 +1,7 @@
 {
   "name": "laurence-portfolio-site",
   "version": "0.1.0",
+  "homepage": "https://laurencetimothymgarcia.github.io",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -20,6 +21,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "r3f-pack start",
     "build": "r3f-pack build",
     "test": "react-scripts test",
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "r3f-pack": "^2.6.2"
   }
 }
