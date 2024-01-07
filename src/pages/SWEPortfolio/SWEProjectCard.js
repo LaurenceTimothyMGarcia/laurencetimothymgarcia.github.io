@@ -5,17 +5,19 @@ import SkillItemCard from '../../components/SkillItemCard';
 
 function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
 
-  // Title of project
-  // Icon for project
-  // Requires Summary of project
-  // Description of project
-  // tech used for project
-  // Direct link to project
-  // Screenshots / video
+  const hoverColor = '#7F9FFA'
 
   return(
     // <Card align={'center'} size={'sm'} maxW={'30vw'}>
-    <Card align={'center'} size={'sm'} maxW={'22rem'} minW={'22rem'}>
+    <Card 
+      align={'center'} 
+      size={'sm'} 
+      maxW={'22rem'} 
+      minW={'22rem'}
+      _hover={{
+        backgroundColor: hoverColor
+      }}
+    >
       <CardHeader align={'center'}>
         <Heading size={'lg'}>{title}</Heading>
         <Link href={link} isExternal>
