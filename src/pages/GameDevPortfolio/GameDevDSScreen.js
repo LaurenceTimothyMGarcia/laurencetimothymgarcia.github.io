@@ -160,7 +160,10 @@ function GameDevDSScreen( { selectedGame }) {
                   <Heading size="md">{title}</Heading>
                   <Heading size='sm' mb={'1rem'}>{genre}</Heading>
 
-                  <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />
+                  <Center>
+                    <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />
+                  </Center>
+                  
 
                   <Box mt={'1rem'}>{summary}</Box>
 
