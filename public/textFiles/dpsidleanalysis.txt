@@ -1,0 +1,77 @@
+Laurence Garcia & Melvin Gitbumrungsin
+CS 2990
+Dr. Markus Eger
+
+Design Analysis of DPS Idle
+
+Introduction
+    DPS Idle is a free to play idle game where your character explores a dungeon, defeating enemies, and unlocks cards to defeat stronger enemies. While 
+being a very simple game on the surface, there are multiple components to this game that makes it an addicting time for players to enjoy.
+
+Gameplay Loop
+    DPS Idle features both a core gameplay loop with its monsters, cards, and dungeon system, and an outer gameplay loop with its guild and hero systems. 
+With its core gameplay loop, the player starts off with defeating the first monster, from there they receive gold to buy a random card. The random card 
+has a property that will deal damage to the monster, help boost damage of other cards, or earn more gold. From here the player defeats more monsters, with 
+each type of monster being worth more gold and more hit points, which earns the player more gold to buy more cards and the gameplay loops itself. When a 
+player unlocks all the cards in a deck, they have the option to upgrade one of those cards to a silver card, which will unlock that card for the rest of 
+the round and increase the effects of that card, but it will place all the other cards back into the deck. 
+    The outer gameplay loop of DPS Idle occurs when the player has enough gold to join a guild. Joining a guild provides a multiplier for a specific stat 
+that grows as the current run goes on. Within the time played, only 2 guilds were able to be joined, the merchant guild and the warriors guild, which 
+multiplies the gold income and damage per second respectively. The player has the option to stay in the guild for more benefits for their current run, such 
+as free unlocks for their cards and instant kills on specific monsters. However, the player also has the option to leave the guild. Upon leaving the guild, 
+they can start a new run, but with the benefit of the multiplier they received and grew from the previous run. This allows the player to start fresh but get 
+further into the dungeon at a faster pace, creating the outer gameplay loop.
+
+Space, Objects w/ Attributes, Actions
+    Being an idle game, the space is primarily focused on the game screen and the UI elements for the different menus. The center of the screen has the monster 
+with its hit points, amount of gold it was worth, and depending on the monster another currency with the percentage of obtaining that currency on defeat. 
+The other parts of the screen are taken up by UI elements showing either the cards the player has unlocked or the spheres of magic, where if the player clicks 
+on them a specific amount of times, a damage multiplier will be applied to the cards. There are also other screens that allow for more upgrades such as the Guild 
+and Heroes System.
+    There are various objects in the game that impact the gameplay systems. The main object, the player, has gold, leafs, cards, silver blue coins, skulls, and 
+total DPS which correlates to the cards. The cards themselves have a deck they belong to, a color indicating their “level”, and a function, whether they deal 
+damage, give more gold, or boost other cards. The monsters have hit points and the gold they are worth upon defeating them, and some monsters also have another 
+currency they drop by chance. Chests by cards of a specific deck and have a cost that increases with each purchase. Guilds have a multiplier that grows as the 
+run continues, and upgrades and bonuses that apply to the current run. Heroes feature upgrades that also apply to the current run and to future runs. Finally 
+there are achievements and quests that can unlock gems, which are the premium currency of the game.
+    With the space and objects, the player has multiple actions they can take. The most basic action is clicking on the monster to deal damage, but this quickly 
+becomes irrelevant as the click (until the hero upgrades) just stays at 1 damage per click. The player can use the gold to open chests to obtain a random card in 
+the deck, with the chest price increasing after each purchase. They can also click on the spheres of magic to add a damage multiplier to the player. Additionally 
+they can use a leaf or silver blue coin to enhance a random card. They can join a guild to have a multiplier build up overtime and leave that guild to restart the 
+game but with the multiplier applied to their next run. They can also choose a hero after meeting a certain criteria such as having 8 silver cards. It should be 
+noted that they can also go to the shop to use real money to buy gems for effects that last between runs.
+
+Goal of the game, and how player decisions affect reaching the goal
+    The overarching goal of the game is to clear the dungeon by defeating each enemy at least once. The player cannot move on to the next monster without first 
+defeating the previous one. While this is the primary goal of the game, there are a few other sub-goals that the player may strive for such as collecting/upgrading 
+all the cards, getting as much DPS as possible, and upgrading the hero as much as possible. There are a few decisions that can be made by the player, with some 
+affecting their progress more than others. Three of the most impactful decisions that the player can make are: which chest to spend their gold on, which card to 
+upgrade, and when to leave the guild for a new run. 
+    Choosing which chest to spend their gold on can greatly affect a player’s progress since there are times where one chest may be more advantageous than others. 
+In general, the later game decks are more powerful than the previous ones, but there is a point where sticking to the same chest leads to diminishing returns. This 
+is when it would become more beneficial for the player to choose a different chest to purchase, since it would offset the diminishing returns. Another impactful 
+choice the player must make is choosing which card to upgrade. Some cards may lead to a huge short term gain in resources, but end up losing value as time passes. 
+Other cards may provide the opposite effect. If the player chooses a non-optimal card, they may find themself feeling stuck. They may not be able to collect and 
+upgrade cards at a fast rate, and their DPS may also suffer as a result of choosing to upgrade a card at the wrong time. Finally, choosing when to leave a guild 
+to restart their progress can also impact a player’s ability to achieve their goals. There comes a point where progress will inevitably slow down so much to the 
+point where a player may feel completely stuck. To escape this situation, the player has the choice of leaving their guild and restarting all of their progress, 
+but this time they have a substantial multiplier to either their income or damage per second to ensure that they get farther than they did in their previous run.
+    All three of these decisions mentioned share a common goal: to offset diminishing returns as much as possible. The player’s job is to keep progress flowing at 
+all times and avoid reaching a point where they are unable to progress any further. In doing so, this will help the player clear the dungeon at a faster rate, gain 
+resources at a faster rate, and it keeps the game’s sense of gratification flowing. 
+
+Effect of luck and skill on the game
+    It should be noted that all of the player’s decisions will result in a gain of resources in one way or another; however, there are certainly some decisions that 
+will lead to a much greater gain than others. Knowing which decisions to make is the “skill” aspect of the game. If a player is able to properly assess which decision 
+would result in a larger increase in progress, they would be able to achieve their goals much faster than someone who makes random decisions. For example, if someone 
+is able to do the math and calculate which upgraded card would result in the biggest increase in DPS, this would greatly influence how quickly they progress. However, 
+there are still a few “luck” aspects of the game that must be considered. 
+    It is completely random which card gets drawn when a player purchases a chest. They are able to draw a new card, but oftentimes players find themselves continuously
+ drawing cards that they’ve already drawn, which slows down their ability to upgrade cards. This can cause players to get stuck at certain times since they are unable 
+ to draw the card that they need to keep upgrading. Another instance of luck in the game is when a player chooses to boost their cards. The card that is chosen to get 
+ boosted is completely random, and it is possible for unimportant cards to get boosted instead of a more valuable card. While this isn’t as impactful as the randomness 
+ of drawing cards from chests, it can still affect a player’s progress in the long run. 
+    Even though the majority of a player’s run is determined by their skill, these instances of luck are still capable of greatly impacting their gameplay. They may get 
+stuck trying to draw the card they need, or they may get everything they need and make great progress. This is entirely determined by how lucky the player gets. The 
+percentage of how much “skill” determines the course of action in the game is most likely around 90%, while luck contributes to approximately 10% of the gameplay.
+
