@@ -2,10 +2,12 @@ import React from 'react';
 import { Center, Heading, Image, Text, Flex, Link, Card, CardHeader, CardBody, CardFooter, Accordion, AccordionItem, AccordionButton, AccordionPanel, Spacer } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import SkillItemCard from '../../components/SkillItemCard';
+import colors from '../../theme/Color';
 
 function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
 
-  const hoverColor = '#7F9FFA'
+  const hoverColor = colors.bgSecondary
+  const hoverTextColor = colors.text
 
   return(
     // <Card align={'center'} size={'sm'} maxW={'30vw'}>
@@ -15,7 +17,8 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
       maxW={'22rem'} 
       minW={'22rem'}
       _hover={{
-        backgroundColor: hoverColor
+        backgroundColor: hoverColor,
+        color: hoverTextColor
       }}
     >
       <CardHeader align={'center'}>

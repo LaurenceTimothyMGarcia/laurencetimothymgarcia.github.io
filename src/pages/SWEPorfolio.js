@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Center, Heading, Link } from '@chakra-ui/react';
 import SWEProjectDisplay from './SWEPortfolio/SWEProjectDisplay';
 import SocialIcon from '../components/SocialIcon';
+import colors from '../theme/Color';
 
 function SWEPorfolio() {
   return (
@@ -9,7 +10,11 @@ function SWEPorfolio() {
       <Center
         p={'2vh'}
       >
-        <Heading>Software Engineering Portfolio</Heading>
+        <Heading
+          color={colors.primary}
+        >
+          Software Engineering Portfolio
+        </Heading>
       </Center>
 
       <Center mb={'1rem'}>
