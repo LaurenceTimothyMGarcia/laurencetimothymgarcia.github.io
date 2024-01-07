@@ -4,7 +4,10 @@ import Socials from "../pages/Socials";
 
 function Footer() {
   return(
-    <Box>
+    <Box
+      pr={'2%'}
+      pl={'2%'}
+    >
       <Flex
         minWidth='max-content'
         minHeight='4vh'
