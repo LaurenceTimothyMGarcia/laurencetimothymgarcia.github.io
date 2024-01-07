@@ -2,6 +2,7 @@ import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, Exte
 import { Box, Heading, Image, Flex, Center, Button, Grid, IconButton, Link, VStack, Spacer, HStack } from '@chakra-ui/react';
 import React from 'react';
 import SocialIcon from '../../components/SocialIcon';
+import colors from '../../theme/Color';
 
 function GameDevDSScreen( { selectedGame }) {
 
@@ -157,8 +158,8 @@ function GameDevDSScreen( { selectedGame }) {
                   h={'95%'}
                   overflowY={'scroll'}
                 >
-                  <Heading size="md">{title}</Heading>
-                  <Heading size='sm' mb={'1rem'}>{genre}</Heading>
+                  <Heading size="md" color={colors.secondary}>{title}</Heading>
+                  <Heading size='sm' mb={'1rem'} color={colors.accent}>{genre}</Heading>
 
                   <Center>
                     <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Center, Flex, Heading } from '@chakra-ui/react';
 import GameDevProjectDisplay from './GameDevPortfolio/GameDevProjectDisplay';
 import SocialIcon from '../components/SocialIcon';
+import colors from '../theme/Color';
 
 function GameDevPortfolio() {
   return (
@@ -9,7 +10,7 @@ function GameDevPortfolio() {
       <Center
         p={'2vh'}
       >
-        <Heading>Game Development Portfolio</Heading>
+        <Heading color={colors.primary}>Game Development Portfolio</Heading>
       </Center>
 
       <GameDevProjectDisplay />
