@@ -3,6 +3,7 @@ import { Center, Grid, GridItem, Heading } from '@chakra-ui/react'
 import SWECanvas from './SWECanvas';
 import GameDevCanvas from './GameDevCanvas';
 import { Link } from "react-router-dom";
+import colors from '../../theme/Color';
 
 function PortfolioDesktop() {
   return (
@@ -27,7 +28,7 @@ function PortfolioDesktop() {
         area={'secTitle'}
         // bg={'green'}
       >
-        <Center><Heading>Project Porfolios</Heading></Center>
+        <Center><Heading mb={'1rem'} mt={'3rem'} color={colors.primary}>Project Porfolios</Heading></Center>
       </GridItem>
 
       <GridItem
@@ -54,14 +55,14 @@ function PortfolioDesktop() {
         area={'sweTitle'}
         // bg={'green'}
       >
-        <Center><Heading><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></Heading></Center>
+        <Center><Heading size={'lg'} color={colors.secondary}><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></Heading></Center>
       </GridItem>
 
       <GridItem
         area={'gamedevTitle'}
         // bg={'green'}
       >
-        <Center><Heading><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></Heading></Center>
+        <Center><Heading size={'lg'} color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></Heading></Center>
       </GridItem>
     </Grid>
   )

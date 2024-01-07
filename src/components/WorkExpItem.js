@@ -1,6 +1,7 @@
 import { Flex, Box, Heading, Spacer, UnorderedList, ListItem, Icon, Image } from "@chakra-ui/react";
 import React from "react";
 import SkillItemCard from './SkillItemCard';
+import colors from "../theme/Color";
 
 const WorkExpItem = ({ alt=false, workExp, scene }) => {
 
@@ -31,9 +32,9 @@ const WorkExpItem = ({ alt=false, workExp, scene }) => {
         // bg='red'
         flex={'3'}
       >
-        <Heading size={'md'}>{startDate} - {endDate}</Heading>
-        <Heading size={'xl'}>{title}</Heading>
-        <Heading size={'lg'}>{company}</Heading>
+        <Heading size={'md'} color={colors.accent}>{startDate} - {endDate}</Heading>
+        <Heading size={'xl'} color={colors.secondary}>{title}</Heading>
+        <Heading size={'lg'} color={colors.secondary}>{company}</Heading>
 
         {/* Skills */}
         <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'}>

@@ -6,6 +6,8 @@ import SkillLanguages from '../../data/SkillLanguages';
 import SkillTools from '../../data/SkillTools';
 import Intro from '../../data/Introduction';
 
+import colors from '../../theme/Color';
+
 function AboutMeDesktop() {
   return(
     <Grid
@@ -24,7 +26,7 @@ function AboutMeDesktop() {
         area={'secTitle'}
         // bg='tomato'
       >
-        <Center><Heading>About Me</Heading></Center>
+        <Center><Heading color={colors.primary}>About Me</Heading></Center>
       </GridItem>
 
       <GridItem 
@@ -32,13 +34,15 @@ function AboutMeDesktop() {
         // bg={'tomato'}
         overflowY={'scroll'}
       >
-        <Center><Heading>Introduction</Heading></Center>
+        <Center><Heading color={colors.secondary}>Introduction</Heading></Center>
         <Text>{Intro}</Text>
       </GridItem>
 
       <GridItem 
         area={'canvas'}
-        // bg={'tomato'}
+        bg={colors.bgSecondary}
+
+        // boxShadow={'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;'}
       >
         <AboutMeCanvas/>
       </GridItem>
@@ -47,7 +51,7 @@ function AboutMeDesktop() {
         area={'edu'}
         // bg={'tomato'}
       >
-        <Center><Heading>Education</Heading></Center>
+        <Center><Heading color={colors.secondary}>Education</Heading></Center>
         <Center><Heading size={'md'}>Computer Science B.S</Heading></Center>
         <Center><Heading size={'md'}>Cal Poly Pomona</Heading></Center>
 
@@ -69,7 +73,7 @@ function AboutMeDesktop() {
         area={'skills'}
         // bg={'tomato'}
       >
-        <Center><Heading size={'lg'}>Skills</Heading></Center>
+        <Center><Heading size={'lg'} color={colors.secondary}>Skills</Heading></Center>
         <SkillDisplay sectionTitle={'Programming Languages'} skillSet={SkillLanguages}/>
         <SkillDisplay sectionTitle={'Tools'} skillSet={SkillTools}/>
       </GridItem>

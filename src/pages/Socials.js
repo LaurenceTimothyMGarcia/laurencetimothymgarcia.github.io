@@ -1,6 +1,7 @@
 import { Box, Text, VStack, Wrap, Heading, Center } from '@chakra-ui/react'
 import React from 'react'
 import SocialIcon from '../components/SocialIcon';
+import colors from '../theme/Color';
 
 function Socials({ footer=false }) {
 
@@ -48,7 +49,7 @@ function Socials({ footer=false }) {
   return(
     <Box>
       <Center mb={'2rem'}>
-        <Heading>Connect with Me!</Heading>
+        <Heading color={colors.primary}>Connect with Me!</Heading>
       </Center>
       
       <Wrap justify={'space-evenly'} w={'100%'} h={'25vh'}>
