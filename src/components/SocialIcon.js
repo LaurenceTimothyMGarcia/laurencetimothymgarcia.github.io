@@ -3,18 +3,18 @@ import React from 'react';
 
 function SocialIcon( {link, img} ) {
   return (
-    <Box>
-      <Link href={link} isExternal>
+    <Link href={link} isExternal>
+      <Box display="flex" justifyContent="center" alignItems="center">
         <IconButton 
           borderRadius={'50%'}
           borderColor={''}
           w={'10%'} 
-          h={'100%'} 
           variant={'outline'} 
           icon={<Image src={img} w={'100%'}/>}  
         />
-      </Link>
-    </Box>
+      </Box>
+      
+    </Link>
   )
 }
 

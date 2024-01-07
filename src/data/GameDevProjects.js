@@ -12,7 +12,7 @@ const GameDevProjects = [
   {
     title: 'VR Drone Training Simulator',
     icon: '/logos/ProjectIcons/VRDroneTraining.jpg',
-    summary: 'Summary of drone',
+    summary: "A virtual reality simiulation that allows the user to fly a drone in simulated real-life environments and weather conditions. Within an environment, users use an in-game controller to fly the drone and can swap into the drone's perspective. The user has the choice to pick the time of day and weather conditions which will also impact the drone's physics, when flying. The software also includes an 'exam' feature which tests the user on flight regulation questions based on California's drone license exams from previous years. ",
     genre: 'First Person Simulator',
     topScreen: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/YcD0RUF4Hl4?si=QAtS_HOCJpJJ3Kat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
     link: 'https://www.youtube.com/watch?v=YcD0RUF4Hl4',
@@ -20,7 +20,7 @@ const GameDevProjects = [
   {
     title: 'Procedural Terrain Generator',
     icon: '/logos/ProjectIcons/TerrainGenerator.png',
-    summary: 'Summary of Terrain Generator',
+    summary: 'Programmed a custom procedural terrain generator in Unity using Perlin Noise. Implemented features enabling users to customize the terrain to their needs, from mountain ranges, valleys, canyons, etc. Designed a custom shader to enable the terrain to have various textures based on elevation levels. ',
     genre: 'Unity Tool',
     topScreen: '/logos/ProjectIcons/GameScreenshots/ProcTerrainGenSS.png',
     link: 'https://github.com/LaurenceTimothyMGarcia/GunslingerHilda',
