@@ -4,7 +4,6 @@ const WorkExp = [
   {
     title: 'Animation Technology Intern',
     company: 'Nickelodeon Animation Studio',
-    location: 'Burbank, CA',
     startDate: 'June 2023',
     endDate: 'August 2023',
     skills: [

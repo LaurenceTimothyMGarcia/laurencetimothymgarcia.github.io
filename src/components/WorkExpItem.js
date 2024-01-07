@@ -1,11 +1,11 @@
-import { Flex, Box, Heading, Spacer } from "@chakra-ui/react";
+import { Flex, Box, Heading, Spacer, UnorderedList, ListItem, Icon, Image } from "@chakra-ui/react";
 import React from "react";
+import SkillItemCard from './SkillItemCard';
 
 const WorkExpItem = ({ alt=false, workExp, scene }) => {
 
   const title = workExp.title
   const company = workExp.company
-  const location = workExp.location
   const startDate = workExp.startDate
   const endDate = workExp.endDate
   const skills = workExp.skills
@@ -14,7 +14,10 @@ const WorkExpItem = ({ alt=false, workExp, scene }) => {
   return(
     <Flex
       gap={"1rem"}
+      mt={'1rem'}
+      mb={'1rem'}
     >
+      {/* Canvas */}
       <Box
         // bg='red'
         flex={'2'}
@@ -23,16 +26,30 @@ const WorkExpItem = ({ alt=false, workExp, scene }) => {
         {scene}
       </Box>
 
+      {/* General information */}
       <Box
         // bg='red'
         flex={'3'}
       >
-        <Heading>{title}</Heading>
-        <Heading>{company}</Heading>
-      </Box>
+        <Heading size={'md'}>{startDate} - {endDate}</Heading>
+        <Heading size={'xl'}>{title}</Heading>
+        <Heading size={'lg'}>{company}</Heading>
 
-      <Box>
-        
+        {/* Skills */}
+        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'}>
+          {skills.map((skill, index) => (
+            <SkillItemCard key={index} title={skill.title} img={skill.img} />
+          ))}
+        </Flex>
+
+        {/* Job Description */}
+        <Box p={'0.5rem'}>
+          <UnorderedList>
+            {jobDesc.map((task, index) => (
+              <ListItem key={index}>{task}</ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
       </Box>
     </Flex>
   )
