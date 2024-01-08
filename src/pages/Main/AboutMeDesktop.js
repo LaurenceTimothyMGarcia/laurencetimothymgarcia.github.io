@@ -5,8 +5,9 @@ import SkillDisplay from '../../components/SkillDisplay';
 import SkillLanguages from '../../data/SkillLanguages';
 import SkillTools from '../../data/SkillTools';
 import Intro from '../../data/Introduction';
-
 import colors from '../../theme/Color';
+import IntroSection from './IntroSection';
+import Education from './Education';
 
 function AboutMeDesktop() {
   return(
@@ -35,26 +36,7 @@ function AboutMeDesktop() {
         // bg={'tomato'}
         overflowY={'auto'}
       >
-        <Center><Heading color={colors.secondary}>Introduction</Heading></Center>
-        {/* <Text>{Intro}</Text> */}
-        <Text>Hi there! I am Laurence Garcia, a newly graduated Computer Science major from Cal Poly Pomona</Text>
-        <UnorderedList>
-
-          <ListItem>
-            I am on my journey to refine my skill set in the fields of Software Engineering, Game Development, and Technical Art.
-          </ListItem>
-
-          <ListItem>
-            I recently interned at Nickelodeon Animation Studios, where I developed 
-            production-enhancing tools that help assist the various teams. 
-          </ListItem>
-
-          <ListItem>
-            I was the President of the CPP Game Development Club where I brought together 
-            a community of students who are passionate about game development, hosting 
-            guest speakers and club projects.
-          </ListItem>
-        </UnorderedList>
+        <IntroSection />
       </GridItem>
 
       <GridItem 
@@ -70,7 +52,8 @@ function AboutMeDesktop() {
         area={'edu'}
         // bg={'tomato'}
       >
-        <Center><Heading color={colors.secondary}>Education</Heading></Center>
+        <Education />
+        {/* <Center><Heading color={colors.secondary}>Education</Heading></Center>
         <Center><Heading size={'md'}>Computer Science B.S</Heading></Center>
         <Center><Heading size={'md'}>Cal Poly Pomona</Heading></Center>
 
@@ -85,7 +68,7 @@ function AboutMeDesktop() {
               <ListItem>President (2022-2023)</ListItem>
             </UnorderedList>
           </UnorderedList>
-        </Center>
+        </Center> */}
       </GridItem>
 
       <GridItem 
