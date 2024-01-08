@@ -24,7 +24,8 @@ function AboutMeDesktop() {
     >
       <GridItem 
         area={'secTitle'}
-        // bg='tomato'
+        pt={'1rem'}
+        pb={'1rem'}
       >
         <Center><Heading color={colors.primary}>About Me</Heading></Center>
       </GridItem>
@@ -32,15 +33,33 @@ function AboutMeDesktop() {
       <GridItem 
         area={'intro'}
         // bg={'tomato'}
-        overflowY={'scroll'}
+        overflowY={'auto'}
       >
         <Center><Heading color={colors.secondary}>Introduction</Heading></Center>
-        <Text>{Intro}</Text>
+        {/* <Text>{Intro}</Text> */}
+        <Text>Hi there! I am Laurence Garcia, a newly graduated Computer Science major from Cal Poly Pomona</Text>
+        <UnorderedList>
+
+          <ListItem>
+            I am on my journey to refine my skill set in the fields of Software Engineering, Game Development, and Technical Art.
+          </ListItem>
+
+          <ListItem>
+            I recently interned at Nickelodeon Animation Studios, where I developed 
+            production-enhancing tools that help assist the various teams. 
+          </ListItem>
+
+          <ListItem>
+            I was the President of the CPP Game Development Club where I brought together 
+            a community of students who are passionate about game development, hosting 
+            guest speakers and club projects.
+          </ListItem>
+        </UnorderedList>
       </GridItem>
 
       <GridItem 
         area={'canvas'}
-        bg={colors.bgSecondary}
+        // bg={colors.bgSecondary}
 
         // boxShadow={'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;'}
       >

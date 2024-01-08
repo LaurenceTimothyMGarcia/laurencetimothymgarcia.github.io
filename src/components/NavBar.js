@@ -6,8 +6,12 @@ import colors from "../theme/Color";
 function NavBar() {
   return(
     <Box
+      bg={colors.bgSecondary}
       pr={'2%'}
       pl={'2%'}
+      // w={'100vw'}
+      // position={'fixed'}
+      // top={0}
     >
       <Flex
         minWidth='max-content'
