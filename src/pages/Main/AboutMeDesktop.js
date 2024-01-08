@@ -11,7 +11,7 @@ import colors from '../../theme/Color';
 function AboutMeDesktop() {
   return(
     <Grid
-      h={"85vh"}
+      h={"100%"}
 
       templateAreas={`"secTitle secTitle secTitle"
                       "intro canvas skills"
