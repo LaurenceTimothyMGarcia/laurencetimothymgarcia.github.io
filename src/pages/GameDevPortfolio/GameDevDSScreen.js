@@ -156,7 +156,7 @@ function GameDevDSScreen( { selectedGame }) {
                   bg={'black'}
                   w={'95%'}
                   h={'95%'}
-                  overflowY={'scroll'}
+                  overflowY={'auto'}
                 >
                   <Heading size="md" color={colors.secondary}>{title}</Heading>
                   <Heading size='sm' mb={'1rem'} color={colors.accent}>{genre}</Heading>
