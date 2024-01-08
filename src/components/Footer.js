@@ -1,16 +1,16 @@
 import React from "react";
 import { Box, Flex, Heading } from "@chakra-ui/layout"
 import Socials from "../pages/Socials";
+import colors from "../theme/Color";
 
 function Footer() {
   return(
     <Box
-      pr={'2%'}
-      pl={'2%'}
+      bg={colors.bgSecondary}
+      p={'1%'}
     >
       <Flex
         minWidth='max-content'
-        minHeight='4vh'
         alignItems='center'
         justify={'space-between'}>
 
