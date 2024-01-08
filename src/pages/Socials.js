@@ -39,7 +39,7 @@ function Socials({ footer=false }) {
         <Box>
           <SocialIcon 
             link={'https://www.instagram.com/emergencyartist/'} 
-            img={'/logos/SocialLogos/Instagram Black.png'} 
+            img={'/logos/SocialLogos/InstagramWhite.png'} 
           />
         </Box>
       </Wrap>
@@ -88,7 +88,7 @@ function Socials({ footer=false }) {
         <VStack>
           <SocialIcon 
             link={'https://www.instagram.com/emergencyartist/'} 
-            img={'/logos/SocialLogos/Instagram Black.png'} 
+            img={'/logos/SocialLogos/InstagramWhite.png'} 
           />
           <Text>@EmergencyArtist</Text>
         </VStack>

@@ -23,7 +23,7 @@ const SkillLanguages = [
   },
   {
     title: 'HTML',
-    img: '/logos/CodingLogos/HTML5_Logo.png'
+    img: '/logos/CodingLogos/HTML5Logo.png'
   },
   {
     title: 'CSS',
