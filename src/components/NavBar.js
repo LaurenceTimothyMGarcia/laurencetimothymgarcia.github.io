@@ -7,29 +7,27 @@ function NavBar() {
   return(
     <Box
       bg={colors.bgSecondary}
-      pr={'2%'}
-      pl={'2%'}
+      p={'2%'}
       // w={'100vw'}
       // position={'fixed'}
       // top={0}
     >
       <Flex
         minWidth='max-content'
-        minHeight='10vh'
         alignItems='center'>
 
         <Box>
-        <Link to='/'><Heading color={colors.primary}>Laurence Timothy M. Garcia</Heading></Link>
+        <Link to='/'><Heading size={'md'} color={colors.primary}>Laurence Timothy M. Garcia</Heading></Link>
         </Box>
 
         <Spacer/>
 
         <HStack
           divider={<StackDivider borderColor='gray.200'/>}>
-          <Link to='/'><Heading color={colors.primary}>About</Heading></Link>
+          <Link to='/'><Heading size={'md'} color={colors.primary}>About</Heading></Link>
 
           <Menu isLazy>
-            <MenuButton><Heading color={colors.primary}>Portfolios</Heading></MenuButton>
+            <MenuButton><Heading size={'md'} color={colors.primary}>Portfolios</Heading></MenuButton>
             <MenuList>
               <MenuItem color={colors.secondary}><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></MenuItem>
               <MenuItem color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></MenuItem>
