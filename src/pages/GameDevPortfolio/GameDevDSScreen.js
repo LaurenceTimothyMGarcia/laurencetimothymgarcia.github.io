@@ -38,9 +38,9 @@ function GameDevDSScreen( { selectedGame }) {
 
       // Transition stuff
       // cursor={'pointer'}
-      transition={'transform 0.6s, box-shadow 0.6s'}
-      transform={'rotateX(15deg) translateY(-50px) translateZ(-100px)'}
-      _hover={hoverStyles}
+      // transition={'transform 0.6s, box-shadow 0.6s'}
+      // transform={'rotateX(15deg) translateY(-50px) translateZ(-100px)'}
+      // _hover={hoverStyles}
     >
       <Flex direction={'column'} h={'100%'}>
         {/* Top Screen */}
