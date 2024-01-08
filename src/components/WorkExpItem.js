@@ -1,9 +1,70 @@
-import { Flex, Box, Heading, Spacer, UnorderedList, ListItem, Icon, Image } from "@chakra-ui/react";
+import { Flex, Box, Heading, Spacer, UnorderedList, ListItem, Icon, Image, VStack } from "@chakra-ui/react";
 import React from "react";
 import SkillItemCard from './SkillItemCard';
 import colors from "../theme/Color";
 
-const WorkExpItem = ({ alt=false, workExp, scene }) => {
+const WorkExpItem = ({ alt=false, workExp, scene, mobile=false }) => {
+
+  let display = DesktopVer(workExp, scene)
+
+  if (mobile) {
+    display = MobileVer(workExp, scene)
+  }
+
+  console.log(workExp);
+
+  return (display)
+  
+
+  // if (alt) {
+  //   return(
+  //     <Flex
+  //       gap={"1rem"}
+  //     >
+  //       <Box
+  //         // bg='red'
+  //         flex={'3'}
+  //       >
+  //         <Heading>{title}</Heading>
+  //       </Box>
+
+  //       <Box
+  //         // bg='red'
+  //         flex={'2'}
+  //         aspectRatio={1}
+  //       >
+  //         {scene}
+  //       </Box>
+  
+  //     </Flex>
+  //   )
+  // } else {
+  //   return(
+  //     <Flex
+  //       gap={"1rem"}
+  //     >
+  //       <Box
+  //         // bg='red'
+  //         flex={'2'}
+  //         aspectRatio={1}
+  //       >
+  //         {scene}
+  //       </Box>
+  
+  //       <Box
+  //         // bg='red'
+  //         flex={'3'}
+  //       >
+  //         <Heading>{title}</Heading>
+  //       </Box>
+  //     </Flex>
+  //   )
+  // }
+
+  
+}
+
+function DesktopVer( workExp, scene ) {
 
   const title = workExp.title
   const company = workExp.company
@@ -54,53 +115,57 @@ const WorkExpItem = ({ alt=false, workExp, scene }) => {
       </Box>
     </Flex>
   )
+}
 
-  // if (alt) {
-  //   return(
-  //     <Flex
-  //       gap={"1rem"}
-  //     >
-  //       <Box
-  //         // bg='red'
-  //         flex={'3'}
-  //       >
-  //         <Heading>{title}</Heading>
-  //       </Box>
+function MobileVer( workExp, scene ) {
 
-  //       <Box
-  //         // bg='red'
-  //         flex={'2'}
-  //         aspectRatio={1}
-  //       >
-  //         {scene}
-  //       </Box>
-  
-  //     </Flex>
-  //   )
-  // } else {
-  //   return(
-  //     <Flex
-  //       gap={"1rem"}
-  //     >
-  //       <Box
-  //         // bg='red'
-  //         flex={'2'}
-  //         aspectRatio={1}
-  //       >
-  //         {scene}
-  //       </Box>
-  
-  //       <Box
-  //         // bg='red'
-  //         flex={'3'}
-  //       >
-  //         <Heading>{title}</Heading>
-  //       </Box>
-  //     </Flex>
-  //   )
-  // }
+  const title = workExp.title
+  const company = workExp.company
+  const startDate = workExp.startDate
+  const endDate = workExp.endDate
+  const skills = workExp.skills
+  const jobDesc = workExp.jobDesc
 
-  
+  return(
+    <VStack
+      // gap={"1rem"}
+      mt={'1rem'}
+      mb={'2rem'}
+    >
+      {/* Canvas */}
+      <Box
+        // bg='red'
+        // aspectRatio={1}
+      >
+        {scene}
+      </Box>
+
+      {/* General information */}
+      <Box
+        // bg='red'
+      >
+        <Heading size={'sm'} color={colors.accent}>{startDate} - {endDate}</Heading>
+        <Heading size={'lg'} color={colors.secondary}>{title}</Heading>
+        <Heading size={'md'} color={colors.secondary}>{company}</Heading>
+
+        {/* Skills */}
+        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'}>
+          {skills.map((skill, index) => (
+            <SkillItemCard key={index} title={skill.title} img={skill.img} />
+          ))}
+        </Flex>
+
+        {/* Job Description */}
+        <Box p={'0.5rem'}>
+          <UnorderedList>
+            {jobDesc.map((task, index) => (
+              <ListItem key={index}>{task}</ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      </Box>
+    </VStack>
+  )
 }
 
 export default WorkExpItem;
