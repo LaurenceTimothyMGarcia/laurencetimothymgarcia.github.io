@@ -28,7 +28,7 @@ function PortfolioDesktop() {
         area={'secTitle'}
         // bg={'green'}
       >
-        <Center><Heading mb={'1rem'} mt={'3rem'} color={colors.primary}>Project Porfolios</Heading></Center>
+        <Center><Heading mb={'1rem'} mt={'3rem'} color={colors.primary}>Project Portfolios</Heading></Center>
       </GridItem>
 
       <GridItem
