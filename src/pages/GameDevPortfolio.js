@@ -10,7 +10,7 @@ function GameDevPortfolio() {
       <Center
         p={'2vh'}
       >
-        <Heading color={colors.primary}>Game Development Portfolio</Heading>
+        <Heading color={colors.primary} textAlign={'center'}>Game Development Portfolio</Heading>
       </Center>
 
       <GameDevProjectDisplay />

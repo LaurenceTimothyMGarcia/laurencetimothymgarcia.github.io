@@ -22,6 +22,7 @@ function DesktopVer() {
       >
         <Heading
           color={colors.primary}
+          textAlign={'center'}
         >
           Software Engineering Portfolio
         </Heading>

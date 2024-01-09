@@ -4,7 +4,7 @@ import React from 'react';
 import SocialIcon from '../../components/SocialIcon';
 import colors from '../../theme/Color';
 
-function GameDevDSScreen( { selectedGame }) {
+function GameDevDSScreen( { selectedGame, mobile=false }) {
 
   const dsBaseColor = '#3A3A3A'
   const dsButtonColor = '#53E6E3'
@@ -28,6 +28,62 @@ function GameDevDSScreen( { selectedGame }) {
   const hoverStyles = {
     transform: 'rotateX(0deg)',
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.3)',
+  }
+
+  if (mobile) {
+    return (
+      <VStack>
+        <Box 
+          bg={dsBaseColor}
+          borderRadius={'5%'}
+          h={'200px'}
+
+          borderWidth={0}
+          borderColor={'black'}
+        >
+          <Center w={'100%'} h={'100%'}>
+            <Box
+              bg={'black'}
+              w={'80%'}
+              h={'90%'}
+            >
+              {topScreen}
+            </Box>
+          </Center>
+          
+        </Box>
+
+        <Box
+          w={'350px'}
+          h={'500px'}
+        >
+          <Center
+            w={'100%'}
+            h={'100%'}
+          >
+            <Box
+              bg={'black'}
+              w={'95%'}
+              h={'95%'}
+              overflowY={'auto'}
+            >
+              <Center><Heading size="md" color={colors.secondary}>{title}</Heading></Center>
+              <Center><Heading size='sm' mb={'1rem'} color={colors.accent}>{genre}</Heading></Center>
+
+              <Center>
+                <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />
+              </Center>
+              
+
+              <Box mt={'1rem'} textColor={colors.text}>{summary}</Box>
+
+            </Box>
+          </Center>
+        </Box>
+        
+      </VStack>
+      
+    )
   }
 
   return (
