@@ -3,11 +3,15 @@ import { Box, Center, Heading, Link } from '@chakra-ui/react';
 import SWEProjectDisplay from './SWEPortfolio/SWEProjectDisplay';
 import SocialIcon from '../components/SocialIcon';
 import colors from '../theme/Color';
+import ScreenRatio from '../components/ScreenRatio';
 
 function SWEPorfolio() {
 
   let display = DesktopVer();
-  // display = MobileVer();
+
+  if (ScreenRatio) {
+    display = MobileVer();
+  }
 
   return (
     display

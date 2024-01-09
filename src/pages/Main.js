@@ -8,31 +8,35 @@ import Extracurriculars from './Extracurriculars';
 import AboutMeMobile from './Main/AboutMeMobile';
 import WorkExpMobile from './Main/WorkExpMobile';
 import PortfolioMobile from './Main/PortfolioMobile';
+import ScreenRatio from '../components/ScreenRatio';
 
 function Main() {
 
-  // Mobile Version
-  return(
-    <Box>
-      <AboutMeMobile />
-      <WorkExpMobile />
-      <PortfolioMobile />
+  if(ScreenRatio) {
+    // Mobile Version
+    return(
+      <Box>
+        <AboutMeMobile />
+        <WorkExpMobile />
+        <PortfolioMobile />
 
-      <Socials mobile={true}/>
-    </Box>
-  )
+        <Socials mobile={true}/>
+      </Box>
+    )
+  }
+  
 
   // Desktop Version
-  // return(
-  //   <Box>
-  //     <AboutMeDesktop/>
-  //     <WorkExpDesktop/>
-  //     <PortfolioDesktop/>
+  return(
+    <Box>
+      <AboutMeDesktop/>
+      <WorkExpDesktop/>
+      <PortfolioDesktop/>
 
-  //     {/* <Extracurriculars/> */}
-  //     <Socials/>
-  //   </Box>
-  // )
+      {/* <Extracurriculars/> */}
+      <Socials/>
+    </Box>
+  )
 }
 
 export default Main;

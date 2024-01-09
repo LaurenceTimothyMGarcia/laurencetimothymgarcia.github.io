@@ -4,11 +4,15 @@ import GameDevProjectCard from './GameDevProjectCard';
 import GameDevProjects from '../../data/GameDevProjects';
 import GameDevDSScreen from './GameDevDSScreen';
 import colors from '../../theme/Color';
+import ScreenRatio from '../../components/ScreenRatio';
 
 function GameDevProjectDisplay() {
 
   let display = Desktop();
-  display = Mobile();
+
+  if (ScreenRatio) {
+    display = Mobile();
+  }
 
   return(display)
   

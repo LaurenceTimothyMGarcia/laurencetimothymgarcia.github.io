@@ -8,7 +8,7 @@ function NavBar( {mobile=false} ) {
 
   let navDisplay = Desktop()
 
-  navDisplay = Mobile()
+  // navDisplay = Mobile()
   if (mobile) {
     navDisplay = Mobile()
   }
