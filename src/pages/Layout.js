@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import colors from '../theme/Color';
 
+// Figure out aspect ratio here
 function Layout({ children }) {
   return (
     <ChakraProvider>
