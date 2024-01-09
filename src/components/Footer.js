@@ -8,6 +8,7 @@ function Footer() {
     <Box
       bg={colors.bgSecondary}
       p={'1%'}
+      mt={'1%'}
     >
       <Flex
         minWidth='max-content'

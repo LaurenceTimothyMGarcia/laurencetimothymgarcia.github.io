@@ -39,7 +39,7 @@ const GameDevProjects = [
     summary: 'In the Splatoon inspired board game, Inkage, you try to color as much of the board in your terrain as possible. Collect power ups that you can use to gain more terrain which you move faster in or use them to slow down your enemies by inking them. ',
     genre: 'Board Game',
     topScreen: '/logos/ProjectIcons/GameScreenshots/InkageSS.png',
-    link: 'https://laurencetimothymgarcia.github.io/public/InkageBoardGame.pdf',
+    link: 'https://laurencetimothymgarcia.github.io/InkageBoardGame.pdf',
   },
   {
     title: 'We Play Tanks! Tanks!',
