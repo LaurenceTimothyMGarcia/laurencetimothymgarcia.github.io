@@ -9,7 +9,7 @@ function IntroSection() {
     <Box>
       <Center><Heading color={colors.secondary}>Introduction</Heading></Center>
       {/* <Text>{Intro}</Text> */}
-      <Text>Hi there! I am Laurence Garcia, a newly graduated Computer Science major from Cal Poly Pomona</Text>
+      <Text>Hi there! I am Laurence Garcia, a newly graduated Computer Science major from Cal Poly Pomona.</Text>
       <UnorderedList>
 
         <ListItem>

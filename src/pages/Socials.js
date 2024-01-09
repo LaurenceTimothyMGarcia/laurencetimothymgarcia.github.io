@@ -1,4 +1,4 @@
-import { Box, Text, VStack, Wrap, Heading, Center, HStack } from '@chakra-ui/react'
+import { Box, Text, VStack, Wrap, Heading, Center, HStack, Flex } from '@chakra-ui/react'
 import React from 'react'
 import SocialIcon from '../components/SocialIcon';
 import colors from '../theme/Color';
@@ -14,7 +14,7 @@ function Socials({ footer=false, mobile=false }) {
           <Heading color={colors.primary}>Connect with Me!</Heading>
         </Center>
         
-        <Wrap justify={'left'} w={'100%'} h={'100%'}>
+        <VStack align={'flex-start'} w={'100%'} h={'100%'}>
           <HStack>
             <SocialIcon 
               link={'https://github.com/LaurenceTimothyMGarcia'} 
@@ -55,49 +55,49 @@ function Socials({ footer=false, mobile=false }) {
             <Text>@EmergencyArtist</Text>
           </HStack>
 
-        </Wrap>
+        </VStack>
       </Box>
     )
   }
 
   if (footer) {
     return(
-      <Wrap justify={'center'}>
-        <Box>
+      <HStack justify={'right'} spacing={0}>
+        <Box transform="scale(0.5)">
           <SocialIcon 
             link={'https://github.com/LaurenceTimothyMGarcia'} 
             img={'/logos/SocialLogos/GithubLogoPurple.png'} 
           />
         </Box>
 
-        <Box>
+        <Box  transform="scale(0.5)">
           <SocialIcon 
             link={'https://www.linkedin.com/in/laurencetimothymanalogarcia/'} 
             img={'/logos/SocialLogos/LinkedInBlue.png'} 
           />
         </Box>
 
-        <Box>
+        <Box transform="scale(0.5)">
           <SocialIcon 
             link={'mailto: laurencetimg@gmail.com'} 
             img={'/logos/SocialLogos/Email.png'} 
           />
         </Box>
 
-        <Box>
+        <Box transform="scale(0.5)">
           <SocialIcon 
             link={'https://emergencyplayer.itch.io/'} 
             img={'/logos/SocialLogos/ItchIORed.png'} 
           />
         </Box>
 
-        <Box>
+        <Box transform="scale(0.5)">
           <SocialIcon 
             link={'https://www.instagram.com/emergencyartist/'} 
             img={'/logos/SocialLogos/InstagramWhite.png'} 
           />
         </Box>
-      </Wrap>
+      </HStack>
     )
   }
 
