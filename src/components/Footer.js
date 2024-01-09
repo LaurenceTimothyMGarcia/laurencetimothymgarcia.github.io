@@ -15,10 +15,15 @@ function Footer() {
         justify={'space-between'}>
 
         <Box>
-          Laurence Timothy M. Garcia 2024
+          Laurence Timothy Garcia
         </Box>
 
-        <Socials footer={true}/>
+        <Box
+          w='40vw'
+        >
+          <Socials footer={true}/>
+        </Box>
+        
       </Flex>
     </Box>
   )

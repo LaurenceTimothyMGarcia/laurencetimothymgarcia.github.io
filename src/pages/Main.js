@@ -17,6 +17,8 @@ function Main() {
       <AboutMeMobile />
       <WorkExpMobile />
       <PortfolioMobile />
+
+      <Socials mobile={true}/>
     </Box>
   )
 
