@@ -83,7 +83,8 @@ function DesktopVer( workExp, scene ) {
       <Box
         // bg='red'
         flex={'2'}
-        aspectRatio={1}
+        // aspectRatio={1}
+        border={'1px solid white'}
       >
         {scene}
       </Box>
@@ -136,6 +137,8 @@ function MobileVer( workExp, scene ) {
       <Box
         // bg='red'
         // aspectRatio={1}
+        border={'1px solid white'}
+
       >
         {scene}
       </Box>

@@ -103,6 +103,7 @@ function Socials({ footer=false, mobile=false }) {
 
   return(
     <Box
+      pt={'2rem'}
       pb={'2rem'}
     >
       <Center mb={'2rem'}>

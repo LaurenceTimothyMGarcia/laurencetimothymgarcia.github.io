@@ -18,7 +18,11 @@ function AboutMeMobile() {
     >
       <VStack >
         {/* 3D Models */}
-        <AboutMeCanvas />
+        <Box
+          border={'1px solid white'}
+        >
+          <AboutMeCanvas />
+        </Box>
 
         {/* Intro Segment */}
         <IntroSection />

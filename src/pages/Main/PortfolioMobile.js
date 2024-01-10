@@ -27,8 +27,8 @@ function PortfolioMobile() {
         <Box>
           <Center><Heading size={'md'} color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></Heading></Center>
 
-          <Link to='/gamedev-portfolio'>
-            <GameDevCanvas/>
+          <Link to='/gamedev-portfolio' border={'1px solid white'}>
+            <GameDevCanvas />
           </Link>
         </Box>
 

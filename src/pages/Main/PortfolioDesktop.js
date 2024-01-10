@@ -1,11 +1,14 @@
 import React from 'react';
-import { Center, Grid, GridItem, Heading } from '@chakra-ui/react'
+import { Center, Grid, GridItem, Heading, background } from '@chakra-ui/react'
 import SWECanvas from './SWECanvas';
 import GameDevCanvas from './GameDevCanvas';
 import { Link } from "react-router-dom";
 import colors from '../../theme/Color';
 
 function PortfolioDesktop() {
+
+  const hoverColor = colors.text;
+
   return (
     <Grid
       h={'85vh'}
@@ -33,7 +36,11 @@ function PortfolioDesktop() {
 
       <GridItem
         area={'swe'}
+        border={'1px solid white'}
         // bg={'green'}
+        _hover={{
+          backgroundColor: hoverColor
+        }}
       >
         <Link to='/swe-portfolio'>
           <SWECanvas/>
@@ -44,6 +51,11 @@ function PortfolioDesktop() {
       <GridItem
         area={'gamedev'}
         // bg={'green'}
+        border={'1px solid white'}
+        
+        _hover={{
+          backgroundColor: hoverColor
+        }}
       >
         <Link to='/gamedev-portfolio'>
           <GameDevCanvas/>
@@ -54,6 +66,9 @@ function PortfolioDesktop() {
       <GridItem
         area={'sweTitle'}
         // bg={'green'}
+        _hover={{
+          backgroundColor: hoverColor
+        }}
       >
         <Center><Heading size={'lg'} color={colors.secondary}><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></Heading></Center>
       </GridItem>
@@ -61,6 +76,9 @@ function PortfolioDesktop() {
       <GridItem
         area={'gamedevTitle'}
         // bg={'green'}
+        _hover={{
+          backgroundColor: hoverColor
+        }}
       >
         <Center><Heading size={'lg'} color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></Heading></Center>
       </GridItem>

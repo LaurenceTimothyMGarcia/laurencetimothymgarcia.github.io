@@ -11,7 +11,7 @@ function CamSettings() {
   camera.far = 1000;
 
   // Set camera position, rotation, and scale
-  camera.position.set(19, 25, 19)
+  camera.position.set(20, 25, 20)
   camera.rotation.set(-45 * Math.PI / 180, 45 * Math.PI / 180, 35 * Math.PI / 180)
 
   camera.updateProjectionMatrix()
