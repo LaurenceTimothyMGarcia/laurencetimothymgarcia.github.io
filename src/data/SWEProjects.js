@@ -87,9 +87,9 @@ const SWEProjects = [
   },
   {
     title: 'Portfolio Website',
-    icon: '/logos/ProjectIcons/GithubIcon.png',
+    icon: '/logos/ProjectIcons/AboutMeIsoTransparent512.png',
     summary: 'Front-End Web Development',
-    description: "Designed and programmed a portfolio website to present all my projects in one place. Utilized Figma to prototype a design. Used React with Chakra UI to build custom components with the Three.js library for responsive 2D and 3D elements. Deployed the website through GitHub Pages.",
+    description: "Designed and programmed a portfolio website to present all my projects in one place. Utilized Figma to prototype a design. Used React with Chakra UI to build custom components with the Three.js library for responsive 2D and 3D elements. All models were done through Blender. Deployed the website through GitHub Pages.",
     link: 'https://laurencetimothymgarcia.github.io/',
     skills: [
       {
@@ -99,6 +99,10 @@ const SWEProjects = [
       {
         title: 'THREE.js',
         img: '/logos/CodingLogos/threejslogo.png'
+      },
+      {
+        title: 'Blender',
+        img: '/logos/CodingLogos/BlenderLogo.png'
       },
       {
         title: 'Figma',

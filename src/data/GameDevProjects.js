@@ -6,7 +6,7 @@ const GameDevProjects = [
     icon: '/logos/ProjectIcons/GunslingerHilda.png',
     summary: 'Explore the everchanging wild west in this third person roguelike shooter. Battle skeletons, cacadillos, and serpents in boots with your arsenal of 3 weapons. \n\n This game was created over the course of a semester with a team of 15 people. I started production on the procedural generation tool that would eventually be implemented into this game around May, and fully implemented it into the game around October. I was also scrum master and reviewed pull requests and code reviews with my team.',
     genre: 'Third Person Rogue-like Shooter',
-    topScreen: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/dsb4kUgZXJU?si=vl3NpTX7W-bUo40u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    topScreen: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/dsb4kUgZXJU?si=MWt0-HRh_5-I4hRB&amp;start=252" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
     link: 'https://emergencyplayer.itch.io/gunslinger-hilda',
   },
   {
