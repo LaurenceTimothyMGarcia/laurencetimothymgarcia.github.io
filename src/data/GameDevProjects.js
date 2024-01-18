@@ -23,7 +23,7 @@ const GameDevProjects = [
     summary: 'Programmed a custom procedural terrain generator in Unity using Perlin Noise. Implemented features enabling users to customize the terrain to their needs, from mountain ranges, valleys, canyons, etc. Designed a custom shader to enable the terrain to have various textures based on elevation levels. ',
     genre: 'Unity Tool',
     topScreen: '/logos/ProjectIcons/GameScreenshots/ProcTerrainGenSS.png',
-    link: 'https://github.com/LaurenceTimothyMGarcia/GunslingerHilda',
+    link: 'https://github.com/LaurenceTimothyMGarcia/ProceduralTerrainGenerator',
   },
   {
     title: 'Chachi',

@@ -73,7 +73,7 @@ const SWEProjects = [
     icon: '/logos/ProjectIcons/TerrainGenerator.png',
     summary: 'Procedural Unity Tool',
     description: "Programmed a custom procedural terrain generator in Unity using Perlin Noise. Implemented features enabling users to customize the terrain to their needs, from mountain ranges, valleys, canyons, etc. Designed a custom shader to enable the terrain to have various textures based on elevation levels. ",
-    link: 'https://github.com/LaurenceTimothyMGarcia/GunslingerHilda',
+    link: 'https://github.com/LaurenceTimothyMGarcia/ProceduralTerrainGenerator',
     skills: [
       {
         title: 'C#',
