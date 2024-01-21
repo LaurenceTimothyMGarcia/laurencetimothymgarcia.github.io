@@ -48,6 +48,23 @@ const SWEProjects = [
     ]
   },
   {
+    title: 'Shader Baker',
+    icon: '/logos/ProjectIcons/ShaderBaker.png',
+    summary: 'Python Blender3D Tool',
+    description: "Developed a Python script that would add image textures to all materials of the selected object on the click of a button. Users can also change the selected UV map / image texture for all image textures. Wrote documentation for the tool with install instructions and clarify any confusion for new users.",
+    link: 'https://github.com/LaurenceTimothyMGarcia/ShaderBaker',
+    skills: [
+      {
+        title: 'Python',
+        img: '/logos/CodingLogos/Python_logo.png'
+      },
+      {
+        title: 'Blender API',
+        img: '/logos/CodingLogos/BlenderLogo.png'
+      },
+    ]
+  },
+  {
     title: 'Prominent Colors',
     icon: '/logos/ProjectIcons/ProminentColorsIcon.png',
     summary: 'Kotlin Android App',
