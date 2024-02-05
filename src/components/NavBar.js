@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, Spacer, StackDivider, Button, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Spacer, StackDivider, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import colors from "../theme/Color";
@@ -51,6 +51,14 @@ function Desktop() {
           <MenuItem color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></MenuItem>
         </MenuList>
       </Menu>
+
+      <Menu isLazy>
+        <MenuButton><Heading size={'md'} color={colors.primary}>Resume</Heading></MenuButton>
+        <MenuList>
+          <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeSWE.pdf' target="_blank">Software Engineering Resume</a></MenuItem>
+          <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeGameDev.pdf' target="_blank">Game Development Resume</a></MenuItem>
+        </MenuList>
+      </Menu>
       
       {/* <Button><Heading>Socials</Heading></Button> */}
     </HStack>
@@ -72,6 +80,12 @@ function Mobile() {
         <MenuItem color={colors.secondary}><Link to='/'>About</Link></MenuItem>
         <MenuItem color={colors.secondary}><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></MenuItem>
         <MenuItem color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></MenuItem>
+
+        <MenuList>
+          <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeSWE.pdf' target="_blank">Software Engineering Resume</a></MenuItem>
+          <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeGameDev.pdf' target="_blank">Game Development Resume</a></MenuItem>
+        </MenuList>
+        
       </MenuList>
     </Menu>
   )
