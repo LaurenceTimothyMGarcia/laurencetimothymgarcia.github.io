@@ -2,10 +2,9 @@ import React from "react"
 import { Canvas, useThree } from "@react-three/fiber"
 import { Suspense } from 'react'
 import { OrbitControls } from "@react-three/drei"
-import NickIsoRoom from '../../models/Nick_IsoRoom'
 import colors from "../../theme/Color"
 
-function CamSettings() {
+function CamSettings({position, rotation}) {
 
   const { camera } = useThree();
 
@@ -13,21 +12,22 @@ function CamSettings() {
   camera.far = 1000
 
   // Set camera position, rotation, and scale
-  camera.position.set(13, 12, 9)
-  camera.rotation.set(-45 * Math.PI / 180, 45 * Math.PI / 180, 35 * Math.PI / 180)
+  camera.position.set(position[0], position[1], position[2])
+  camera.rotation.set(rotation[0] * Math.PI / 180, rotation[1] * Math.PI / 180, rotation[2] * Math.PI / 180)
 
   camera.updateProjectionMatrix()
 
   return null;
 }
 
-function WorkExpCanvas() {
+function WorkExpCanvas({item, pos, rot}) {
 
   return (
     <Canvas orthographic={false}>
       <Suspense fallback={null}>
-        <CamSettings/>
-        <NickIsoRoom/>
+        <CamSettings position={pos} rotation={rot}/>
+        {item}
+        {/* <NickIsoRoom/> */}
         {/* <Plane/> */}
       </Suspense>
 

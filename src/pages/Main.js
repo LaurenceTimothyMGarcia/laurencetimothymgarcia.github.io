@@ -4,10 +4,11 @@ import AboutMeDesktop from './Main/AboutMeDesktop';
 import PortfolioDesktop from './Main/PortfolioDesktop';
 import WorkExpDesktop from './Main/WorkExpDesktop';
 import Socials from './Socials';
-import Extracurriculars from './Extracurriculars';
+import ExtracurricularsDesktop from './Main/ExtracurricularsDesktop';
 import AboutMeMobile from './Main/AboutMeMobile';
 import WorkExpMobile from './Main/WorkExpMobile';
 import PortfolioMobile from './Main/PortfolioMobile';
+import ExtracurricularsMobile from './Main/ExtracurricularsMobile';
 import ScreenRatio from '../components/ScreenRatio';
 
 function Main() {
@@ -19,6 +20,7 @@ function Main() {
         <AboutMeMobile />
         <WorkExpMobile />
         <PortfolioMobile />
+        <ExtracurricularsMobile />
 
         <Socials mobile={true}/>
       </Box>
@@ -33,7 +35,7 @@ function Main() {
       <WorkExpDesktop/>
       <PortfolioDesktop/>
 
-      {/* <Extracurriculars/> */}
+      <ExtracurricularsDesktop/>
       <Socials/>
     </Box>
   )
