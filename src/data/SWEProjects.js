@@ -65,6 +65,23 @@ const SWEProjects = [
     ]
   },
   {
+    title: 'Unity Network API',
+    icon: '/logos/ProjectIcons/AbsoluteMomentum.png',
+    summary: 'Online Multiplayer API',
+    description: "A C# Unity based API that allows players to create and join lobbies online and interact in realtime. This API is currently being used in 2 Unity games, Absolute Momentum and Solar Sweets. Utilized Unity's UI system to develop a C# script that would dynamically build new components based on the existing lobbies from the servers.",
+    link: 'https://plutz.itch.io/absolute-momentum',
+    skills: [
+      {
+        title: 'C#',
+        img: '/logos/CodingLogos/CSharpLogo.png'
+      },
+      {
+        title: 'Unity',
+        img: '/logos/CodingLogos/UnityLogo.png'
+      },
+    ]
+  },
+  {
     title: 'Prominent Colors',
     icon: '/logos/ProjectIcons/ProminentColorsIcon.png',
     summary: 'Kotlin Android App',
