@@ -1,5 +1,5 @@
 import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, ExternalLinkIcon } from '@chakra-ui/icons';
-import { Box, Heading, Image, Flex, Center, Button, Grid, IconButton, Link, VStack, Spacer, HStack } from '@chakra-ui/react';
+import { Box, Heading, Image, ListItem, UnorderedList, Flex, Center, Button, Grid, IconButton, Link, VStack, Spacer, HStack } from '@chakra-ui/react';
 import React from 'react';
 import SocialIcon from '../../components/SocialIcon';
 import colors from '../../theme/Color';
@@ -13,6 +13,7 @@ function GameDevDSScreen( { selectedGame, mobile=false }) {
   let icon = ''
   let summary = ''
   let genre = ''
+  let contribution = []
   let link = ''
   let topScreen = <Box>Select a game to learn more!</Box>;
 
@@ -21,6 +22,7 @@ function GameDevDSScreen( { selectedGame, mobile=false }) {
     icon = selectedGame.icon
     summary = selectedGame.summary
     genre = selectedGame.genre
+    contribution = selectedGame.contribution
     link = selectedGame.link
     topScreen = TopDisplay(selectedGame.topScreen);
   }
@@ -74,8 +76,17 @@ function GameDevDSScreen( { selectedGame, mobile=false }) {
                 <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />
               </Center>
               
+              <Center><Heading size='sm' mt={'1rem'} color={colors.accent}>Summary</Heading></Center>
+              <Box textColor={colors.text}>{summary}</Box>
 
-              <Box mt={'1rem'} textColor={colors.text}>{summary}</Box>
+              <Center><Heading size='sm' mt={'1rem'} color={colors.accent}>Contributions</Heading></Center>
+              <Box textColor={colors.text}>
+                <UnorderedList>
+                  {contribution.map((task, index) =>
+                    <ListItem key={index}>{task}</ListItem>
+                  )}
+                </UnorderedList>
+              </Box>
 
             </Box>
           </Center>
@@ -221,8 +232,17 @@ function GameDevDSScreen( { selectedGame, mobile=false }) {
                     <SocialIcon link={link} img={'/logos/SocialLogos/ItchIORed.png'} />
                   </Center>
                   
+                  <Heading size='sm' mt={'1rem'} color={colors.accent}>Summary</Heading>
+                  <Box >{summary}</Box>
 
-                  <Box mt={'1rem'}>{summary}</Box>
+                  <Heading size='sm' mt={'1rem'} color={colors.accent}>Contributions</Heading>
+                  <Box >
+                    <UnorderedList>
+                      {contribution.map((task, index) =>
+                        <ListItem key={index}>{task}</ListItem>
+                      )}
+                    </UnorderedList>
+                  </Box>
 
                 </Box>
               </Center>
