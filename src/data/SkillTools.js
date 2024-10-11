@@ -73,6 +73,10 @@ const SkillTools = [
     title: 'Premiere Pro',
     img: '/logos/CodingLogos/PremiereProLogo.png'
   },
+  {
+    title: 'Power Automate',
+    img: '/logos/CodingLogos/PowerAutomateLogo.png'
+  },
 ]
 
 export default SkillTools
