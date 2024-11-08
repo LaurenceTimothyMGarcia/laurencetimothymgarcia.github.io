@@ -12,6 +12,14 @@ const WorkExp = [
         img: '/logos/CodingLogos/CSharpLogo.png'
       },
       {
+        title: 'DotNET',
+        img: '/logos/CodingLogos/DotNETLogo.png'
+      },
+      {
+        title: 'TypeScript',
+        img: '/logos/CodingLogos/Typescript_Logo.png'
+      },
+      {
         title: 'React',
         img: '/logos/CodingLogos/ReactLogo.png'
       },
@@ -21,9 +29,9 @@ const WorkExp = [
       },
     ],
     jobDesc: [
-      "Developed the company's Xvantage platform as a software engineer.",
-      "Collabroated with clients on the sales team to build an internal task system to assist the sales team with follow ups from trainings with vendors.",
-      "Programmed a C# backend API in Azure Function tools to automatically transfer solutions to different dev environments."
+      "Built internal tools and user facing services as a software engineer to boost sales and productivity at Ingram Micro.",
+      "Utilized DotNET and Azure Functions to build a backend API that automates the process for transferring solutions to different dev environments.",
+      "Developed a tool that creates follow up tasks for the team members on the sales team who attend vendor specific trainings."
     ]
   },
   {

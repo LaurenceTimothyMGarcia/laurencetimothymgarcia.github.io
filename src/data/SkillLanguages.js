@@ -14,6 +14,10 @@ const SkillLanguages = [
     img: '/logos/CodingLogos/Javascript_Logo.png'
   },
   {
+    title: 'TypeScript',
+    img: '/logos/CodingLogos/Typescript_Logo.png'
+  },
+  {
     title: 'Java',
     img: '/logos/CodingLogos/JavaLogo.png'
   },
