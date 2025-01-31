@@ -24,14 +24,28 @@ const WorkExp = [
         img: '/logos/CodingLogos/ReactLogo.png'
       },
       {
+        title: 'Angular',
+        img: '/logos/CodingLogos/AngularLogo.png'
+      },
+      {
+        title: 'ServiceNow',
+        img: '/logos/CodingLogos/ServiceNowLogo.png'
+      },
+      {
+        title: 'Jira',
+        img: '/logos/CodingLogos/JiraLogo.png'
+      },
+      {
         title: 'Power Automate',
         img: '/logos/CodingLogos/PowerAutomateLogo.png'
       },
     ],
     jobDesc: [
       "Built internal tools and user facing services as a software engineer to boost sales and productivity at Ingram Micro.",
-      "Utilized DotNET and Azure Functions to build a backend API that automates the process for transferring solutions to different dev environments.",
-      "Developed a tool that creates follow up tasks for the team members on the sales team who attend vendor specific trainings."
+      "Utilized DotNET and Azure Functions to build a backend API that automates the process for transferring solutions to different dev environments, resulting in a 100% acceleration in the development pipeline.",
+      "Implemented a system to generate follow-up tasks for sales team members after vendor-specific training, strengthening vendor relationships and improving feedback on training fund utilization.",
+      "Developed a robust Angular dashboard for warehouse admins to manage associates and roles.",
+      "Engaged with multiple ServiceNow and Jira tickets, assisting associates with bugs, requests, and technical issues relating to the company’s primary sales platforms."
     ]
   },
   {
@@ -60,6 +74,7 @@ const WorkExp = [
     jobDesc: [
       "Built internal web tools and rendering scripts as a software developer to assist animation teams at Nickelodeon.",
       "Developed a UI tool leveraging React.js for the frontend and Python Shotgrid API for the backend, resulting in a significant 50% acceleration in the configuration of an internal transcoding tool for all Nickelodeon productions.",
+      "Onboarded new production members and shows on the various technologies and services offered by AnimTech.",
       "Programmed an EDL report from a post production edit to compare with contents from files in Shotgrid.",
       "Monitored Deadline render farms to assist users with job status and interpreting error messages.",
       "Met with 10 different production teams to find what they require support for or feedback on tools produced."

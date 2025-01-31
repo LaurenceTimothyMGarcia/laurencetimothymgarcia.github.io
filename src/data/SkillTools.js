@@ -10,6 +10,10 @@ const SkillTools = [
     img: '/logos/CodingLogos/ReactLogo.png'
   },
   {
+    title: 'Angular',
+    img: '/logos/CodingLogos/AngularLogo.png'
+  },
+  {
     title: 'DotNET',
     img: '/logos/CodingLogos/DotNETLogo.png'
   },
@@ -76,6 +80,14 @@ const SkillTools = [
   {
     title: 'Power Automate',
     img: '/logos/CodingLogos/PowerAutomateLogo.png'
+  },
+  {
+    title: 'ServiceNow',
+    img: '/logos/CodingLogos/ServiceNowLogo.png'
+  },
+  {
+    title: 'Jira',
+    img: '/logos/CodingLogos/JiraLogo.png'
   },
 ]
 
