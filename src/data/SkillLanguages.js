@@ -22,6 +22,10 @@ const SkillLanguages = [
     img: '/logos/CodingLogos/JavaLogo.png'
   },
   {
+    title: 'SQL',
+    img: '/logos/CodingLogos/SQLLogo.png'
+  },
+  {
     title: 'Kotlin',
     img: '/logos/CodingLogos/KotlinLogo.png'
   },

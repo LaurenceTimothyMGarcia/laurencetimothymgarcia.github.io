@@ -5,7 +5,7 @@ import WorkExpItem from "../../components/WorkExpItem";
 import WorkExpCanvas from './WorkExpCanvas';
 import WorkExp from '../../data/WorkExpData';
 import NickIsoRoom from '../../models/Nick_IsoRoom'
-import IngramLogo from '../../models/IngramLogo'
+import IngramMicroLogo from '../../models/IngramMicroLogo'
 
 // Work Exp Mobile version
 
@@ -21,7 +21,7 @@ function WorkExpMobile() {
       {/* Ingram Micro */}
       <WorkExpItem 
         workExp={WorkExp[0]} 
-        scene={<WorkExpCanvas item={<IngramLogo/>} pos={[-18, 1, 21]} rot={[-6, -35, -3]}/>}
+        scene={<WorkExpCanvas item={<IngramMicroLogo/>} pos={[-18, 1, 21]} rot={[-6, -35, -3]}/>}
         mobile={true}/>
 
       {/* Nickelodeon */}

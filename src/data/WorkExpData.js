@@ -28,6 +28,14 @@ const WorkExp = [
         img: '/logos/CodingLogos/AngularLogo.png'
       },
       {
+        title: 'SQL',
+        img: '/logos/CodingLogos/SQLLogo.png'
+      },
+      {
+        title: 'Python',
+        img: '/logos/CodingLogos/Python_logo.png'
+      },
+      {
         title: 'ServiceNow',
         img: '/logos/CodingLogos/ServiceNowLogo.png'
       },
@@ -39,13 +47,23 @@ const WorkExp = [
         title: 'Power Automate',
         img: '/logos/CodingLogos/PowerAutomateLogo.png'
       },
+      {
+        title: 'Azure Functions',
+        img: '/logos/CodingLogos/AzureFunctionslogo.png'
+      },
+      {
+        title: 'SQL Server Management Studio',
+        img: '/logos/CodingLogos/SQLServerLogo.png'
+      },
     ],
     jobDesc: [
       "Built internal tools and user facing services as a software engineer to boost sales and productivity at Ingram Micro.",
       "Utilized DotNET and Azure Functions to build a backend API that automates the process for transferring solutions to different dev environments, resulting in a 100% acceleration in the development pipeline.",
       "Implemented a system to generate follow-up tasks for sales team members after vendor-specific training, strengthening vendor relationships and improving feedback on training fund utilization.",
       "Developed a robust Angular dashboard for warehouse admins to manage associates and roles.",
-      "Engaged with multiple ServiceNow and Jira tickets, assisting associates with bugs, requests, and technical issues relating to the company’s primary sales platforms."
+      "Engaged with multiple ServiceNow and Jira tickets, assisting associates with bugs, requests, and technical issues relating to the company’s primary sales platforms.",
+      "Modernized a 20-year-old legacy system by upgrading it to a full-stack React and DotNET application, developing CRUD APIs for the backend and seamlessly integrating with the existing SQL Server database to align with the security team’s standards.",
+      "Programmed the React frontend for an application inventory system to track Ingram Micro’s extensive portfolio of applications and servers, optimizing resource management."
     ]
   },
   {
@@ -69,6 +87,10 @@ const WorkExp = [
       {
         title: 'Shotgrid',
         img: '/logos/CodingLogos/ShotgridLogo.png'
+      },
+      {
+        title: 'MongoDB',
+        img: '/logos/CodingLogos/MongoDBLogo.png'
       },
     ],
     jobDesc: [

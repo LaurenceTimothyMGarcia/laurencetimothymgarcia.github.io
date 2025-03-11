@@ -125,7 +125,7 @@ function DesktopNoAlt( workExp, scene ) {
         <Heading size={'lg'} color={colors.secondary}>{company}</Heading>
 
         {/* Skills */}
-        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'}>
+        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'} wrap={'wrap'} gap={"0.5rem"}>
           {skills.map((skill, index) => (
             <SkillItemCard key={index} title={skill.title} img={skill.img} />
           ))}
@@ -169,7 +169,7 @@ function DesktopAlt( workExp, scene ) {
         <Heading size={'lg'} color={colors.secondary}>{company}</Heading>
 
         {/* Skills */}
-        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'}>
+        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'} wrap={'wrap'} gap={"0.5rem"}>
           {skills.map((skill, index) => (
             <SkillItemCard key={index} title={skill.title} img={skill.img} />
           ))}
@@ -232,7 +232,7 @@ function MobileVer( workExp, scene, alt ) {
         <Heading size={'md'} color={colors.secondary}>{company}</Heading>
 
         {/* Skills */}
-        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'}>
+        <Flex w={'100%'} justifyContent={'space-evenly'} padding={'0.5rem'} wrap={'wrap'} gap={"0.5rem"}>
           {skills.map((skill, index) => (
             <SkillItemCard key={index} title={skill.title} img={skill.img} />
           ))}

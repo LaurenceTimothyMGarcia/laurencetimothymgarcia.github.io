@@ -52,13 +52,15 @@ function Desktop() {
         </MenuList>
       </Menu>
 
-      <Menu isLazy>
+      <Link to='https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf'><Heading size={'md'} color={colors.primary}>Resume</Heading></Link>
+
+      {/* <Menu isLazy>
         <MenuButton><Heading size={'md'} color={colors.primary}>Resume</Heading></MenuButton>
         <MenuList>
-          <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeSWE.pdf' target="_blank">Software Engineering Resume</a></MenuItem>
+          <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf' target="_blank">Software Engineering Resume</a></MenuItem>
           <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeGameDev.pdf' target="_blank">Game Development Resume</a></MenuItem>
         </MenuList>
-      </Menu>
+      </Menu> */}
       
       {/* <Button><Heading>Socials</Heading></Button> */}
     </HStack>

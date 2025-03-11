@@ -89,6 +89,14 @@ const SkillTools = [
     title: 'Jira',
     img: '/logos/CodingLogos/JiraLogo.png'
   },
+  {
+    title: 'Azure Functions',
+    img: '/logos/CodingLogos/AzureFunctionslogo.png'
+  },
+  {
+    title: 'SQL Server Management Studio',
+    img: '/logos/CodingLogos/SQLServerLogo.png'
+  },
 ]
 
 export default SkillTools
