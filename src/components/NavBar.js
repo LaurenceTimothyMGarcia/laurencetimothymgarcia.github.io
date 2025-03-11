@@ -82,11 +82,12 @@ function Mobile() {
         <MenuItem color={colors.secondary}><Link to='/'>About</Link></MenuItem>
         <MenuItem color={colors.secondary}><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></MenuItem>
         <MenuItem color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></MenuItem>
+        <MenuItem color={colors.secondary}><a href="https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf" target="_blank" rel="noopener noreferrer">Resume</a></MenuItem>
 
-        <MenuList>
+        {/* <MenuList>
           <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeSWE.pdf' target="_blank">Software Engineering Resume</a></MenuItem>
           <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeGameDev.pdf' target="_blank">Game Development Resume</a></MenuItem>
-        </MenuList>
+        </MenuList> */}
         
       </MenuList>
     </Menu>
