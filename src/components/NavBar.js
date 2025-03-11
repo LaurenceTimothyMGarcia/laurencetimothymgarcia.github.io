@@ -52,7 +52,7 @@ function Desktop() {
         </MenuList>
       </Menu>
 
-      <Link to='https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf'><Heading size={'md'} color={colors.primary}>Resume</Heading></Link>
+      <a href="https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf" target="_blank" rel="noopener noreferrer"><Heading size={'md'} color={colors.primary}>Resume</Heading></a>
 
       {/* <Menu isLazy>
         <MenuButton><Heading size={'md'} color={colors.primary}>Resume</Heading></MenuButton>
