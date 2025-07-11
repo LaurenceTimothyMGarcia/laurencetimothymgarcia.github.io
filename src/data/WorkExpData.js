@@ -49,7 +49,7 @@ const WorkExp = [
       },
       {
         title: 'Azure Functions',
-        img: '/logos/CodingLogos/AzureFunctionslogo.png'
+        img: '/logos/CodingLogos/AzureFunctionsLogo.png'
       },
       {
         title: 'SQL Server Management Studio',

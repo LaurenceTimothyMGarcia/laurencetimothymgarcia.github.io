@@ -26,6 +26,11 @@ function IntroSection() {
         </ListItem>
 
         <ListItem>
+          On my freetime, I work as a software engineer for my game dev studio, PIE Dev Studios. We are currently working on 
+          a multiplayer parkour racing game called Absolute Momentum, available to wishlist on Steam now!
+        </ListItem>
+
+        <ListItem>
           I interned at Nickelodeon Animation Studios, where I developed 
           production-enhancing tools that help assist the various teams. 
         </ListItem>
