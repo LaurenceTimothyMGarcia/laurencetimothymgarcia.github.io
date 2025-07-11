@@ -110,7 +110,8 @@ function DesktopNoAlt( workExp, scene ) {
         // bg='red'
         flex={'2'}
         // aspectRatio={1}
-        border={'1px solid white'}
+        border={'2px solid'}
+        borderColor={colors.contrast}
       >
         {scene}
       </Box>
@@ -190,7 +191,8 @@ function DesktopAlt( workExp, scene ) {
         // bg='red'
         flex={'2'}
         // aspectRatio={1}
-        border={'1px solid white'}
+        border={'2px solid'}
+        borderColor={colors.contrast}
       >
         {scene}
       </Box>
@@ -217,8 +219,8 @@ function MobileVer( workExp, scene, alt ) {
       <Box
         // bg='red'
         // aspectRatio={1}
-        border={'1px solid white'}
-
+        border={'2px solid'}
+        borderColor={colors.contrast}
       >
         {scene}
       </Box>

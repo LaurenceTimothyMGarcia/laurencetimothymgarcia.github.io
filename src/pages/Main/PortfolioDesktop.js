@@ -36,7 +36,8 @@ function PortfolioDesktop() {
 
       <GridItem
         area={'swe'}
-        border={'1px solid white'}
+        border={'2px solid'}
+        borderColor={colors.contrast}
         // bg={'green'}
         _hover={{
           backgroundColor: hoverColor
@@ -51,7 +52,8 @@ function PortfolioDesktop() {
       <GridItem
         area={'gamedev'}
         // bg={'green'}
-        border={'1px solid white'}
+        border={'2px solid'}
+        borderColor={colors.contrast}
         
         _hover={{
           backgroundColor: hoverColor

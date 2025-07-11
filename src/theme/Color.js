@@ -27,16 +27,36 @@ import { extendTheme } from "@chakra-ui/react";
 //   contrast: "#ababbe",
 // }
 
-const colors = {
-  bg: "#05020d",
-  bgSecondary: "#11072E",
-  primary: "#AF8DF7",
-  secondary: "#B81A34",
-  accent: "#e17634",
-  text: "#e7e1fb",
+// const colors = {
+//   bg: "#05020d",
+//   bgSecondary: "#11072E",
+//   primary: "#AF8DF7",
+//   secondary: "#B81A34",
+//   accent: "#e17634",
+//   text: "#e7e1fb",
 
-  contrast: "#ababbe",
-}
+//   contrast: "#ababbe",
+// }
+
+// windows xp inspired
+const colors = {
+  // Window background & dialogs
+  bg:           "#F0F8FF",  // AliceBlue (light XP window background)
+  bgSecondary:  "#E5ECF9",  // Soft light grey-blue
+
+  // Taskbar & titlebars
+  primary:      "#3B7DBE",  // XP “active title bar” blue
+
+  // Start button & highlights
+  secondary:    "#008000",  // Start button green
+  accent:       "#E04B2B",  // Selection highlight yellow
+  highlight:    "#FF6600",  // Orange for warnings/buttons
+
+  // Text & borders
+  text:         "#000000",  // Classic black text
+  contrast:     "#A6A6A6",  // Grey for inactive edges/borders
+};
+
 
 // const colors = extendTheme({
 //   colors: {
