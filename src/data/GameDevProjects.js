@@ -3,14 +3,20 @@
 const GameDevProjects = [
   {
     title: 'Absolute Momentum',
-    icon: '/logos/ProjectIcons/AbsoluteMomentum.png',
-    summary: 'A phenomenon has caught on worldwide. Speed is life, and adrenaline is the only thing that matters. World peace? Non-Existent. War? Zero Interest. Cybernetic implants in your legs that make you move 3 cm/s faster? Absolutely. Everyone is here, and everyone is watching. Impress the world, and learn the ways of Absolute Momentum.',
-    genre: 'Online Multiplayer Speedrunner',
+    icon: '/logos/ProjectIcons/AbsMom.png',
+    summary: 'Get ready to sprint, jump, slide, and wall run your way in Absolute Momentum. Race through beautiful environments as you find hidden passages and alternate paths utilizing every parkour technique in your disposal. Can you maintain Absolute Momentum?',
+    genre: 'Online Multiplayer Parkour Racing Game',
     contribution: [
-      "Built a network API for Unity that allows players to interact with each other in real time. Players join through a code system."
+      "Built a network API for 2 online Unity multiplayer games to allow players to join different online lobbies.",
+      "Upgraded the architecture to Unity’s Multiplayer Services and Netcode package for the Unity 6 Engine.", 
+      "Utilized Unity’s UI system to develop a C# script that would dynamically build new components based on existing lobbies from the servers.",
+      "Met with software engineering team 3 times a week in SCRUM meetings to discuss updates and features required.",
+      "Hosted playtesting sessions to observe player engagement with prototype, documenting areas for improvement.",
+      "Collaborated with the team’s artists to craft marketing assets for the Solar Sweets Steam Page to take ideas from concept to execution.",
+      "Produced creative and engaging trailers in Davinci Resolve to show off the most engaging points of gameplay, catering to the specific genre of the game.",
     ],
-    topScreen: '/logos/ProjectIcons/GameScreenshots/AM_SS1.png',
-    link: 'https://plutz.itch.io/absolute-momentum',
+    topScreen: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/JM2TsM6aMdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    link: 'https://store.steampowered.com/app/3810400/Absolute_Momentum/',
   },
   {
     title: 'Gunslinger Hilda',
