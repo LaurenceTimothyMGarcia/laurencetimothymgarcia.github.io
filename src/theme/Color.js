@@ -40,21 +40,23 @@ import { extendTheme } from "@chakra-ui/react";
 
 // windows xp inspired
 const colors = {
-  // Window background & dialogs
-  bg:           "#F0F8FF",  // AliceBlue (light XP window background)
-  bgSecondary:  "#E5ECF9",  // Soft light grey-blue
+  // Window background & dialogs (slightly muted)
+  bg:           "#DCE7F0",  // Muted AliceBlue (less bright, still XP-like)
+
+  // Navbar / toolbar / sidebar background (darker for navbars)
+  bgSecondary:  "#C3D3E9",  // Muted light steel blue (like XP toolbars, subtle)
 
   // Taskbar & titlebars
-  primary:      "#3B7DBE",  // XP “active title bar” blue
+  primary:      "#3B7DBE",  // Keep this vibrant for contrast
 
   // Start button & highlights
-  secondary:    "#008000",  // Start button green
-  accent:       "#E04B2B",  // Selection highlight yellow
-  highlight:    "#FF6600",  // Orange for warnings/buttons
+  secondary:    "#00703C",  // Slightly softened green (less neon than #008000)
+  accent:       "#eb3f18ff",  // XP red, as you already set
+  highlight:    "#FF6600",  // Keep for warnings / bright actions
 
   // Text & borders
-  text:         "#000000",  // Classic black text
-  contrast:     "#A6A6A6",  // Grey for inactive edges/borders
+  text:         "#000000",
+  contrast:     "#8C8C8C",  // Slightly darker for subtle borders
 };
 
 

@@ -77,10 +77,10 @@ function GameDevDSScreen( { selectedGame, mobile=false }) {
               </Center>
               
               <Center><Heading size='sm' mt={'1rem'} color={colors.accent}>Summary</Heading></Center>
-              <Box textColor={colors.text}>{summary}</Box>
+              <Box textColor={colors.contrast}>{summary}</Box>
 
               <Center><Heading size='sm' mt={'1rem'} color={colors.accent}>Contributions</Heading></Center>
-              <Box textColor={colors.text}>
+              <Box textColor={colors.contrast}>
                 <UnorderedList>
                   {contribution.map((task, index) =>
                     <ListItem key={index}>{task}</ListItem>
@@ -233,10 +233,10 @@ function GameDevDSScreen( { selectedGame, mobile=false }) {
                   </Center>
                   
                   <Heading size='sm' mt={'1rem'} color={colors.accent}>Summary</Heading>
-                  <Box >{summary}</Box>
+                  <Box color={colors.contrast}>{summary}</Box>
 
                   <Heading size='sm' mt={'1rem'} color={colors.accent}>Contributions</Heading>
-                  <Box >
+                  <Box color={colors.contrast}>
                     <UnorderedList>
                       {contribution.map((task, index) =>
                         <ListItem key={index}>{task}</ListItem>
