@@ -38,25 +38,50 @@ import { extendTheme } from "@chakra-ui/react";
 //   contrast: "#ababbe",
 // }
 
-// windows xp inspired
+// // windows xp inspired
+// const colors = {
+//   // Window background & dialogs (slightly muted)
+//   bg:           "#DCE7F0",  // Muted AliceBlue (less bright, still XP-like)
+
+//   // Navbar / toolbar / sidebar background (darker for navbars)
+//   bgSecondary:  "#C3D3E9",  // Muted light steel blue (like XP toolbars, subtle)
+
+//   // Taskbar & titlebars
+//   primary:      "#3B7DBE",  // Keep this vibrant for contrast
+
+//   // Start button & highlights
+//   secondary:    "#00703C",  // Slightly softened green (less neon than #008000)
+//   accent:       "#eb3f18ff",  // XP red, as you already set
+//   highlight:    "#FF6600",  // Keep for warnings / bright actions
+
+//   // Text & borders
+//   text:         "#000000",
+//   contrast:     "#8C8C8C",  // Slightly darker for subtle borders
+// };
+
+// new 2026 iteration
 const colors = {
-  // Window background & dialogs (slightly muted)
-  bg:           "#DCE7F0",  // Muted AliceBlue (less bright, still XP-like)
+  // Window background & dialogs (clean but not washed out)
+  bg: "#F2F7F4",
 
-  // Navbar / toolbar / sidebar background (darker for navbars)
-  bgSecondary:  "#C3D3E9",  // Muted light steel blue (like XP toolbars, subtle)
+  // Navbar / toolbar / sidebar background (clear separation from bg)
+  bgSecondary: "#D6E4DD",
 
-  // Taskbar & titlebars
-  primary:      "#3B7DBE",  // Keep this vibrant for contrast
+  // Primary surfaces (strong anchor color)
+  primary: "#145C4A",
 
-  // Start button & highlights
-  secondary:    "#00703C",  // Slightly softened green (less neon than #008000)
-  accent:       "#eb3f18ff",  // XP red, as you already set
-  highlight:    "#FF6600",  // Keep for warnings / bright actions
+  // Green accent (noticeably brighter than primary)
+  secondary: "#1ED19B",
 
-  // Text & borders
-  text:         "#000000",
-  contrast:     "#8C8C8C",  // Slightly darker for subtle borders
+  // Pink accent (high contrast vs green)
+  accent: "#E63E8C",
+
+  // Attention / CTA (kept distinct from both accents)
+  highlight: "#FF9F1C",
+
+  // Text & borders (strong readability)
+  text: "#0B1A16",
+  contrast: "#7F948B",
 };
 
 
