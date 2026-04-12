@@ -13,13 +13,12 @@ function IntroSection() {
 
       <Center>
         <UnorderedList>
-          <ListItem>GPA: 3.82</ListItem>
           <ListItem>Summa Cum Laude</ListItem>
           <ListItem>Dean's & President's List: All Semesters</ListItem>
           <ListItem>CPP Game Development Club</ListItem>
           <UnorderedList>
-            <ListItem>Secretary (2021-2022)</ListItem>
-            <ListItem>President (2022-2023)</ListItem>
+            <ListItem>President</ListItem>
+            <ListItem>Secretary</ListItem>
           </UnorderedList>
         </UnorderedList>
       </Center>
