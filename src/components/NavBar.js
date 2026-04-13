@@ -52,7 +52,7 @@ function Desktop() {
         </MenuList>
       </Menu>
 
-      <a href="https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf" target="_blank" rel="noopener noreferrer"><Heading size={'md'} color={colors.primary}>Resume</Heading></a>
+      {/* <a href="https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf" target="_blank" rel="noopener noreferrer"><Heading size={'md'} color={colors.primary}>Resume</Heading></a> */}
 
       {/* <Menu isLazy>
         <MenuButton><Heading size={'md'} color={colors.primary}>Resume</Heading></MenuButton>
@@ -82,7 +82,7 @@ function Mobile() {
         <MenuItem color={colors.secondary}><Link to='/'>About</Link></MenuItem>
         <MenuItem color={colors.secondary}><Link to='/swe-portfolio'>Software Engineering Portfolio</Link></MenuItem>
         <MenuItem color={colors.secondary}><Link to='/gamedev-portfolio'>Game Development Portfolio</Link></MenuItem>
-        <MenuItem color={colors.secondary}><a href="https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf" target="_blank" rel="noopener noreferrer">Resume</a></MenuItem>
+        {/* <MenuItem color={colors.secondary}><a href="https://www.laurencetimg.com/LaurenceGarciaResumeSWEPortfolio.pdf" target="_blank" rel="noopener noreferrer">Resume</a></MenuItem> */}
 
         {/* <MenuList>
           <MenuItem color={colors.secondary}><a href='https://www.laurencetimg.com/LaurenceGarciaResumeSWE.pdf' target="_blank">Software Engineering Resume</a></MenuItem>
