@@ -1,7 +1,7 @@
 {
   "name": "laurence-portfolio-site",
   "version": "0.1.0",
-  "homepage": "https://laurencetimothymgarcia.github.io",
+  "homepage": "https://www.laurencetimg.com",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

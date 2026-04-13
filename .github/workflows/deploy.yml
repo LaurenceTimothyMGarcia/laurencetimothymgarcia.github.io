@@ -1,5 +1,10 @@
 name: Deploy React App to GitHub Pages
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+run: npx gh-pages -d build -u "github-actions <github-actions@github.com"
+
 on:
   push:
     branches:
