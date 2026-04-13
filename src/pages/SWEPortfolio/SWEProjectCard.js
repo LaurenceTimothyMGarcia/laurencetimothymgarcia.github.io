@@ -16,7 +16,7 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
       size={'sm'} 
       maxW={'22rem'} 
       minW={'22rem'}
-      backgroundColor={colors.contrast}
+      backgroundColor={colors.bgSecondary}
       _hover={{
         backgroundColor: hoverColor,
         color: hoverTextColor
