@@ -1,5 +1,27 @@
 {
+  "name": "laurencetimg-website-2023",
+  "version": "1.0.0",
+  "description": "Laurence Garcia's Personal Website utilizing THREE.js",
+  "homepage": "https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurenceTimothyMGarcia/laurencetimothymgarcia.github.io.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "three": "^0.149.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
