@@ -1,4 +1,4 @@
-import { Box, Text, VStack, Wrap, Heading, Center, HStack, Link } from '@chakra-ui/react'
+import { Box, Wrap, WrapItem, Heading, Center, HStack } from '@chakra-ui/react'
 import React from 'react'
 import SocialIcon from '../components/SocialIcon';
 import colors from '../theme/Color';
@@ -42,41 +42,7 @@ const socials = [
   }
 ];
 
-// Text that links to the same place as its icon
-function SocialLabel({ link, children }) {
-  const isMail = link.startsWith('mailto:');
-  return (
-    <Link
-      href={link}
-      isExternal={!isMail}
-      color={colors.text}
-      _hover={{ color: colors.primary, textDecoration: 'underline' }}
-    >
-      <Text>{children}</Text>
-    </Link>
-  );
-}
-
 function Socials({ footer = false, mobile = false }) {
-
-  if (mobile) {
-    return (
-      <Box pt={'2rem'} pb={'2rem'}>
-        <Center mb={'1rem'}>
-          <Heading color={colors.primary}>Hi, I'm Laurence!</Heading>
-        </Center>
-
-        <VStack align={'flex-start'} w={'100%'} h={'100%'}>
-          {socials.map((s) => (
-            <HStack key={s.link}>
-              <SocialIcon link={s.link} img={s.img} />
-              <SocialLabel link={s.link}>{s.label}</SocialLabel>
-            </HStack>
-          ))}
-        </VStack>
-      </Box>
-    );
-  }
 
   if (footer) {
     return (
@@ -90,18 +56,18 @@ function Socials({ footer = false, mobile = false }) {
     );
   }
 
+  // Desktop + mobile share the same centered icon row
   return (
     <Box pt={'2rem'} pb={'2rem'}>
-      <Center mb={'2rem'}>
+      <Center mb={mobile ? '1rem' : '2rem'}>
         <Heading color={colors.primary}>Hi, I'm Laurence!</Heading>
       </Center>
 
-      <Wrap justify={'space-evenly'} w={'100%'} h={'100%'}>
+      <Wrap justify={'center'} spacing={mobile ? '1rem' : '2rem'} w={'100%'}>
         {socials.map((s) => (
-          <VStack key={s.link}>
+          <WrapItem key={s.link}>
             <SocialIcon link={s.link} img={s.img} />
-            <SocialLabel link={s.link}>{s.label}</SocialLabel>
-          </VStack>
+          </WrapItem>
         ))}
       </Wrap>
     </Box>

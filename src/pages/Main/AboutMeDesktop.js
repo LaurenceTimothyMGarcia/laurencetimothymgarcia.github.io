@@ -51,12 +51,12 @@ function AboutMeDesktop() {
         <AboutMeCanvas/>
       </GridItem>
 
-      <GridItem 
+      {/* <GridItem 
         area={'edu'}
         // bg={'tomato'}
       >
         <Education />
-      </GridItem>
+      </GridItem> */}
 
       <GridItem 
         area={'skills'}

@@ -28,14 +28,14 @@ function AboutMeMobile() {
         <IntroSection />
 
         {/* Education Segment */}
-        <Education />
+        {/* <Education /> */}
 
         {/* Shows off skills */}
-        <Box>
+        {/* <Box>
           <Center><Heading size={'lg'} color={colors.secondary}>Skills</Heading></Center>
           <SkillDisplay sectionTitle={'Programming Languages'} skillSet={SkillLanguages}/>
           <SkillDisplay sectionTitle={'Tools'} skillSet={SkillTools}/>
-        </Box>
+        </Box> */}
         
       </VStack>
     </Box>
