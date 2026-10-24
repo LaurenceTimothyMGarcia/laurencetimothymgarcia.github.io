@@ -36,6 +36,19 @@ const SWEProjects = [
     ]
   },
   {
+    title: 'Emergency Player',
+    icon: '/logos/ProjectIcons/EmergencyPlayer.png',
+    summary: 'Indie Animation YouTube Channel',
+    description: "Write, model, animate, voice, edit, and publish monthly long-form and daily short-form 3D animated content on YouTube, Instagram, and TikTok as a solo creator, owning the full production pipeline from concept to upload using Blender and DaVinci Resolve. Develop Python Blender Add-Ons that automate time-intensive automation tasks like lip-syncing, enabling daily handcrafted animated shorts at roughly one hour per video. Build and maintain reusable library of original 3D models, animation presets, shaders, sprite sheets, and environments, enabling faster production and visual variety across videos. Published 100+ animated videos totaling 300,000+ views.",
+    link: 'https://www.youtube.com/@EmergencyPlayer',
+    skills: [
+      {
+        title: 'Blender',
+        img: '/logos/CodingLogos/BlenderLogo.png'
+      },
+    ]
+  },
+  {
     title: 'Unity Network API',
     icon: '/logos/ProjectIcons/AbsoluteMomentum.png',
     summary: 'Online Multiplayer API',
