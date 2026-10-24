@@ -60,29 +60,79 @@ import { extendTheme } from "@chakra-ui/react";
 // };
 
 // new 2026 iteration
+// const colors = {
+//   // Window background & dialogs (clean but not washed out)
+//   bg: "#F2F7F4",
+
+//   // Navbar / toolbar / sidebar background (clear separation from bg)
+//   bgSecondary: "#D6E4DD",
+
+//   // Primary surfaces (strong anchor color)
+//   primary: "#145C4A",
+
+//   // Green accent (noticeably brighter than primary)
+//   secondary: "#1ED19B",
+
+//   // Pink accent (high contrast vs green)
+//   accent: "#E63E8C",
+
+//   // Attention / CTA (kept distinct from both accents)
+//   highlight: "#FF9F1C",
+
+//   // Text & borders (strong readability)
+//   text: "#0B1A16",
+//   contrast: "#7F948B",
+// };
+
+
 const colors = {
-  // Window background & dialogs (clean but not washed out)
-  bg: "#F2F7F4",
+  // Page background: soft lavender-white, keeps things clean
+  bg: "#F7F3FB",
 
-  // Navbar / toolbar / sidebar background (clear separation from bg)
-  bgSecondary: "#D6E4DD",
+  // Navbar / sidebar / cards: light purple tint, clear separation from bg
+  bgSecondary: "#E6DAF3",
 
-  // Primary surfaces (strong anchor color)
-  primary: "#145C4A",
+  // Anchor color: deep purple (headers, footer, hero blocks)
+  primary: "#4B1D8F",
 
-  // Green accent (noticeably brighter than primary)
-  secondary: "#1ED19B",
+  // Slime green: badges, tags, hover states, highlights
+  secondary: "#8ED62B",
 
-  // Pink accent (high contrast vs green)
-  accent: "#E63E8C",
+  // Brighter purple: links, focus rings, secondary buttons
+  accent: "#9B4DFF",
 
-  // Attention / CTA (kept distinct from both accents)
-  highlight: "#FF9F1C",
+  // Nick orange: main CTA buttons only
+  highlight: "#FF6A13",
 
-  // Text & borders (strong readability)
-  text: "#0B1A16",
-  contrast: "#7F948B",
+  // Text & borders
+  text: "#1B0F2E",
+  contrast: "#8A7AA3",
 };
+
+
+// const colors = {
+//   // Page background: warm cream, makes orange feel richer
+//   bg: "#FFF7EE",
+
+//   // Cards / sidebar / alternating sections: light peach
+//   bgSecondary: "#FFE3C7",
+
+//   // Brand color: Nick orange (navbar, hero, section headers, key blocks)
+//   primary: "#FF6A13",
+
+//   // Slime green: tags, badges, hover states, underline accents
+//   secondary: "#8ED62B",
+
+//   // Bright purple: links, focus rings, small highlights on light bg
+//   accent: "#7B3FE4",
+
+//   // Deep purple: CTA buttons on orange, footer, dark sections
+//   highlight: "#3A1578",
+
+//   // Text & borders
+//   text: "#1B0F2E",
+//   contrast: "#9A7B66",
+// };
 
 
 // const colors = extendTheme({

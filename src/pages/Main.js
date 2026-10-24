@@ -10,6 +10,7 @@ import WorkExpMobile from './Main/WorkExpMobile';
 import PortfolioMobile from './Main/PortfolioMobile';
 import ExtracurricularsMobile from './Main/ExtracurricularsMobile';
 import ScreenRatio from '../components/ScreenRatio';
+import SWEPorfolio from './SWEPorfolio';
 
 function Main() {
 
@@ -17,12 +18,12 @@ function Main() {
     // Mobile Version
     return(
       <Box>
+        <Socials mobile={true}/>
         <AboutMeMobile />
         <WorkExpMobile />
-        <PortfolioMobile />
+        {/* <PortfolioMobile /> */}
+        <SWEPorfolio />
         <ExtracurricularsMobile />
-
-        <Socials mobile={true}/>
       </Box>
     )
   }
@@ -31,12 +32,12 @@ function Main() {
   // Desktop Version
   return(
     <Box>
+      <Socials/>
       <AboutMeDesktop/>
       <WorkExpDesktop/>
-      <PortfolioDesktop/>
-
+      {/* <PortfolioDesktop/> */}
+      <SWEPorfolio />
       <ExtracurricularsDesktop/>
-      <Socials/>
     </Box>
   )
 }

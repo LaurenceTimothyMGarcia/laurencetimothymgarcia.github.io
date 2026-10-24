@@ -1,160 +1,77 @@
-import { Box, Text, VStack, Wrap, Heading, Center, HStack, Flex } from '@chakra-ui/react'
+import { Box, Wrap, WrapItem, Heading, Center, HStack } from '@chakra-ui/react'
 import React from 'react'
 import SocialIcon from '../components/SocialIcon';
 import colors from '../theme/Color';
 
-function Socials({ footer=false, mobile=false }) {
-
-  if (mobile) {
-    return(
-      <Box
-        pb={'2rem'}
-      >
-        <Center mb={'1rem'}>
-          <Heading color={colors.primary}>Connect with Me!</Heading>
-        </Center>
-        
-        <VStack align={'flex-start'} w={'100%'} h={'100%'}>
-          <HStack>
-            <SocialIcon 
-              link={'https://github.com/LaurenceTimothyMGarcia'} 
-              img={'/logos/SocialLogos/GithubLogoPurple.png'} 
-            />
-            <Text>@LaurenceTimothyMGarcia</Text>
-          </HStack>
-
-          <HStack>
-            <SocialIcon 
-              link={'https://www.linkedin.com/in/laurencetimothymanalogarcia/'} 
-              img={'/logos/SocialLogos/LinkedInBlue.png'} 
-            />
-            <Text>@LaurenceTimothyMGarcia</Text>
-          </HStack>
-
-          <HStack>
-            <SocialIcon 
-              link={'mailto: laurencetimg@gmail.com'} 
-              img={'/logos/SocialLogos/Email.png'} 
-            />
-            <Text>laurencetimg@gmail.com</Text>
-          </HStack>
-
-          <HStack>
-            <SocialIcon 
-              link={'https://emergencyplayer.itch.io/'} 
-              img={'/logos/SocialLogos/ItchIORed.png'} 
-            />
-            <Text>emergencyplayer.itch.io</Text>
-          </HStack>
-
-          <HStack>
-            <SocialIcon 
-              link={'https://www.instagram.com/emergencyartist/'} 
-              img={'/logos/SocialLogos/InstagramWhite.png'} 
-            />
-            <Text>@EmergencyArtist</Text>
-          </HStack>
-
-        </VStack>
-      </Box>
-    )
+const socials = [
+  {
+    label: '@EmergencyPlayer',
+    link: 'https://www.instagram.com/emergencyplayer/',
+    img: '/logos/SocialLogos/InstagramBlack.png',
+    footer: true,
+  },
+  {
+    label: '@EmergencyPlayer',
+    link: 'https://www.youtube.com/@EmergencyPlayer',
+    img: '/logos/SocialLogos/YouTubeLogo.png',
+    footer: true,
+  },
+  {
+    label: '@LaurenceTimothyMGarcia',
+    link: 'https://github.com/LaurenceTimothyMGarcia',
+    img: '/logos/SocialLogos/GithubLogoPurple.png',
+    footer: true,
+  },
+  {
+    label: '@LaurenceTimothyMGarcia',
+    link: 'https://www.linkedin.com/in/laurencetimothymanalogarcia/',
+    img: '/logos/SocialLogos/LinkedInBlue.png',
+    footer: true,
+  },
+  {
+    label: 'laurencetimg@gmail.com',
+    link: 'mailto:laurencetimg@gmail.com',
+    img: '/logos/SocialLogos/Email.png',
+    footer: true,
+  },
+  {
+    label: 'emergencyplayer.itch.io',
+    link: 'https://emergencyplayer.itch.io/',
+    img: '/logos/SocialLogos/ItchIORed.png',
+    footer: true,
   }
+];
+
+function Socials({ footer = false, mobile = false }) {
 
   if (footer) {
-    return(
+    return (
       <HStack justify={'right'} spacing={0}>
-        <Box transform="scale(0.5)">
-          <SocialIcon 
-            link={'https://github.com/LaurenceTimothyMGarcia'} 
-            img={'/logos/SocialLogos/GithubLogoPurple.png'} 
-          />
-        </Box>
-
-        <Box  transform="scale(0.5)">
-          <SocialIcon 
-            link={'https://www.linkedin.com/in/laurencetimothymanalogarcia/'} 
-            img={'/logos/SocialLogos/LinkedInBlue.png'} 
-          />
-        </Box>
-
-        <Box transform="scale(0.5)">
-          <SocialIcon 
-            link={'mailto: laurencetimg@gmail.com'} 
-            img={'/logos/SocialLogos/Email.png'} 
-          />
-        </Box>
-
-        <Box transform="scale(0.5)">
-          <SocialIcon 
-            link={'https://emergencyplayer.itch.io/'} 
-            img={'/logos/SocialLogos/ItchIORed.png'} 
-          />
-        </Box>
-
-        <Box transform="scale(0.5)">
-          <SocialIcon 
-            link={'https://www.instagram.com/emergencyartist/'} 
-            img={'/logos/SocialLogos/InstagramWhite.png'} 
-          />
-        </Box>
+        {socials.filter((s) => s.footer).map((s) => (
+          <Box key={s.link} transform="scale(0.5)">
+            <SocialIcon link={s.link} img={s.img} />
+          </Box>
+        ))}
       </HStack>
-    )
+    );
   }
 
-  return(
-    <Box
-      pt={'2rem'}
-      pb={'2rem'}
-    >
-      <Center mb={'2rem'}>
-        <Heading color={colors.primary}>Connect with Me!</Heading>
+  // Desktop + mobile share the same centered icon row
+  return (
+    <Box pt={'2rem'} pb={'2rem'}>
+      <Center mb={mobile ? '1rem' : '2rem'}>
+        <Heading color={colors.primary}>Hi, I'm Laurence!</Heading>
       </Center>
-      
-      <Wrap justify={'space-evenly'} w={'100%'} h={'100%'}>
-        <VStack>
-          <SocialIcon 
-            link={'https://github.com/LaurenceTimothyMGarcia'} 
-            img={'/logos/SocialLogos/GithubLogoPurple.png'} 
-          />
-          <Text>@LaurenceTimothyMGarcia</Text>
-        </VStack>
 
-        <VStack>
-          <SocialIcon 
-            link={'https://www.linkedin.com/in/laurencetimothymanalogarcia/'} 
-            img={'/logos/SocialLogos/LinkedInBlue.png'} 
-          />
-          <Text>@LaurenceTimothyMGarcia</Text>
-        </VStack>
-
-        <VStack>
-          <SocialIcon 
-            link={'mailto: laurencetimg@gmail.com'} 
-            img={'/logos/SocialLogos/Email.png'} 
-          />
-          <Text>laurencetimg@gmail.com</Text>
-        </VStack>
-
-        <VStack>
-          <SocialIcon 
-            link={'https://emergencyplayer.itch.io/'} 
-            img={'/logos/SocialLogos/ItchIORed.png'} 
-          />
-          <Text>emergencyplayer.itch.io</Text>
-        </VStack>
-
-        <VStack>
-          <SocialIcon 
-            link={'https://www.instagram.com/emergencyartist/'} 
-            img={'/logos/SocialLogos/InstagramWhite.png'} 
-          />
-          <Text>@EmergencyArtist</Text>
-        </VStack>
-
+      <Wrap justify={'center'} spacing={mobile ? '1rem' : '2rem'} w={'100%'}>
+        {socials.map((s) => (
+          <WrapItem key={s.link}>
+            <SocialIcon link={s.link} img={s.img} />
+          </WrapItem>
+        ))}
       </Wrap>
     </Box>
-    
-  )
+  );
 }
 
 export default Socials;
