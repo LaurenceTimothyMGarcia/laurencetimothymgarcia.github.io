@@ -8,14 +8,6 @@ const WorkExp = [
     endDate: 'Present',
     skills: [
       {
-        title: 'C#',
-        img: '/logos/CodingLogos/CSharpLogo.png'
-      },
-      {
-        title: 'DotNET',
-        img: '/logos/CodingLogos/DotNETLogo.png'
-      },
-      {
         title: 'TypeScript',
         img: '/logos/CodingLogos/Typescript_Logo.png'
       },
@@ -24,16 +16,24 @@ const WorkExp = [
         img: '/logos/CodingLogos/ReactLogo.png'
       },
       {
+        title: 'C#',
+        img: '/logos/CodingLogos/CSharpLogo.png'
+      },
+      {
+        title: 'DotNET',
+        img: '/logos/CodingLogos/DotNETLogo.png'
+      },
+      {
+        title: 'Python',
+        img: '/logos/CodingLogos/Python_logo.png'
+      },
+      {
         title: 'Angular',
         img: '/logos/CodingLogos/AngularLogo.png'
       },
       {
         title: 'SQL',
         img: '/logos/CodingLogos/SQLLogo.png'
-      },
-      {
-        title: 'Python',
-        img: '/logos/CodingLogos/Python_logo.png'
       },
       {
         title: 'ServiceNow',
@@ -94,9 +94,10 @@ const WorkExp = [
     ],
     jobDesc: [
       "Co-founded an indie game studio and shipped Solar Sweets on Steam in 2024.",
-      "Currently developing Absolute Momentum, a new multiplayer title planned for Steam release in 2026.",
+      "Currently developing Get Off My Tower, a new tower defense game planned for Steam release in 2027.",
       "Architected and implemented multiplayer networking systems for Unity games using C# and Unity Multiplayer Services.",
       "Built backend lobby APIs and matchmaking systems allowing players to create and join online sessions.",
+      "Engineered gameplay and UI systems for an exhibit feature that spotlights team member contributions to the game, highlighting art, music, and gameplay assets.",
       "Collaborated with a cross-disciplinary team (engineering, art, design) through regular SCRUM meetings and playtesting cycles to iterate on player experience.",
       "Executing social media strategy to drive community interest for an upcoming game through infographics, developer blogs, and development-focused video content."
     ]

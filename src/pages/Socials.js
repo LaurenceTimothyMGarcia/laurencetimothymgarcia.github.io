@@ -49,10 +49,10 @@ function Socials({ footer=false, mobile=false }) {
 
           <HStack>
             <SocialIcon 
-              link={'https://www.instagram.com/emergencyartist/'} 
+              link={'https://www.instagram.com/emergencyplayer/'} 
               img={'/logos/SocialLogos/InstagramWhite.png'} 
             />
-            <Text>@EmergencyArtist</Text>
+            <Text>@EmergencyPlayer</Text>
           </HStack>
 
         </VStack>
@@ -93,7 +93,7 @@ function Socials({ footer=false, mobile=false }) {
 
         <Box transform="scale(0.5)">
           <SocialIcon 
-            link={'https://www.instagram.com/emergencyartist/'} 
+            link={'https://www.instagram.com/emergencyplayer/'} 
             img={'/logos/SocialLogos/InstagramWhite.png'} 
           />
         </Box>
@@ -145,10 +145,10 @@ function Socials({ footer=false, mobile=false }) {
 
         <VStack>
           <SocialIcon 
-            link={'https://www.instagram.com/emergencyartist/'} 
+            link={'https://www.instagram.com/emergencyplayer/'} 
             img={'/logos/SocialLogos/InstagramWhite.png'} 
           />
-          <Text>@EmergencyArtist</Text>
+          <Text>@EmergencyPlayer</Text>
         </VStack>
 
       </Wrap>
