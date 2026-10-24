@@ -11,17 +11,16 @@ function SWEProjectCard( { title, icon, summary, description, link, skills } ) {
 
   return(
     // <Card align={'center'} size={'sm'} maxW={'30vw'}>
-    <Card 
-      align={'center'} 
-      size={'sm'} 
-      maxW={'22rem'} 
-      minW={'22rem'}
+    <Card
+      align={'center'}
+      size={'sm'}
+      w={{ base: '80vw', md: '22rem' }}
+      maxW={'22rem'}
+      flexShrink={0}
+      sx={{ scrollSnapAlign: 'center' }}
       backgroundColor={colors.bgSecondary}
       color={colors.text}
-      _hover={{
-        backgroundColor: hoverColor,
-        color: hoverTextColor
-      }}
+      _hover={{ backgroundColor: hoverColor, color: hoverTextColor }}
     >
       <CardHeader align={'center'}>
         <Heading size={'lg'}>{title}</Heading>

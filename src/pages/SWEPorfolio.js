@@ -6,74 +6,21 @@ import colors from '../theme/Color';
 import ScreenRatio from '../components/ScreenRatio';
 
 function SWEPorfolio() {
-
-  let display = DesktopVer();
-
-  if (ScreenRatio) {
-    display = MobileVer();
-  }
-
-  return (
-    display
-  )
-}
-
-function DesktopVer() {
   return (
     <Box>
-      <Center
-        p={'2vh'}
-      >
+      <Center p={'2vh'}>
         <Heading
           color={colors.primary}
+          size={{ base: 'md', md: 'lg' }}
           textAlign={'center'}
         >
-          Software Engineering Portfolio
+          Independent Endeavors
         </Heading>
       </Center>
 
-      <Center mb={'1rem'}>
-        <Box display={'flex'} justifyContent="center" alignItems="center">
-          <SocialIcon
-            link={'https://github.com/LaurenceTimothyMGarcia'} 
-            img={'/logos/SocialLogos/GithubLogoPurple.png'} 
-          />
-        </Box>
-      </Center>
-      
-
       <SWEProjectDisplay />
     </Box>
-  )
-}
-
-function MobileVer() {
-  return (
-    <Box>
-      <Center
-        p={'2vh'}
-      >
-        <Heading
-          color={colors.primary}
-          size={'md'}
-        >
-          Software Engineering Portfolio
-        </Heading>
-      </Center>
-
-      <Center mb={'1rem'}>
-        <Box display={'flex'} justifyContent="center" alignItems="center">
-          <SocialIcon
-            link={'https://github.com/LaurenceTimothyMGarcia'} 
-            img={'/logos/SocialLogos/GithubLogoPurple.png'} 
-          />
-        </Box>
-      </Center>
-      
-
-      <SWEProjectDisplay />
-    </Box>
-  )
+  );
 }
 
 export default SWEPorfolio;
