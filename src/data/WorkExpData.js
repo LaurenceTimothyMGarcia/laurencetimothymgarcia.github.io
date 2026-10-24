@@ -58,12 +58,15 @@ const WorkExp = [
     ],
     jobDesc: [
       "Delivered on 5+ major internal and customer-facing projects to improve sales acceleration and streamlined developer productivity.",
-      "Prevented scheduled decommissioning of critical platforms by modernizing legacy financial and data applications into secure, full-stack React and .NET 8 applications integrated with SQL Server. Addressed security flaws, brought systems into compliance with SEC security requirements, rebuilt APIs and front-end views, and delivered the upgrades within 3 months with a three developer team.",
-      "Built an automated documentation tool using Python and Gemini 2.5 Flash that generates and updates Confluence documentation from completed pull requests in a target project.",
-      "Streamlined development pipeline throughput by 100% by building an automated backend API to transfer solutions between development environments using .NET and Azure Functions.",
-      "Implemented an automated task generation system for sales teams, that increased post-training follow-up by 280% and visibility into training-fund usage.",
-      "Conducted a 2 week research project utilizing Vertex AI (Gemini 2.5 Flash) prompt engineering to automate framework upgrades from .NET 3.5 to 8.0 with 80% accuracy and 360% faster development.",
-      "Integrated a Java Selenium tool into the QA pipeline to automate tests for weekly front-end deployments with provided reports on the status of features that enabled the team to validate new and existing features 500% faster."
+      "Prevented decommissioning of critical financial platforms by modernizing legacy financial and data applications into secure full-stack React/.NET 8 systems compliant with SOX requirements, delivered within 3 months.",
+      "Rebuilt APIs and front-end views for modernized platforms, addressing security flaws and restoring compliance with SOX requirements.",
+      "Architected and built a TypeScript/React component library adopted by 10,000+ developers, standardizing UI development across the company’s primary B2B SaaS platform and accelerating product delivery.",
+      "Collaborate closely with UI/UX design members to translate Figma designs and project requirements into usable components and updating issues with existing components.",
+      "Developed a Microsoft Teams extension and Python-based escalation system integrated with the ServiceNOW API to notify and hold approvers accountable, improving ticket response rate by 600%.",
+      "Built an automated documentation tool using Python and Gemini 2.5 Flash that syncs Confluence documentation from completed pull requests, maintaining coverage across 100+ projects.",
+      "Integrated a Java Selenium tool into the QA pipeline to automate front-end deployment tests, generating feature status reports and enabling the team to validate features 500% faster.",
+      "Developed a full-stack React application surfacing SAP Order Number data via SAP OData API within Gemini 2.5 Flash AI analysis, adopted by all 50+ members of the SAP ERP team.",
+      "Implemented an automated task generation system for sales teams, that increased post-training follow-up by 280% and visibility into training-fund usage."
     ]
   },
   {
